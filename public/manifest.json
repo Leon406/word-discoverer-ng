@@ -4,7 +4,7 @@
   "name": "__MSG_appName__",
   "description": "__MSG_appDesc__",
   "default_locale": "zh_CN",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icons": {
     "48": "assets/result48.png",
     "128": "assets/icon_128.png"
@@ -24,10 +24,8 @@
     "identity",
     "tabs"
   ],
-  // "optional_permissions": ["https://*/*"],
   "background": {
     "service_worker": "js/background.js"
-    // "type": "module"
   },
   "host_permissions": ["<all_urls>"],
   "content_security_policy": {
