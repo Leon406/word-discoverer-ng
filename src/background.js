@@ -28,14 +28,6 @@ function do_load_dictionary(file_text) {
 
 function load_eng_dictionary() {
   const file_path = chrome.runtime.getURL('../assets/eng_dict.txt')
-  // var xhr = new XMLHttpRequest()
-  // xhr.onreadystatechange = function () {
-  //   if (xhr.readyState == XMLHttpRequest.DONE) {
-  //     do_load_dictionary(xhr.responseText)
-  //   }
-  // }
-  // xhr.open('GET', file_path, true)
-  // xhr.send(null)
   fetch(file_path)
     .then((res) => res.text())
     .then(do_load_dictionary)
@@ -61,14 +53,6 @@ function do_load_idioms(file_text) {
 
 function load_idioms() {
   const file_path = chrome.runtime.getURL('../assets/eng_idioms.txt')
-  // var xhr = new XMLHttpRequest()
-  // xhr.onreadystatechange = function () {
-  //   if (xhr.readyState == XMLHttpRequest.DONE) {
-  //     do_load_idioms(xhr.responseText)
-  //   }
-  // }
-  // xhr.open('GET', file_path, true)
-  // xhr.send(null)
   fetch(file_path)
     .then((res) => res.text())
     .then(do_load_idioms)
@@ -129,11 +113,6 @@ function list_to_set(src_list) {
 }
 
 function substract_from_set(lhs_set, rhs_set) {
-  // for (const key in rhs_set) {
-  //   if (rhs_set.hasOwnProperty(key) && lhs_set.hasOwnProperty(key)) {
-  //     delete lhs_set[key]
-  //   }
-  // }
   Object.keys(rhs_set).forEach((key) => {
     if (rhs_set.hasOwnProperty(key) && lhs_set.hasOwnProperty(key)) {
       delete lhs_set[key]
@@ -142,11 +121,6 @@ function substract_from_set(lhs_set, rhs_set) {
 }
 
 function add_to_set(lhs_set, rhs_set) {
-  // for (const key in rhs_set) {
-  //   if (rhs_set.hasOwnProperty(key)) {
-  //     lhs_set[key] = 1
-  //   }
-  // }
   Object.keys(rhs_set).forEach((key) => {
     if (rhs_set.hasOwnProperty(key)) {
       lhs_set[key] = 1
@@ -156,11 +130,6 @@ function add_to_set(lhs_set, rhs_set) {
 
 function serialize_vocabulary(entries) {
   const keys = []
-  // for (const key in entries) {
-  //   if (entries.hasOwnProperty(key)) {
-  //     keys.push(key)
-  //   }
-  // }
   Object.keys(entries).forEach((key) => {
     if (entries.hasOwnProperty(key)) {
       keys.push(key)

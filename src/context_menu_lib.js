@@ -193,10 +193,6 @@ export function createDictionaryEntry(title, dictUrl, entryId) {
     title,
     contexts: ['selection'],
     id: entryId,
-    // onclick: function (info, tab) {
-    //   var word = info.selectionText
-    //   showDefinition(dictUrl, word)
-    // },
   })
   chrome.contextMenus.onClicked.addListener(function (info, tab) {
     const word = info.selectionText
@@ -249,7 +245,6 @@ export function initContextMenus(dictPairs) {
       title,
       contexts: ['selection'],
       id: 'vocab_select_add',
-      // onclick: onClickHandler,
     })
     chrome.contextMenus.onClicked.addListener(onClickHandler)
     chrome.contextMenus.create({

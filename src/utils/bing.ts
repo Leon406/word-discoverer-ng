@@ -2,11 +2,7 @@ import { handleNoResult, getText, getInnerHTML, DictSearchResult } from './index
 
 const HOST = 'https://cn.bing.com'
 
-
-
 type BingSearchResultLex = DictSearchResult<BingResultLex>
-type BingSearchResultMachine = DictSearchResult<BingResultMachine>
-type BingSearchResultRelated = DictSearchResult<BingResultRelated>
 
 /** Lexical result */
 export interface BingResultLex {
@@ -33,27 +29,6 @@ export interface BingResultLex {
     chs?: string
     source?: string
     mp3?: string
-  }>
-}
-
-/** Alternate machine translation result */
-export interface BingResultMachine {
-  type: 'machine'
-  /** machine translation */
-  mt: string
-}
-
-/** Alternate result */
-export interface BingResultRelated {
-  type: 'related'
-  title: string
-  defs: Array<{
-    title: string
-    meanings: Array<{
-      href: string
-      word: string
-      def: string
-    }>
   }>
 }
 
@@ -164,56 +139,3 @@ export function handleLexResult(
   return handleNoResult()
 }
 
-export function handleMachineResult(
-  doc: Document,
-  transform: null | ((text: string) => string),
-): BingSearchResultMachine | Promise<BingSearchResultMachine> {
-  const mt = getText(doc, '.client_sen_cn', transform)
-
-  if (mt) {
-    return {
-      result: {
-        type: 'machine',
-        mt,
-      },
-    }
-  }
-
-  return handleNoResult()
-}
-
-export function handleRelatedResult(
-  doc: Document,
-  config: BingConfigOption,
-  transform: null | ((text: string) => string),
-): BingSearchResultRelated | Promise<BingSearchResultRelated> {
-  const searchResult: DictSearchResult<BingResultRelated> = {
-    result: {
-      type: 'related',
-      title: getText(doc, '.client_do_you_mean_title_bar', transform),
-      defs: [],
-    },
-  }
-
-  doc.querySelectorAll('.client_do_you_mean_area').forEach(($area) => {
-    const $defsList = $area.querySelectorAll('.client_do_you_mean_list')
-    if ($defsList.length > 0) {
-      searchResult.result.defs.push({
-        title: getText($area, '.client_do_you_mean_title', transform),
-        meanings: Array.from($defsList).map(($list) => {
-          const word = getText($list, '.client_do_you_mean_list_word', transform)
-          return {
-            href: `https://cn.bing.com/dict/search?q=${word}`,
-            word,
-            def: getText($list, '.client_do_you_mean_list_def', transform),
-          }
-        }),
-      })
-    }
-  })
-
-  if (searchResult.result.defs.length > 0) {
-    return searchResult
-  }
-  return handleNoResult()
-}

@@ -34,10 +34,6 @@ export interface DictSearchResult<Result> {
 /** Return a dictionary source page url for the dictionary header */
 
 
-export type HTMLString = string
-
-export type SearchErrorType = 'NO_RESULT' | 'NETWORK_ERROR'
-
 export function handleNoResult<T = any>(): Promise<T> {
   return Promise.reject(new Error('NO_RESULT'))
 }
@@ -159,29 +155,6 @@ export function removeChild(parent: ParentNode, selector: string) {
   }
 }
 
-/**
- * Remove all the matching child nodes from a parent node
- */
-export function removeChildren(parent: ParentNode, selector: string) {
-  parent.querySelectorAll(selector).forEach(el => el.remove())
-}
-
-/**
- * HEX string to normal string
- */
-export function decodeHEX(text: string): string {
-  return text.replace(/\\x([0-9A-Fa-f]{2})/g, (m, p1) => String.fromCharCode(parseInt(p1, 16)))
-}
-
-/**
- * Will jump to the website instead of searching
- * when clicking on the dict panel
- */
-export function externalLink($a: HTMLElement) {
-  $a.setAttribute('target', '_blank')
-  $a.setAttribute('rel', 'nofollow noopener noreferrer')
-}
-
 export function getFullLink(host: string, el: Element, attr: string): string {
   if (host.endsWith('/')) {
     host = host.slice(0, -1)
@@ -217,10 +190,3 @@ export function isTagName(node: Node, tagName: string): boolean {
 }
 
 export const isInternalPage = () => false
-
-/**
- * Generate a unique key
- */
-export function genUniqueKey(): string {
-  return Date.now().toString().slice(6) + Math.random().toString().slice(2, 8)
-}

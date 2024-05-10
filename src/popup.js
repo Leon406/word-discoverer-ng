@@ -77,7 +77,7 @@ function process_show() {
   chrome.tabs.create(
     { url: chrome.runtime.getURL('display.html') },
     function (tab) {
-      // opens import dialong in new tab
+      // opens import dialog in new tab
     },
   )
 }
@@ -86,7 +86,7 @@ function process_help() {
   chrome.tabs.create(
     { url: chrome.runtime.getURL('help.html') },
     function (tab) {
-      // opens import dialong in new tab
+      // opens import dialog in new tab
     },
   )
 }
@@ -95,7 +95,7 @@ function process_adjust() {
   chrome.tabs.create(
     { url: chrome.runtime.getURL('adjust.html') },
     function (tab) {
-      // opens adjust dialong in new tab
+      // opens adjust dialog in new tab
     },
   )
 }

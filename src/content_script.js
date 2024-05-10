@@ -278,7 +278,7 @@ function text_to_hl_nodes(text, dst) {
     }
   }
 
-  if ((num_good * 1.0) / num_nonempty < 0.1) {
+  if (num_good / num_nonempty < 0.1) {
     return 0
   }
 
