@@ -3,7 +3,7 @@ import { handleLexResult } from './utils/bing'
 import { LRUCache } from 'lru-cache'
 
 const options = {
-  max: 5,
+  max: 100,
   dispose: (value, key) => {
     console.log('Cache Evict', key, value)
   }
@@ -108,7 +108,8 @@ function renderBubble() {
     document.getElementById('wdn_translate_bing')
   // 避免网络问题，显示上一次内容
   wdnTranslateBingDom.innerHTML = ''
-  let cacheResult = cache.get(wdSpanText)
+  // 加入缓存，key为小写字母
+  let cacheResult = cache.get(wdSpanText.toLowerCase())
   if (cacheResult) {
     console.log("use Cache",wdSpanText)
     wdnTranslateBingDom.innerHTML = `<div>${cacheResult.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>`
@@ -133,7 +134,7 @@ function renderBubble() {
             },
             null
           )
-          cache.set(wdSpanText, result)
+          cache.set(wdSpanText.toLowerCase(), result)
           wdnTranslateBingDom.innerHTML = `<div>${result.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>`
         }
       }
