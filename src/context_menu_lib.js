@@ -1,4 +1,4 @@
-import { request_unhighlight, add_lexeme } from './common_lib'
+import { add_lexeme, request_unhighlight } from './common_lib'
 
 const isoLangs = {
   ab: 'Abkhaz',
@@ -174,7 +174,7 @@ const isoLangs = {
   xh: 'Xhosa',
   yi: 'Yiddish',
   yo: 'Yoruba',
-  za: 'Zhuang',
+  za: 'Zhuang'
 }
 
 export function get_dict_definition_url(dictUrl, text) {
@@ -183,21 +183,19 @@ export function get_dict_definition_url(dictUrl, text) {
 
 export function showDefinition(dictUrl, text) {
   const fullUrl = get_dict_definition_url(dictUrl, text)
-  chrome.tabs.create({ url: fullUrl }, function (tab) {
+  chrome.tabs.create({ url: fullUrl }, function(tab) {
     // opens definition in a new tab
   })
 }
 
-export function createDictionaryEntry(title, dictUrl, entryId) {
-  chrome.contextMenus.create({
-    title,
-    contexts: ['selection'],
-    id: entryId,
-  })
-  chrome.contextMenus.onClicked.addListener(function (info, tab) {
-    const word = info.selectionText
-    showDefinition(dictUrl, word)
-  })
+export function createDictionaryEntry(dictPairs) {
+  for (let i = 0; i < dictPairs.length; ++i) {
+    chrome.contextMenus.create({
+      title:  dictPairs[i].title,
+      contexts: ['selection'],
+      id:  `wd_define_${i}`,
+    })
+  }
 }
 
 export function context_handle_add_result(report, lemma) {
@@ -206,10 +204,6 @@ export function context_handle_add_result(report, lemma) {
   }
 }
 
-export function onClickHandler(info, tab) {
-  const word = info.selectionText
-  add_lexeme(word, context_handle_add_result)
-}
 
 export function make_default_online_dicts() {
   const result = []
@@ -220,44 +214,48 @@ export function make_default_online_dicts() {
     const langName = isoLangs[uiLang]
     result.push({
       title: `Translate to ${langName} in Google`,
-      url: `https://translate.google.com/#en/${uiLang}/`,
+      url: `https://translate.google.com/#en/${uiLang}/`
     })
   }
   result.push({
     title: 'Define in Merriam-Webster',
-    url: 'https://www.merriam-webster.com/dictionary/',
+    url: 'https://www.merriam-webster.com/dictionary/'
   })
   result.push({
     title: 'Define in Google',
-    url: 'https://encrypted.google.com/search?hl=en&gl=en&q=define:',
+    url: 'https://encrypted.google.com/search?hl=en&gl=en&q=define:'
   })
   result.push({
     title: 'View pictures in Google',
-    url: 'https://encrypted.google.com/search?hl=en&gl=en&tbm=isch&q=',
+    url: 'https://encrypted.google.com/search?hl=en&gl=en&tbm=isch&q='
   })
   return result
 }
 
 export function initContextMenus(dictPairs) {
-  chrome.contextMenus.removeAll(function () {
+  chrome.contextMenus.removeAll(function() {
     const title = chrome.i18n.getMessage('menuItem')
     chrome.contextMenus.create({
       title,
       contexts: ['selection'],
-      id: 'vocab_select_add',
+      id: 'vocab_select_add'
     })
-    chrome.contextMenus.onClicked.addListener(onClickHandler)
+    chrome.contextMenus.onClicked.addListener(function(info, tab) {
+      console.log('ContextMenus', info)
+      const word = info.selectionText
+      if (info.menuItemId === "vocab_select_add") {
+        add_lexeme(word, context_handle_add_result)
+      }else if (info.menuItemId.startsWith("wd_define_") ){
+        let i = info.menuItemId.substring(info.menuItemId.lastIndexOf("_") +1)
+        console.log("ddd",i,dictPairs[parseInt(i)])
+        showDefinition(dictPairs[parseInt(i)].url, word)
+      }
+    })
     chrome.contextMenus.create({
       type: 'separator',
       contexts: ['selection'],
-      id: 'wd_separator_id',
+      id: 'wd_separator_id'
     })
-    for (let i = 0; i < dictPairs.length; ++i) {
-      createDictionaryEntry(
-        dictPairs[i].title,
-        dictPairs[i].url,
-        `wd_define_${i}`,
-      )
-    }
+    createDictionaryEntry(dictPairs)
   })
 }
