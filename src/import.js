@@ -1,17 +1,7 @@
 import { localizeHtmlPage, sync_if_needed } from './common_lib'
 
 function parse_vocabulary(text) {
-  const lines = text.split('\n')
-  const found = []
-  for (let i = 0; i < lines.length; ++i) {
-    let word = lines[i]
-    if (i + 1 === lines.length && word.length <= 1) break
-    if (word.slice(-1) === '\r') {
-      word = word.slice(0, -1)
-    }
-    found.push(word)
-  }
-  return found
+  return text.split(/[\r\n]+/).filter((line) => line)
 }
 
 function add_new_words(new_words) {
@@ -39,7 +29,8 @@ function add_new_words(new_words) {
         }
       }
       if (num_added) {
-        chrome.storage.local.set(new_state, sync_if_needed)
+        // chrome.storage.local.set(new_state, sync_if_needed)
+        chrome.storage.local.set({"wd_user_vocabulary": user_vocabulary});
       }
       const num_skipped = new_words.length - num_added
       document.getElementById('addedInfo').textContent =

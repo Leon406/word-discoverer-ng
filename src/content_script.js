@@ -57,8 +57,7 @@ function get_rare_lemma(word) {
 function get_word_percentile(word) {
   if (!dict_words.hasOwnProperty(word)) return undefined
   const wf = dict_words[word]
-  const result = Math.ceil((wf[1] * 100) / word_max_rank)
-  return result
+  return Math.ceil((wf[1] * 100) / word_max_rank)
 }
 
 function assert(condition, message) {

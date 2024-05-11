@@ -6,7 +6,7 @@ let gapi_inited = false
 // TODO check chrome.runtime.lastError for all storage.local operations
 
 function do_load_dictionary(file_text) {
-  const lines = file_text.split('\n')
+  const lines = file_text.split(/[\r\n]+/)
   const rare_words = {}
   let rank = 0
   let prev_lemma = null
@@ -34,7 +34,7 @@ function load_eng_dictionary() {
 }
 
 function do_load_idioms(file_text) {
-  const lines = file_text.split('\n')
+  const lines = file_text.split(/[\r\n]+/)
   const rare_words = {}
   for (let lno = 0; lno < lines.length; ++lno) {
     const fields = lines[lno].split('\t')
@@ -42,7 +42,7 @@ function do_load_idioms(file_text) {
     const words = fields[0].split(' ')
     for (let i = 0; i + 1 < words.length; ++i) {
       const key = words.slice(0, i + 1).join(' ')
-      rare_words[key] = -1
+      if (key) rare_words[key] = -1
     }
     const key = fields[0]
     rare_words[key] = fields[1]
