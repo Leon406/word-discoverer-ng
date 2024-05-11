@@ -1,6 +1,6 @@
 import { localizeHtmlPage, make_hl_style } from './common_lib'
 import { initContextMenus, make_default_online_dicts } from './context_menu_lib'
-import saveAs from './FileSaver'
+import { saveAs } from 'file-saver'
 
 let wd_hl_settings = null
 let wd_hover_settings = null
