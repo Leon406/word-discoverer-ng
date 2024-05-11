@@ -181,7 +181,7 @@ export function get_dict_definition_url(dictUrl, text) {
   return dictUrl + encodeURIComponent(text)
 }
 
-function open(url) {
+function openUrl(url) {
   window.open(url)
 }
 
@@ -192,7 +192,7 @@ export function showDefinition(dictUrl, text) {
       // opens definition in a new tab
     })
   } else {
-    eval_func(open, [fullUrl])
+    eval_func(openUrl, [fullUrl])
   }
 
 }

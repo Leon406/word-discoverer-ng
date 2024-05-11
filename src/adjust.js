@@ -18,7 +18,7 @@ const target_types = ['hl', 'ow']
 function display_sync_interface() {
   chrome.storage.local.get(
     ['wd_gd_sync_enabled', 'wd_last_sync_error', 'wd_last_sync'],
-    function (result) {
+    function(result) {
       const { wd_last_sync_error } = result
       const { wd_gd_sync_enabled } = result
       const { wd_last_sync } = result
@@ -55,31 +55,31 @@ function display_sync_interface() {
         syncDateLabel.style.display = 'inline'
         syncDateLabel.textContent = passed_time_msg
       }
-    },
+    }
   )
 }
 
 function synchronize_now() {
   chrome.runtime.onMessage.addListener(
-    function (request, sender, sendResponse) {
+    function(request, sender, sendResponse) {
       if (request.sync_feedback) {
         display_sync_interface()
       }
-    },
+    }
   )
   document.getElementById('syncStatusFeedback').style.display = 'inline'
   document.getElementById('syncStatusFeedback').textContent =
     'Synchronization started...'
-  chrome.storage.local.set({ wd_gd_sync_enabled: true }, function () {
+  chrome.storage.local.set({ wd_gd_sync_enabled: true }, function() {
     chrome.runtime.sendMessage({
       wdm_request: 'gd_sync',
-      interactive_mode: true,
+      interactive_mode: true
     })
   })
 }
 
 function request_permissions_and_sync() {
-  chrome.permissions.request({ origins: ['https://*/*'] }, function (granted) {
+  chrome.permissions.request({ origins: ['https://*/*'] }, function(granted) {
     if (!granted) return
     synchronize_now()
   })
@@ -88,7 +88,7 @@ function request_permissions_and_sync() {
 function stop_synchronization() {
   chrome.storage.local.set(
     { wd_gd_sync_enabled: false },
-    display_sync_interface,
+    display_sync_interface
   )
 }
 
@@ -98,7 +98,7 @@ function process_test_warnings() {
 
 function process_get_dbg() {
   const storage_key = document.getElementById('getFromStorageKey').value
-  chrome.storage.local.get([storage_key], function (result) {
+  chrome.storage.local.get([storage_key], function(result) {
     const storage_value = result[storage_key]
     console.log(`key: ${storage_key}; value: ${JSON.stringify(storage_value)}`)
   })
@@ -114,7 +114,7 @@ function process_set_dbg() {
     storage_value = JSON.parse(storage_value)
   }
   console.log(`storage_key:${storage_key}, storage_value:${storage_value}`)
-  chrome.storage.local.set({ [storage_key]: storage_value }, function () {
+  chrome.storage.local.set({ [storage_key]: storage_value }, function() {
     const last_error = chrome.runtime.lastError
     console.log(`last_error:${last_error}`)
     console.log('finished setting value')
@@ -122,7 +122,7 @@ function process_set_dbg() {
 }
 
 function process_export() {
-  chrome.storage.local.get(['wd_user_vocabulary'], function (result) {
+  chrome.storage.local.get(['wd_user_vocabulary'], function(result) {
     const user_vocabulary = result.wd_user_vocabulary
     const keys = []
     Object.keys(user_vocabulary).forEach((key) => {
@@ -139,7 +139,8 @@ function process_export() {
 function process_import() {
   chrome.tabs.create(
     { url: chrome.runtime.getURL('import.html') },
-    function (tab) {},
+    function(tab) {
+    }
   )
 }
 
@@ -160,13 +161,22 @@ function show_rb_states(ids, color) {
   }
 }
 
+function openUrl(url) {
+  window.open(url)
+}
+
 function process_test_old_dict(e) {
   const button = e.target
   const btn_id = button.id
   if (!btn_id.startsWith('testDictBtn_')) return
   const btn_no = parseInt(btn_id.split('_')[1], 10)
   const url = `${wd_online_dicts[btn_no].url}test`
-  chrome.tabs.create({ url }, function (tab) {})
+  if (url.startsWith('http')) {
+    chrome.tabs.create({ url }, function(tab) {
+    })
+  } else {
+    openUrl(url)
+  }
 }
 
 function process_delete_old_dict(e) {
@@ -239,7 +249,8 @@ function process_test_new_dict() {
   dictUrl = dictUrl.trim()
   if (!dictUrl) return
   const url = `${dictUrl}test`
-  chrome.tabs.create({ url }, function (tab) {})
+  chrome.tabs.create({ url }, function(tab) {
+  })
 }
 
 function show_internal_state() {
@@ -297,7 +308,7 @@ function show_internal_state() {
 }
 
 function add_cb_event_listener(id, dst_params, dst_key) {
-  document.getElementById(id).addEventListener('click', function () {
+  document.getElementById(id).addEventListener('click', function() {
     const checkboxElem = document.getElementById(id)
     if (checkboxElem.checked) {
       dst_params[dst_key] = true
@@ -320,7 +331,7 @@ function process_rb(dst_params, dst_key, ids) {
 
 function handle_rb_loop(ids, dst_params, dst_key) {
   for (let i = 0; i < ids.length; i++) {
-    document.getElementById(ids[i]).addEventListener('click', function () {
+    document.getElementById(ids[i]).addEventListener('click', function() {
       process_rb(dst_params, dst_key, ids)
     })
   }
@@ -363,16 +374,16 @@ function add_hover_rb_listeners() {
 }
 
 function process_display() {
-  window.onload = function () {
+  window.onload = function() {
     chrome.storage.local.get(
       [
         'wd_hl_settings',
         'wd_hover_settings',
         'wd_online_dicts',
         'wd_developer_mode',
-        'wd_enable_tts',
+        'wd_enable_tts'
       ],
-      function (result) {
+      function(result) {
         assign_back_labels()
         wd_hl_settings = result.wd_hl_settings
         wd_hover_settings = result.wd_hover_settings
@@ -391,34 +402,34 @@ function process_display() {
         add_cb_event_listener(
           'wordsEnabled',
           wd_hl_settings.wordParams,
-          'enabled',
+          'enabled'
         )
         add_cb_event_listener(
           'idiomsEnabled',
           wd_hl_settings.idiomParams,
-          'enabled',
+          'enabled'
         )
         add_cb_event_listener('wordsBold', wd_hl_settings.wordParams, 'bold')
         add_cb_event_listener('idiomsBold', wd_hl_settings.idiomParams, 'bold')
         add_cb_event_listener(
           'wordsBackground',
           wd_hl_settings.wordParams,
-          'useBackground',
+          'useBackground'
         )
         add_cb_event_listener(
           'idiomsBackground',
           wd_hl_settings.idiomParams,
-          'useBackground',
+          'useBackground'
         )
         add_cb_event_listener(
           'wordsColor',
           wd_hl_settings.wordParams,
-          'useColor',
+          'useColor'
         )
         add_cb_event_listener(
           'idiomsColor',
           wd_hl_settings.idiomParams,
-          'useColor',
+          'useColor'
         )
 
         add_hover_rb_listeners()
@@ -464,13 +475,13 @@ function process_display() {
 
         document
           .getElementById('saveVisuals')
-          .addEventListener('click', function () {
+          .addEventListener('click', function() {
             chrome.storage.local.set({ wd_hl_settings })
           })
 
         document
           .getElementById('defaultDicts')
-          .addEventListener('click', function () {
+          .addEventListener('click', function() {
             wd_online_dicts = make_default_online_dicts()
             chrome.storage.local.set({ wd_online_dicts })
             initContextMenus(wd_online_dicts)
@@ -479,19 +490,19 @@ function process_display() {
 
         document
           .getElementById('pronunciationEnabled')
-          .addEventListener('click', function (e) {
+          .addEventListener('click', function(e) {
             wd_enable_tts = e.target.checked
             chrome.storage.local.set({ wd_enable_tts })
           })
 
         display_sync_interface()
         show_internal_state()
-      },
+      }
     )
   }
 }
 
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener('DOMContentLoaded', function(event) {
   localizeHtmlPage()
   process_display()
 })
