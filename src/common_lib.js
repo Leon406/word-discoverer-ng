@@ -4,6 +4,20 @@ export function request_unhighlight(lemma) {
   })
 }
 
+/**
+ * 如需使用 chrome.scripting API，请在清单中声明 "scripting" 权限，以及要将脚本注入的网页的主机权限。
+ * refer https://developer.chrome.com/docs/extensions/reference/api/scripting?hl=zh-cn
+ */
+export function eval_func(func, args = []) {
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.scripting.executeScript({
+      target: { tabId: tabs[0].id },
+      func,
+      args
+    })
+  })
+}
+
 export function make_id_suffix(text) {
   const before = btoa(text)
   const after = before

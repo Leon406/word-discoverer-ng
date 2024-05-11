@@ -1,4 +1,4 @@
-import { add_lexeme, request_unhighlight } from './common_lib'
+import { add_lexeme, eval_func, request_unhighlight } from './common_lib'
 
 const isoLangs = {
   ab: 'Abkhaz',
@@ -181,19 +181,28 @@ export function get_dict_definition_url(dictUrl, text) {
   return dictUrl + encodeURIComponent(text)
 }
 
+function open(url) {
+  window.open(url)
+}
+
 export function showDefinition(dictUrl, text) {
   const fullUrl = get_dict_definition_url(dictUrl, text)
-  chrome.tabs.create({ url: fullUrl }, function(tab) {
-    // opens definition in a new tab
-  })
+  if (fullUrl.startsWith('http')) {
+    chrome.tabs.create({ url: fullUrl }, function(tab) {
+      // opens definition in a new tab
+    })
+  } else {
+    eval_func(open, [fullUrl])
+  }
+
 }
 
 export function createDictionaryEntry(dictPairs) {
   for (let i = 0; i < dictPairs.length; ++i) {
     chrome.contextMenus.create({
-      title:  dictPairs[i].title,
+      title: dictPairs[i].title,
       contexts: ['selection'],
-      id:  `wd_define_${i}`,
+      id: `wd_define_${i}`
     })
   }
 }
@@ -243,11 +252,11 @@ export function initContextMenus(dictPairs) {
     chrome.contextMenus.onClicked.addListener(function(info, tab) {
       console.log('ContextMenus', info)
       const word = info.selectionText
-      if (info.menuItemId === "vocab_select_add") {
+      if (info.menuItemId === 'vocab_select_add') {
         add_lexeme(word, context_handle_add_result)
-      }else if (info.menuItemId.startsWith("wd_define_") ){
-        let i = info.menuItemId.substring(info.menuItemId.lastIndexOf("_") +1)
-        console.log("ddd",i,dictPairs[parseInt(i)])
+      } else if (info.menuItemId.startsWith('wd_define_')) {
+        let i = info.menuItemId.substring(info.menuItemId.lastIndexOf('_') + 1)
+        console.log('ddd', i, dictPairs[parseInt(i)])
         showDefinition(dictPairs[parseInt(i)].url, word)
       }
     })

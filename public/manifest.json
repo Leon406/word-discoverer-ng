@@ -4,7 +4,7 @@
   "name": "__MSG_appName__",
   "description": "__MSG_appDesc__",
   "default_locale": "zh_CN",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "icons": {
     "48": "assets/result48.png",
     "128": "assets/icon_128.png"
@@ -20,6 +20,7 @@
     "storage",
     "unlimitedStorage",
     "contextMenus",
+    "scripting",
     "tts",
     "identity",
     "tabs"
