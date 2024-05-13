@@ -1,5 +1,5 @@
 import { localizeHtmlPage, make_hl_style } from './common_lib'
-import { initContextMenus, make_default_online_dicts } from './context_menu_lib'
+import { get_dict_definition_url, initContextMenus, make_default_online_dicts } from './context_menu_lib'
 import { saveAs } from 'file-saver'
 
 let wd_hl_settings = null
@@ -170,13 +170,7 @@ function process_test_old_dict(e) {
   const btn_id = button.id
   if (!btn_id.startsWith('testDictBtn_')) return
   const btn_no = parseInt(btn_id.split('_')[1], 10)
-  const url = `${wd_online_dicts[btn_no].url}test`
-  if (url.startsWith('http')) {
-    chrome.tabs.create({ url }, function(tab) {
-    })
-  } else {
-    openUrl(url)
-  }
+  _openDict(wd_online_dicts[btn_no].url)
 }
 
 function process_delete_old_dict(e) {
@@ -248,9 +242,17 @@ function process_test_new_dict() {
   let dictUrl = document.getElementById('addDictUrl').value
   dictUrl = dictUrl.trim()
   if (!dictUrl) return
-  const url = `${dictUrl}test`
-  chrome.tabs.create({ url }, function(tab) {
-  })
+  _openDict(dictUrl)
+}
+
+function _openDict(dictUrl) {
+  const url = get_dict_definition_url(dictUrl, "test")
+  if (url.startsWith('http')) {
+    chrome.tabs.create({ url }, function(tab) {
+    })
+  } else {
+    openUrl(url)
+  }
 }
 
 function show_internal_state() {

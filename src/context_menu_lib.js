@@ -178,7 +178,9 @@ const isoLangs = {
 }
 
 export function get_dict_definition_url(dictUrl, text) {
-  return dictUrl + encodeURIComponent(text)
+  return dictUrl.includes('%wd_text%') ?
+    dictUrl.replace('%wd_text%', encodeURIComponent(text))
+    : dictUrl + encodeURIComponent(text)
 }
 
 function openUrl(url) {

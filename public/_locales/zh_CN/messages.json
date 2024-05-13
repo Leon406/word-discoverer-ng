@@ -4,7 +4,7 @@
     "description": "The title of the application, displayed in the web store."
   },
   "appDesc": {
-    "message": "高亮网页上罕见的英语字典词汇和惯用语。促进英语语言学习并扩大词汇量。",
+    "message": "高亮网页上罕见的英语字典词汇和习语。促进英语语言学习并扩大词汇量。",
     "description": "The description of the application, displayed in the web store."
   },
   "menuItem": {
@@ -120,16 +120,16 @@
     "message": "非高亮单词弹出菜单"
   },
   "adjustOnlineDicts": {
-    "message": "悬停和右键菜单的在线词典"
+    "message": "在线词典（悬停和右键菜单时显示）"
   },
   "dictNameHeader": {
     "message": "词典名称："
   },
   "dictUrlHeader": {
-    "message": "词典查询网址："
+    "message": "网址（%wd_text%为选中文本变量）："
   },
   "testBtn": {
-    "message": "测试"
+    "message": "Test"
   },
   "restoreDefaults": {
     "message": "恢复默认值"
