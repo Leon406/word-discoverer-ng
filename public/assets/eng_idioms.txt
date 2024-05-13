@@ -2793,3 +2793,6 @@ smooth operator	smooth operator
 smooth operators	smooth operator
 at face value	at face value
 all but certain	all but certain
+can’t be bad	can’t be bad
+above all	above all
+there’s no telling	there’s no telling

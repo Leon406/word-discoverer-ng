@@ -200,12 +200,14 @@ function processMouse(e) {
 function text_to_hl_nodes(text, dst) {
   const lc_text = text.toLowerCase()
   let ws_text = lc_text.replace(
-    /[,;()?!`:"'.\s\-\u2013\u2014\u201C\u201D\u2019]/g,
+    /[,;()?!`:".\s\-\u2013\u2014\u201C\u201D]/g,
     ' '
   )
-  ws_text = ws_text.replace(/[^\w ]/g, '.')
+
+  ws_text = ws_text.replace(/[^\w '\u2019]/g, '.')
 
   const tokens = ws_text.split(' ')
+  console.log(`${text} -- ${tokens} `)
 
   let num_good = 0 // number of found dictionary words
   let num_nonempty = 0

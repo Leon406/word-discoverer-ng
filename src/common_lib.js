@@ -19,7 +19,7 @@ export function eval_func(func, args = []) {
 }
 
 export function make_id_suffix(text) {
-  const before = btoa(text)
+  const before = btoa(text.replace(/['’]/g, '_'))
   const after = before
     .replace(/\+/g, '_')
     .replace(/\//g, '-')

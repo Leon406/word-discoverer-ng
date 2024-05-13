@@ -1,4 +1,4 @@
-import { make_default_online_dicts, initContextMenus } from './context_menu_lib'
+import { initContextMenus, make_default_online_dicts } from './context_menu_lib'
 
 let gapi_loaded = false
 let gapi_inited = false
@@ -33,6 +33,13 @@ function load_eng_dictionary() {
     .then(do_load_dictionary)
 }
 
+function deriveKey(key, rare_words,value) {
+  let tmp = key.replace(/’/g, "'")
+  if (tmp !== key) {
+    rare_words[tmp] = value
+  }
+}
+
 function do_load_idioms(file_text) {
   const lines = file_text.split(/[\r\n]+/)
   const rare_words = {}
@@ -43,9 +50,11 @@ function do_load_idioms(file_text) {
     for (let i = 0; i + 1 < words.length; ++i) {
       const key = words.slice(0, i + 1).join(' ')
       if (key) rare_words[key] = -1
+      deriveKey(key, rare_words, -1)
     }
     const key = fields[0]
     rare_words[key] = fields[1]
+    deriveKey(key, rare_words, fields[1])
   }
   const local_storage = chrome.storage.local
   local_storage.set({ wd_idioms: rare_words })
@@ -59,14 +68,14 @@ function load_idioms() {
 }
 
 function report_sync_failure(error_msg) {
-  chrome.storage.local.set({ wd_last_sync_error: error_msg }, function () {
+  chrome.storage.local.set({ wd_last_sync_error: error_msg }, function() {
     chrome.runtime.sendMessage({ sync_feedback: 1 })
   })
 }
 
 function load_script(url, callback_func) {
   const request = new XMLHttpRequest()
-  request.onreadystatechange = function () {
+  request.onreadystatechange = function() {
     if (request.readyState !== 4) return
     if (request.status !== 200) return
     // eslint-disable-next-line no-eval
@@ -80,14 +89,14 @@ function load_script(url, callback_func) {
 function authorize_user(interactive_authorization) {
   chrome.identity.getAuthToken(
     { interactive: interactive_authorization },
-    function (token) {
+    function(token) {
       if (token === undefined) {
         report_sync_failure('Unable to get oauth token')
       } else {
         gapi.client.setToken({ access_token: token })
         sync_user_vocabularies()
       }
-    },
+    }
   )
 }
 
@@ -158,14 +167,14 @@ function create_new_dir(dir_name, success_cb) {
   const body = {
     name: dir_name,
     mimeType: 'application/vnd.google-apps.folder',
-    appProperties: { wdfile: '1' },
+    appProperties: { wdfile: '1' }
   }
   const req_params = {
     path: 'https://www.googleapis.com/drive/v3/files/',
     method: 'POST',
-    body,
+    body
   }
-  gapi.client.request(req_params).then(function (jsonResp, rawResp) {
+  gapi.client.request(req_params).then(function(jsonResp, rawResp) {
     if (jsonResp.status === 200) {
       success_cb(jsonResp.result.id)
     } else {
@@ -179,14 +188,14 @@ function create_new_file(fname, parent_dir_id, success_cb) {
     name: fname,
     parents: [parent_dir_id],
     appProperties: { wdfile: '1' },
-    mimeType: 'text/plain',
+    mimeType: 'text/plain'
   }
   const req_params = {
     path: 'https://www.googleapis.com/drive/v3/files',
     method: 'POST',
-    body,
+    body
   }
-  gapi.client.request(req_params).then(function (jsonResp, rawResp) {
+  gapi.client.request(req_params).then(function(jsonResp, rawResp) {
     if (jsonResp.status === 200) {
       success_cb(jsonResp.result.id)
     } else {
@@ -199,9 +208,9 @@ function upload_file_content(file_id, file_content, success_cb) {
   const req_params = {
     path: `https://www.googleapis.com/upload/drive/v3/files/${file_id}`,
     method: 'PATCH',
-    body: file_content,
+    body: file_content
   }
-  gapi.client.request(req_params).then(function (jsonResp, rawResp) {
+  gapi.client.request(req_params).then(function(jsonResp, rawResp) {
     if (jsonResp.status === 200) {
       success_cb()
     } else {
@@ -215,10 +224,10 @@ function fetch_file_content(file_id, success_cb) {
   const full_query_url = `https://www.googleapis.com/drive/v3/files/${file_id}?alt=media`
   gapi.client
     .request({ path: full_query_url, method: 'GET' })
-    .then(function (jsonResp, rawResp) {
+    .then(function(jsonResp, rawResp) {
       if (jsonResp.status !== 200) {
         report_sync_failure(
-          `Bad status: ${jsonResp.status} for getting content of file: ${file_id}`,
+          `Bad status: ${jsonResp.status} for getting content of file: ${file_id}`
         )
         return
       }
@@ -232,10 +241,10 @@ function find_gdrive_id(query, found_cb, not_found_cb) {
   const full_query_url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(query)}`
   gapi.client
     .request({ path: full_query_url, method: 'GET' })
-    .then(function (jsonResp, rawResp) {
+    .then(function(jsonResp, rawResp) {
       if (jsonResp.status !== 200) {
         report_sync_failure(
-          `Bad status: ${jsonResp.status} for query: ${query}`,
+          `Bad status: ${jsonResp.status} for query: ${query}`
         )
         return
       }
@@ -260,34 +269,34 @@ function apply_cloud_vocab(entries) {
     wd_user_vocabulary: entries,
     wd_user_vocab_added: {},
     wd_user_vocab_deleted: {},
-    wd_last_sync: sync_time,
+    wd_last_sync: sync_time
   }
-  chrome.storage.local.set(new_state, function () {
+  chrome.storage.local.set(new_state, function() {
     chrome.runtime.sendMessage({ sync_feedback: 1 })
   })
 }
 
 function sync_vocabulary(dir_id, vocab) {
-  const merge_and_upload_vocab = function (file_id, file_content) {
+  const merge_and_upload_vocab = function(file_id, file_content) {
     const vocab_list = parse_vocabulary(file_content)
     const entries = list_to_set(vocab_list)
     substract_from_set(entries, vocab.deleted)
     add_to_set(entries, vocab.added)
     const merged_content = serialize_vocabulary(entries)
 
-    const set_merged_vocab = function () {
+    const set_merged_vocab = function() {
       apply_cloud_vocab(entries)
     }
     upload_file_content(file_id, merged_content, set_merged_vocab)
   }
 
-  const merge_vocab_to_cloud = function (file_id) {
+  const merge_vocab_to_cloud = function(file_id) {
     fetch_file_content(file_id, merge_and_upload_vocab)
   }
 
   const vocab_file_name = `${vocab.name}.txt`
   const file_query = `name = '${vocab_file_name}' and trashed = false and appProperties has { key='wdfile' and value='1' } and '${dir_id}' in parents`
-  const create_new_file_wrap = function () {
+  const create_new_file_wrap = function() {
     create_new_file(vocab_file_name, dir_id, merge_vocab_to_cloud)
     const new_added = {}
     add_to_set(new_added, vocab.all)
@@ -298,7 +307,7 @@ function sync_vocabulary(dir_id, vocab) {
 }
 
 function backup_vocabulary(dir_id, vocab, success_cb) {
-  const merge_and_upload_backup = function (file_id, file_content) {
+  const merge_and_upload_backup = function(file_id, file_content) {
     const vocab_list = parse_vocabulary(file_content)
     const entries = list_to_set(vocab_list)
     add_to_set(entries, vocab.all)
@@ -307,32 +316,32 @@ function backup_vocabulary(dir_id, vocab, success_cb) {
     const merged_content = serialize_vocabulary(entries)
     upload_file_content(file_id, merged_content, success_cb)
   }
-  const merge_backup_to_cloud = function (file_id) {
+  const merge_backup_to_cloud = function(file_id) {
     fetch_file_content(file_id, merge_and_upload_backup)
   }
 
   const backup_file_name = `.${vocab.name}.backup`
   const backup_query = `name = '${backup_file_name}' and trashed = false and appProperties has { key='wdfile' and value='1' } and '${dir_id}' in parents`
-  const create_new_backup_file_wrap = function () {
+  const create_new_backup_file_wrap = function() {
     create_new_file(backup_file_name, dir_id, merge_backup_to_cloud)
   }
   find_gdrive_id(
     backup_query,
     merge_backup_to_cloud,
-    create_new_backup_file_wrap,
+    create_new_backup_file_wrap
   )
 }
 
 function perform_full_sync(vocab) {
   const dir_name = 'Words Discoverer Sync'
   const dir_query = `name = '${dir_name}' and trashed = false and appProperties has { key='wdfile' and value='1' }`
-  const backup_and_sync_vocabulary = function (dir_id) {
-    const sync_vocabulary_wrap = function () {
+  const backup_and_sync_vocabulary = function(dir_id) {
+    const sync_vocabulary_wrap = function() {
       sync_vocabulary(dir_id, vocab)
     }
     backup_vocabulary(dir_id, vocab, sync_vocabulary_wrap)
   }
-  const create_new_dir_wrap = function () {
+  const create_new_dir_wrap = function() {
     create_new_dir(dir_name, backup_and_sync_vocabulary)
   }
   find_gdrive_id(dir_query, backup_and_sync_vocabulary, create_new_dir_wrap)
@@ -341,7 +350,7 @@ function perform_full_sync(vocab) {
 function sync_user_vocabularies() {
   chrome.storage.local.get(
     ['wd_user_vocabulary', 'wd_user_vocab_added', 'wd_user_vocab_deleted'],
-    function (result) {
+    function(result) {
       let { wd_user_vocabulary } = result
       let { wd_user_vocab_added } = result
       let { wd_user_vocab_deleted } = result
@@ -358,10 +367,10 @@ function sync_user_vocabularies() {
         name: 'my_vocabulary',
         all: wd_user_vocabulary,
         added: wd_user_vocab_added,
-        deleted: wd_user_vocab_deleted,
+        deleted: wd_user_vocab_deleted
       }
       perform_full_sync(vocab)
-    },
+    }
   )
 }
 
@@ -369,21 +378,21 @@ function init_gapi(interactive_authorization) {
   const gapikey = generate_key()
   const init_params = { apiKey: gapikey }
   gapi.client.init(init_params).then(
-    function () {
+    function() {
       gapi_inited = true
       authorize_user(interactive_authorization)
     },
-    function (reject_reason) {
+    function(reject_reason) {
       const error_msg = `Unable to init client. Reject reason: ${reject_reason}`
       console.error(error_msg)
       report_sync_failure(error_msg)
-    },
+    }
   )
 }
 
 function load_and_init_gapi(interactive_authorization) {
-  load_script('https://apis.google.com/js/api.js', function () {
-    gapi.load('client', function () {
+  load_script('https://apis.google.com/js/api.js', function() {
+    gapi.load('client', function() {
       gapi_loaded = true
       init_gapi(interactive_authorization)
     })
@@ -393,7 +402,7 @@ function load_and_init_gapi(interactive_authorization) {
 function start_sync_sequence(interactive_authorization) {
   chrome.storage.local.set(
     { wd_last_sync_error: 'Unknown sync problem' },
-    function () {
+    function() {
       if (!gapi_loaded) {
         load_and_init_gapi(interactive_authorization)
       } else if (!gapi_inited) {
@@ -401,17 +410,17 @@ function start_sync_sequence(interactive_authorization) {
       } else {
         authorize_user(interactive_authorization)
       }
-    },
+    }
   )
 }
 
 function initialize_extension() {
   chrome.runtime.onMessage.addListener(
-    function (request, sender, sendResponse) {
+    function(request, sender, sendResponse) {
       if (request.type === 'fetch') {
         console.log('request', request)
         fetch(
-          `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${request.q}`,
+          `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${request.q}`
         )
           .then((response) => response.text())
           .then(sendResponse)
@@ -423,7 +432,7 @@ function initialize_extension() {
         const domain = url.hostname
         sendResponse({ wdm_hostname: domain })
       } else if (request.wdm_request === 'page_language') {
-        chrome.tabs.detectLanguage(sender.tab.id, function (iso_language_code) {
+        chrome.tabs.detectLanguage(sender.tab.id, function(iso_language_code) {
           sendResponse({ wdm_iso_language_code: iso_language_code })
         })
         return true // This is to indicate that sendResponse would be sent asynchronously and keep the message channel open, see https://developer.chrome.com/extensions/runtime#event-onMessage
@@ -431,53 +440,54 @@ function initialize_extension() {
         if (request.wdm_verdict === 'highlight') {
           chrome.storage.local.get(
             ['wd_gd_sync_enabled', 'wd_last_sync_error'],
-            function (result) {
+            function(result) {
               chrome.action.setIcon(
                 { path: '../assets/result48.png', tabId: sender.tab.id },
-                function () {
+                function() {
                   if (result.wd_gd_sync_enabled) {
                     if (result.wd_last_sync_error == null) {
                       chrome.action.setBadgeText({
                         text: 'sync',
-                        tabId: sender.tab.id,
+                        tabId: sender.tab.id
                       })
                       chrome.action.setBadgeBackgroundColor({
                         color: [25, 137, 0, 255],
-                        tabId: sender.tab.id,
+                        tabId: sender.tab.id
                       })
                     } else {
                       chrome.action.setBadgeText({
                         text: 'err',
-                        tabId: sender.tab.id,
+                        tabId: sender.tab.id
                       })
                       chrome.action.setBadgeBackgroundColor({
                         color: [137, 0, 0, 255],
-                        tabId: sender.tab.id,
+                        tabId: sender.tab.id
                       })
                     }
                   }
-                },
+                }
               )
-            },
+            }
           )
         } else if (request.wdm_verdict === 'keyboard') {
           chrome.action.setIcon({
             path: '../assets/no_dynamic.png',
-            tabId: sender.tab.id,
+            tabId: sender.tab.id
           })
         } else {
           chrome.action.setIcon({
             path: '../assets/result48_gray.png',
-            tabId: sender.tab.id,
+            tabId: sender.tab.id
           })
         }
       } else if (request.wdm_new_tab_url) {
         const fullUrl = request.wdm_new_tab_url
-        chrome.tabs.create({ url: fullUrl }, function (tab) {})
+        chrome.tabs.create({ url: fullUrl }, function(tab) {
+        })
       } else if (request.wdm_request === 'gd_sync') {
         start_sync_sequence(request.interactive_mode)
       }
-    },
+    }
   )
 
   chrome.storage.local.get(
@@ -493,9 +503,9 @@ function initialize_extension() {
       'wd_black_list',
       'wd_white_list',
       'wd_gd_sync_enabled',
-      'wd_enable_tts',
+      'wd_enable_tts'
     ],
-    function (result) {
+    function(result) {
       load_eng_dictionary()
       load_idioms()
       let { wd_hl_settings } = result
@@ -507,7 +517,7 @@ function initialize_extension() {
           useBackground: false,
           backgroundColor: 'rgb(255, 248, 220)',
           useColor: true,
-          color: 'red',
+          color: 'red'
         }
         const idiom_hl_params = {
           enabled: true,
@@ -516,11 +526,11 @@ function initialize_extension() {
           useBackground: false,
           backgroundColor: 'rgb(255, 248, 220)',
           useColor: true,
-          color: 'blue',
+          color: 'blue'
         }
         wd_hl_settings = {
           wordParams: word_hl_params,
-          idiomParams: idiom_hl_params,
+          idiomParams: idiom_hl_params
         }
         chrome.storage.local.set({ wd_hl_settings })
       }
@@ -560,17 +570,17 @@ function initialize_extension() {
       if (typeof white_list === 'undefined') {
         chrome.storage.local.set({ wd_white_list: {} })
       }
-    },
+    }
   )
 
   chrome.runtime.onMessage.addListener(
-    function (request, sender, sendResponse) {
+    function(request, sender, sendResponse) {
       if ((request.type = 'tts_speak')) {
         if (!!request.word && typeof request.word === 'string') {
           chrome.tts.speak(request.word, { lang: 'en', gender: 'male' })
         }
       }
-    },
+    }
   )
 }
 
