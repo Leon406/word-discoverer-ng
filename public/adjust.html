@@ -35,14 +35,16 @@
         display: inline-block;
         background-color: rgb(255, 248, 220);
         margin: 4px 8px;
-        width: 200px;
+        padding-left: 8px;
+        width: 192px;
         line-height: 25px;
         font-size: 12px;
       }
       .existingDictUrl {
         background-color: rgb(255, 248, 220);
         margin: 4px 8px;
-        width: 300px;
+        width: 292px;
+        padding-left: 8px;
         line-height: 25px;
         border: none;
         font-size: 12px;
@@ -62,12 +64,12 @@
         font-size: 12px;
       }
       .cbLabel {
-        vertical-align: middle;
+        vertical-align: center;
         font-size: 14px;
         padding: 2px;
       }
       .cbHeaderLabel {
-        vertical-align: middle;
+        vertical-align: center;
         padding: 2px;
         font-size: 14px;
       }
@@ -159,6 +161,13 @@
         font-size: 14px;
         margin: 4px 20px;
       }
+      .hidden {
+          display: none;
+      }
+      .radioBlock input[type=radio],#adjustPronunciationSection input[type=checkbox]{
+          position: relative;
+          top: 2px;
+      }
     </style>
     <title>Advanced Settings</title>
     <script src="./js/adjust.js"></script>
@@ -184,7 +193,7 @@
       <br />
     </fieldset>
     <br />
-    <fieldset>
+    <fieldset class="hidden">
       <span class="smallHeader">Backup and sync with Google Drive.</span
       ><a href="example.com" target="_blank" id="moreInfoLink">More Info</a>
       <br />
