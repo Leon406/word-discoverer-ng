@@ -1,26 +1,29 @@
-Bob's your uncle	Bob's your uncle
+Bob’s your uncle	Bob’s your uncle
 God in heaven	God in heaven
 God rest her soul	God rest her soul
 God rest his soul	God rest his soul
-God's gift to	God's gift to
+God willing	God willing
+God’s gift to	God’s gift to
+Hell’s teeth	Hell’s teeth
 I ask you	I ask you
+I beg your pardon	I beg your pardon
+I can hardly wait	I can hardly wait
 I can promise you	I can promise you
 I can tell you	I can tell you
-I can't can hardly wait	I can't can hardly wait
-I can't take anywhere	I can't take anywhere
-I can't wait hardly wait	I can't wait hardly wait
+I can’t take anywhere	I can’t take anywhere
+I can’t wait	I can hardly wait
 I could eat a horse	I could eat a horse
 I could use	I could use
-I couldn't give a monkey's	I couldn't give a monkey's
+I couldn’t give a monkey’s	I couldn’t give a monkey’s
 I dare say	I dare say
-I don't blame her	I don't blame her
-I don't blame you	I don't blame you
-I don't give a monkey's	I don't give a monkey's
-I don't mind admitting	I don't mind admitting
-I don't mind if I do	I don't mind if I do
-I don't think so	I don't think so
+I don’t blame her	I don’t blame her
+I don’t blame you	I don’t blame you
+I don’t give a monkey’s	I don’t give a monkey’s
+I don’t mind admitting	I don’t mind admitting
+I don’t mind if I do	I don’t mind if I do
+I don’t think so	I don’t think so
 I give you that	I give you that
-I hear what you're saying	I hear what you're saying
+I hear what you’re saying	I hear what you’re saying
 I like to think	I like to think
 I must say	I must say
 I promise you	I promise you
@@ -34,22 +37,31 @@ I tip my hat to	I tip my hat to
 I told you so	I told you so
 I warrant you	I warrant you
 I would just as soon do	I would just as soon do
-I wouldn't mind	I wouldn't mind
-I wouldn't put it past	I wouldn't put it past
-I wouldn't say no	I wouldn't say no
-I'd like to think	I'd like to think
-I'll drink to that	I'll drink to that
-I'll eat my hat	I'll eat my hat
-I'll give you that	I'll give you that
-I'll tell you what	I'll tell you what
-I'll thank you for do	I'll thank you for do
-I'll warrant you	I'll warrant you
-I'm glad to say	I'm glad to say
-I'm sorry to say	I'm sorry to say
-I'm telling you	I'm telling you
-I've only got one pair of hands	I've only got one pair of hands
-It's a long story.	It's a long story.
-Rome wasn't built in a day	Rome wasn't built in a day
+I wouldn’t mind	I wouldn’t mind
+I wouldn’t put it past	I wouldn’t put it past
+I wouldn’t say no	I wouldn’t say no
+It’s a long story.	It’s a long story.
+I’d like to think	I’d like to think
+I’ll be bound	I’ll be bound
+I’ll be buggered	I’ll be buggered
+I’ll be damned	I’ll be damned
+I’ll be darned	I’ll be darned
+I’ll drink to that	I’ll drink to that
+I’ll eat my hat	I’ll eat my hat
+I’ll give you that	I’ll give you that
+I’ll tell you what	I’ll tell you what
+I’ll thank you for do	I’ll thank you for do
+I’ll warrant you	I’ll warrant you
+I’m afraid	I’m afraid
+I’m easy	I’m easy
+I’m glad to say	I’m glad to say
+I’m sorry to say	I’m sorry to say
+I’m telling you	I’m telling you
+I’ve only got one pair of hands	I’ve only got one pair of hands
+My arse	My arse
+Rome wasn’t built in a day	Rome wasn’t built in a day
+Yours sincerely	Yours sincerely
+a babe in arms	a babe in arms
 a backhanded compliment	a backhanded compliment
 a bad apple	a bad apple
 a bad egg	a bad egg
@@ -67,7 +79,7 @@ a big ask	a big ask
 a big cheese	a big cheese
 a big fish	a big fish
 a big fish in a small pond	a big fish in a small pond
-a big girl's blouse	a big girl's blouse
+a big girl’s blouse	a big girl’s blouse
 a big name	a big name
 a big noise	a big noise
 a big shot	a big shot
@@ -97,7 +109,7 @@ a bright spark	a bright spark
 a bright spot	a bright spot
 a broad church	a broad church
 a bull in a china shop	a bull in a china shop
-a buyer's market	a buyer's market
+a buyer’s market	a buyer’s market
 a call to arms	a call to arms
 a can of worms	a can of worms
 a canary in a coal mine	a canary in a coal mine
@@ -121,6 +133,8 @@ a close call	a close call
 a close shave	a close shave
 a close thing	a close thing
 a closed book	a closed book
+public knowledge	public knowledge
+common knowledge	public knowledge
 a cog in the machine	a cog in the machine
 a cog in the wheel	a cog in the wheel
 a cold fish	a cold fish
@@ -132,7 +146,9 @@ a crashing bore	a crashing bore
 a crock of gold	a crock of gold
 a crock of shit	a crock of shit
 a crying need	a crying need
-a curate's egg	a curate's egg
+a crying shame	a crying shame
+a curate’s egg	a curate’s egg
+a cushy number	a cushy number
 a cut above	a cut above
 a damn sight too good	a damn sight too good
 a damp squib	a damp squib
@@ -147,13 +163,14 @@ a devil of a time	a devil of a time
 a different ball game	a different ball game
 a different kettle of fish	a different kettle of fish
 a dime a dozen	a dime a dozen
+a disaster waiting to happen	a disaster waiting to happen
 a distinction without a difference	a distinction without a difference
 a dive for	a dive for
 a dog and pony show	a dog and pony show
 a dog in the manger	a dog in the manger
-a dog's breakfast	a dog's breakfast
-a dog's dinner	a dog's dinner
-a dog's life	a dog's life
+a dog’s breakfast	a dog’s breakfast
+a dog’s dinner	a dog’s dinner
+a dog’s life	a dog’s life
 a done deal	a done deal
 a dose of your own medicine	a dose of your own medicine
 a drop in the bucket	a drop in the bucket
@@ -212,8 +229,9 @@ a heavy atmosphere	a heavy atmosphere
 a heavy heart	a heavy heart
 a heavy silence	a heavy silence
 a high profile	a high profile
+a hill of beans	a hill of beans
 a home from home	a home from home
-a hornets' nest	a hornets' nest
+a hornets’ nest	a hornets’ nest
 a hostage to fortune	a hostage to fortune
 a huge ask	a huge ask
 a hundred per cent	a hundred per cent
@@ -223,7 +241,8 @@ a journey of a thousand miles begins with a single step	a journey of a thousand 
 a kick in the pants the backside	a kick in the pants the backside
 a kick in the teeth	a kick in the teeth
 a kick in the up the backside	a kick in the up the backside
-a king's ransom	a king's ransom
+a kind of	a kind of
+a king’s ransom	a king’s ransom
 a knight in shining armour	a knight in shining armour
 a labor of love	a labor of love
 a labour of love	a labour of love
@@ -232,6 +251,7 @@ a lamb to the slaughter	a lamb to the slaughter
 a lambs to the slaughter	a lambs to the slaughter
 a last Monday	a last Monday
 a last resort	a last resort
+a law unto yourself	a law unto yourself
 a leap in the dark	a leap in the dark
 a leap of faith	a leap of faith
 a lease of life	a lease of life
@@ -262,9 +282,9 @@ a man of substance	a man of substance
 a man of the cloth	a man of the cloth
 a man of the people	a man of the people
 a man of the world	a man of the world
-a man's home is his castle	a man's home is his castle
-a man's man	a man's man
-a mare's nest	a mare's nest
+a man’s home is his castle	a man’s home is his castle
+a man’s man	a man’s man
+a mare’s nest	a mare’s nest
 a marked man	a marked man
 a marked woman	a marked woman
 a matter of course	a matter of course
@@ -290,7 +310,7 @@ a monkey wrench into	a monkey wrench into
 a month of Sundays	a month of Sundays
 a moot point	a moot point
 a moot question	a moot question
-a mug's game	a mug's game
+a mug’s game	a mug’s game
 a nail in coffin	a nail in coffin
 a name to conjure with	a name to conjure with
 a name to reckon with	a name to reckon with
@@ -304,7 +324,7 @@ a new kid on the block	a new kid on the block
 a new lease of life	a new lease of life
 a new one on me	a new one on me
 a night out	a night out
-a nine days' wonder	a nine days' wonder
+a nine days’ wonder	a nine days’ wonder
 a nod and a wink	a nod and a wink
 a nod to	a nod to
 a nothing going for you	a nothing going for you
@@ -347,6 +367,7 @@ a pregnant silence	a pregnant silence
 a pretty penny	a pretty penny
 a price on head	a price on head
 a prodigal son	a prodigal son
+a queer fish	a queer fish
 a question mark against	a question mark against
 a question mark over	a question mark over
 a race against the clock	a race against the clock
@@ -369,7 +390,7 @@ a rough deal	a rough deal
 a rule of thumb	a rule of thumb
 a safe pair of hands	a safe pair of hands
 a second childhood	a second childhood
-a seller's market	a seller's market
+a seller’s market	a seller’s market
 a sense of occasion	a sense of occasion
 a share of the cake	a share of the cake
 a share of the pie	a share of the pie
@@ -399,6 +420,7 @@ a slip of the tongue	a slip of the tongue
 a slippery slope	a slippery slope
 a snake in the grass	a snake in the grass
 a soft option	a soft option
+a soft touch	a soft touch
 a song and dance	a song and dance
 a sore point	a sore point
 a spanner in the works	a spanner in the works
@@ -417,9 +439,8 @@ a sticky wicket	a sticky wicket
 a stiff upper lip	a stiff upper lip
 a still small voice	a still small voice
 a sting in the tail	a sting in the tail
-a stitch in time	a stitch in time
 a stitch in time saves nine	a stitch in time saves nine
-a stone's throw	a stone's throw
+a stone’s throw	a stone’s throw
 a stopped clock is right twice a day	a stopped clock is right twice a day
 a storm in a teacup	a storm in a teacup
 a straight face	a straight face
@@ -472,8 +493,8 @@ a whole lot	a whole lot
 a whole new ball game	a whole new ball game
 a whole nother	a whole nother
 a wind winds of change	a wind winds of change
-a witch's evil brew	a witch's evil brew
-a wolf in sheep's clothing	a wolf in sheep's clothing
+a witch’s evil brew	a witch’s evil brew
+a wolf in sheep’s clothing	a wolf in sheep’s clothing
 a woman after your own heart	a woman after your own heart
 a woman of many parts	a woman of many parts
 a woman of parts	a woman of parts
@@ -491,12 +512,14 @@ above and beyond	above and beyond
 above the fold	above the fold
 above the law	above the law
 above the line	above the line
+above yourself	above yourself
 absence makes the heart grow fonder	absence makes the heart grow fonder
 absolute monarchy	absolute monarchy
 accidents will happen	accidents will happen
 according to lights	according to lights
 ace in the hole	ace in the hole
 acquired taste	acquired taste
+across country	across country
 across the board	across the board
 across the way	across the way
 act as if you own the place	act as if you own the place
@@ -513,20 +536,24 @@ ad nauseum	ad nauseum
 add insult to injury	add insult to injury
 adds up	adds up
 after a fashion	after a fashion
+after all	after all
 after taste	after taste
 after the event	after the event
 after the fact	after the fact
 again and again	again and again
 against all odds	against all odds
+against nature	against nature
 against the clock	against the clock
 against the grain	against the grain
 against the law	against the law
+against time	against time
 agree to differ	agree to differ
 agree to disagree	agree to disagree
 ahead of the curve	ahead of the curve
 ahead of the game	ahead of the game
 ahead of time	ahead of time
 ahead of your time	ahead of your time
+aid and abet	aid and abet
 air duct	air duct
 air ducts	air duct
 air hockey	air hockey
@@ -540,13 +567,16 @@ airs and graces	airs and graces
 al dente	al dente
 alive and kicking	alive and kicking
 alive and well	alive and well
+all along	all along
 all and sundry	all and sundry
+all around	all round
 all at once	all at once
 all bets are off	all bets are off
 all but certain	all but certain
 all caps	all caps
 all ears	all ears
 all else being equal	all else being equal
+all found	all found
 all good things come to an end	all good things come to an end
 all grist to mill	all grist to mill
 all grist to the mill	all grist to the mill
@@ -555,17 +585,25 @@ all hands on deck	all hands on deck
 all hell breaks loose	all hell breaks loose
 all hell broke loose	all hell broke loose
 all hot and bothered	all hot and bothered
+all hours	all hours
+all in all	all in all
+all in one	all in one
 all is not lost	all is not lost
 all kinds of	all kinds of
 all of a piece	all of a piece
 all of a sudden	all of a sudden
 all on your lonesome	all on your lonesome
 all on your own	all on your own
+all over bar the shouting	all over bar the shouting
+all over the shop	all over the shop
 all present and correct	all present and correct
+all round	all round
+all smiles	all smiles
 all systems go	all systems go
 all that glistens is not gold	all that glisters is not gold
 all that glisters is not gold	all that glisters is not gold
 all that glitters is not gold	all that glisters is not gold
+all the best	all the best
 all the harder	all the harder
 all the more	all the more
 all the same	all the same
@@ -585,12 +623,15 @@ all to the good	all to the good
 all to themselves	all to themselves
 all to yourself	all to yourself
 all to yourselves	all to yourselves
+all told	all told
 all very well	all very well
 all well and good	all well and good
+all wet	all wet
 all work and no play	all work and no play
-all's fair in love and war	all's fair in love and war
 allow free rein	allow free rein
 allow full rein	allow full rein
+allow me	allow me
+all’s fair in love and war	all’s fair in love and war
 alma mater	alma mater
 almost upon you	almost upon you
 aloe vera	aloe vera
@@ -605,11 +646,8 @@ alternate history	alternate history
 always the way	always the way
 amateur hour	amateur hour
 among other things	among other things
-an Englishman's home is his castle	an Englishman's home is his castle
-an a disaster waiting to happen	an a disaster waiting to happen
-an a queer fish	an a queer fish
-an a soft touch	an a soft touch
-an accident disaster waiting to happen	an accident disaster waiting to happen
+an Englishman’s home is his castle	an Englishman’s home is his castle
+an accident waiting to happen	an accident waiting to happen
 an ace in the hole	an ace in the hole
 an ace up your sleeve	an ace up your sleeve
 an acquired taste	an acquired taste
@@ -628,7 +666,7 @@ an iron fist	an iron fist
 an iron hand	an iron hand
 an odd queer fish	an odd queer fish
 an old head on young shoulders	an old head on young shoulders
-an old wives' tale	an old wives' tale
+an old wives’ tale	an old wives’ tale
 an open book	an open book
 an open invitation	an open invitation
 an soft option	an soft option
@@ -640,8 +678,8 @@ and about time too	and about time too
 and all that	and all that
 and all the rest of it	and all the rest of it
 and be done with it	and be done with it
-and don't forget it	and don't forget it
-and don't you forget it	and don't you forget it
+and don’t forget it	and don’t forget it
+and don’t you forget it	and don’t you forget it
 and no mistake	and no mistake
 and so forth	and so forth
 and so on	and so on
@@ -668,8 +706,10 @@ any port in a storm	any port in a storm
 any press is good press	any press is good press
 any time now	any time now
 any way you slice it	any way you slice it
+anything but	anything but
 anything can happen	anything can happen
 anything might happen	anything might happen
+anytime soon	anytime soon
 apex predator	apex predator
 appeal to authority	appeal to authority
 appeal to emotion	appeal to emotion
@@ -677,6 +717,7 @@ apples and oranges	apples and oranges
 argue the toss	argue the toss
 argumentum ad populum	argumentum ad populum
 armed to the teeth	armed to the teeth
+arms akimbo	with arms akimbo
 arms race	arms race
 around the clock	around the clock
 around the corner	around the corner
@@ -693,6 +734,7 @@ as a rule	as a rule
 as a whole	as a whole
 as all get out	as all get out
 as all hell	as all hell
+as always	as always
 as and when	as and when
 as bald as a coot	as bald as a coot
 as blind as a bat	as blind as a bat
@@ -703,6 +745,7 @@ as clean as a whistle	as clean as a whistle
 as clean as the driven snow	as clean as the driven snow
 as clear as day	as clear as day
 as clear as mud	as clear as mud
+as cool as a cucumber	cool as a cucumber
 as dead as a dodo	as dead as a dodo
 as dead as a doornail	as dead as a doornail
 as dead as the dodo	as dead as the dodo
@@ -719,11 +762,18 @@ as far as I know	as far as I know
 as far as is concerned	as far as is concerned
 as far as it goes	as far as it goes
 as far as the eye can see	as far as the eye can see
-as far as the eye could see	as far as the eye could see
+as far as the eye could see	as far as the eye can see
 as fast as your legs can carry you	as fast as your legs can carry you
 as fit as a fiddle	as fit as a fiddle
 as flat as a pancake	as flat as a pancake
 as good as	as good as
+all eyes	all eyes
+feel good	feel good
+on the fiddle	on the fiddle
+feeling good	feel good
+felt good	feel good
+fair go	fair go
+Is that a fact	Is that a fact
 as happy as anything	as happy as anything
 as hard as nails	as hard as nails
 as if to the manner born	as if to the manner born
@@ -776,6 +826,7 @@ as soon as possible	as soon as possible
 as steady as a rock	as steady as a rock
 as straight as a ramrod	as straight as a ramrod
 as sure as eggs is eggs	as sure as eggs is eggs
+as the case may be	as the case may be
 as the crow flies	as the crow flies
 as the fancy takes you	as the fancy takes you
 as the next guy	as the next guy
@@ -786,15 +837,20 @@ as thick as thieves	as thick as thieves
 as thick as two short planks	as thick as two short planks
 as things go	as things go
 as things turned out	as things turned out
+as though	as though
 as tough as nails	as tough as nails
 as tough as old boots	as tough as old boots
 as ugly as sin	as ugly as sin
+as usual	as usual
 as we speak	as we speak
 as well as	as well as
+as yet	as yet
 as you do	as you do
 as you know	as you know
 ask for it	ask for it
 ask for the moon	ask for the moon
+asking for it	asking for trouble
+asking for trouble	asking for trouble
 asleep at the switch	asleep at the switch
 asleep at the wheel	asleep at the wheel
 asleep on the job	asleep on the job
@@ -818,7 +874,7 @@ at a lick	at a lick
 at a loose end	at a loose end
 at a loss	at a loss
 at a low ebb	at a low ebb
-at a moment's notice	at a moment's notice
+at a moment’s notice	at a moment’s notice
 at a pinch	at a pinch
 at a premium	at a premium
 at a price	at a price
@@ -827,7 +883,7 @@ at a rate of knots	at a rate of knots
 at a single glance	at a single glance
 at a single go	at a single go
 at a single stroke	at a single stroke
-at a snail's pace	at a snail's pace
+at a snail’s pace	at a snail’s pace
 at a steady clip	at a steady clip
 at a stroke	at a stroke
 at a tender age	at a tender age
@@ -843,11 +899,13 @@ at any minute	at any minute
 at any moment	at any moment
 at any price	at any price
 at any rate	at any rate
+at bat	at bat
 at bay	at bay
 at close quarters	at close quarters
 at close range	at close range
 at daggers drawn	at daggers drawn
-at death's door	at death's door
+at death’s door	at death’s door
+at ease	stand at ease
 at every turn	at every turn
 at face value	at face value
 at first glance	at first glance
@@ -856,26 +914,47 @@ at first sight	at first sight
 at full blast	at full blast
 at full pelt	at full pelt
 at full steam	at full steam
+put your best foot forward	put your best foot forward
+lie flat	lie flat
+lies flat	lie flat
+lay flat	lie flat
+lain flat	lie flat
+lying flat	lie flat
+go flying	go flying
+going flying	go flying
+goes flying	go flying
+gone flying	go flying
+went flying	go flying
 at full stretch	at full stretch
 at full throttle	at full throttle
 at full tilt	at full tilt
+at gunpoint	at gunpoint
 at half mast	at half mast
 at his time of life	at his time of life
+at it again	at it again
+at knifepoint	at knifepoint
+at large	at large
+at least	at least
+at leisure	at leisure
 at loggerheads over	at loggerheads over
 at loggerheads with	at loggerheads with
 at long last	at long last
 at my time of life	at my time of life
 at no time	at no time
 at odds	at odds
+at once	at once
 at one fell swoop	at one fell swoop
 at one go	at one go
 at one stroke	at one stroke
 at one with	at one with
+at random	at random
 at risk to	at risk to
 at risk to yourself	at risk to yourself
 at second hand	at second hand
 at short notice	at short notice
 at sixes and sevens	at sixes and sevens
+at source	at source
+at stake	at stake
 at that rate	at that rate
 at the back of your mind	at the back of your mind
 at the best of times	at the best of times
@@ -913,16 +992,22 @@ at third hand	at third hand
 at this moment in time	at this moment in time
 at this point in time	at this point in time
 at this rate	at this rate
+at times	at times
 at variance with	at variance with
+at will	at will
+at work	at work
 at your command	at your command
 at your disposal	at your disposal
 at your earliest convenience	at your earliest convenience
 at your ease	at your ease
 at your leisure	at your leisure
-at your mother's knee	at your mother's knee
+at your mother’s knee	at your mother’s knee
 at your pleasure	at your pleasure
 at your service	at your service
 at your time of life	at your time of life
+at your wits’ end	at your wits’ end
+ate crow	eat crow
+ate dirt	eat dirt
 atomic number	atomic number
 attention span	attention span
 attention whore	attention whore
@@ -993,6 +1078,7 @@ bargain bin	bargain bin
 bargaining chip	bargaining chip
 bargaining power	bargaining power
 bark is worse than their bite	bark is worse than their bite
+barking up the wrong tree	barking up the wrong tree
 barrel roll	barrel roll
 base jumping	base jumping
 basic bitch	basic bitch
@@ -1011,26 +1097,47 @@ be right back	be right back
 be that as it may	be that as it may
 be the case	be the case
 be the way to go	be the way to go
+be upstanding	be upstanding
+be yourself	be yourself
+bear arms	bear arms
+bear fruit	bear fruit
 bear in mind	bear in mind
+beat a dead horse	beat a dead horse
+beat about the bush	beat about the bush
 beat around the bush	beat around the bush
+beat it	beat it
+beat the clock	beat the clock
+beat the rap	beat the rap
+beat your brains out	beat your brains out
+beat your breast	beat your breast
 beauty is in the eye of the beholder	beauty is in the eye of the beholder
 bedroom eyes	bedroom eyes
 bedside manner	bedside manner
 bedtime story	bedtime story
 beer pong	beer pong
 before long	before long
+before you know where you are	before you know where you are
+beg the question	beg the question
 beg to differ	beg to differ
+beggars can’t be choosers	beggars can’t be choosers
 behind bars	behind bars
 behind closed doors	behind closed doors
 behind the curve	behind the curve
 behind the scenes	behind the scenes
 behind the times	behind the times
+belabour the point	belabour the point
 believe it or not	believe it or not
 bell curve	bell curve
 bells and whistles	bells and whistles
 belly button	belly button
+below stairs	below stairs
 below the belt	below the belt
+below the fold	below the fold
+below the line	below the line
+belt and braces	belt and braces
 bend the rules	bend the rules
+bend the truth	bend the truth
+beneath your dignity	beneath your dignity
 benefit of the doubt	benefit of the doubt
 beside the point	beside the point
 best case scenario	best case scenario
@@ -1041,11 +1148,21 @@ better safe than sorry	better safe than sorry
 better than nothing	better than nothing
 better the devil you know	better the devil you know
 between a rock and a hard place	between a rock and a hard place
+between jobs	between jobs
+between the devil and the deep blue sea	between the devil and the deep blue sea
+betwixt and between	betwixt and between
+beyond belief	beyond belief
 beyond reasonable doubt	beyond reasonable doubt
+beyond recall	beyond recall
 beyond the pale	beyond the pale
+beyond your ken	beyond your ken
 bide your time	bide your time
+big bickies	big bickies
+big bikkies	big bikkies
 big data	big data
+big deal	big deal
 big league	big league
+big mo	the big mo
 big pharma	big pharma
 big toe	big toe
 bigger fish to fry	bigger fish to fry
@@ -1084,13 +1201,16 @@ blaze a trail	blaze a trail
 bleeding edge	bleeding edge
 bleeding heart	bleeding heart
 blend into the woodwork	blend into the woodwork
+bless you	bless you
 blessing in disguise	blessing in disguise
 blind as a bat	blind as a bat
 blind date	blind date
+blind drunk	blind drunk
 blind spot	blind spot
 blind spots	blind spot
 blind with science	blind with science
 blinker fluid	blinker fluid
+blissful ignorance	blissful ignorance
 block chain	block chain
 block diagram	block diagram
 block diagrams	block diagram
@@ -1100,9 +1220,11 @@ blood moon	blood moon
 blood transfusion	blood transfusion
 blood work	blood work
 bloody mary	bloody mary
+bloody well	bloody well
 blot your copybook	blot your copybook
 blow a fuse	blow a fuse
 blow brains out	blow brains out
+blow chunks	blow chunks
 blow hot and cold	blow hot and cold
 blow off steam	blow off steam
 blow out of the water	blow out of the water
@@ -1163,9 +1285,13 @@ born and bred	born and bred
 born with a silver spoon in your mouth	born with a silver spoon in your mouth
 bossa nova	bossa nova
 both guns blazing	both guns blazing
+bottle it	bottle it
 bottom line	bottom line
 bottom of the barrel	bottom of the barrel
 bottom of the pile	bottom of the pile
+bottoms up	bottoms up
+bought time	buy time
+bouncing off the walls	bouncing off the walls
 bound and determined	bound and determined
 bound for	bound for
 bound up with	bound up with
@@ -1176,32 +1302,43 @@ bow down	bow down
 bow out	bow out
 bowel movement	bowel movement
 bowl cut	bowl cut
+box clever	box clever
 box office	box office
 boxer briefs	boxer briefs
 boxing day	boxing day
 boy band	boy band
 boy scout	boy scout
 boy scouts	boy scout
+boys will be boys	boys will be boys
 bragging rights	bragging rights
 brain drain	brain drain
 brand new	brand new
 brass knuckles	brass knuckles
 brass monkey weather	brass monkey weather
+brass monkeys	brass monkeys
+brass neck	brass neck
 brass ring	brass ring
+brass tacks	brass tacks
 brave new world	brave new world
 brazen it out	brazen it out
 bread and circuses	bread and circuses
+break a leg	break a leg
+break cover	break cover
 break even	break even
 break faith with	break faith with
+break ground	break ground
 break loose	break loose
 break loose from	break loose from
 break new ground	break new ground
 break of dawn	break of dawn
 break of day	break of day
+break step	break step
+break sweat	break sweat
 break the ice	break the ice
 break the mold	break the mould
 break the mould	break the mould
 break the news	break the news
+break wind	break wind
 breaking news	breaking news
 breath of fresh air	breath of fresh air
 breathe down neck	breathe down neck
@@ -1234,6 +1371,7 @@ bring in its train	bring in its train
 bring into effect	bring into effect
 bring into force	bring into force
 bring into line	bring into line
+bring it	bring it
 bring out the worst in	bring out the worst in
 bring the curtain down on	bring the curtain down on
 bring the house down	bring the house down
@@ -1256,11 +1394,14 @@ bring up short	bring up short
 bring up the rear	bring up the rear
 broad daylight	broad daylight
 broad strokes	broad strokes
+broke ground	break ground
+broken ground	break ground
 broken heart	broken heart
 bronze age	bronze age
 bros before hoes	bros before hoes
 bros before hos	bros before hos
 brother in law	brother in law
+brought low	brought low
 browned off with	browned off with
 bubble gum	bubble gum
 bubble wrap	bubble wrap
@@ -1268,9 +1409,14 @@ buck your ideas up	buck your ideas up
 bucket list	bucket list
 buckle down	buckle down
 buckle up	buckle up
+bugger me	bugger me
 bugger off	bugger off
 build castles in the air	build castles in the air
 built like a tank	built like a tank
+bulk large	bulk large
+bulked large	bulk large
+bulking large	bulk large
+bulks large	bulk large
 bullet point	bullet point
 bullet points	bullet point
 bully for you	bully for you
@@ -1294,9 +1440,9 @@ bury your head in the sand	bury your head in the sand
 business as usual	business as usual
 business is business	business is business
 bust a gut	bust a gut
-bust out some move	bust a move
-bust out a move	bust a move
 bust a move	bust a move
+bust out a move	bust a move
+bust out some move	bust a move
 bust some moves	bust a move
 bust your ass	bust your ass
 bust your butt	bust your butt
@@ -1304,18 +1450,23 @@ bust your chops	bust your chops
 bust your hump	bust your hump
 busy work	busy work
 but then again	but then again
-butter wouldn't melt	butter wouldn't melt
+butter wouldn’t melt	butter wouldn’t melt
 butterfly effect	butterfly effect
 butterfly knife	butterfly knife
+button it	button it
 buy a pig in a poke	buy a pig in a poke
 buy back the farm	buy back the farm
 buy the farm	buy the farm
+buy time	buy time
+buys time	buy time
 buzz cut	buzz cut
+by Jove	by Jove
 by a long shot	by a long shot
 by a long way	by a long way
 by a neck	by a neck
 by a nose	by a nose
 by a whisker	by a whisker
+by accident	by accident
 by all accounts	by all accounts
 by all means	by all means
 by and by	by and by
@@ -1323,12 +1474,21 @@ by and large	by and large
 by any chance	by any chance
 by any means	by any means
 by any stretch of the imagination	by any stretch of the imagination
-by comparison with	by comparison with
+by choice	by choice
+by comparison	by comparison
+by default	by default
+by degrees	by degrees
+by extension	by extension
 by fair means or foul	by fair means or foul
 by false pretences	by false pretences
+by far	by far
 by fits and starts	by fits and starts
+by gum	by gum
+by heart	off by heart
 by hook or by crook	by hook or by crook
+by jingo	by jingo
 by leaps and bounds	by leaps and bounds
+by name	by name
 by no means	by no means
 by no stretch of the imagination	by no stretch of the imagination
 by popular demand	by popular demand
@@ -1348,6 +1508,7 @@ by the time	by the time
 by the way	by the way
 by trade	by trade
 by virtue of	by virtue of
+by water	by water
 by way of	by way of
 by word of mouth	by word of mouth
 by your leave	by your leave
@@ -1355,6 +1516,9 @@ by your lonesome	by your lonesome
 by your own account	by your own account
 bystander effect	bystander effect
 cake walk	cake walk
+in the catbird seat	in the catbird seat
+you can’t be too careful	you can’t be too careful
+the calm before the storm	the calm before the storm
 call a spade a spade	call a spade a spade
 call it a day	call it a day
 call it a night	call it a night
@@ -1368,17 +1532,19 @@ call to arms	call to arms
 call to mind	call to mind
 call to order	call to order
 call to prayer	call to prayer
+came true	come true
+came unglued	come unglued
 camel toe	camel toe
 can haz	can haz
 can of worms	can of worms
 can take it or leave it	can take it or leave it
 can whistle for	can whistle for
-can't do for toffee	can't do for toffee
-can't get over	can't get over
 cannon fodder	cannon fodder
 cannot help but do	cannot help but do
 cannot hold a candle to	cannot hold a candle to
 can’t be bad	can’t be bad
+can’t do for toffee	can’t do for toffee
+can’t get over	can’t get over
 capital punishment	capital punishment
 car of the year	car of the year
 carbon copy	carbon copy
@@ -1408,6 +1574,7 @@ case sensitive	case sensitive
 case study	case study
 case the joint	case the joint
 cash cow	cash cow
+cash down	cash down
 cash grab	cash grab
 cash in hand	cash in hand
 cash in your chips	cash in your chips
@@ -1433,6 +1600,7 @@ cat ladies	cat lady
 cat lady	cat lady
 cat tree	cat tree
 catch a cold	catch a cold
+catch it	catch it
 catch off balance	catch off balance
 catch on the back foot	catch on the back foot
 catch on the hop	catch on the hop
@@ -1445,6 +1613,7 @@ catch your breath	catch your breath
 catch your death	catch your death
 categorical imperative	categorical imperative
 caught in the cross hairs	caught in the cross hairs
+caught short	caught short
 cause a splash	cause a splash
 cause and effect	cause and effect
 cautionary tale	cautionary tale
@@ -1457,7 +1626,9 @@ chain of command	chain of command
 chalk and cheese	chalk and cheese
 chalk up to experience	chalk up to experience
 champing at the bit	champing at the bit
+chance would be a fine thing	chance would be a fine thing
 chance your arm	chance your arm
+change hands	change hands
 change horses in midstream	change horses in midstream
 change of heart	change of heart
 change places with	change places with
@@ -1469,13 +1640,35 @@ chapter and verse	chapter and verse
 character assassination	character assassination
 charge the earth	charge the earth
 charge top dollar	charge top dollar
-chase your own tail	chase your own tail
+charity begins at home	charity begins at home
+chase your own tail	chase your tail
 chase your tail	chase your tail
 chattel slavery	chattel slavery
 cheap at the price	cheap at the price
+play chicken	play chicken
+at home	at home
+hop it	hop it
+on ice	on ice
+if I were you	if I were you
+if anything	if anything
+in the hunt	in the hunt
+keep house	keep house
+kept house	keep house
+keeping house	keep house
+keeps house	keep house
+hopping mad	hopping mad
+hopped it	hop it
+play hookey	play hookey
+play hooky	play hookey
+plays chicken	play chicken
+played chicken	play chicken
+playing chicken	play chicken
 cheap shot	cheap shot
+going cheap	going cheap
 cheat day	cheat day
+cheat death	cheat death
 cheat sheet	cheat sheet
+cheated death	cheat death
 cheaters never prosper	cheaters never prosper
 check box	check box
 check boxes	check box
@@ -1493,6 +1686,7 @@ chicken coop	chicken coop
 chicken out	chicken out
 chicken pox	chicken pox
 chicken wire	chicken wire
+child’s play	child’s play
 chime in	chime in
 chimed in	chime in
 chimes in	chime in
@@ -1525,9 +1719,8 @@ claim to fame	claim to fame
 clap eyes on	clap eyes on
 class action	class action
 class struggle	class struggle
-claw your into	claw your into
-claw your to	claw your to
 claw your way back	claw your way back
+clean house	clean house
 clean slate	clean slate
 clean up your act	clean up your act
 clear as day	clear as day
@@ -1547,6 +1740,7 @@ clock speed	clock speed
 close at hand	close at hand
 close call	close call
 close its doors	close its doors
+close ranks	close ranks
 close the barn door after the horse has escaped	close the barn door after the horse has escaped
 close the book on	close the book on
 close the door on	close the door on
@@ -1586,6 +1780,8 @@ come a cropper	come a cropper
 come a gutser	come a gutser
 come a poor second	come a poor second
 come a poor third	come a poor third
+come again	come again
+come alive	come alive
 come along for the ride	come along for the ride
 come and go	come and go
 come as a revelation	come as a revelation
@@ -1598,6 +1794,7 @@ come down the pike	come down the pike
 come down to earth	come down to earth
 come down to the wire	come down to the wire
 come easily to	come easily to
+come first	come first
 come full circle	come full circle
 come go out of use	come go out of use
 come hell or high water	come hell or high water
@@ -1649,7 +1846,10 @@ come to the fore	come to the fore
 come to the same thing	come to the same thing
 come to the table	come to the table
 come to think of it	come to think of it
+come true	come true
 come turn up trumps	come turn up trumps
+come unglued	come unglued
+come unstuck	come unstuck
 come up in the world	come up in the world
 come up of smelling of roses	come up of smelling of roses
 come up trumps	come up trumps
@@ -1657,10 +1857,13 @@ come up with the goods	come up with the goods
 come what may	come what may
 come with the territory	come with the territory
 come your way	come your way
+comes first	come first
 comes home to roost	comes home to roost
 comes reaches ears	comes reaches ears
 comes to ears	comes to ears
+comes true	come true
 comfort food	comfort food
+comfortably off	comfortably off
 comic relief	comic relief
 comic strip	comic strip
 comings and goings	comings and goings
@@ -1680,6 +1883,8 @@ concrete jungle	concrete jungle
 confirmation bias	confirmation bias
 conflict of interest	conflict of interest
 conflict of interests	conflict of interest
+confound it	confound it
+confound you	confound it
 connect the dots	connect the dots
 consolation prize	consolation prize
 conspicuous by your absence	conspicuous by your absence
@@ -1698,11 +1903,15 @@ conversation piece	conversation piece
 conveyor belt	conveyor belt
 cook the books	cook the books
 cook up a storm	cook up a storm
+cooking with gas	cooking with gas
+cool as a cucumber	cool as a cucumber
 cool beans	cool beans
+cool it	cool it
 cool kids	cool kids
 cool story bro	cool story bro
 cool your heels	cool your heels
 cop a plea	cop a plea
+cop it	cop it
 cop out	cop out
 copped out	cop out
 copping out	cop out
@@ -1716,7 +1925,8 @@ cottage cheese	cottage cheese
 cotton candy	cotton candy
 could care less	could care less
 could do with	could do with
-couldn't care less	couldn't care less
+couldn’t care less	couldn’t care less
+count sheep	count sheep
 count the cost	count the cost
 count your blessings	count your blessings
 counter clockwise	counter clockwise
@@ -1732,7 +1942,9 @@ cover your back	cover your back
 cover your tracks	cover your tracks
 crack down	crack down
 crack the whip	crack the whip
+crack wise	crack wise
 cracked down	crack down
+cracking good	cracking good
 crammed like sardines	crammed like sardines
 crash and burn	crash and burn
 crash course	crash course
@@ -1749,6 +1961,7 @@ criminal offence	criminal offence
 critical acclaim	critical acclaim
 critical mass	critical mass
 critically acclaimed	critically acclaimed
+crocodile tears	crocodile tears
 crony capitalism	crony capitalism
 crop rotation	crop rotation
 cross a line	cross a line
@@ -1764,6 +1977,7 @@ cross your mind	cross your mind
 cruel and unusual punishment	cruel and unusual punishment
 cruise missile	cruise missile
 crunch time	crunch time
+crush it	crush it
 cry for the moon	cry for the moon
 cry foul	cry foul
 cry over spilt milk	cry over spilt milk
@@ -1777,6 +1991,7 @@ cult of personality	cult of personality
 cultural appropriation	cultural appropriation
 culture shock	culture shock
 cum laude	cum laude
+cupboard love	cupboard love
 curb appeal	curb appeal
 curb stomp	curb stomp
 curiosity killed the cat	curiosity killed the cat
@@ -1795,6 +2010,10 @@ cut both ways	cut both ways
 cut corners	cut corners
 cut down to size	cut down to size
 cut in line	cut in line
+cut it	cut it
+daylight robbery	daylight robbery
+that’ll be the day	that’ll be the day
+all in a day’s work	all in a day’s work
 cut it fine	cut it fine
 cut loose from	cut loose from
 cut no ice	cut no ice
@@ -1820,6 +2039,7 @@ cylinder heads	cylinder head
 daft as a brush	daft as a brush
 daily grind	daily grind
 daisy chain	daisy chain
+damn all	damn all
 damn the consequences	damn the consequences
 damn the expense	damn the expense
 damn with faint praise	damn with faint praise
@@ -1827,8 +2047,10 @@ dance attendance on	dance attendance on
 dance the night away	dance the night away
 dance to tune	dance to tune
 dance up a storm	dance up a storm
+dangerous ground	dangerous ground
 dark ages	dark ages
 dark triad	dark triad
+darn it	darn it
 dash cam	dash cam
 data mining	data mining
 data set	data set
@@ -1841,6 +2063,7 @@ day to day	day to day
 daylight savings	daylight savings
 de facto	de facto
 de jure	de jure
+dead and gone	dead and gone
 dead as a dodo	dead as a dodo
 dead as a doornail	dead as a doornail
 dead as the dodo	dead as the dodo
@@ -1862,6 +2085,7 @@ death knell	death knell
 death row	death row
 death toll	death toll
 decimal point	decimal point
+deep down	deep down
 deep pockets	deep pockets
 deep web	deep web
 defeat the purpose	defeat the purpose
@@ -1874,7 +2098,7 @@ department stores	department store
 deserting a sinking ship	deserting a sinking ship
 deserve all you get	deserve all you get
 deserve everything you get	deserve everything you get
-deserve what's coming	deserve what's coming
+deserve what’s coming	deserve what’s coming
 deserves a medal	deserves a medal
 desperate times call for desperate measures	desperate times call for desperate measures
 destination wedding	destination wedding
@@ -1886,6 +2110,8 @@ diatomaceous earth	diatomaceous earth
 dice with death	dice with death
 diddly squat	diddly squat
 die a death	die a death
+die in your bed	die in your bed
+die laughing	die laughing
 die like flies	die like flies
 die the death	die the death
 dig a grave for yourself	dig a grave for yourself
@@ -1935,6 +2161,21 @@ do a bunk	do a bunk
 do a disservice	do a disservice
 do a flit	do a flit
 do a good job	do a good job
+good job	good job
+leg it	leg it
+under licence	under licence
+lie low	lie low
+worse luck	worse luck
+at liberty	at liberty
+legged it	leg it
+know best	know best
+left to yourself	left to yourself
+old enough to know better	old enough to know better
+no joke	no joke
+no kidding	no kidding
+keep going	keep going
+keeps going	keep going
+kept going	keep going
 do a good turn	do a good turn
 do a midnight flit	do a midnight flit
 do a moonie	do a moonie
@@ -1947,8 +2188,8 @@ do a slow burn	do a slow burn
 do an honor	do an honor
 do an honour	do an honor
 do an injustice	do an injustice
-do as if there's no tomorrow	do as if there's no tomorrow
-do as like there's no tomorrow	do as like there's no tomorrow
+do as if there’s no tomorrow	do as if there’s no tomorrow
+do as like there’s no tomorrow	do as like there’s no tomorrow
 do as you please	do as you please
 do at your own peril	do at your own peril
 do at your own risk	do at your own risk
@@ -1987,6 +2228,7 @@ do the trick	do the trick
 do the world of good	do the world of good
 do things to	do things to
 do till you are blue in the face	do till you are blue in the face
+do time	do time
 do to death	do to death
 do unto others	do unto others
 do violence to	do violence to
@@ -2008,34 +2250,42 @@ do yourself justice	do yourself justice
 do yourself out of a job	do yourself out of a job
 do yourself proud	do yourself proud
 dodge a bullet	dodge a bullet
+dodge a bullet	dodge bullets
+dodge bullets	dodge bullets
+dodge the bullet	dodge bullets
 dodge the bullet	dodge the bullet
+dodged bullets	dodge bullets
+dodges bullets	dodge bullets
 does exactly what it says on the tin	does exactly what it says on the tin
 does not come cheap	does not come cheap
 does what it says on the tin	does what it says on the tin
-doesn't wash with	doesn't wash with
+doesn’t wash with	doesn’t wash with
 dog eat dog	dog eat dog
 doggy style	doggy style
+dollar signs	see dollar signs
 dollar store	dollar store
 dollar stores	dollar store
 domino effect	domino effect
-don't ask me	don't ask me
-don't blame me	don't blame me
-don't count your chickens	don't count your chickens
-don't give me that	don't give me that
-don't give up the day job	don't give up the day job
-don't judge a book by its cover	don't judge a book by its cover
-don't make me laugh	don't make me laugh
-don't mention it	don't mention it
-don't sweat it	don't sweat it
-don't sweat the small stuff	don't sweat the small stuff
-don't tell me	don't tell me
-don't you start	don't you start
 done and dusted	done and dusted
 done like a dinner	done like a dinner
 done to a turn	done to a turn
+don’t ask me	don’t ask me
+don’t blame me	don’t blame me
+don’t count your chickens	don’t count your chickens
+don’t give me that	don’t give me that
+don’t give up the day job	don’t give up the day job
+don’t judge a book by its cover	don’t judge a book by its cover
+don’t make me laugh	don’t make me laugh
+don’t mention it	don’t mention it
+don’t sweat it	don’t sweat it
+don’t sweat the small stuff	don’t sweat the small stuff
+don’t tell me	don’t tell me
+don’t you dare	don’t you dare
+don’t you start	don’t you start
 doom and gloom	doom and gloom
-dos and don'ts	dos and don'ts
-dot your i's and cross your t's	dot your i's and cross your t's
+gloom and doom	doom and gloom
+dos and don’ts	dos and don’ts
+dot your i’s and cross your t’s	dot your i’s and cross your t’s
 double agent	double agent
 double back	double back
 double dare	double dare
@@ -2063,6 +2313,7 @@ down the track	down the track
 down to the final	down to the final
 down to the last	down to the last
 down to the smallest	down to the smallest
+down tools	down tools
 downward spiral	downward spiral
 doze off	doze off
 drag and drop	drag and drop
@@ -2083,6 +2334,7 @@ draw a line in the sand	draw a line in the sand
 draw a line under	draw a line under
 draw attention	draw attention
 draw back	draw back
+draw breath	draw breath
 draw lots for	draw lots for
 draw straws for	draw straws for
 draw the line	draw the line
@@ -2115,6 +2367,7 @@ drinking game	drinking game
 drinking games	drinking game
 drive a coach and horses through	drive a coach and horses through
 drive a hard bargain	drive a hard bargain
+drive a wedge between	drive a wedge between
 drive home to	drive home to
 drive to drink	drive to drink
 drive yourself into the ground	drive yourself into the ground
@@ -2123,17 +2376,21 @@ driving under the influence	driving under the influence
 drop a brick	drop a brick
 drop a clanger	drop a clanger
 drop a dime on	drop a dime on
+drop dead	drop dead
 drop in it	drop in it
 drop in lap	drop in lap
 drop like flies	drop like flies
+drop names	drop names
 drop the ball	drop the ball
 drop the dime on	drop the dime on
 drop your bundle	drop your bundle
 drop your guard	drop your guard
 drops into lap	drops into lap
+drove a wedge between	drive a wedge between
 drown your fears	drown your fears
 drown your loneliness	drown your loneliness
 drown your sorrows	drown your sorrows
+drugged up to the eyeballs	drugged up to the eyeballs
 drum into head	drum into head
 drum roll	drum roll
 drum up	drum up
@@ -2167,8 +2424,10 @@ each to his own	each to his own
 each to their own	each to their own
 ear wax	ear wax
 early adopter	early adopter
+early doors	early doors
+early on	early on
 earn a crust	earn a crust
-earn straight A's	earn straight A's
+earn straight A’s	earn straight A’s
 earn top dollar	earn top dollar
 earn your crust	earn your crust
 earn your keep	earn your keep
@@ -2179,11 +2438,15 @@ ears are flapping	ears are flapping
 easier said than done	easier said than done
 easy as pie	easy as pie
 easy does it	easy does it
+easy meat	easy meat
+easy money	easy money
 easy on the ear	easy on the ear
 easy on the eye	easy on the eye
 easy on the eyes	easy on the eyes
 easy peasy	easy peasy
 easy target	easy target
+eat crow	eat crow
+eat dirt	eat dirt
 eat humble pie	eat humble pie
 eat like a horse	eat like a horse
 eat out of hand	eat out of hand
@@ -2191,6 +2454,8 @@ eat out of house and home	eat out of house and home
 eat out of your hand	eat out of your hand
 eat your heart out	eat your heart out
 eat your words	eat your words
+eats crow	eat crow
+eats dirt	eat dirt
 ebb and flow	ebb and flow
 echo chamber	echo chamber
 echo chambers	echo chamber
@@ -2225,6 +2490,7 @@ end to end	end to end
 end your days	end your days
 end your life	end your life
 engine bay	engine bay
+enough already	enough already
 enough is enough	enough is enough
 enter into force	enter into force
 enter name for	enter name for
@@ -2245,6 +2511,7 @@ every bit as good as	every bit as good as
 every cloud has a silver lining	every cloud has a silver lining
 every dog has his day	every dog has his day
 every dog has its day	every dog has its day
+every inch	every inch
 every last	every last
 every little helps	every little helps
 every man for himself	every man for himself
@@ -2252,6 +2519,7 @@ every nook and cranny	every nook and cranny
 every now and again	every now and again
 every now and then	every now and then
 every once in a while	every once in a while
+every other	every other
 every rule has an exception	every rule has an exception
 every so often	every so often
 every trick in the book	every trick in the book
@@ -2282,7 +2550,7 @@ eye patch	eye patch
 eye witness	eye witness
 eyeball to eyeball	eyeball to eyeball
 eyes are bigger than their stomach	eyes are bigger than their stomach
-face doesn't fit	face doesn't fit
+face doesn’t fit	face doesn’t fit
 face fits fit	face fits fit
 face is like thunder	face is like thunder
 face palm	face palm
@@ -2299,6 +2567,7 @@ fair to middling	fair to middling
 fairly and squarely	fairly and squarely
 fairy tale	fairy tale
 fairy tales	fairy tale
+fair’s fair	fair’s fair
 fall flat	fall flat
 fall from grace	fall from grace
 fall like flies	fall like flies
@@ -2308,6 +2577,7 @@ fall on stony ground	fall on stony ground
 fall on your feet	fall on your feet
 fall prey	fall prey
 fall short	fall short
+fall sick	fall sick
 fall through the cracks	fall through the cracks
 fall to lot	fall to lot
 fall to pieces	fall to pieces
@@ -2332,6 +2602,7 @@ fancy pants	fancy pants
 fancy that	fancy that
 fanny pack	fanny pack
 fantasy land	fantasy land
+far afield	far afield
 far and away	far and away
 far and wide	far and wide
 far be it from me	far be it from me
@@ -2339,6 +2610,7 @@ far fetched	far fetched
 far from it	far from it
 far from pleased	far from pleased
 far from the madding crowd	far from the madding crowd
+farther afield	far afield
 fashion sense	fashion sense
 fashionably late	fashionably late
 fast and furious	fast and furious
@@ -2367,6 +2639,7 @@ feel sorry for yourself	feel sorry for yourself
 feel the pinch	feel the pinch
 feel your age	feel your age
 feel your way	feel your way
+feet first	feet first
 fell short	fall short
 femme fatale	femme fatale
 fender bender	fender bender
@@ -2390,6 +2663,9 @@ fight to the finish	fight to the finish
 fight tooth and nail	fight tooth and nail
 fight your corner	fight your corner
 fight your own battles	fight your own battles
+fighting fit	fighting fit
+fighting spirit	fighting spirit
+fighting talk	fighting talk
 fighting words	fighting words
 figure of speech	figure of speech
 file extension	file extension
@@ -2413,6 +2689,7 @@ find your match	find your match
 find your tongue	find your tongue
 find your voice	find your voice
 find your way	find your way
+finders keepers	finders keepers
 fine and dandy	fine and dandy
 fine line	fine line
 finger in the air	finger in the air
@@ -2433,9 +2710,11 @@ first and last	first and last
 first cause	first cause
 first hand	first hand
 first of all	first of all
+first off	first off
 first past the post	first past the post
 first things first	first things first
 first time round	first time round
+first up	first up
 first world problem	first world problem
 fishing line	fishing line
 fit a description	fit a description
@@ -2455,7 +2734,9 @@ flame thrower	flame thrower
 flash a look	flash a look
 flash a smile	flash a smile
 flash forward	flash forward
+flat broke	flat broke
 flat on your back	flat on your back
+flat out	flat out
 flat tire	flat tire
 flat white	flat white
 flatten the curve	flatten the curve
@@ -2468,6 +2749,7 @@ flea markets	flea market
 flesh and blood	flesh and blood
 flesh out	flesh out
 flex your muscles	flex your muscles
+flies high	fly high
 flight attendant	flight attendant
 fling mud at	fling mud at
 flip flop	flip flop
@@ -2485,6 +2767,7 @@ flux capacitor	flux capacitor
 fly a kite	fly a kite
 fly by the seat of your pants	fly by the seat of your pants
 fly fishing	fly fishing
+fly high	fly high
 fly into a rage	fly into a rage
 fly into a temper	fly into a temper
 fly off at a tangent	fly off at a tangent
@@ -2495,6 +2778,7 @@ fly out the window	fly out the window
 fly the coop	fly the coop
 fly the flag	fly the flag
 fly the nest	fly the nest
+flying high	fly high
 flying monkeys	flying monkeys
 flying saucer	flying saucer
 foam at the mouth	foam at the mouth
@@ -2509,6 +2793,26 @@ follow the line of least resistance	follow the line of least resistance
 follow the path of least resistance	follow the path of least resistance
 follow your nose	follow your nose
 food coma	food coma
+hedge your bets	hedge your bets
+hedged your bets	hedge your bets
+better yet	better yet
+your best bib and tucker	your best bib and tucker
+that’s much better	that’s much better
+that’s better	that’s much better
+discretion is the better part of valour	discretion is the better part of valour
+as best you can	as best you can
+the best that money can buy	the best that money can buy
+as busy as a bee	as busy as a bee
+I don’t believe it	I don’t believe it
+don’t you believe it	don’t you believe it
+on your best behaviour	on your best behaviour
+the bee’s knees	the bee’s knees
+like shooting fish in a barrel	like shooting fish in a barrel
+go ballistic	go ballistic
+goes ballistic	go ballistic
+going ballistic	go ballistic
+gone ballistic	go ballistic
+went ballistic	go ballistic
 food court	food court
 food courts	food court
 food for thought	food for thought
@@ -2518,9 +2822,10 @@ food processors	food processor
 food stamp	food stamp
 fools rush in	fools rush in
 foot the bill	foot the bill
-for Christ's sake	for Christ's sake
-for God's sake	for God's sake
-for Pete's sake	for Pete's sake
+for Chrissake	for Chrissake
+for Christ’s sake	for Christ’s sake
+for God’s sake	for God’s sake
+for Pete’s sake	for Pete’s sake
 for a song	for a song
 for a start	for a start
 for all I care	for all I care
@@ -2537,26 +2842,31 @@ for all to see	for all to see
 for all you care	for all you care
 for all you know	for all you know
 for better or worse	for better or worse
+for certain	for certain
 for crying out loud	for crying out loud
 for dear life	for dear life
 for eyes only	for eyes only
 for good measure	for good measure
-for goodness' sake	for goodness' sake
-for heaven's sake	for heaven's sake
+for goodness’ sake	for goodness’ sake
+for heaven’s sake	for heaven’s sake
 for his part	for his part
+for instance	for instance
 for kicks	for kicks
 for my money	for my money
 for my part	for my part
-for old times' sake	for old times' sake
+for old times’ sake	for old times’ sake
 for one thing	for one thing
-for pity's sake	for pity's sake
+for pity’s sake	for pity’s sake
 for practical purposes	for practical purposes
 for sake of	for sake of
 for so long	for so long
+for starters	for starters
+for sure	for sure
 for that matter	for that matter
 for the asking	for the asking
+for the chop	for the chop
 for the duration	for the duration
-for the foreseeable future	for the foreseeable future
+for the foreseeable future	in the foreseeable future
 for the heck of it	for the heck of it
 for the hell of it	for the hell of it
 for the life of you	for the life of you
@@ -2573,7 +2883,7 @@ for the sake of	for the sake of
 for the time being	for the time being
 for their part	for their part
 for two pins	for two pins
-for what it's worth	for what it's worth
+for what it’s worth	for what it’s worth
 for your information	for your information
 for your life	for your life
 for your liking	for your liking
@@ -2588,6 +2898,7 @@ force the pace	force the pace
 foregone conclusion	foregone conclusion
 forever and ever	forever and ever
 forewarned is forearmed	forewarned is forearmed
+forget it	forget it
 forgive and forget	forgive and forget
 form a united front	form a united front
 form factor	form factor
@@ -2631,6 +2942,7 @@ from A to B	from A to B
 from A to Z	from A to Z
 from a distance	from a distance
 from a standing start	from a standing start
+from afar	from afar
 from all accounts	from all accounts
 from all sides	from all sides
 from close quarters	from close quarters
@@ -2658,7 +2970,7 @@ from the cradle to the grave	from the cradle to the grave
 from the first	from the first
 from the ground up	from the ground up
 from the heart	from the heart
-from the horse's mouth	from the horse's mouth
+from the horse’s mouth	from the horse’s mouth
 from the outset	from the outset
 from the sidelines	from the sidelines
 from the sublime to the ridiculous	from the sublime to the ridiculous
@@ -2674,6 +2986,8 @@ front and centre	front and center
 front runner	front runner
 frown on	frown on
 frown upon	frown upon
+fuck me	fuck me
+fucking well	fucking well
 full bore	full bore
 full metal jacket	full metal jacket
 full of it	full of it
@@ -2686,7 +3000,10 @@ full throttle	full throttle
 full tilt	full tilt
 fully fledged	fully fledged
 fun and games	fun and games
+funnily enough	funnily enough
 funny bone	funny bone
+funny peculiar	funny peculiar
+further afield	far afield
 further along the road	further along the road
 further down the road	further down the road
 fuse box	fuse box
@@ -2694,7 +3011,10 @@ fuse boxes	fuse box
 future proof	future proof
 gag order	gag order
 gag reflex	gag reflex
+gagging for it	gagging for it
+gain ground	gain ground
 gain the upper hand	gain the upper hand
+gain time	gain time
 gain up ground	gain up ground
 gale of laughter	gale of laughter
 gales of laughter	gale of laughter
@@ -2711,6 +3031,7 @@ gas pedal	gas pedal
 gated communities	gated community
 gated community	gated community
 gateway drug	gateway drug
+gave the game away	give the game away
 gaze into space	gaze into space
 gear ratio	gear ratio
 gear ratios	gear ratio
@@ -2745,11 +3066,16 @@ get back on the rails	get back on the rails
 get back to basics	get back to basics
 get back to nature	get back to nature
 get back up	get back up
+no chance	no chance
 get called on the carpet	get called on the carpet
 get carried away	get carried away
 get caught in the middle	get caught in the middle
+got caught in the middle	get caught in the middle
+gets caught in the middle	get caught in the middle
+caught in the middle	get caught in the middle
 get caught with your hand in the cookie jar	get caught with your hand in the cookie jar
 get cold feet	get cold feet
+get cracking	get cracking
 get down set to work	get down set to work
 get down to a fine art	get down to a fine art
 get down to brass tacks	get down to brass tacks
@@ -2759,7 +3085,9 @@ get even with	get even with
 get found with your hand in the cookie jar	get found with your hand in the cookie jar
 get given the chop	get given the chop
 get given the floor	get given the floor
+get going	get going
 get have the floor	get have the floor
+get hitched	get hitched
 get hold of	get hold of
 get hold of the wrong end of the stick	get hold of the wrong end of the stick
 get in a stew	get in a stew
@@ -2788,8 +3116,10 @@ get it on	get it on
 get it up	get it up
 get itchy feet	get itchy feet
 get keep bad company	get keep bad company
+get knotted	get knotted
 get mixed up in	get mixed up in
 get mixed up with	get mixed up with
+get moving	get moving
 get not get anywhere	get not get anywhere
 get nowhere get anywhere	get nowhere get anywhere
 get off back	get off back
@@ -2825,14 +3155,16 @@ get set to work	get set to work
 get short shrift	get short shrift
 get some rays	get some rays
 get somewhere under your own steam	get somewhere under your own steam
+get spliced	get spliced
 get steamed up	get steamed up
-get straight A's	get straight A's
+get straight A’s	get straight A’s
 get stuck in	get stuck in
 get stuck into	get stuck into
 get tensed up	get tensed up
 get the ball rolling	get the ball rolling
 get the better of	get the better of
 get the boot	get the boot
+get the chop	given the chop
 get the elbow	get the elbow
 get the hang of	get the hang of
 get the hell out	get the hell out
@@ -2851,13 +3183,30 @@ get the wind up	get the wind up
 get the word out	get the word out
 get the worst of it	get the worst of it
 get the wrong end of the stick	get the wrong end of the stick
+get this	get this
 get to grips with	get to grips with
 get to work	get to work
 get too big for your boots	get too big for your boots
+too big for your boots	get too big for your boots
 get too big for your britches	get too big for your britches
 get under control	get under control
 get under skin	get under skin
 get up nose	get up nose
+like blazes	like blazes
+go down a bomb	go down a bomb
+gone down a bomb	go down a bomb
+going down a bomb	go down a bomb
+goes down a bomb	go down a bomb
+went down a bomb	go down a bomb
+go like a bomb	go down a bomb
+gone like a bomb	go down a bomb
+going like a bomb	go down a bomb
+goes like a bomb	go down a bomb
+went like a bomb	go down a bomb
+God bless	God bless
+get the bit between your teeth	get the bit between your teeth
+gets the bit between your teeth	get the bit between your teeth
+got the bit between your teeth	get the bit between your teeth
 get up up steam	get up up steam
 get up with the lark	get up with the lark
 get what for	get what for
@@ -2890,7 +3239,7 @@ get your kit off	get your kit off
 get your knickers in a twist	get your knickers in a twist
 get your leg over	get your leg over
 get your marching orders	get your marching orders
-get your money's worth	get your money's worth
+get your money’s worth	get your money’s worth
 get your name on the score sheet	get your name on the score sheet
 get your nose in the trough	get your nose in the trough
 get your own back	get your own back
@@ -2907,7 +3256,9 @@ get your wings	get your wings
 get your wires crossed	get your wires crossed
 get yourself in a stew	get yourself in a stew
 get yourself into shape	get yourself into shape
+getting any younger	getting any younger
 getting used to	getting used to
+getting younger	getting younger
 ghost town	ghost town
 gild the lily	gild the lily
 ginger beer	ginger beer
@@ -2934,20 +3285,43 @@ give a hundred and ten per cent	give a hundred and ten per cent
 give a hundred per cent	give a hundred per cent
 give a man a fish	give a man a fish
 give and take	give and take
+give chase	give chase
 give credit where credit is due	give credit where credit is due
 give it a whirl	give it a whirl
+give it some welly	give it some welly
+give me a break	give me a break
 give or take	give or take
+give the game away	give the game away
+given the chop	given the chop
 glass cannon	glass cannon
 glass cannons	glass cannon
 gloss over	gloss over
 glossed over	gloss over
 glove compartment	glove compartment
 go all the way	go all the way
+go ape	go ape
+go apeshit	go ape
+go astray	go astray
+go away to sea	run away to sea
+go balls out	go balls out
+go bananas	go bananas
+go bang	go bang
 go belly up	go belly up
 go big or go home	go big or go home
 go both ways	go both ways
+go by the board	go by the board
+go commando	go commando
+go down like a lead balloon	go down like a lead balloon
 go downhill	go downhill
+go for broke	go for broke
+go for the jugular	go for the jugular
+go from bad to worse	go from bad to worse
 go hand in hand	go hand in hand
+go haywire	go haywire
+go hot and cold	go hot and cold
+go it alone	go it alone
+go like a bomb	go like a bomb
+go live	go live
 go nuts	go nuts
 go off at a tangent	go off at a tangent
 go off one	go off one
@@ -2978,6 +3352,8 @@ go public	go public
 go right down to the wire	go right down to the wire
 go round in circles	go round in circles
 go slow on	go slow on
+go spare	go spare
+go stag	go stag
 go steady with	go steady with
 go that far	go that far
 go the distance	go the distance
@@ -3012,6 +3388,7 @@ go to sleep	go to sleep
 go to some lengths	go to some lengths
 go to the bad	go to the bad
 go to the country	go to the country
+go to the devil	go to the devil
 go to the dogs	go to the dogs
 go to the ends of the earth	go to the ends of the earth
 go to the mat	go to the mat
@@ -3028,10 +3405,22 @@ go with the territory	go with the territory
 go with the tide	go with the tide
 go with your gut	go with your gut
 go without saying	go without saying
+go wrong	go wrong
 go your own way	go your own way
 go your separate ways	go your separate ways
 god awful	god awful
+goes commando	go commando
+goes down like a lead balloon	go down like a lead balloon
+goes for the jugular	go for the jugular
+goes from bad to worse	go from bad to worse
+goes haywire	go haywire
+goes hot and cold	go hot and cold
+goes like a bomb	go like a bomb
+goes live	go live
+goes stag	go stag
+going from bad to worse	go from bad to worse
 going rate	going rate
+going strong	going strong
 gold digger	gold digger
 gold rush	gold rush
 golden child	golden child
@@ -3040,6 +3429,8 @@ golden ticket	golden ticket
 golf course	golf course
 golf courses	golf course
 gone for a burton	gone for a burton
+gone from bad to worse	go from bad to worse
+gone haywire	go haywire
 good and proper	good and proper
 good as gold	good as gold
 good as new	good as new
@@ -3057,8 +3448,11 @@ good riddance	good riddance
 good standing	good standing
 good things come to those who wait	good things come to those who wait
 good to go	good to go
+good works	good works
 goof off	goof off
 googly eyes	googly eyes
+got going	get going
+got the chop	given the chop
 grab some rays	grab some rays
 grab the headlines	grab the headlines
 grace period	grace period
@@ -3081,6 +3475,7 @@ great barrier reef	great barrier reef
 great minds think alike	great minds think alike
 great oaks from little acorns grow	great oaks from little acorns grow
 greater good	greater good
+greedy guts	greedy guts
 green card	green card
 green onion	green onion
 green with envy	green with envy
@@ -3088,6 +3483,7 @@ greenhouse effect	greenhouse effect
 grey goo	grey goo
 grey market	grey market
 grey matter	grey matter
+grin and bear it	grin and bear it
 grin from ear to ear	grin from ear to ear
 grind to a halt	grind to a halt
 grist to mill	grist to mill
@@ -3111,6 +3507,9 @@ gut feeling	gut feeling
 gym rat	gym rat
 habeas corpus	habeas corpus
 had a good innings	had a good innings
+had a screw loose	have a screw loose
+had kittens	have kittens
+had legs	have legs
 hair of the dog	hair of the dog
 hair tie	hair tie
 hale and hearty	hale and hearty
@@ -3138,6 +3537,8 @@ hand in marriage	hand in marriage
 hand to on a plate	hand to on a plate
 hand waving	hand waving
 handle with kid gloves	handle with kid gloves
+hands down	hands down
+hands up	hands up
 hang a left	hang a left
 hang a right	hang a right
 hang around	hang around
@@ -3152,13 +3553,21 @@ hang on in there	hang on in there
 hang on like grim death	hang on like grim death
 hang on words every word	hang on words every word
 hang out to dry	hang out to dry
+hang tough	hang tough
 hang your hat	hang your hat
 hanging around	hang around
 hangs around	hang around
 happily ever after	happily ever after
 happy medium	happy medium
+hard and fast	hard and fast
+hard cheese	hard cheese
+hard going	hard going
 hard hat	hard hat
+hard luck	hard luck
 hard of hearing	hard of hearing
+has a screw loose	have a screw loose
+has kittens	have kittens
+has legs	have legs
 hash oil	hash oil
 haste makes waste	haste makes waste
 hate crime	hate crime
@@ -3172,7 +3581,7 @@ have a big mouth	have a big mouth
 have a bone to pick with	have a bone to pick with
 have a bumpy ride	have a bumpy ride
 have a bun in the oven	have a bun in the oven
-have a butcher's	have a butcher's
+have a butcher’s	have a butcher’s
 have a card up your sleeve	have a card up your sleeve
 have a chip on your shoulder	have a chip on your shoulder
 have a claim on	have a claim on
@@ -3205,10 +3614,12 @@ have a lot going for you	have a lot going for you
 have a lot much on your plate	have a lot much on your plate
 have a lot of time for	have a lot of time for
 have a lot on the ball	have a lot on the ball
+have a lot on your plate	have enough on your plate
 have a lump in your throat	have a lump in your throat
 have a memory like a sieve	have a memory like a sieve
 have a mind like a sieve	have a mind like a sieve
 have a mind of your own	have a mind of your own
+have a nice day	have a nice day
 have a night on the tiles	have a night on the tiles
 have a nodding acquaintance with	have a nodding acquaintance with
 have a nose round	have a nose round
@@ -3225,6 +3636,7 @@ have a rough easy ride	have a rough easy ride
 have a rough ride	have a rough ride
 have a roving eye	have a roving eye
 have a say	have a say
+have a screw loose	have a screw loose
 have been around	have been around
 have bigger fish to fry	have bigger fish to fry
 have blood on your hands	have blood on your hands
@@ -3236,8 +3648,6 @@ have come to stay	have come to stay
 have coming out of your ears	have coming out of your ears
 have designs on	have designs on
 have done with	have done with
-have a lot on your plate	have enough on your plate
-have too much on your plate	have enough on your plate
 have enough on your plate	have enough on your plate
 have everything your own way	have everything your own way
 have eyes in the back of your head	have eyes in the back of your head
@@ -3265,6 +3675,7 @@ have had it	have had it
 have had one too many	have had one too many
 have had your chips	have had your chips
 have had your day	have had your day
+have hysterics	have hysterics
 have in common	have in common
 have in mind	have in mind
 have in the palm of your hand	have in the palm of your hand
@@ -3285,7 +3696,9 @@ have it your own way	have it your own way
 have itchy feet	have itchy feet
 have its moments	have its moments
 have its uses	have its uses
+have kittens	have kittens
 have left with egg on over your face	have left with egg on over your face
+have legs	have legs
 have lot on the ball	have lot on the ball
 have money to burn	have money to burn
 have money to play with	have money to play with
@@ -3309,6 +3722,11 @@ have on a short fuse	have on a short fuse
 have on good authority	have on good authority
 have on the brain	have on the brain
 have on the go	have on the go
+going great guns	going great guns
+no great shakes	no great shakes
+on the go	on the go
+be my guest	be my guest
+on your guard	on your guard
 have on your side	have on your side
 have one eye an eye on	have one eye an eye on
 have one foot in the grave	have one foot in the grave
@@ -3322,6 +3740,7 @@ have shot your bolt	have shot your bolt
 have skin in the game	have skin in the game
 have some rough edges	have some rough edges
 have sticky fingers	have sticky fingers
+have teeth	have teeth
 have that coming	have that coming
 have that coming to you	have that coming to you
 have the courage of your convictions	have the courage of your convictions
@@ -3348,6 +3767,7 @@ have to show for	have to show for
 have to thank	have to thank
 have to your credit	have to your credit
 have to your name	have to your name
+have too much on your plate	have enough on your plate
 have two left feet	have two left feet
 have up your sleeve	have up your sleeve
 have what it takes	have what it takes
@@ -3382,19 +3802,24 @@ have your way with	have your way with
 have your wicked way with	have your wicked way with
 have your wits about you	have your wits about you
 have your work cut out	have your work cut out
+having a screw loose	have a screw loose
+having kittens	have kittens
+having legs	have legs
 having said that	having said that
-he can't win	he can't win
-he doesn't miss a trick	he doesn't miss a trick
+he can’t win	he can’t win
+he doesn’t miss a trick	he doesn’t miss a trick
 he or she	he or she
 he started it	he started it
 he who hesitates	he who hesitates
 he who laughs last laughs longest	he who laughs last laughs longest
 he who pays the piper calls the tune	he who pays the piper calls the tune
+head first	head first
 head in the sand	head in the sand
 head over heels	head over heels
 head start	head start
 head to head	head to head
 head to toe	head to toe
+heads or tails	heads or tails
 heads will roll	heads will roll
 heap scorn on	heap scorn on
 heart and soul	heart and soul
@@ -3407,6 +3832,7 @@ heave into sight	heave into sight
 heave into view	heave into view
 heaven forbid	heaven forbid
 heaviness of heart	heaviness of heart
+heavy going	heavy going
 heavy lifting	heavy lifting
 hedge fund	hedge fund
 hedge funds	hedge fund
@@ -3446,6 +3872,10 @@ high profile	high profile
 high society	high society
 high tide	high tide
 higher power	higher power
+hightail it	hightail it
+dead meat	dead meat
+hightailed it	hightail it
+highway robbery	highway robbery
 his dying breath	his dying breath
 his last breath	his last breath
 hissy fit	hissy fit
@@ -3481,7 +3911,7 @@ hit the trail	hit the trail
 hit the wall	hit the wall
 hit the woodwork	hit the woodwork
 hit the wrong note	hit the wrong note
-hit when they're down	hit when they're down
+hit when they’re down	hit when they’re down
 hit where it hurts	hit where it hurts
 hit your stride	hit your stride
 hither and thither	hither and thither
@@ -3537,8 +3967,13 @@ honesty is the best policy	honesty is the best policy
 honor among thieves	honor among thieves
 honor killing	honor killing
 honour among thieves	honour among thieves
+hoof it	hoof it
+hoofed it	hoof it
+hoofing it	hoof it
+hoofs it	hoof it
 hop to it	hop to it
 hope against hope	hope against hope
+hope for the best	hope for the best
 hope springs eternal	hope springs eternal
 horror of horrors	horror of horrors
 horses for courses	horses for courses
@@ -3553,7 +3988,9 @@ hot on tracks	hot on tracks
 hot on trail	hot on trail
 hot pink	hot pink
 hot spot	hot spot
+hot to trot	hot to trot
 hot under the collar	hot under the collar
+hotfoot it	hotfoot it
 hourglass figure	hourglass figure
 house rule	house rule
 how dare you	how dare you
@@ -3579,9 +4016,16 @@ if I were in your place	if I were in your place
 if I were in your shoes	if I were in your shoes
 if all else fails	if all else fails
 if and only if	if and only if
+only if	only if
+pump iron	pump iron
+at issue	at issue
 if and when	if and when
+in a jam	in a jam
+I’ll be jiggered	I’ll be jiggered
+before you can say Jack Robinson	before you can say Jack Robinson
+jam tomorrow	jam tomorrow
 if ever there was	if ever there was
-if he's a day	if he's a day
+if he’s a day	if he’s a day
 if in doubt	if in doubt
 if it comes to that	if it comes to that
 if it comes to the point	if it comes to the point
@@ -3589,22 +4033,22 @@ if memory serves me correctly	if memory serves me correctly
 if memory serves me well	if memory serves me well
 if my memory serves me correctly	if my memory serves me correctly
 if my memory serves me well	if my memory serves me well
-if need be	if need be
+if need be	if needs be
 if needs be	if needs be
 if nothing else	if nothing else
-if she's a day	if she's a day
+if she’s a day	if she’s a day
 if the cap fits	if the cap fits
 if the shoe fits	if the shoe fits
 if the spirit moves you	if the spirit moves you
 if the worst comes to the worst	if the worst comes to the worst
 if you ask me	if you ask me
-if you can't stand the heat	if you can't stand the heat
-if you don't mind	if you don't mind
+if you can’t stand the heat	if you can’t stand the heat
+if you don’t mind	if you don’t mind
 if you like	if you like
 if you must	if you must
 if you please	if you please
 if you think about it	if you think about it
-if you wouldn't mind	if you wouldn't mind
+if you wouldn’t mind	if you wouldn’t mind
 ignorance is bliss	ignorance is bliss
 ill at ease	ill at ease
 ill will	ill will
@@ -3617,8 +4061,8 @@ implied consent	implied consent
 impostor syndrome	impostor syndrome
 improve upon	improve upon
 impulse buy	impulse buy
-in God's name	in God's name
-in Heaven's name	in Heaven's name
+in God’s name	in God’s name
+in Heaven’s name	in Heaven’s name
 in Indian file	in Indian file
 in a bad light	in a bad light
 in a bad state of repair	in a bad state of repair
@@ -3658,7 +4102,9 @@ in a vacuum	in a vacuum
 in a way	in a way
 in a word	in a word
 in a world of your own	in a world of your own
+in abeyance	in abeyance
 in absentia	in absentia
+in abundance	in abundance
 in accord with	in accord with
 in accordance with	in accordance with
 in actual fact	in actual fact
@@ -3668,6 +4114,7 @@ in all conscience	in all conscience
 in all fairness	in all fairness
 in all fairness to	in all fairness to
 in all honesty	in all honesty
+in all innocence	in all innocence
 in all my born days	in all my born days
 in all seriousness	in all seriousness
 in all weathers	in all weathers
@@ -3679,31 +4126,45 @@ in and out	in and out
 in any case	in any case
 in any event	in any event
 in any shape or form	in any shape or form
+in arrears	in arrears
 in as far as	in as far as
 in as many words	in as many words
+in attendance	in attendance
 in bad faith	in bad faith
 in bad nick	in bad nick
 in bad repair	in bad repair
+in bed	in bed
 in black and white	in black and white
+in brief	in brief
 in broad daylight	in broad daylight
+in camera	in camera
 in capable hands	in capable hands
 in character with	in character with
+in chorus	in chorus
 in cold blood	in cold blood
-in common with	in common with
+in commission	in commission
+in common	in common
 in company with	in company with
 in comparison with	in comparison with
 in concert with	in concert with
 in conformity with	in conformity with
 in conjunction with	in conjunction with
 in connection with	in connection with
+in contemplation	in contemplation
 in contention for	in contention for
 in contradistinction to	in contradistinction to
+in convoy	in convoy
 in deep shit	in deep shit
 in deep water	in deep waters
 in deep waters	in deep waters
+in demand	in demand
 in dribs and drabs	in dribs and drabs
 in due course	in due course
 in due time	in due time
+in duplicate	in duplicate
+in earnest	in earnest
+in effect	in effect
+in embryo	in embryo
 in equal measure	in equal measure
 in fairness to	in fairness to
 in favor of	in favor of
@@ -3711,9 +4172,22 @@ in favour of	in favor of
 in fear of your life	in fear of your life
 in fine fettle	in fine fettle
 in fits and starts	in fits and starts
+in foal	in foal
+in for it	in for it
 in for the kill	in for the kill
+in force	in force
 in front of eyes	in front of eyes
 in front of very eyes	in front of very eyes
+go further	go further
+in general	in general
+game on	game on
+game over	game over
+on the game	on the game
+in future	in future
+going further	go further
+goes further	go further
+gone further	go further
+went further	go further
 in full bloom	in full bloom
 in full cry	in full cry
 in full measure	in full measure
@@ -3732,7 +4206,11 @@ in good time	in good time
 in good trim	in good trim
 in grand style	in grand style
 in great style	in great style
-in harness with	in harness with
+in harness	in harness
+get heavy	get heavy
+got heavy	get heavy
+from hell	from hell
+like hell	like hell
 in her infinite wisdom	in her infinite wisdom
 in her own way	in her own way
 in her way	in her way
@@ -3752,14 +4230,14 @@ in its midst	in its midst
 in its own way	in its own way
 in its way	in its way
 in its wisdom	in its wisdom
+in jeopardy	in jeopardy
+in jest	in jest
 in keeping with	in keeping with
 in large measure	in large measure
 in large part	in large part
 in league with	in league with
 in leaps and bounds	in leaps and bounds
-in no time	in no time
 in less than no time	in no time
-in next to no time	in no time
 in light of	in light of
 in line for	in line for
 in line with	in line with
@@ -3767,23 +4245,18 @@ in living memory	in living memory
 in mint condition	in mint condition
 in mistake for	in mistake for
 in more ways than one	in more ways than one
+in mothballs	in mothballs
 in my book	in my book
 in my place	in my place
 in name only	in name only
 in next to no time	in next to no time
+in next to no time	in no time
 in no circumstances	in no circumstances
 in no hurry	in no hurry
 in no small measure	in no small measure
 in no time	in no time
 in no uncertain terms	in no uncertain terms
 in no way	in no way
-in of commission	in of commission
-in of play	in of play
-in of pocket	in of pocket
-in of step	in of step
-in of the picture	in of the picture
-in of the reckoning	in of the reckoning
-in of the running	in of the running
 in old money	in old money
 in olden times	in olden times
 in one fell swoop	in one fell swoop
@@ -3791,42 +4264,60 @@ in one go	in one go
 in one piece	in one piece
 in one sitting	in one sitting
 in one way	in one way
-in opposition to	in opposition to
+in opposition	in opposition
 in order that	in order that
 in other words	in other words
 in our midst	in our midst
 in out of phase	in out of phase
 in over your head	in over your head
 in parallel with	in parallel with
+in part	in part
+in particular	in particular
+in passing	in passing
+in pawn	in pawn
 in perpetuity	in perpetuity
 in phase of phase	in phase of phase
 in plain English	in plain English
 in point of fact	in point of fact
 in preference to	in preference to
+in principle	in principle
+in private	in private
+in progress	in progress
+in public	in public
+in rags	in rags
+in reality	in reality
 in reference to	in reference to
 in regard to	in regard to
 in relation to	in relation to
+in reserve	in reserve
+in retrospect	in retrospect
 in return for	in return for
 in rude health	in rude health
+in ruins	in ruins
 in running order	in running order
 in safe hands	in safe hands
+in secret	in secret
 in seventh heaven	in seventh heaven
 in short order	in short order
 in short supply	in short supply
 in short trousers	in short trousers
+in shreds	in shreds
 in single file	in single file
 in situ	in situ
+in snatches	in snatches
 in so far as	in so far as
 in so many words	in so many words
 in some measure	in some measure
 in some ways	in some ways
 in spades	in spades
+in spirit	in spirit
 in spite of	in spite of
-in spite of yourself	in spite of yourself
+in step	in step
 in stops and starts	in stops and starts
 in store for	in store for
 in stride	in stride
 in sympathy with	in sympathy with
+in sync	in sync
 in tandem with	in tandem with
 in terms of	in terms of
 in that case	in that case
@@ -3840,16 +4331,20 @@ in the air	in the air
 in the altogether	in the altogether
 in the ascendant	in the ascendant
 in the back of your mind	in the back of your mind
+in the bag	in the bag
 in the balance	in the balance
 in the ballpark	in the ballpark
+in the black	in the black
 in the blink of an eye	in the blink of an eye
 in the box seat	in the box seat
 in the buff	in the buff
+in the can	in the can
 in the cards	in the cards
 in the care of	in the care of
 in the circumstances	in the circumstances
 in the clear	in the clear
 in the closet	in the closet
+in the club	in the club
 in the clutch	in the clutch
 in the cold light of day	in the cold light of day
 in the course of time	in the course of time
@@ -3858,8 +4353,12 @@ in the dark	in the dark
 in the dark about	in the dark about
 in the dead of night	in the dead of night
 in the dead of winter	in the dead of winter
-in the director's chair	in the director's chair
+in the director’s chair	in the director’s chair
 in the distance	in the distance
+in the dogbox	in the dogbox
+in the doghouse	in the doghouse
+in the driver’s seat	in the driver’s seat
+in the driving seat	in the driving seat
 in the dumps	in the dumps
 in the end	in the end
 in the extreme	in the extreme
@@ -3902,8 +4401,6 @@ in the midst of	in the midst of
 in the moment	in the moment
 in the morning	in the morning
 in the name of	in the name of
-in the name of God	in the name of God
-in the name of Heaven	in the name of Heaven
 in the nature of things	in the nature of things
 in the nick of time	in the nick of time
 in the normal	in the normal
@@ -3913,11 +4410,14 @@ in the offing	in the offing
 in the olden days	in the olden days
 in the ordinary	in the ordinary
 in the original	in the original
+in the picture	in the picture
 in the pink	in the pink
 in the pipeline	in the pipeline
 in the public eye	in the public eye
 in the raw	in the raw
+in the reckoning	into the reckoning
 in the round	in the round
+in the running	in the running
 in the saddle	in the saddle
 in the same boat	in the same boat
 in the same breath	in the same breath
@@ -3949,22 +4449,27 @@ in the wrong	in the wrong
 in the zone	in the zone
 in their entirety	in their entirety
 in their midst	in their midst
+in theory	in theory
 in this connection	in this connection
 in this day and age	in this day and age
 in this regard	in this regard
 in thrall to	in thrall to
-in time for	in time for
-in time for do	in time for do
+in time	in time
+in tow	in tow
+in triplicate	in triplicate
+in truth	in truth
+in turn	in turn
 in two shakes	in two shakes
 in twos and threes	in twos and threes
 in unison	in unison
-in unison with	in unison with
 in utero	in utero
+in vain	in vain
 in vino veritas	in vino veritas
 in vitro	in vitro
 in vivo	in vivo
 in words of one syllable	in words of one syllable
 in working order	in working order
+in writing	in writing
 in your backyard	in your backyard
 in your birthday suit	in your birthday suit
 in your cups	in your cups
@@ -3974,7 +4479,6 @@ in your element	in your element
 in your fifties	in your fifties
 in your forties	in your forties
 in your heart	in your heart
-in your heart of hearts	in your heart of hearts
 in your midst	in your midst
 in your nineties	in your nineties
 in your own backyard	in your own backyard
@@ -4001,19 +4505,22 @@ information theory	information theory
 inner circle	inner circle
 inner workings	inner workings
 ins and outs	ins and outs
+inside baseball	inside baseball
 inside information	inside information
 inside job	inside job
 inside joke	inside joke
 inside jokes	inside joke
+inside out	inside out
 institutional racism	institutional racism
 insult to injury	insult to injury
 intelligence agencies	intelligence agency
 intelligence agency	intelligence agency
 internalized misogyny	internalized misogyny
+into action	into action
 into high gear	into high gear
-into of the reckoning	into of the reckoning
 into the bargain	into the bargain
 into the distance	into the distance
+into the reckoning	into the reckoning
 into the stratosphere	into the stratosphere
 inversely proportional	inversely proportional
 ipso facto	ipso facto
@@ -4023,31 +4530,29 @@ ironing boards	ironing board
 is going to murder me	is going to murder me
 is going to murder you	is going to murder you
 is what it is	is what it is
-isn't having any of it	isn't having any of it
+isn’t having any of it	isn’t having any of it
 it all depends	it all depends
 it does exactly what it says on the tin	it does exactly what it says on the tin
 it does heart good	it does heart good
 it does what it says on the tin	it does what it says on the tin
-it doesn't grow on trees	it doesn't grow on trees
+it doesn’t grow on trees	it doesn’t grow on trees
 it goes to show	it goes to show
 it is just as well	it is just as well
 it is nothing	it is nothing
 it is tipping down	it is tipping down
 it is tipping it down	it is tipping it down
 it is what it is	it is what it is
-it isn't his thing	it isn't his thing
-it isn't my thing	it isn't my thing
-it isn't on	it isn't on
+it isn’t his thing	it isn’t his thing
+it isn’t my thing	it isn’t my thing
+it isn’t on	it isn’t on
 it makes no odds	it makes no odds
 it never rains but it pours	it never rains but it pours
 it says a lot for	it says a lot for
 it says very little for	it says very little for
 it serves right	it serves right
 it sounds like a plan	it sounds like a plan
-it sounds like a plan to me	it sounds like a plan to me
 it stands to reason	it stands to reason
 it takes all sorts	it takes all sorts
-it takes all sorts to make a world	it takes all sorts to make a world
 it takes one to know one	it takes one to know one
 it takes two to tango	it takes two to tango
 it was nothing	it was nothing
@@ -4056,40 +4561,42 @@ it was tipping it down	it was tipping it down
 it will all come out in the wash	it will all come out in the wash
 it will come out in the wash	it will come out in the wash
 it will cost you	it will cost you
-it won't do	it won't do
-it won't hurt	it won't hurt
-it wouldn't do any harm	it wouldn't do any harm
-it wouldn't hurt	it wouldn't hurt
-it's a fair cop	it's a fair cop
-it's a free country	it's a free country
-it's a small world	it's a small world
-it's about time	it's about time
-it's all Greek to me	it's all Greek to me
-it's all water under the bridge	it's all water under the bridge
-it's always the way	it's always the way
-it's an ill wind that blows nobody any good	it's an ill wind that blows nobody any good
-it's as broad as it's long	it's as broad as it's long
-it's chucking it down	it's chucking it down
-it's early days	it's early days
-it's early days yet	it's early days yet
-it's high time	it's high time
-it's just a matter of time	it's just a matter of time
-it's no skin off his nose	it's no skin off his nose
-it's no skin off my nose	it's no skin off my nose
-it's no skin off your nose	it's no skin off your nose
-it's no use	it's no use
-it's not as if	it's not as if
-it's not brain surgery	it's not brain surgery
-it's not day	it's not day
-it's not my problem	it's not my problem
-it's not over until the fat lady sings	it's not over until the fat lady sings
-it's not rocket science	it's not rocket science
-it's now or never	it's now or never
-it's only a matter of time	it's only a matter of time
-it's six of one and half a dozen of the other	it's six of one and half a dozen of the other
-it's still early days	it's still early days
-it's water under the bridge	it's water under the bridge
-it's your funeral	it's your funeral
+it won’t do	it won’t do
+it won’t hurt	it won’t hurt
+it wouldn’t do any harm	it wouldn’t do any harm
+it wouldn’t hurt	it wouldn’t hurt
+it's a deal	it's a deal
+it’ll be all right on the night	it’ll be all right on the night
+it’ll be alright on the night	it’ll be all right on the night
+it’s a fair cop	it’s a fair cop
+it’s a free country	it’s a free country
+it’s a small world	it’s a small world
+it’s about time	it’s about time
+it’s all Greek to me	it’s all Greek to me
+it’s all water under the bridge	it’s all water under the bridge
+it’s always the way	it’s always the way
+it’s an ill wind that blows nobody any good	it’s an ill wind that blows nobody any good
+it’s as broad as it’s long	it’s as broad as it’s long
+it’s chucking it down	it’s chucking it down
+it’s early days	it’s early days
+it’s high time	it’s high time
+it’s just a matter of time	it’s just a matter of time
+it’s no skin off his nose	it’s no skin off his nose
+it’s no skin off my nose	it’s no skin off my nose
+it’s no skin off your nose	it’s no skin off your nose
+it’s no use	it’s no use
+it’s not as if	it’s not as if
+it’s not brain surgery	it’s not brain surgery
+it’s not day	it’s not day
+it’s not my problem	it’s not my problem
+it’s not over until the fat lady sings	it’s not over until the fat lady sings
+it’s not rocket science	it’s not rocket science
+it’s now or never	it’s now or never
+it’s only a matter of time	it’s only a matter of time
+it’s six of one and half a dozen of the other	it’s six of one and half a dozen of the other
+it’s still early days	it’s still early days
+it’s water under the bridge	it’s water under the bridge
+it’s your funeral	it’s your funeral
 ivory tower	ivory tower
 jack of all trades	jack of all trades
 jack shit	jack shit
@@ -4111,6 +4618,10 @@ join battle with	join battle with
 join forces with	join forces with
 join hands with	join hands with
 join the club	join the club
+joking apart	joking aside
+joking aside	joking aside
+jolly good	jolly good
+jolly well	jolly well
 judgement call	judgement call
 judgement day	judgement day
 jump down throat	jump down throat
@@ -4130,10 +4641,12 @@ jump to conclusions	jump to conclusions
 jump to it	jump to it
 jumped ship	jump ship
 jumping ship	jump ship
+jumping up and down	jumping up and down
 jumps ship	jump ship
 just a minute	just a minute
 just a moment	just a moment
 just a second	just a second
+just about	just about
 just around the corner	just around the corner
 just as well	just as well
 just for love	just for love
@@ -4145,11 +4658,14 @@ just in case	just in case
 just in time	just in time
 just like that	just like that
 just my luck	just my luck
+just now	just now
 just one of those things	just one of those things
 just round the corner	just round the corner
+just so	just so
 just the job	just the job
 just the same	just the same
 just the ticket	just the ticket
+just then	just then
 just this once	just this once
 just what the doctor ordered	just what the doctor ordered
 just you wait	just you wait
@@ -4174,7 +4690,7 @@ keep an eye open	keep an eye open
 keep an eye out	keep an eye out
 keep an open mind	keep an open mind
 keep at a distance	keep at a distance
-keep at arm's length	keep at arm's length
+keep at arm’s length	keep at arm’s length
 keep at bay	keep at bay
 keep body and soul together	keep body and soul together
 keep close tabs on	keep close tabs on
@@ -4190,6 +4706,7 @@ keep in touch	keep in touch
 keep it real	keep it real
 keep it up	keep it up
 keep move with the times	keep move with the times
+keep mum	keep mum
 keep on about	keep on about
 keep on at	keep on at
 keep on their toes	keep on their toes
@@ -4198,6 +4715,7 @@ keep pace	keep pace
 keep posted	keep posted
 keep put under lock and key	keep put under lock and key
 keep quiet about	keep quiet about
+keep shtum	stay shtum
 keep tabs on	keep tabs on
 keep the ball rolling	keep the ball rolling
 keep the change	keep the change
@@ -4228,8 +4746,6 @@ keep your hair on	keep your hair on
 keep your hand in	keep your hand in
 keep your hands off	keep your hands off
 keep your head	keep your head
-keep your head above water	keep your head above water
-keep your head down	keep your head down
 keep your mouth shut	keep your mouth shut
 keep your nose clean	keep your nose clean
 keep your nose to the grindstone	keep your nose to the grindstone
@@ -4239,10 +4755,14 @@ keep your pecker up	keep your pecker up
 keep your powder dry	keep your powder dry
 keep your shirt on	keep your shirt on
 keep your temper	keep your temper
-keep your temper with	keep your temper with
 keep your wits about you	keep your wits about you
 keep yourself aloof	keep yourself aloof
 keep yourself busy	keep yourself busy
+keeping mum	keep mum
+keeps mum	keep mum
+keeps shtum	stay shtum
+kept mum	keep mum
+kept shtum	stay shtum
 kettle of fish	kettle of fish
 key fob	key fob
 key fobs	key fob
@@ -4259,16 +4779,17 @@ kick some butt	kick some butt
 kick start	kick start
 kick the bucket	kick the bucket
 kick the can	kick the can
-kick the can down the road	kick the can down the road
 kick the tires	kick the tires
 kick the tyres	kick the tires
 kick up a fuss	kick up a fuss
 kick up a stink	kick up a stink
 kick up your heels	kick up your heels
-kick when they're down	kick when they're down
+kick when they’re down	kick when they’re down
 kick your heels	kick your heels
 kicking and screaming	kicking and screaming
 kidney stone	kidney stone
+kids stuff	kids’ stuff
+kids’ stuff	kids’ stuff
 kill an hour	kill an hour
 kill or cure	kill or cure
 kill switch	kill switch
@@ -4279,6 +4800,7 @@ kill two birds with one stone	kill two birds with one stone
 kill with kindness	kill with kindness
 kill yourself laughing	kill yourself laughing
 killer whale	killer whale
+kindly adjust	kindly adjust
 kingdom come	kingdom come
 kiss and tell	kiss and tell
 kiss goodbye to	kiss goodbye to
@@ -4310,8 +4832,8 @@ know inside out	know inside out
 know like the back of your hand	know like the back of your hand
 know off pat	know off pat
 know to your cost	know to your cost
-know what you're talking about	know what you're talking about
-know what's what	know what's what
+know what you’re talking about	know what you’re talking about
+know what’s what	know what’s what
 know which side your bread is buttered	know which side your bread is buttered
 know your own mind	know your own mind
 know your stuff	know your stuff
@@ -4341,6 +4863,7 @@ last resort	last resort
 last straw	last straw
 late in the day	late in the day
 late to the party	late to the party
+later on	later on
 laugh all the way to the bank	laugh all the way to the bank
 laugh in face	laugh in face
 laugh like a drain	laugh like a drain
@@ -4455,7 +4978,7 @@ let fly	let fly
 let have it	let have it
 let it all hang out	let it all hang out
 let it go	let it go
-let's see	let's see
+let loose	let loose
 let me see	let me see
 let me think	let me think
 let nature take its course	let nature take its course
@@ -4474,9 +4997,11 @@ let well alone	let well alone
 let your hair down	let your hair down
 let your heart rule your head	let your heart rule your head
 let yourself go	let yourself go
-let's just say	let's just say
 letter grade	letter grade
 letter of the law	letter of the law
+let’s just say	let’s just say
+let’s roll	let’s roll
+let’s see	let’s see
 level headed	level headed
 level playing field	level playing field
 level the playing field	level the playing field
@@ -4497,7 +5022,7 @@ life jacket	life jacket
 life of the party	life of the party
 life savings	life savings
 life sentence	life sentence
-life's too short	life's too short
+life’s too short	life’s too short
 lift a finger	lift a finger
 lift the lid on	lift the lid on
 light a fire under	light a fire under
@@ -4511,12 +5036,12 @@ lightning never strikes twice	lightning never strikes twice
 like a Michelin man	like a Michelin man
 like a bad dream	like a bad dream
 like a bat out of hell	like a bat out of hell
+like a bear with a sore head	like a bear with a sore head
 like a broken record	like a broken record
 like a cat on a hot tin roof	like a cat on a hot tin roof
 like a cat on hot bricks	like a cat on hot bricks
-like a cat that's got the cream	like a cat that's got the cream
+like a cat that’s got the cream	like a cat that’s got the cream
 like a dog	like a dog
-like a dog with a bone	like a dog with a bone
 like a dose of salts	like a dose of salts
 like a duck to water	like a duck to water
 like a flash	like a flash
@@ -4530,21 +5055,25 @@ like a stuck record	like a stuck record
 like a ton of bricks	like a ton of bricks
 like a woman possessed	like a woman possessed
 like all get out	like all get out
+like anything	like anything
 like as not	like as not
 like clockwork	like clockwork
+like fury	like fury
 like getting blood from a stone	like getting blood from a stone
 like getting blood out of a stone	like getting blood out of a stone
 like gold dust	like gold dust
 like greased lightning	like greased lightning
 like herding cats	like herding cats
-like it's going out of fashion	like it's going out of fashion
-like nobody's business	like nobody's business
+like it’s going out of fashion	like it’s going out of fashion
+like nobody’s business	like nobody’s business
 like one possessed	like one possessed
 like painting the Forth Bridge	like painting the Forth Bridge
 like pulling teeth	like pulling teeth
 like putty in hands	like putty in hands
 like rats deserting a sinking ship	like rats deserting a sinking ship
 like rats leaving a sinking ship	like rats leaving a sinking ship
+like sheep	like sheep
+like taking candy from a baby	like taking candy from a baby
 like the Michelin man	like the Michelin man
 like the cat that ate the canary	like the cat that ate the canary
 like the cat that got the canary	like the cat that got the canary
@@ -4553,7 +5082,8 @@ like the clappers	like the clappers
 like the devil	like the devil
 like the sound of your own voice	like the sound of your own voice
 like the wind	like the wind
-like water off a duck's back	like water off a duck's back
+like water	like water
+like water off a duck’s back	like water off a duck’s back
 like waving a red flag in front of a bull	like waving a red flag in front of a bull
 line in the sand	line in the sand
 line of sight	line of sight
@@ -4574,11 +5104,10 @@ live from hand to mouth	live from hand to mouth
 live hand to mouth	live hand to mouth
 live in a world of your own	live in a world of your own
 live in clover	live in clover
-live in each other's pockets	live in each other's pockets
+live in each other’s pockets	live in each other’s pockets
 live in sin	live in sin
 live in the past	live in the past
 live it up	live it up
-live off	live off
 live off the fat of the land	live off the fat of the land
 live off the land	live off the land
 live the dream	live the dream
@@ -4607,7 +5136,6 @@ look a gift horse in the mouth	look a gift horse in the mouth
 look a picture	look a picture
 look askance at	look askance at
 look at askance	look at askance
-look at through eyes	look at through eyes
 look bad for	look bad for
 look before you leap	look before you leap
 look daggers at	look daggers at
@@ -4616,10 +5144,6 @@ look down upon	look down upon
 look down your nose at	look down your nose at
 look for trouble	look for trouble
 look forward to	look forward to
-look in the eye	look in the eye
-look in the eyeface	look in the eyeface
-look in the eyes	look in the eyes
-look in the face	look in the face
 look into space	look into space
 look kindly on	look kindly on
 look kindly upon	look kindly upon
@@ -4631,20 +5155,27 @@ look like the cat brought in	look like the cat brought in
 look like the cat dragged in	look like the cat dragged in
 look no further	look no further
 look on the bright side	look on the bright side
+look sharp	look sharp
 look suspiciously like	look suspiciously like
 look the other way	look the other way
 look the part	look the part
 look to your laurels	look to your laurels
 look up and down	look up and down
-look who's talking	look who's talking
+look who’s talking	look who’s talking
 look your age	look your age
+loom large	loom large
+loomed large	loom large
+looming large	loom large
+looms large	loom large
 loop the loop	loop the loop
 loose cannon	loose cannon
 loose ends	loose ends
 lord it over	lord it over
 lord of the flies	lord of the flies
 lorem ipsum	lorem ipsum
+lose face	lose face
 lose ground to	lose ground to
+lose heart	lose heart
 lose in the shuffle	lose in the shuffle
 lose money hand over fist	lose money hand over fist
 lose the plot	lose the plot
@@ -4662,6 +5193,8 @@ loss of face	loss of face
 lost and found	lost and found
 lost cause	lost cause
 lost causes	lost cause
+lost face	lose face
+lost heart	lose heart
 lost in thought	lost in thought
 lost in translation	lost in translation
 lots of love	lots of love
@@ -4688,6 +5221,7 @@ lucid dreams	lucid dream
 luck is in	luck is in
 luck of the draw	luck of the draw
 lucked out	lucked out
+lump it	lump it
 machine gun	machine gun
 machine guns	machine gun
 machine learning	machine learning
@@ -4699,6 +5233,7 @@ made for each other	made for each other
 made for other	made for other
 made in heaven	made in heaven
 made of money	made of money
+made sense	make sense
 made to measure	made to measure
 magic bullet	magic bullet
 magic carpet	magic carpet
@@ -4737,7 +5272,7 @@ make a point	make a point
 make a quick buck	make a quick buck
 make a ripple	make a ripple
 make a rod for your own back	make a rod for your own back
-make a silk purse out of a sow's ear	make a silk purse out of a sow's ear
+make a silk purse out of a sow’s ear	make a silk purse out of a sow’s ear
 make a spectacle of yourself	make a spectacle of yourself
 make a splash	make a splash
 make a thing about	make a thing about
@@ -4773,8 +5308,19 @@ make headway with	make headway with
 make inroads into	make inroads into
 make inroads on	make inroads on
 make it big	make it big
+marry money	marry money
 make it snappy	make it snappy
+I mean	I mean
+in person	in person
+mission accomplished	mission accomplished
+in microcosm	in microcosm
+miles away	miles away
+no messing	no messing
+beyond measure	beyond measure
+where the rubber meets the road	where the rubber meets the road
+mean to say	mean to say
 make it with	make it with
+by marriage	by marriage
 make life a misery	make life a misery
 make life difficult	make life difficult
 make light of	make light of
@@ -4788,7 +5334,6 @@ make no bones about	make no bones about
 make no claim	make no claim
 make no difference	make no difference
 make no mistake	make no mistake
-make no mistake about	make no mistake about
 make noises about	make noises about
 make of yourself	make of yourself
 make or break	make or break
@@ -4796,6 +5341,7 @@ make peace with	make peace with
 make ready for	make ready for
 make reassuring noises	make reassuring noises
 make room	make room
+make sense	make sense
 make so bold	make so bold
 make some difference	make some difference
 make soothing noises	make soothing noises
@@ -4811,6 +5357,7 @@ make up for lost time	make up for lost time
 make up ground	make up ground
 make up leeway	make up leeway
 make up your mind	make up your mind
+make waves	make waves
 make way for	make way for
 make your blood freeze	make your blood freeze
 make your flesh creep	make your flesh creep
@@ -4825,10 +5372,11 @@ make your presence felt	make your presence felt
 make your skin crawl	make your skin crawl
 make your voice heard	make your voice heard
 make your way	make your way
-make your way towards	make your way towards
 make yourself known to	make yourself known to
 make yourself scarce	make yourself scarce
 make yourself understood	make yourself understood
+makes sense	make sense
+making sense	make sense
 man and boy	man and boy
 man cave	man cave
 man enough	man enough
@@ -4843,8 +5391,9 @@ many a time	many a time
 many hands make light work	many hands make light work
 many happy returns	many happy returns
 many moons ago	many moons ago
+man’s best friend	man’s best friend
 march to a different drum	march to a different drum
-march to a different drummer	march to a different drummer
+march to a different drummer	march to a different drum
 march to a different tune	march to a different tune
 margin call	margin call
 margin of error	margin of error
@@ -4867,6 +5416,7 @@ may just as well do	may just as well do
 mazel tov	mazel tov
 me and my big mouth	me and my big mouth
 mea culpa	mea culpa
+mean business	mean business
 mean no harm	mean no harm
 mean spirited	mean spirited
 mean the world to	mean the world to
@@ -4926,6 +5476,7 @@ misery loves company	misery loves company
 miss the boat	miss the boat
 miss the mark	miss the mark
 miss your guess	miss your guess
+mission impossible	mission impossible
 mix and match	mix and match
 mix it up	mix it up
 mix it with	mix it with
@@ -4934,7 +5485,7 @@ mocked up	mock up
 mocks up	mock up
 modus operandi	modus operandi
 mom and pop	mom and pop
-money doesn't grow on trees	money doesn't grow on trees
+money doesn’t grow on trees	money doesn’t grow on trees
 money for jam rope	money for jam rope
 money for old rope	money for old rope
 money is no object	money is no object
@@ -4953,9 +5504,10 @@ more like it	more like it
 more often than not	more often than not
 more or less	more or less
 more power to elbow	more power to elbow
-more than your job's worth	more than your job's worth
+more precisely	more precisely
+more than your job’s worth	more than your job’s worth
 more to the point	more to the point
-more's the pity	more's the pity
+more’s the pity	more’s the pity
 morning sickness	morning sickness
 morning wood	morning wood
 mortal coil	mortal coil
@@ -4985,10 +5537,13 @@ mutually assured destruction	mutually assured destruction
 mutually exclusive	mutually exclusive
 mutually intelligible	mutually intelligible
 muzzle brake	muzzle brake
+my bad	my bad
+my hat	my hat
 my heart bleeds	my heart bleeds
 my lips are sealed	my lips are sealed
 my two cents	my two cents
 my way or the highway	my way or the highway
+my word	upon my word
 nail down	nail down
 nail gun	nail gun
 nail it	nail it
@@ -5000,6 +5555,9 @@ nails down	nail down
 naked eye	naked eye
 name and shame	name and shame
 name is mud	name is mud
+name names	name names
+named names	name names
+names names	name names
 narrow minded	narrow minded
 native speaker	native speaker
 natural disaster	natural disaster
@@ -5054,30 +5612,51 @@ nip in the bud	nip in the bud
 no big deal	no big deal
 no biggie	no biggie
 no can do	no can do
+no comment	no comment
+no contest	no contest
+to be going on with	to be going on with
+get there	get there
+gnash your teeth	gnash your teeth
+gnashing your teeth	gnash your teeth
+no dice	no dice
+no end	no end
+give as good as you get	give as good as you get
+give up the ghost	give up the ghost
+gave up the ghost	give up the ghost
+given up the ghost	give up the ghost
 no flies on	no flies on
 no fool like an old fool	no fool like an old fool
 no hard feelings	no hard feelings
 no harm done	no harm done
 no holds barred	no holds barred
+no less	no less
 no man is an island	no man is an island
 no matter what	no matter what
 no matter where	no matter where
 no matter who	no matter who
 no news is good news	no news is good news
+no offence	no offence
+no offense	no offence
 no peace for the wicked	no peace for the wicked
 no pun intended	no pun intended
 no rest for the wicked	no rest for the wicked
 no room to swing a cat	no room to swing a cat
+no shit	no shit
+no slouch	no slouch
 no smoke without fire	no smoke without fire
 no sooner said than done	no sooner said than done
 no strings attached	no strings attached
 no such luck	no such luck
+no sweat	no sweat
 no thanks to	no thanks to
 no time like the present	no time like the present
 no two ways about it	no two ways about it
-no you don't	no you don't
+no way	there is no way
+no worries	no worries
+no you don’t	no you don’t
 noble savage	noble savage
 non sequitur	non sequitur
+none but	none but
 none other than	none other than
 none the less	none the less
 none the wiser	none the wiser
@@ -5106,7 +5685,10 @@ not as bad as all that	not as bad as all that
 not as badly as all that	not as badly as all that
 not at all	not at all
 not at any price	not at any price
+not bad	not bad
 not bat an eyelid	not bat an eyelid
+not believe your ears	not believe your ears
+not believe your eyes	not believe your eyes
 not bother your head about	not bother your head about
 not bother your head with	not bother your head with
 not bother yourself head about	not bother yourself head about
@@ -5119,21 +5701,20 @@ not by any manner of means	not by any manner of means
 not by any means	not by any means
 not by any stretch of the imagination	not by any stretch of the imagination
 not care a damn	not care a damn
-not care a damn about	not care a damn about
 not care a fig	not care a fig
-not care a fig for	not care a fig for
 not care a hoot	not care a hoot
 not care tuppence for	not care tuppence for
 not care two hoots	not care two hoots
 not come amiss	not come amiss
 not come easy	not come easy
-not come easy to	not come easy to
 not come to anything	not come to anything
 not come to much	not come to much
+not cricket	not cricket
 not cup of tea	not cup of tea
+not cut it	cut it
 not cut it	not cut it
 not cut the mustard	not cut the mustard
-not do a hand's turn	not do a hand's turn
+not do a hand’s turn	not do a hand’s turn
 not do a lot for	not do a lot for
 not do a much for	not do a much for
 not do anything lot for	not do anything lot for
@@ -5159,17 +5740,12 @@ not for the world	not for the world
 not for want of trying	not for want of trying
 not get a wink of sleep	not get a wink of sleep
 not get a word in	not get a word in
-not get a word in edgeways	not get a word in edgeways
 not get to first base	not get to first base
 not give a damn	not give a damn
-not give a damn about	not give a damn about
 not give a fig	not give a fig
-not give a fig for	not give a fig for
 not give a fuck	not give a fuck
-not give a fuck about	not give a fuck about
 not give a hoot	not give a hoot
 not give a shit	not give a shit
-not give a shit about	not give a shit about
 not give a stuff	not give a stuff
 not give a toss	not give a toss
 not give an inch	not give an inch
@@ -5187,16 +5763,17 @@ not half bad	not half bad
 not half such a	not half such a
 not harm a fly	not harm a fly
 not harm a hair of head	not harm a hair of head
-not have Buckley's	not have Buckley's
-not have a cat in hell's chance	not have a cat in hell's chance
+not have Buckley’s	not have Buckley’s
+not have a bean	not have a bean
+not have a cat in hell’s chance	not have a cat in hell’s chance
 not have a clue	not have a clue
-not have a dog's chance	not have a dog's chance
+not have a dog’s chance	not have a dog’s chance
 not have a good word to say for	not have a good word to say for
 not have a hair out of place	not have a hair out of place
 not have a hope	not have a hope
 not have a hope in hell	not have a hope in hell
 not have a leg to stand on	not have a leg to stand on
-not have a snowball's chance in hell	not have a snowball's chance in hell
+not have a snowball’s chance in hell	not have a snowball’s chance in hell
 not have a stitch on	not have a stitch on
 not have a wink of sleep	not have a wink of sleep
 not have all day	not have all day
@@ -5225,16 +5802,19 @@ not in the slightest	not in the slightest
 not in vocabulary	not in vocabulary
 not in wildest dreams	not in wildest dreams
 not in your right mind	not in your right mind
+not inconsiderable	not inconsiderable
 not just a pretty face	not just a pretty face
 not just yet	not just yet
+not know any better	not know any better
 not know from Adam	not know from Adam
 not know the first thing about	not know the first thing about
 not know what hit you	not know what hit you
 not know where to look	not know where to look
 not know whether to laugh or cry	not know whether to laugh or cry
-not know whether you're coming or going	not know whether you're coming or going
+not know whether you’re coming or going	not know whether you’re coming or going
 not know you are born	not know you are born
 not know your arse from your elbow	not know your arse from your elbow
+not least	not least
 not leave side	not leave side
 not let the grass grow under your feet	not let the grass grow under your feet
 not lift a finger	not lift a finger
@@ -5253,6 +5833,7 @@ not much chop	not much chop
 not much cop	not much cop
 not much in it	not much in it
 not much to look at	not much to look at
+not necessarily	not necessarily
 not on any account	not on any account
 not on your life	not on your life
 not one bit	not one bit
@@ -5273,7 +5854,7 @@ not see the forest for the trees	not see the forest for the trees
 not see the wood for the trees	not see the wood for the trees
 not sleep a wink	not sleep a wink
 not so hot	not so hot
-not stand a cat in hell's chance	not stand a cat in hell's chance
+not stand a cat in hell’s chance	not stand a cat in hell’s chance
 not stand in way	not stand in way
 not suffer fools gladly	not suffer fools gladly
 not take kindly to	not take kindly to
@@ -5297,12 +5878,15 @@ not trust an inch	not trust an inch
 not turn a hair	not turn a hair
 not want to know	not want to know
 not worth the candle	not worth the candle
-not worth the paper it's printed on	not worth the paper it's printed on
-not worth the paper it's written on	not worth the paper it's written on
+not worth the paper it’s printed on	not worth the paper it’s printed on
+not worth the paper it’s written on	not worth the paper it’s written on
 note to self	note to self
 nothing all skin and bone	nothing all skin and bone
 nothing but skin and bone	nothing but skin and bone
+nothing daunted	nothing daunted
+nothing doing	nothing doing
 nothing if not	nothing if not
+if not	if not
 nothing less than	nothing less than
 nothing much to write home about	nothing much to write home about
 nothing of the kind	nothing of the kind
@@ -5318,7 +5902,7 @@ now a days	now a days
 now and again	now and again
 now and then	now and then
 now or never	now or never
-now you're talking	now you're talking
+now you’re talking	now you’re talking
 nowhere in sight	nowhere in sight
 nowhere to be found	nowhere to be found
 nuclear family	nuclear family
@@ -5330,7 +5914,9 @@ nuclear winter	nuclear winter
 null and void	null and void
 null hypothesis	null hypothesis
 number theory	number theory
+numbers game	numbers game
 observable universe	observable universe
+obstruct justice	obstruct justice
 odd one out	odd one out
 odds and ends	odds and ends
 of a certain age	of a certain age
@@ -5343,7 +5929,9 @@ of all things	of all things
 of all time	of all time
 of bad report	of bad report
 of choice for	of choice for
-of course not	of course not
+of color	of color
+of colour	of color
+of course	of course
 of easy virtue	of easy virtue
 of good report	of good report
 of little account	of little account
@@ -5353,6 +5941,7 @@ of no avail	of no avail
 of one kind or another	of one kind or another
 of one sort or another	of one sort or another
 of sorts	of sorts
+of steel	of steel
 of that kind	of that kind
 of the day	of the day
 of the essence	of the essence
@@ -5368,14 +5957,18 @@ of your own accord	of your own accord
 of your own free will	of your own free will
 of your own making	of your own making
 off and on and off	off and on and off
+off base	off base
+off beam	off beam
 off brand	off brand
 off by heart	off by heart
+off camera	off camera
 off chance	off chance
 off guard	off guard
 off the air	off the air
 off the back of a lorry	off the back of a lorry
 off the bat	off the bat
 off the beaten path	off the beaten path
+off the beaten track	off the beaten track
 off the boil	off the boil
 off the charts	off the charts
 off the cuff	off the cuff
@@ -5388,24 +5981,26 @@ off the pace	off the pace
 off the peg	off the peg
 off the rack	off the rack
 off the radar	off the radar
-off the radar screen	off the radar screen
 off the record	off the record
 off the road	off the road
 off the shelf	off the shelf
 off the table	off the table
 off the top of your head	off the top of your head
 off the wall	off the wall
+off topic	off topic
 off your food	off your food
 off your game	off your game
 off your guard	off your guard
 off your hands	off your hands
 off your nut	off your nut
 off your own bat	off your own bat
+off your rocker	off your rocker
 off your trolley	off your trolley
 offer your hand	offer your hand
 oh dear God	oh dear God
 oh my days	oh my days
 oh snap	oh snap
+oh yeah	oh yeah
 oil rig	oil rig
 oil slick	oil slick
 oil the wheels	oil the wheels
@@ -5413,33 +6008,50 @@ old habits die hard	old habits die hard
 old money	old money
 old traditions die hard	old traditions die hard
 olive branch	olive branch
-on Shanks's pony	on Shanks's pony
+on Shanks’s pony	on Shanks’s pony
 on a dime	on a dime
 on a hiding to nothing	on a hiding to nothing
 on a level with	on a level with
 on a par	on a par
 on a regular basis	on a regular basis
+on a roll	on a roll
 on a shoestring	on a shoestring
 on a silver platter	on a silver platter
 on a whim	on a whim
 on a wing and a prayer	on a wing and a prayer
+on account	on account
+on aggregate	on aggregate
 on all fours	on all fours
 on all sides	on all sides
 on an even keel	on an even keel
 on and on	on and on
+on autopilot	on autopilot
+on balance	on balance
 on behalf of	on behalf of
 on blast	on blast
+on board	on board
+on camera	on camera
 on cloud nine	on cloud nine
 on course for do	on course for do
+on cue	right on cue
+on demand	on demand
+on deposit	on deposit
+on draught	on draught
+on earth	on earth
 on easy street	on easy street
 on either hand	on either hand
 on end	on end
 on equal terms	on equal terms
 on every hand	on every hand
 on every side	on every side
-on everyone's lips	on everyone's lips
+on everyone’s lips	on everyone’s lips
 on false pretences	on false pretences
+on fire	on fire
 on first acquaintance	on first acquaintance
+on hand	on hand
+on heat	on heat
+on high beam	on high beam
+on horseback	on horseback
 on its way	on its way
 on mature consideration	on mature consideration
 on mature reflection	on mature reflection
@@ -5448,13 +6060,20 @@ on neutral territory	on neutral territory
 on no account	on no account
 on no condition	on no condition
 on one hand	on one hand
+on one side	to one side
 on own ground	on own ground
 on par	on par
 on point	on point
+on purpose	on purpose
 on sale or return	on sale or return
 on second thought	on second thought
 on second thoughts	on second thought
+on shuffle	on shuffle
+on song	on song
+on special	on special
 on strike	on strike
+on sufferance	on sufferance
+on tenterhooks	on tenterhooks
 on that account	on that account
 on that score	on that score
 on the air	on the air
@@ -5471,6 +6090,7 @@ on the bounce	on the bounce
 on the button	on the button
 on the cards	on the cards
 on the carpet	on the carpet
+on the case	on the case
 on the cheap	on the cheap
 on the chopping block	on the chopping block
 on the contrary	on the contrary
@@ -5535,7 +6155,8 @@ on the scrapheap	on the scrapheap
 on the scrounge	on the scrounge
 on the shelf	on the shelf
 on the side	on the side
-on the sidelines	on the sidelines
+on the sidelines	from the sidelines
+on the skids	on the skids
 on the sly	on the sly
 on the small side	on the small side
 on the spectrum	on the spectrum
@@ -5543,7 +6164,7 @@ on the spot	on the spot
 on the spur of the moment	on the spur of the moment
 on the stocks	on the stocks
 on the street	on the street
-on the streets	on the streets
+on the streets	on the street
 on the surface	on the surface
 on the table	on the table
 on the television	on the television
@@ -5564,10 +6185,14 @@ on the wrong track	on the wrong track
 on thin ice	on thin ice
 on this account	on this account
 on this score	on this score
+on tick	on tick
 on tilt	on tilt
+on time	on time
 on top of the world	on top of the world
+on topic	on topic
 on your Pat Malone	on your Pat Malone
 on your back	on your back
+on your bike	on your bike
 on your conscience	on your conscience
 on your doorstep	on your doorstep
 on your feet	on your feet
@@ -5609,7 +6234,7 @@ one hit wonder	one hit wonder
 one hundred per cent	one hundred per cent
 one in a million	one in a million
 one in the eye	one in the eye
-one man's meat is another man's poison	one man's meat is another man's poison
+one man’s meat is another man’s poison	one man’s meat is another man’s poison
 one of a kind	one of a kind
 one of the old school	one of the old school
 one of these days	one of these days
@@ -5618,7 +6243,7 @@ one of those things	one of those things
 one or two	one or two
 one step ahead	one step ahead
 one step at a time	one step at a time
-one swallow doesn't make a summer	one swallow doesn't make a summer
+one swallow doesn’t make a summer	one swallow doesn’t make a summer
 one thing after another	one thing after another
 one thing leads to another	one thing leads to another
 one thing led to another	one thing leads to another
@@ -5637,6 +6262,7 @@ onto the defensive	onto the defensive
 onto the street	onto the streets
 onto the streets	onto the streets
 ontological argument	ontological argument
+depending on	depending on
 open bar	open bar
 open beta	open beta
 open doors for	open doors for
@@ -5662,27 +6288,22 @@ out for the count	out for the count
 out of a hat	out of a hat
 out of action	out of action
 out of all proportion	out of all proportion
-out of all proportion to	out of all proportion to
 out of bounds	out of bounds
-out of bounds for	out of bounds for
-out of bounds to	out of bounds to
 out of breath	out of breath
 out of business	out of business
 out of character	out of character
 out of commission	out of commission
 out of contention	out of contention
-out of contention for	out of contention for
 out of doors	out of doors
 out of earshot	out of earshot
 out of gear	out of gear
 out of hand	out of hand
-out of harm's way	out of harm's way
+out of harm’s way	out of harm’s way
 out of hearing	out of hearing
 out of here	out of here
 out of it	out of it
 out of joint	out of joint
 out of keeping	out of keeping
-out of keeping with	out of keeping with
 out of kilter	out of kilter
 out of line	out of line
 out of line with	out of line with
@@ -5719,15 +6340,18 @@ out of this world	out of this world
 out of true	out of true
 out of turn	out of turn
 out of whack	out of whack
+out of your depth	out of your depth
 out of your element	out of your element
 out of your hands	out of your hands
 out of your head	out of your head
+out of your tree	out of your tree
 out of your way	out of your way
 out off your head	out off your head
 out on a limb	out on a limb
 out on the street	out on the streets
 out on the streets	out on the streets
 out on the town	out on the town
+out on your ear	out on your ear
 out onto the street	out onto the streets
 out onto the streets	out onto the streets
 out the wazoo	out the wazoo
@@ -5744,6 +6368,7 @@ over and over	over and over
 over my dead body	over my dead body
 over the counter	over the counter
 over the hill	over the hill
+over the hump	over the hump
 over the long haul	over the long haul
 over the moon	over the moon
 over the odds	over the odds
@@ -5767,9 +6392,11 @@ pale in comparison	pale in comparison
 pale into insignificance	pale into insignificance
 pale next to	pale next to
 panic button	panic button
+panic stations	panic stations
 paper clip	paper clip
 paper mache	paper mache
 paper trail	paper trail
+par for the course	par for the course
 paradigm shift	paradigm shift
 parallel universe	parallel universe
 pardon my French	pardon my French
@@ -5795,6 +6422,7 @@ passes out	pass out
 passing away	pass away
 passing out	pass out
 passion fruit	passion fruit
+past caring	past caring
 past life	past life
 pat on the back	pat on the back
 pat yourself on the back	pat yourself on the back
@@ -5829,11 +6457,11 @@ pen name	pen name
 pencil skirt	pencil skirt
 penis envy	penis envy
 penny arcade	penny arcade
-people in glass houses shouldn't throw stones	people in glass houses shouldn't throw stones
+people in glass houses shouldn’t throw stones	people in glass houses shouldn’t throw stones
 people in high places	people in high places
-people who live in glass houses shouldn't throw stones	people who live in glass houses shouldn't throw stones
-people's eyes meet	people's eyes meet
-people's paths cross	people's paths cross
+people who live in glass houses shouldn’t throw stones	people who live in glass houses shouldn’t throw stones
+people’s eyes meet	people’s eyes meet
+people’s paths cross	people’s paths cross
 pep talk	pep talk
 pepper spray	pepper spray
 pepper sprayed	pepper spray
@@ -5918,6 +6546,7 @@ plain as the nose on your face	plain as the nose on your face
 planned obsolescence	planned obsolescence
 plate armour	plate armour
 plausible deniability	plausible deniability
+play Cupid	play Cupid
 play a game of cat and mouse with	play a game of cat and mouse with
 play a part	play a part
 play ball with	play ball with
@@ -5927,14 +6556,18 @@ play by rules	play by rules
 play by the rules	play by the rules
 play cat and mouse with	play cat and mouse with
 play dead	play dead
+play defense	play defense
+play dirty	play dirty
 play fast and loose	play fast and loose
 play footsie with	play footsie with
 play for time	play for time
 play games with	play games with
+play gooseberry	play gooseberry
 play happy families	play happy families
 play hard to get	play hard to get
 play hell with	play hell with
 play host to	play host to
+play house	play house
 play into hands	play into hands
 play it by ear	play it by ear
 play it cool	play it cool
@@ -5950,12 +6583,29 @@ play the game	play the game
 play the market	play the market
 play the race card	play the race card
 play to the gallery	play to the gallery
+play truant	play truant
 play with fire	play with fire
 play with yourself	play with yourself
 play your ace	play your ace
 play your cards close to your chest	play your cards close to your chest
 play your cards right	play your cards right
+played Cupid	play Cupid
+played gooseberry	play gooseberry
+played house	play house
+played truant	play truant
+playing Cupid	play Cupid
+playing gooseberry	play gooseberry
+playing house	play house
+playing truant	play truant
+plays Cupid	play Cupid
+plays gooseberry	play gooseberry
+plays house	play house
+plays truant	play truant
 plead the fifth	plead the fifth
+please God	please God
+go figure	go figure
+become a figure of fun	become a figure of fun
+a figure of fun	become a figure of fun
 please the eye	please the eye
 pleased as Punch	pleased as Punch
 pleased with yourself	pleased with yourself
@@ -5991,6 +6641,7 @@ poked fun	poke fun
 poker face	poker face
 pokes fun	poke fun
 poking fun	poke fun
+poles apart	poles apart
 police state	police state
 political climate	political climate
 political correctness	political correctness
@@ -6042,6 +6693,7 @@ preach to the converted	preach to the converted
 prefer charges against	prefer charges against
 prepare the ground	prepare the ground
 present a united front	present a united front
+present arms	present arms
 present company excepted	present company excepted
 present tense	present tense
 press all the buttons	press all the buttons
@@ -6064,7 +6716,7 @@ price point	price point
 price yourself out of the market	price yourself out of the market
 prick up your ears	prick up your ears
 prick your conscience	prick your conscience
-prick your ears	prick your ears
+prick your ears	prick up your ears
 pride and joy	pride and joy
 pride of place	pride of place
 prima facie	prima facie
@@ -6086,8 +6738,10 @@ promise the world	promise the world
 promised land	promised land
 proof of concept	proof of concept
 prop up	prop up
+draw blood	draw blood
 proper noun	proper noun
 prophet of doom	prophet of doom
+doom merchant	prophet of doom
 proportional representation	proportional representation
 propose a toast	propose a toast
 pros and cons	pros and cons
@@ -6199,9 +6853,9 @@ put in motion	put in motion
 put in the picture	put in the picture
 put in the shade	put in the shade
 put in their place	put in their place
-put in your two cents' worth	put in your two cents' worth
-put in your two penn'orth	put in your two penn'orth
+put in your two cents’ worth	put in your two cents’ worth
 put in your two pennyworth	put in your two pennyworth
+put in your two penn’orth	put in your two penn’orth
 put into effect	put into effect
 put into reverse	put into reverse
 put it about	put it about
@@ -6246,7 +6900,7 @@ put the fear of God into	put the fear of God into
 put the frighteners on	put the frighteners on
 put the kibosh on	put the kibosh on
 put the knife in	put the knife in
-put the knife into	put the knife into
+put the knife into	put the knife in
 put the kybosh on	put the kybosh on
 put the lid on	put the lid on
 put the mockers on	put the mockers on
@@ -6307,17 +6961,17 @@ put your shirt on	put your shirt on
 put your shoulder to the wheel	put your shoulder to the wheel
 put your skates on	put your skates on
 put your thinking cap on	put your thinking cap on
-put yourself in else's place	put yourself in else's place
+put yourself in else’s place	put yourself in else’s place
 put yourself in place	put yourself in place
 put yourself in shoes	put yourself in shoes
 putty in hands	putty in hands
 queer the pitch	queer the pitch
-queer the pitch for	queer the pitch for
 queer theory	queer theory
 quick and dirty	quick and dirty
 quick as a flash	quick as a flash
 quick off the mark	quick off the mark
 quid pro quo	quid pro quo
+quids in	quids in
 quite a bit	quite a bit
 quite a few	quite a few
 quite a lot	quite a lot
@@ -6332,8 +6986,10 @@ rags to riches	rags to riches
 rain forest	rain forest
 rain on parade	rain on parade
 rain or shine	rain or shine
+raining cats and dogs	raining cats and dogs
 raise a hand against	raise a hand against
 raise a hand to	raise a hand to
+raise hell	raise hell
 raise the ante	raise the ante
 raise the bar	raise the bar
 raise the roof	raise the roof
@@ -6345,6 +7001,7 @@ raise your sights	raise your sights
 raisin bran	raisin bran
 rake over the coals	rake over the coals
 ram down throat	ram down throat
+ran riot	run riot
 ranch dressing	ranch dressing
 random access	random access
 rank and file	rank and file
@@ -6353,6 +7010,7 @@ rap on the knuckles	rap on the knuckles
 rap over the knuckles	rap over the knuckles
 rat out	rat out
 rather him than me	rather him than me
+rather than	rather than
 rather you than me	rather you than me
 raw data	raw data
 razor wire	razor wire
@@ -6380,6 +7038,7 @@ red riding hood	red riding hood
 red scare	red scare
 red tape	red tape
 redress the balance	redress the balance
+reduced circumstances	reduced circumstances
 reductio ad absurdum	reductio ad absurdum
 reference point	reference point
 reference work	reference work
@@ -6417,6 +7076,7 @@ riddle me this	riddle me this
 ride height	ride height
 ride herd on	ride herd on
 ride roughshod over	ride roughshod over
+riding for a fall	riding for a fall
 right a wrong	right a wrong
 right and left	right and left
 right as rain	right as rain
@@ -6451,6 +7111,7 @@ risk your neck	risk your neck
 rite of passage	rite of passage
 riveted to the spot	riveted to the spot
 roar to victory	roar to victory
+roaring drunk	roaring drunk
 roast beef	roast beef
 rob Peter to pay Paul	rob Peter to pay Paul
 rob the cradle	rob the cradle
@@ -6465,12 +7126,12 @@ roger that	roger that
 role model	role model
 roll cage	roll cage
 roll call	roll call
-roll in her grave	roll in one's grave
-roll in his grave	roll in one's grave
+roll in her grave	roll in one’s grave
+roll in his grave	roll in one’s grave
 roll off the tongue	roll off the tongue
 roll out the welcome mat	roll out the welcome mat
-roll over in her grave	roll over in one's grave
-roll over in his grave	roll over in one's grave
+roll over in her grave	roll over in one’s grave
+roll over in his grave	roll over in one’s grave
 roll the dice	roll the dice
 roll up your sleeves	roll up your sleeves
 roll with the punches	roll with the punches
@@ -6499,7 +7160,7 @@ rough around the edges	rough around the edges
 round number	round number
 round of applause	round of applause
 round robin	round robin
-round the clock	round the clock
+round the clock	around the clock
 round the corner	round the corner
 round the twist	round the twist
 round trip	round trip
@@ -6529,13 +7190,13 @@ run a risk	run a risk
 run a tight ship	run a tight ship
 run amok	run amok
 run an eye over	run an eyes over
-run your eyes over	run an eyes over
 run around like a headless chicken	run around like a headless chicken
 run away to sea	run away to sea
 run down the clock	run down the clock
 run dry	run dry
 run for it	run for it
 run for the hills	run for the hills
+run free	run free
 run in the family	run in the family
 run in your blood	run in your blood
 run into the ground	run into the ground
@@ -6550,6 +7211,7 @@ run out the clock	run out the clock
 run rampant	run rampant
 run rings around	run rings around
 run rings round	run rings around
+run riot	run riot
 run roughshod over	run roughshod over
 run round in circles	run round in circles
 run the gauntlet	run the gauntlet
@@ -6558,10 +7220,13 @@ run the show	run the show
 run to earth	run to earth
 run to ground	run to ground
 run to seed	run to seed
+run wild	run wild
+run your eyes over	run an eyes over
 run yourself into the ground	run yourself into the ground
 running gag	running gag
 running gear	running gear
 running joke	running joke
+running on empty	running on empty
 runny nose	runny nose
 rush hour	rush hour
 sacred cow	sacred cow
@@ -6570,6 +7235,7 @@ safe and sound	safe and sound
 safe as houses	safe as houses
 safe haven	safe haven
 safe in the knowledge that	safe in the knowledge that
+safety first	safety first
 safety pin	safety pin
 safety razor	safety razor
 sail close to the wind	sail close to the wind
@@ -6581,6 +7247,8 @@ salt in the wound	salt in the wound
 salt shaker	salt shaker
 salvage yard	salvage yard
 salwar kameez	salwar kameez
+same again	the same again
+same here	same here
 same to you	same to you
 sanity check	sanity check
 saran wrap	saran wrap
@@ -6603,6 +7271,7 @@ saved by the bell	saved by the bell
 saving grace	saving grace
 saw fit	see fit
 say a mouthful	say a mouthful
+say cheese	say cheese
 say mutter under your breath	say mutter under your breath
 say no more	say no more
 say no to	say no to
@@ -6642,6 +7311,8 @@ sea urchin	sea urchin
 search box	search box
 search engine	search engine
 search engines	search engine
+search me	search me
+season’s greetings	season’s greetings
 seat belt	seat belt
 seat belts	seat belt
 second coming	second coming
@@ -6672,6 +7343,7 @@ see for yourself	see for yourself
 see how the land lies	see how the land lies
 see in the New Year	see in the New Year
 see out of the corner of your eye	see out of the corner of your eye
+see red	see red
 see the New Year in	see the New Year in
 see the color of money	see the color of money
 see the colour of money	see the color of money
@@ -6744,6 +7416,7 @@ set the record straight	set the record straight
 set the scene	set the scene
 set the seal on	set the seal on
 set the stage for	set the stage for
+set the world alight	set the world alight
 set theory	set theory
 set to rights	set to rights
 set tongues wagging	set tongues wagging
@@ -6767,13 +7440,13 @@ shake in your boots	shake in your boots
 shake in your shoes	shake in your shoes
 shake to its foundations	shake to its foundations
 shale oil	shale oil
-shame on him	shame on one
 shame on her	shame on one
+shame on him	shame on one
 shame on you	shame on one
 shape up or ship out	shape up or ship out
 share and share alike	share and share alike
 shark week	shark week
-she doesn't miss a trick	she doesn't miss a trick
+she doesn’t miss a trick	she doesn’t miss a trick
 she started it	she started it
 shed a tear	shed a tear
 shed light on	shed light on
@@ -6782,6 +7455,9 @@ shelf life	shelf life
 shell game	shell game
 shelter in place	shelter in place
 shift your ground	shift your ground
+shiny new	shiny new
+shit happens	shit happens
+shock horror	shock horror
 shoot a dirty look	shoot a dirty look
 shoot from the hip	shoot from the hip
 shoot it out	shoot it out
@@ -6809,6 +7485,7 @@ shoulder blade	shoulder blade
 shoulder to shoulder	shoulder to shoulder
 shout from the rooftops	shout from the rooftops
 shout yourself silly	shout yourself silly
+shove it	shove it
 show and tell	show and tell
 show know the ropes	show know the ropes
 show learn the ropes	show learn the ropes
@@ -6816,7 +7493,7 @@ show the door	show the door
 show the flag	show the flag
 show the ropes	show the ropes
 show the way	show the way
-show who's boss	show who's boss
+show who’s boss	show who’s boss
 show your cards	show your cards
 show your face	show your face
 show your hand	show your hand
@@ -6834,6 +7511,7 @@ sick as a parrot	sick as a parrot
 sick at heart	sick at heart
 sick leave	sick leave
 sick to your stomach	sick to your stomach
+sick with worry	sick with worry
 side by side	side by side
 side dish	side dish
 side dishes	side dish
@@ -6880,17 +7558,20 @@ sit well with	sit well with
 sits back	sit back
 sits out	sit out
 sitting duck	sitting duck
+six feet under	six feet under
 sixth sense	sixth sense
 skeleton key	skeleton key
 skim milk	skim milk
 skin and bone	skin and bone
 skin in the game	skin in the game
+skip it	skip it
 slack off	slack off
 slam the door in face	slam the door in face
 slap and tickle	slap and tickle
 slap on the wrist	slap on the wrist
 sleep like a baby	sleep like a baby
 sleep like a log	sleep like a log
+sleep tight	sleep tight
 sleeper agent	sleeper agent
 slice and dice	slice and dice
 slice of life	slice of life
@@ -6918,6 +7599,7 @@ slow off the mark	slow off the mark
 slow your roll	slow your roll
 slowly but surely	slowly but surely
 slug it out	slug it out
+slum it	slum it
 smack dab	smack dab
 smack your lips	smack your lips
 small arms	small arms
@@ -6925,6 +7607,7 @@ small potatoes	small potatoes
 small talk	small talk
 smart ass	smart ass
 smarty pants	smarty pants
+smash it	smash it
 smash to smithereens	smash to smithereens
 smell a mile off	smell a mile off
 smell a rat	smell a rat
@@ -6949,6 +7632,7 @@ snare drum	snare drum
 snatch victory from the jaws of defeat	snatch victory from the jaws of defeat
 sneak peek	sneak peek
 snow leopard	snow leopard
+snuff it	snuff it
 so I should hope	so I should hope
 so be it	so be it
 so far as I am concerned	so far as I am concerned
@@ -6961,6 +7645,7 @@ so much for	so much for
 so much the worse	so much the worse
 so near and yet so far	so near and yet so far
 so the story goes	so the story goes
+so there	so there
 so to say	so to say
 so to speak	so to speak
 soap box	soap box
@@ -6975,6 +7660,7 @@ social housing	social housing
 social mobility	social mobility
 social stigma	social stigma
 sock puppet	sock puppet
+socking great	socking great
 sod off	sod off
 soft drink	soft drink
 soften the blow	soften the blow
@@ -7044,7 +7730,6 @@ spend the night with	spend the night with
 spick and span	spick and span
 spill the beans	spill the beans
 spill your guts	spill your guts
-spill your guts	spill your guts
 spin a tale	spin a tale
 spin a yarn	spin a yarn
 spin off	spin off
@@ -7055,13 +7740,16 @@ spitting image	spitting image
 splash screen	splash screen
 split an infinitive	split an infinitive
 split down the middle	split down the middle
+split hairs	split hairs
 split the difference	split the difference
 split the ticket	split the ticket
 split your sides	split your sides
-split your sides laughing laughter	split your sides laughing laughter
-split your sides with laughter	split your sides with laughter
-spoil the ship for a ha'p'orth of tar	spoil the ship for a ha'p'orth of tar
-spoil the ship for a ha'pennyworth of tar	spoil the ship for a ha'pennyworth of tar
+split your sides laughing	split your sides laughing
+split your sides with laughter	split your sides laughing
+spoil the ship for a ha’pennyworth of tar	spoil the ship for a ha’p’orth of tar
+spoil the ship for a ha’p’orth of tar	spoil the ship for a ha’p’orth of tar
+spoiling for a fight	spoiling for a fight
+spoilt for choice	spoilt for choice
 spoke volumes	speak volumes
 spot a mile off	spot a mile off
 spread eagle	spread eagle
@@ -7085,14 +7773,17 @@ squeaky clean	squeaky clean
 squeaky wheel	squeaky wheel
 squeaky wheel gets the grease	squeaky wheel gets the grease
 stab in the back	stab in the back
+stack it	stack it
 stained glass	stained glass
 stake a claim	stake a claim
 stake out a claim	stake out a claim
 stake out your claim	stake out your claim
 stake your claim	stake your claim
 stand a chance	stand a chance
+stand alone	stand alone
 stand at ease	stand at ease
 stand bolt upright	stand bolt upright
+stand easy	stand easy
 stand guard over	stand guard over
 stand head and shoulders above	stand head and shoulders above
 stand in good stead	stand in good stead
@@ -7105,7 +7796,9 @@ stand on your own two feet	stand on your own two feet
 stand out a mile	stand out a mile
 stand out like a sore thumb	stand out like a sore thumb
 stand silently by	stand silently by
+stand tall	stand tall
 stand the test of time	stand the test of time
+stand up and be counted	stand up and be counted
 stand your ground	stand your ground
 standard deviation	standard deviation
 standing army	standing army
@@ -7129,10 +7822,13 @@ stay in the closet	stay in the closet
 stay in touch	stay in touch
 stay out of way	stay out of way
 stay put	stay put
+stay shtum	stay shtum
 stay the course	stay the course
 stay the night	stay the night
 stay your hand	stay your hand
+stayed shtum	stay shtum
 staying power	staying power
+stays shtum	stay shtum
 steady as a rock	steady as a rock
 steak house	steak house
 steak houses	steak house
@@ -7166,7 +7862,7 @@ stick out a mile	stick out a mile
 stick out like a sore thumb	stick out like a sore thumb
 stick the boot in	stick the boot in
 stick the knife in	stick the knife in
-stick the knife into	stick the knife into
+stick the knife into	stick the knife in
 stick to your guns	stick to your guns
 stick two fingers up at	stick two fingers up at
 stick your neck out	stick your neck out
@@ -7193,8 +7889,10 @@ stopping distance	stopping distance
 store of value	store of value
 story arc	story arc
 straight as a ramrod	straight as a ramrod
-straight from the horse's mouth	straight from the horse's mouth
+straight away	straight away
+straight from the horse’s mouth	straight from the horse’s mouth
 straight from the shoulder	straight from the shoulder
+straight up	straight up
 strain at the leash	strain at the leash
 strain every nerve	strain every nerve
 strain every sinew	strain every sinew
@@ -7205,16 +7903,21 @@ street art	street art
 street cred	street cred
 street food	street food
 strength in depth	strength in depth
+in depth	in depth
+a dirty word	a dirty word
+to distraction	to distraction
+same difference	same difference
+be a devil	be a devil
 stretch a point	stretch a point
 stretch goal	stretch goal
 stretch the rules	stretch the rules
 stretch your legs	stretch your legs
+strictly speaking	strictly speaking
 stride for stride	stride for stride
 strike a balance	strike a balance
 strike a bargain	strike a bargain
-strike a bargain with	strike a bargain with
-strike a blow against	strike a blow against
 strike a blow	strike a blow
+strike a blow against	strike a blow against
 strike a chord	strike a chord
 strike a deal	strike a deal
 strike a hard bargain	strike a hard bargain
@@ -7225,6 +7928,7 @@ strike a raw nerve	strike a raw nerve
 strike a sensitive nerve	strike a sensitive nerve
 strike an attitude	strike an attitude
 strike fear into heart	strike fear into heart
+strike gold	strike gold
 strike it lucky	strike it lucky
 strike it rich	strike it rich
 strike pay dirt	strike pay dirt
@@ -7236,6 +7940,7 @@ strike while the iron is hot	strike while the iron is hot
 string together	string together
 strip mall	strip mall
 strong suit	strong suit
+struck gold	strike gold
 strut your stuff	strut your stuff
 stuff and nonsense	stuff and nonsense
 stumble across	stumble across
@@ -7258,6 +7963,7 @@ suggestion box	suggestion box
 suit down to the ground	suit down to the ground
 suit of armor	suit of armor
 suit your book	suit your book
+suit yourself	suit yourself
 suited and booted	suited and booted
 sum of its parts	sum of its parts
 sunk cost	sunk cost
@@ -7267,11 +7973,14 @@ sunshine and rainbows	sunshine and rainbows
 sure as eggs is eggs	sure as eggs is eggs
 sure enough	sure enough
 sure of yourself	sure of yourself
+sure thing	sure thing
 surface tension	surface tension
 suspension bridge	suspension bridge
 suspension of disbelief	suspension of disbelief
 swap places with	swap places with
+swear blind	swear blind
 swear like a trooper	swear like a trooper
+sweat blood	sweat blood
 sweat your guts out	sweat your guts out
 sweep off their feet	sweep off their feet
 sweep the board	sweep the board
@@ -7306,7 +8015,7 @@ take a back seat	take a back seat
 take a bath	take a bath
 take a bow	take a bow
 take a break	take a break
-take a butcher's	take a butcher's
+take a butcher’s	take a butcher’s
 take a chance	take a chance
 take a crack at	take a crack at
 take a dive	take a dive
@@ -7349,18 +8058,22 @@ take as they come	take as they come
 take as you find them	take as you find them
 take at face value	take at face value
 take at their word	take at their word
+take attendance	take attendance
 take breath away	take breath away
 take by storm	take by storm
 take by surprise	take by surprise
-take care of yourself	take care of yourself
+take care	take care
 take coals to Newcastle	take coals to Newcastle
 take courage from	take courage from
 take cover	take cover
 take down a peg	take down a peg
+take effect	take effect
 take evasive action	take evasive action
 take exception to	take exception to
+take flight	take flight
 take for a ride	take for a ride
 take for granted	take for granted
+take form	take form
 take fright at	take fright at
 take from the top	take from the top
 take great pains	take great pains
@@ -7388,20 +8101,20 @@ take lying down	take lying down
 take name in vain	take name in vain
 take off the market	take off the market
 take off the shelves	take off the shelves
-take offence	take offence
+take offence	take offense
 take offense	take offense
 take on board	take on board
 take on the chin	take on the chin
 take on trust	take on trust
 take one for the team	take one for the team
 take over the helm	take over the helm
-take pains over	take pains over
-take pains with	take pains with
+take pains	take pains
 take part in	take part in
 take pleasure	take pleasure
 take revenge	take revenge
 take shape	take shape
 take sides	take sides
+take some beating	take some beating
 take steps	take steps
 take the bad with the good	take the bad with the good
 take the biscuit	take the biscuit
@@ -7454,6 +8167,7 @@ take to the cleaners	take to the cleaners
 take to the floor	take to the floor
 take to the mat	take to the mat
 take to the next level	take to the next level
+take to your bed	take to your bed
 take to your heels	take to your heels
 take too far	take too far
 take trouble over	take trouble over
@@ -7480,11 +8194,14 @@ take your mind off	take your mind off
 take your own life	take your own life
 take your place	take your place
 take your time	take your time
+taken form	take form
 taken offense	take offense
 taken steps	take steps
+takes form	take form
 takes offense	take offense
 takes one to know one	takes one to know one
 takes steps	take steps
+taking form	take form
 taking offense	take offense
 taking steps	take steps
 talk a good game	talk a good game
@@ -7492,14 +8209,19 @@ talk is cheap	talk is cheap
 talk nineteen to the dozen	talk nineteen to the dozen
 talk of the devil	talk of the devil
 talk out of turn	talk out of turn
+talk shop	talk shop
 talk some sense into	talk some sense into
 talk the hind legs off a donkey	talk the hind legs off a donkey
 talk the same language	talk the same language
 talk the talk	talk the talk
 talk through your hat	talk through your hat
 talk tough on	talk tough on
+talk turkey	talk turkey
+talked shop	talk shop
 talking head	talking head
 talking points	talking points
+talking shop	talk shop
+talks shop	talk shop
 tall oaks from little acorns grow	tall oaks from little acorns grow
 tall order	tall order
 tank top	tank top
@@ -7519,10 +8241,11 @@ tear to bits	tear to bits
 tear to pieces	tear to pieces
 tear to ribbons	tear to ribbons
 tear to shreds	tear to shreds
-tear your hair	tear your hair
 tear your hair out	tear your hair out
 tear your heart out	tear your heart out
 tee hee	tee hee
+heavy hand	heavy hand
+good with your hands	good with your hands
 tell a different story	tell a different story
 tell a different tale	tell a different tale
 tell a mile off	tell a mile off
@@ -7536,11 +8259,6 @@ tell tales about	tell tales about
 tell tales on	tell tales on
 tell the difference	tell the difference
 tell the time	tell the time
-tell what they can do with	tell what they can do with
-tell where to get off they can get off	tell where to get off they can get off
-tell where to get where they can get off	tell where to get where they can get off
-tell where to put	tell where to put
-tell where to stick	tell where to stick
 temper tantrum	temper tantrum
 ten a penny	ten a penny
 ten out of ten	ten out of ten
@@ -7568,29 +8286,31 @@ that ship has sailed	that ship has sailed
 that sinking feeling	that sinking feeling
 that was it	that was it
 that will do	that will do
-that's about all	that's about all
-that's about it	that's about it
-that's about the size of it	that's about the size of it
-that's all she wrote	that's all she wrote
-that's always the way	that's always the way
-that's done it	that's done it
-that's her problem	that's her problem
-that's his problem	that's his problem
-that's not my problem	that's not my problem
-that's not saying much	that's not saying much
-that's the story of my life	that's the story of my life
-that's the ticket	that's the ticket
-that's the way the cookie crumbles	that's the way the cookie crumbles
-that's their problem	that's their problem
-that's torn it	that's torn it
-that's your problem	that's your problem
+that’s about all	that’s about all
+that’s about it	that’s about it
+that’s about the size of it	that’s about the size of it
+that’s all she wrote	that’s all she wrote
+that’s always the way	that’s always the way
+that’s done it	that’s done it
+that’s her problem	that’s her problem
+that’s his problem	that’s his problem
+that’s life	that’s life
+that’s not my problem	that’s not my problem
+that’s not saying much	that’s not saying much
+that’s the story of my life	that’s the story of my life
+that’s the ticket	that’s the ticket
+that’s the way the cookie crumbles	that’s the way the cookie crumbles
+that’s their problem	that’s their problem
+that’s torn it	that’s torn it
+that’s your problem	that’s your problem
 the Bank of Mum and Dad	the Bank of Mum and Dad
 the Big Four	the Big Four
 the Big Three	the Big Three
 the Elysian Fields	the Elysian Fields
-the apple doesn't fall falls far from the tree	the apple doesn't fall falls far from the tree
-the apple doesn't never falls far from the tree	the apple doesn't never falls far from the tree
+the apple doesn’t fall falls far from the tree	the apple doesn’t fall falls far from the tree
+the apple doesn’t never falls far from the tree	the apple doesn’t never falls far from the tree
 the apple of eye	the apple of eye
+the back of beyond	the back of beyond
 the bad old days	the bad old days
 the balance of evidence	the balance of evidence
 the balance of probability	the balance of probability
@@ -7598,12 +8318,16 @@ the ball is in court	the ball is in court
 the ball is in your court	the ball is in your court
 the bare bones	the bare bones
 the battle lines are drawn	the battle lines are drawn
+the beginning of the end	the beginning of the end
+the best medicine	the best medicine
+the best thing since sliced bread	the best thing since sliced bread
 the big enchilada	the big enchilada
 the big kahuna	the big kahuna
 the big mo	the big mo
 the big picture	the big picture
 the big stick	the big stick
 the bird has flown	the bird has flown
+the birds and the bees	the birds and the bees
 the blind leading the blind	the blind leading the blind
 the boot is on the other foot	the boot is on the other foot
 the bottom drops out	the bottom drops out
@@ -7618,7 +8342,7 @@ the call of nature	the call of nature
 the cards are stacked against you	the cards are stacked against you
 the cards are stacked in your favour	the cards are stacked in your favour
 the carrot and stick	the carrot and stick
-the carrot and the stick	the carrot and the stick
+the carrot and the stick	the carrot and stick
 the chance of a lifetime	the chance of a lifetime
 the chattering classes	the chattering classes
 the clock is ticking	the clock is ticking
@@ -7631,7 +8355,7 @@ the corridors of power	the corridors of power
 the crest of a wave	the crest of a wave
 the crest of the wave	the crest of the wave
 the cupboard is bare	the cupboard is bare
-the curate's egg	the curate's egg
+the curate’s egg	the curate’s egg
 the customer is always right	the customer is always right
 the cut and thrust	the cut and thrust
 the demon drink	the demon drink
@@ -7642,15 +8366,16 @@ the die is cast	the die is cast
 the dim and distant past	the dim and distant past
 the distant past	the distant past
 the dizzy heights	the dizzy heights
+the done thing	the done thing
 the door to	the door to
 the dose makes the poison	the dose makes the poison
-the early bird catches the worm	the early bird catches the worm
+the early bird catches the worm	the early bird gets the worm
 the early bird gets the worm	the early bird gets the worm
 the early hours	the early hours
 the easy option	the easy option
 the ebb and flow	the ebb and flow
 the elephant in the room	the elephant in the room
-the emperor's new clothes	the emperor's new clothes
+the emperor’s new clothes	the emperor’s new clothes
 the end justifies the means	the end justifies the means
 the end of the line	the end of the line
 the end of the road	the end of the road
@@ -7706,8 +8431,8 @@ the jaws of a tunnel	the jaws of a tunnel
 the jaws of death	the jaws of death
 the jaws of defeat	the jaws of defeat
 the jewel in the crown	the jewel in the crown
-the joke's on	the joke's on
 the joker in the pack	the joker in the pack
+the joke’s on	the joke’s on
 the jury is out on	the jury is out on
 the jury is still out	the jury is still out
 the jury is still out on	the jury is still out on
@@ -7732,10 +8457,10 @@ the lie of the land	the lie of the land
 the life and soul of the party	the life and soul of the party
 the light dawned	the light dawned
 the light of life	the light of life
-the lights are on but nobody's home	the lights are on but nobody's home
+the lights are on but nobody’s home	the lights are on but nobody’s home
 the line of least resistance	the line of least resistance
-the lion's den	the lion's den
-the lion's share	the lion's share
+the lion’s den	the lion’s den
+the lion’s share	the lion’s share
 the livelong day	the livelong day
 the long and short of it	the long and short of it
 the long and the short of it	the long and the short of it
@@ -7784,7 +8509,7 @@ the other evening	the other evening
 the other morning	the other morning
 the other side of the coin	the other side of the coin
 the other way around	the other way around
-the other way round	the other way round
+the other way round	the other way around
 the other week	the other week
 the parting of the ways	the parting of the ways
 the path of least resistance	the path of least resistance
@@ -7798,17 +8523,30 @@ the pit of the stomach	the pit of the stomach
 the pit of your stomach	the pit of your stomach
 the plot thickens	the plot thickens
 the point of no return	the point of no return
-the poor man's	the poor man's
+the poor man’s	the poor man’s
 the pot calling the kettle black	the pot calling the kettle black
 the primrose path	the primrose path
 the printed page	the printed page
 the printed word	the printed word
 the prodigal son	the prodigal son
 the proof is in the pudding	the proof is in the pudding
-the proof of the pudding is in the eating	the proof of the pudding is in the eating
+the proof of the pudding	the proof of the pudding is in the eating
 the pros and cons	the pros and cons
 the psychological moment	the psychological moment
 the real McCoy	the real McCoy
+or else	or else
+explain yourself	explain yourself
+like enough	like enough
+near enough	near enough
+right enough	right enough
+and everything	and everything
+in the event	in the event
+for example	for example
+not exactly	not exactly
+enough said	enough said
+ your own worst enemy	 your own worst enemy
+at the end of your tether	at the end of your tether
+economical with the truth	economical with the truth
 the real thing	the real thing
 the rest is history	the rest is history
 the ripe old age	the ripe old age
@@ -7831,7 +8569,7 @@ the shifting sands	the shifting sands
 the shirt off back	the shirt off back
 the shoe is on the other foot	the shoe is on the other foot
 the sky is the limit	the sky is the limit
-the sky's the limit	the sky's the limit
+the sky’s the limit	the sky’s the limit
 the slippery slope	the slippery slope
 the small hours	the small hours
 the soft option	the soft option
@@ -7842,22 +8580,22 @@ the still of the night	the still of the night
 the still small voice	the still small voice
 the story goes	the story goes
 the straight and narrow	the straight and narrow
-the straw that breaks the camel's back	the straw that breaks the camel's back
+the straw that breaks the camel’s back	the straw that breaks the camel’s back
 the streets are paved with gold	the streets are paved with gold
 the survival of the fittest	the survival of the fittest
 the sweet smell of success	the sweet smell of success
 the sword of Damocles	the sword of Damocles
-the tail is wagging the dog	the tail is wagging the dog
+the tail is wagging the dog	the tail wagging the dog
 the tail wagging the dog	the tail wagging the dog
 the thin end of the wedge	the thin end of the wedge
 the thing about is	the thing about is
 the thing is	the thing is
+dog it	dog it
 the thing with is	the thing with is
 the three Rs	the three Rs
 the three strikes rule	the three strikes rule
 the thrills and spills	the thrills and spills
 the tide turned	the tide turned
-the to end all sths	the to end all sths
 the tricks of the trade	the tricks of the trade
 the truth will out	the truth will out
 the turn of the century	the turn of the century
@@ -7931,40 +8669,39 @@ there we go	there we go
 there you are	there you are
 there you go	there you go
 there you go again	there you go again
-there's a first time for everything	there's a first time for everything
-there's a good boy	there's a good boy
-there's a good dog	there's a good dog
-there's a good girl	there's a good girl
-there's a method in madness	there's a method in madness
-there's for you	there's for you
-there's many a slip 'twixt cup and lip	there's many a slip 'twixt cup and lip
-there's method in madness	there's method in madness
-there's more than one way to skin a cat	there's more than one way to skin a cat
-there's no accounting for taste	there's no accounting for taste
-there's no comparison	there's no comparison
-there's no fool like an old fool	there's no fool like an old fool
-there's no getting away from	there's no getting away from
-there's no knowing	there's no knowing
-there's no law against	there's no law against
-there's no peace for the wicked	there's no peace for the wicked
-there's no rest for the wicked	there's no rest for the wicked
-there's no rhyme or reason for	there's no rhyme or reason for
-there's no rhyme or reason to	there's no rhyme or reason to
-there's no saying	there's no saying
-there's no such thing as a free lunch	there's no such thing as a free lunch
-there's no telling	there's no telling
-there's nothing like	there's nothing like
-there's nothing to it	there's nothing to it
-there's one born every minute	there's one born every minute
-there's only one thing for it	there's only one thing for it
+there’s a first time for everything	there’s a first time for everything
+there’s a good boy	there’s a good boy
+there’s a good dog	there’s a good dog
+there’s a good girl	there’s a good girl
+there’s a method in madness	there’s a method in madness
+there’s for you	there’s for you
+there’s many a slip ’twixt cup and lip	there’s many a slip ’twixt cup and lip
+there’s method in madness	there’s method in madness
+there’s more than one way to skin a cat	there’s more than one way to skin a cat
+there’s no accounting for taste	there’s no accounting for taste
+there’s no comparison	there’s no comparison
+there’s no fool like an old fool	there’s no fool like an old fool
+there’s no getting away from	there’s no getting away from
+there’s no knowing	there’s no knowing
+there’s no law against	there’s no law against
+there’s no peace for the wicked	there’s no peace for the wicked
+there’s no rest for the wicked	there’s no rest for the wicked
+there’s no rhyme or reason for	there’s no rhyme or reason for
+there’s no rhyme or reason to	there’s no rhyme or reason to
+there’s no saying	there’s no saying
+there’s no such thing as a free lunch	there’s no such thing as a free lunch
 there’s no telling	there’s no telling
+there’s nothing like	there’s nothing like
+there’s nothing to it	there’s nothing to it
+there’s one born every minute	there’s one born every minute
+there’s only one thing for it	there’s only one thing for it
 these four walls	these four walls
 these things are sent to try us	these things are sent to try us
 these things happen	these things happen
 they broke the mold when they made	they broke the mould when they made
 they broke the mould when they made	they broke the mould when they made
-they can't can hardly wait	they can't can hardly wait
-they can't wait hardly wait	they can't wait hardly wait
+they can hardly wait	they can hardly wait
+they can’t wait	they can hardly wait
 thick and fast	thick and fast
 thick as thieves	thick as thieves
 thick as two short planks	thick as two short planks
@@ -7974,6 +8711,7 @@ thin air	thin air
 thin on the ground	thin on the ground
 thin on top	thin on top
 things that go bump in the night	things that go bump in the night
+think again	think again
 think aloud loud	think aloud loud
 think back	think back
 think for yourself	think for yourself
@@ -7995,12 +8733,13 @@ this and that	this and that
 this is it	this is it
 those were the days	those were the days
 three cheers	three cheers
-three strikes and you're out	three strikes and you're out
+three strikes and you’re out	three strikes and you’re out
 threw up	throw up
 thrift shop	thrift shop
 thrills and spills	thrills and spills
 through and through	through and through
 through good offices	through good offices
+through the agency of	through the agency of
 through the back door	through the back door
 through the grapevine	through the grapevine
 through the roof	through the roof
@@ -8030,6 +8769,7 @@ throw money at	throw money at
 throw off balance	throw off balance
 throw off the scent	throw off the scent
 throw out of court	throw out of court
+throw shapes	throw shapes
 throw the baby out with the bathwater	throw the baby out with the bathwater
 throw the book at	throw the book at
 throw to the dogs	throw to the dogs
@@ -8061,7 +8801,9 @@ tie up in knots	tie up in knots
 tie yourself in knots	tie yourself in knots
 tie yourself up in knots	tie yourself up in knots
 tied to apron strings	tied to apron strings
+tighten your belt	tighten your belt
 tighty whities	tighty whities
+till doomsday	till doomsday
 till kingdom come	till kingdom come
 till the cows come home	till the cows come home
 till the last	till the last
@@ -8073,6 +8815,7 @@ time and again	time and again
 time and time again	time and time again
 time capsule	time capsule
 time dilation	time dilation
+time flies	time flies
 time heals all wounds	time heals all wounds
 time is money	time is money
 time is on your side	time is on your side
@@ -8094,12 +8837,16 @@ to a T	to a T
 to a degree	to a degree
 to a fault	to a fault
 to a man	to a man
-to a tee	to a tee
+to a tee	to a T
+to all intents and purposes	to all intents and purposes
 to alter out of all recognition	to alter out of all recognition
 to alter out of recognition	to alter out of recognition
 to an extent	to an extent
 to and fro	to and fro
+to be sure	to be sure
+to beard the lion in his den	to beard the lion in his den
 to begin with	to begin with
+to boot	to boot
 to cap it all	to cap it all
 to change out of all recognition	to change out of all recognition
 to change out of recognition	to change out of recognition
@@ -8107,6 +8854,7 @@ to coin a phrase	to coin a phrase
 to crown it all	to crown it all
 to cut a long story short	to cut a long story short
 to die for	to die for
+to do the decent thing	to do the decent thing
 to dramatic effect	to dramatic effect
 to each his own	to each his own
 to err is human	to err is human
@@ -8116,6 +8864,7 @@ to go into your shell	to go into your shell
 to good advantage	to good advantage
 to good effect	to good effect
 to great effect	to great effect
+to hand	to hand
 to hell and back	to hell and back
 to hell with	to hell with
 to keep one jump ahead	to keep one jump ahead
@@ -8169,7 +8918,7 @@ to this effect	to this effect
 to this end	to this end
 to wit	to wit
 to your fingertips	to your fingertips
-to your heart's content	to your heart's content
+to your heart’s content	to your heart’s content
 to your knowledge	to your knowledge
 to your liking	to your liking
 to your name	to your name
@@ -8178,15 +8927,18 @@ toe the line	toe the line
 toe the mark	toe the mark
 toe the party line	toe the party line
 toe to toe	toe to toe
+together with	together with
 toing and froing	toing and froing
 tomorrow is another day	tomorrow is another day
 tongue in cheek	tongue in cheek
 tongues are wagging	tongues are wagging
+too bad	too bad
 too big to fail	too big to fail
 too clever by half	too clever by half
 too close for comfort	too close for comfort
 too cool for school	too cool for school
 too funny for words	too funny for words
+too good to be true	too good to be true
 too many cooks spoil the broth	too many cooks spoil the broth
 too much like hard work	too much like hard work
 too much of a good thing	too much of a good thing
@@ -8215,6 +8967,7 @@ touch a nerve	touch a nerve
 touch a raw nerve	touch a raw nerve
 touch a sensitive nerve	touch a sensitive nerve
 touch base with	touch base with
+touch bottom	touch bottom
 touch on the raw	touch on the raw
 touch wood	touch wood
 touch your forelock	touch your forelock
@@ -8237,6 +8990,12 @@ trail mix	trail mix
 trailer trash	trailer trash
 train of thought	train of thought
 trap door	trap door
+travel light	travel light
+traveled light	travel light
+traveling light	travel light
+travelled light	travel light
+travelling light	travel light
+travels light	travel light
 tread a dangerous path	tread a dangerous path
 tread a difficult path	tread a difficult path
 tread a fine line	tread a fine line
@@ -8300,6 +9059,7 @@ turn over a new leaf	turn over a new leaf
 turn round and do	turn round and do
 turn swords into ploughshares	turn swords into ploughshares
 turn swords into plowshares	turn swords into plowshares
+turn tail	turn tail
 turn the clock back	turn the clock back
 turn the corner	turn the corner
 turn the knife	turn the knife
@@ -8310,6 +9070,7 @@ turn the tide	turn the tide
 turn to good account	turn to good account
 turn to jelly	turn to jelly
 turn to your advantage	turn to your advantage
+turn turtle	turn turtle
 turn up like a bad penny	turn up like a bad penny
 turn upside down	turn upside down
 turn your back	turn your back
@@ -8319,6 +9080,7 @@ turn your nose up at	turn your nose up at
 turn your stomach	turn your stomach
 turnabout is fair play	turnabout is fair play
 turtles all the way down	turtles all the way down
+twice over	twice over
 twiddle your thumbs	twiddle your thumbs
 twist around your little finger	twist around your little finger
 twist the knife	twist the knife
@@ -8328,7 +9090,7 @@ two can play at that game	two can play at that game
 two heads are better than one	two heads are better than one
 two sandwiches short of a picnic	two sandwiches short of a picnic
 two sides of the same coin	two sides of the same coin
-two wrongs don't make a right	two wrongs don't make a right
+two wrongs don’t make a right	two wrongs don’t make a right
 two wrongs make a right	two wrongs make a right
 ugly as sin	ugly as sin
 ugly duckling	ugly duckling
@@ -8336,12 +9098,20 @@ umbrella term	umbrella term
 uncalled for	uncalled for
 uncanny valley	uncanny valley
 under a cloud	under a cloud
+under age	under age
+under arms	under arms
+under canvas	under canvas
+under control	under control
+under cover	under cover
 under false pretences	under false pretences
 under lock and key	under lock and key
 under no circumstances	under no circumstances
 under one roof	under one roof
+under protest	under protest
+under seal	under seal
 under separate cover	under separate cover
-under starter's orders	under starter's orders
+under siege	under siege
+under starter’s orders	under starter’s orders
 under the banner	under the banner
 under the circumstances	under the circumstances
 under the cosh	under the cosh
@@ -8367,7 +9137,9 @@ unsoundness of mind	unsoundness of mind
 until kingdom come	until kingdom come
 until the bitter end	until the bitter end
 unwashed masses	unwashed masses
+up a gum tree	up a gum tree
 up a storm	up a storm
+up against a brick wall	up against a brick wall
 up and down	up and down
 up and running	up and running
 up close and personal	up close and personal
@@ -8375,6 +9147,7 @@ up for grabs	up for grabs
 up for sale	up for sale
 up in arms	up in arms
 up in the air	up in the air
+up sticks	up sticks
 up the ante	up the ante
 up the creek	up the creek
 up the duff	up the duff
@@ -8392,11 +9165,14 @@ up to speed on	up to speed on
 up to the hilt	up to the hilt
 up to the mark	up to the mark
 up to the minute	up to the minute
+up top	up top
 up your alley	up your alley
 up your game	up your game
 up your street	up your street
+up yours	up yours
 uphill battle	uphill battle
 upon my word	upon my word
+upon you	almost upon you
 upper middle class	upper middle class
 ups and downs	ups and downs
 upset the apple cart	upset the apple cart
@@ -8449,15 +9225,22 @@ walk a fine line	walk a fine line
 walk a thin line	walk a thin line
 walk a tightrope	walk a tightrope
 walk down the aisle	walk down the aisle
+walk free	walk free
 walk in the park	walk in the park
+walk it	walk it
 walk off the job	walk off the job
 walk off their feet	walk off their feet
 walk on air	walk on air
 walk on eggshells	walk on eggshells
+walk the beat	walk the beat
 walk the plank	walk the plank
 walk the streets	walk the streets
 walk the walk	walk the walk
+walked free	walk free
+walked the beat	walk the beat
+walking the beat	walk the beat
 walking the streets	walking the streets
+walks the beat	walk the beat
 wall of text	wall of text
 walled garden	walled garden
 walls have ears	walls have ears
@@ -8475,6 +9258,7 @@ wash over	wash over
 wash your dirty laundry in public	wash your dirty laundry in public
 wash your dirty linen in public	wash your dirty linen in public
 waste your breath	waste your breath
+watch it	watch it
 watch the clock	watch the clock
 watch the time	watch the time
 watch the world go by	watch the world go by
@@ -8486,7 +9270,7 @@ watch your step	watch your step
 watch your tongue	watch your tongue
 water down	water down
 water main	water main
-water off a duck's back	water off a duck's back
+water off a duck’s back	water off a duck’s back
 water table	water table
 water under the bridge	water under the bridge
 watered down	water down
@@ -8498,7 +9282,6 @@ way back when	way back when
 way of life	way of life
 way off	way off
 ways and means	ways and means
-we'll drink to that	we'll drink to that
 weak at the knees	weak at the knees
 weak spot	weak spot
 weakest link	weakest link
@@ -8508,6 +9291,7 @@ wear off	wear off
 wear sackcloth and ashes	wear sackcloth and ashes
 wear the pants	wear the pants
 wear the trousers	wear the trousers
+wear thin	wear thin
 wear your heart on your sleeve	wear your heart on your sleeve
 wearing off	wear off
 wears off	wear off
@@ -8519,15 +9303,30 @@ week by week	week by week
 weigh your words	weigh your words
 well and good	well and good
 well and truly	well and truly
+well away	well away
 well in with	well in with
+well said	well said
+went commando	go commando
+went down like a lead balloon	go down like a lead balloon
+went for the jugular	go for the jugular
+went from bad to worse	go from bad to worse
+went haywire	go haywire
+went hot and cold	go hot and cold
+went like a bomb	go like a bomb
+went live	go live
 went missing	went missing
 went out with the ark	went out with the ark
 went overboard	go overboard
+went stag	go stag
 western world	western world
 wet dream	wet dream
 wet your knickers	wet your knickers
 wet your pants	wet your pants
+wet yourself	wet yourself
+we’ll drink to that	we’ll drink to that
 what are the odds	what are the odds
+what are we waiting for	what are we waiting for
+what are you waiting for	what are you waiting for
 what do you say	what do you say
 what goes around comes around	what goes around comes around
 what goes up must come down	what goes up must come down
@@ -8538,26 +9337,30 @@ what is driving at	what is driving at
 what is more	what is more
 what it takes	what it takes
 what makes tick	what makes tick
-what the eye doesn't see	what the eye doesn't see
+what the eye doesn’t see	what the eye doesn’t see
+what the heck	what the heck
+what the hey	what the hey
 what was that	what was that
 what with one thing and another	what with one thing and another
 what would you say	what would you say
 what you see is what you get	what you see is what you get
-what's her face	what's her face
-what's his face	what's his face
-what's sauce for the goose is sauce for the gander	what's sauce for the goose is sauce for the gander
 whatever floats your boat	whatever floats your boat
 whatever it takes	whatever it takes
 whatever you do	whatever you do
 whatever you say	whatever you say
+what’s eating	what’s eating
+what’s her face	what’s her face
+what’s his face	what’s his face
+what’s sauce for the goose is sauce for the gander	what’s sauce for the goose is sauce for the gander
+what’s the deal	what’s the deal
 wheel and deal	wheel and deal
 wheel of fortune	wheel of fortune
 wheels within wheels	wheels within wheels
 when all is said and done	when all is said and done
-when he's at home	when he's at home
+when he’s at home	when he’s at home
 when in Rome do as the Romans do	when in Rome do as the Romans do
 when it comes to	when it comes to
-when it's at home	when it's at home
+when it’s at home	when it’s at home
 when push comes to shove	when push comes to shove
 when the balloon goes up	when the balloon goes up
 when the chips are down	when the chips are down
@@ -8565,20 +9368,20 @@ when the going gets tough	when the going gets tough
 when the shit hits the fan	when the shit hits the fan
 when the spirit moves you	when the spirit moves you
 when you think about it	when you think about it
-when you've heard them all	when you've heard them all
-when you've seen them all	when you've seen them all
+when you’ve heard them all	when you’ve heard them all
+when you’ve seen them all	when you’ve seen them all
 whenever the fancy takes you	whenever the fancy takes you
 where is coming from	where is coming from
-where it's at	where it's at
+where it’s at	where it’s at
 where on earth	where on earth
-where there's a will there's a way	where there's a will there's a way
-where there's life	where there's life
-where there's muck there's brass	where there's muck there's brass
+where there’s a will there’s a way	where there’s a will there’s a way
+where there’s life	where there’s life
+where there’s muck there’s brass	where there’s muck there’s brass
 which is which	which is which
-while I'm at it	while I'm at it
+while I’m at it	while I’m at it
 while the getting is good	while the getting is good
 while the going is good	while the going is good
-while you're at it	while you're at it
+while you’re at it	while you’re at it
 whip out	whip out
 whipped cream	whipped cream
 whipped out	whip out
@@ -8593,14 +9396,18 @@ white supremacist	white supremacist
 white supremacists	white supremacist
 white supremacy	white supremacy
 white trash	white trash
+who goes there	who goes there
 who on earth	who on earth
 whole food	whole food
 whole hog	whole hog
 whole milk	whole milk
 whoop it up	whoop it up
 whooping cough	whooping cough
+who’s counting	who’s counting
 why buy the cow when you can get the milk for free	why buy the cow when you can get the milk for free
+why ever	why ever
 why in the world	why in the world
+why keep a dog and bark yourself	why keep a dog and bark yourself
 why on earth	why on earth
 wide awake	wide awake
 wide of the mark	wide of the mark
@@ -8626,6 +9433,7 @@ wine and dine	wine and dine
 wing it	wing it
 winged it	wing it
 winning streak	winning streak
+winning ways	winning ways
 wipe off the face of the earth	wipe off the face of the earth
 wipe off the map	wipe off the map
 wipe out	wipe out
@@ -8668,6 +9476,8 @@ with arms akimbo	with arms akimbo
 with bad grace	with bad grace
 with bated breath	with bated breath
 with both guns blazing	with both guns blazing
+with child	with child
+with despatch	with despatch
 with flying colors	with flying colors
 with flying colours	with flying colors
 with gay abandon	with gay abandon
@@ -8684,6 +9494,7 @@ with open arms	with open arms
 with reference to	with reference to
 with regard to	with regard to
 with respect to	with respect to
+with the best will in the world	with the best will in the world
 with the sun	with the sun
 with tongue in cheek	with tongue in cheek
 with your bare hands	with your bare hands
@@ -8693,8 +9504,10 @@ with your eyes shut	with your eyes shut
 with your leave	with your leave
 with your name on it	with your name on it
 with your nose in the air	with your nose in the air
+with your tail between your legs	with your tail between your legs
 with your tongue in your cheek	with your tongue in your cheek
 within easy reach	within easy reach
+within limits	within limits
 within living memory	within living memory
 within reach	within reach
 within reason	within reason
@@ -8709,19 +9522,24 @@ without a doubt	without a doubt
 without a hitch	without a hitch
 without a second thought	without a second thought
 without breaking stride	without breaking stride
+without ceremony	without ceremony
+without demur	without demur
 without detriment to	without detriment to
 without fail	without fail
 without fear or favour	without fear or favour
 without further ado	without further ado
 without let or hindrance	without let or hindrance
+without limit	without limits
+without limits	without limits
 without more ado	without more ado
 without prejudice to	without prejudice to
 without rhyme or reason	without rhyme or reason
 without so much as a by your leave	without so much as a by your leave
+woe is me	woe is me
 woman of the year	woman of the year
-won't thank you for	won't thank you for
-won't wash with	won't wash with
 wonders will never cease	wonders will never cease
+won’t thank you for	won’t thank you for
+won’t wash with	won’t wash with
 word for word	word for word
 word is their bond	word is their bond
 word of god	word of god
@@ -8754,6 +9572,7 @@ works wonders	work wonders
 world power	world power
 worlds apart	worlds apart
 worn off	wear off
+worried sick	sick with worry
 worst case scenario	worst case scenario
 worst comes to worst	worst comes to worst
 worth a try	worth a try
@@ -8791,49 +9610,54 @@ yerba mate	yerba mate
 yes and no	yes and no
 you and yours	you and yours
 you are what you eat	you are what you eat
+you bet	you bet
+you betcha	you betcha
 you can do worse than do	you can do worse than do
 you can never tell	you can never tell
-you can run but you can't hide	you can run but you can't hide
+you can run but you can’t hide	you can run but you can’t hide
 you can say that again	you can say that again
 you can stuff	you can stuff
 you can talk	you can talk
-you can't compare apples and oranges	you can't compare apples and oranges
-you can't get away from	you can't get away from
-you can't go wrong	you can't go wrong
-you can't keep a good man down	you can't keep a good man down
-you can't make a silk purse out of a sow's ear	you can't make a silk purse out of a sow's ear
-you can't make an omelette without breaking eggs	you can't make an omelette without breaking eggs
-you can't say fairer than that	you can't say fairer than that
-you can't take anywhere	you can't take anywhere
-you can't talk	you can't talk
-you can't teach an old dog new tricks	you can't teach an old dog new tricks
-you can't win	you can't win
+you can’t compare apples and oranges	you can’t compare apples and oranges
+you can’t get away from	you can’t get away from
+you can’t go wrong	you can’t go wrong
+you can’t keep a good man down	you can’t keep a good man down
+you can’t make a silk purse out of a sow’s ear	you can’t make a silk purse out of a sow’s ear
+you can’t make an omelette without breaking eggs	you can’t make an omelette without breaking eggs
+you can’t say fairer than that	you can’t say fairer than that
+you can’t take anywhere	you can’t take anywhere
+you can’t talk	you can’t talk
+you can’t teach an old dog new tricks	you can’t teach an old dog new tricks
+you can’t win	you can’t win
 you could do worse than do	you could do worse than do
 you could have fooled me	you could have fooled me
 you could have knocked me down with a feather	you could have knocked me down with a feather
 you could hear a pin drop	you could hear a pin drop
 you could use	you could use
+you don’t say	you don’t say
 you get what you pay for	you get what you pay for
 you had me worried	you had me worried
 you have got to laugh	you have got to laugh
-you haven't lived	you haven't lived
+you haven’t lived	you haven’t lived
 you know what	you know what
 you know who	you know who
 you live and learn	you live and learn
+you must be joking	you must be kidding
+you must be kidding	you must be kidding
 you name it	you name it
 you never can tell	you never can tell
 you never know	you never know
 you pays your money and you takes your choice	you pays your money and you takes your choice
 you reap what you sow	you reap what you sow
-you scratch my back and I'll scratch yours	you scratch my back and I'll scratch yours
+you said it	you said it
+you scratch my back and I’ll scratch yours	you scratch my back and I’ll scratch yours
 you snooze you lose	you snooze you lose
 you started it	you started it
-you you've got to laugh	you you've got to laugh
-you're a fine one to talk	you're a fine one to talk
-you're all right	you're all right
-you're only young once	you're only young once
-you've got another think coming	you've got another think coming
+you you’ve got to laugh	you you’ve got to laugh
+you're alright	you're alright
 young at heart	young at heart
+your Sunday best	your Sunday best
+your all	your all
 your bounden duty	your bounden duty
 your conscience pricks you	your conscience pricks you
 your considered opinion	your considered opinion
@@ -8850,7 +9674,7 @@ your last resort	your last resort
 your luck is in	your luck is in
 your milage may vary	your milage may vary
 your mileage may vary	your mileage may vary
-your mind's eye	your mind's eye
+your mind’s eye	your mind’s eye
 your nearest and dearest	your nearest and dearest
 your own flesh and blood	your own flesh and blood
 your pound of flesh	your pound of flesh
@@ -8861,7 +9685,22 @@ your true colors	your true colors
 your true colours	your true colors
 your wish is my command	your wish is my command
 yours ever yours	yours ever yours
+yours truly	yours truly
+you’ll be lucky	you’ll be lucky
+you’re a fine one to talk	you’re a fine one to talk
+you’re all right	you’re all right
+you’re joking	you must be kidding
+you’re kidding	you must be kidding
+you’re on	you’re on
+you’re only young once	you’re only young once
+you’re telling me	you’re telling me
+you’re welcome	you’re welcome
+you’ve got another think coming	you’ve got another think coming
 zero dark thirty	zero dark thirty
 zip code	zip code
 zip codes	zip code
 zip tie	zip tie
+as easy as anything	as easy as anything
+as easy as pie	as easy as anything
+as easy as ABC	as easy as anything
+as easy as falling off a log	as easy as anything

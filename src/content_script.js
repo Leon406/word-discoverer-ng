@@ -206,9 +206,7 @@ function text_to_hl_nodes(text, dst) {
 
   ws_text = ws_text.replace(/[^\w '\u2019]/g, '.')
 
-  const tokens = ws_text.split(' ')
-  console.log(`${text} -- ${tokens} `)
-
+  const tokens = ws_text.split(' ')g
   let num_good = 0 // number of found dictionary words
   let num_nonempty = 0
   let ibegin = 0 // beginning of word
