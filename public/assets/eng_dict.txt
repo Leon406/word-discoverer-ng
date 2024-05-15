@@ -11,6 +11,8 @@ ins	in
 for	for
 but	but
 have	have
+haven’t	have
+hasn’t	have
 has	have
 had	have
 haves	have
@@ -18,14 +20,22 @@ having	have
 havings	have
 with	with
 be	be
+is	be
+am	be
+amn’t	be
+isn’t	be
+ain’t	be
 been	be
 bees	be
 beings	be
 was	be
+wasn’t	be
 were	be
+weren’t	be
 this	this
 not	not
 are	are
+aren’t	are
 ares	are
 they	they
 as	as
@@ -33,6 +43,7 @@ just	just
 juster	just
 justest	just
 can	can
+cann’t	can
 caned	can
 canes	can
 caning	can
@@ -54,7 +65,10 @@ what	what
 me	me
 mes	me
 would	would
+wouldn’t	would
 do	do
+don’t	do
+doesn’t	do
 did	do
 does	do
 doing	do
@@ -95,6 +109,7 @@ when	when
 no	no
 noes	no
 will	will
+won’t	will
 willed	will
 willes	will
 wills	will
@@ -153,6 +168,7 @@ wanting	want
 wantings	want
 wants	want
 could	could
+couldn’t	could
 any	any
 go	go
 goes	go

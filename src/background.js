@@ -19,7 +19,10 @@ function do_load_dictionary(file_text) {
       rank += 1
       prev_lemma = lemma
     }
-    rare_words[fields[0]] = [fields[1], rank]
+    rare_words[form] = [lemma, rank]
+    if (form.includes('’')) {
+      rare_words[form.replace(/’/g,"'")] = [lemma, rank]
+    }
   }
   const local_storage = chrome.storage.local
   local_storage.set({ words_discoverer_eng_dict: rare_words })
