@@ -189,8 +189,8 @@ function openUrl(url) {
 
 
 function copy_vocabulary() {
-  const voca = Array.from(document.querySelectorAll('wdautohl-customtag[lemma]'))
-    .map(ele => ele.getAttribute("lemma")).join('\r\n')
+  const voca = Array.from(new Set(Array.from(document.querySelectorAll('wdautohl-customtag[lemma]'))
+    .map(ele => ele.getAttribute('lemma')))).join('\r\n')
   const textArea = document.createElement('textarea')
   textArea.value = voca
   textArea.style.position = 'fixed'
