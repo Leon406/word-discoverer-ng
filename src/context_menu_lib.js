@@ -187,6 +187,22 @@ function openUrl(url) {
   window.open(url)
 }
 
+
+function copy_vocabulary() {
+  const voca = Array.from(document.querySelectorAll('wdautohl-customtag[lemma]'))
+    .map(ele => ele.getAttribute("lemma")).join('\r\n')
+  const textArea = document.createElement('textarea')
+  textArea.value = voca
+  textArea.style.position = 'fixed'
+  textArea.style.left = '-10000px'
+  textArea.style.top = '-10000px'
+  document.body.appendChild(textArea)
+  textArea.select()
+  document.execCommand('copy')
+  document.body.removeChild(textArea)
+  alert('Copied')
+}
+
 export function showDefinition(dictUrl, text) {
   const fullUrl = get_dict_definition_url(dictUrl, text)
   if (fullUrl.startsWith('http')) {
@@ -251,11 +267,17 @@ export function initContextMenus(dictPairs) {
       contexts: ['selection'],
       id: 'vocab_select_add'
     })
+    chrome.contextMenus.create({
+      title: 'Copy Vocabulary',
+      id: 'vocab_copy'
+    })
     chrome.contextMenus.onClicked.addListener(function(info, tab) {
       console.log('ContextMenus', info)
       const word = info.selectionText
       if (info.menuItemId === 'vocab_select_add') {
         add_lexeme(word, context_handle_add_result)
+      } else if (info.menuItemId === 'vocab_copy') {
+        eval_func(copy_vocabulary)
       } else if (info.menuItemId.startsWith('wd_define_')) {
         let i = info.menuItemId.substring(info.menuItemId.lastIndexOf('_') + 1)
         console.log('ddd', i, dictPairs[parseInt(i)])
