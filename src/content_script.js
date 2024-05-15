@@ -100,6 +100,7 @@ function renderBubble() {
   }
 
   const wdSpanText = node_to_render.textContent
+  const lemma = node_to_render.getAttribute('lemma')
   const bubbleDOM = document.getElementById('wd_selection_bubble')
   const bubbleText = document.getElementById('wd_selection_bubble_text')
   const bubbleFreq = document.getElementById('wd_selection_bubble_freq')
@@ -141,6 +142,7 @@ function renderBubble() {
   }
 
   bubbleText.textContent = limit_text_len(wdSpanText)
+  bubbleText.setAttribute('title', lemma)
   const prcntFreq = get_word_percentile(wdSpanText.toLowerCase())
   bubbleFreq.textContent = prcntFreq ? `${prcntFreq}%` : 'n/a'
   bubbleFreq.style.backgroundColor = getHeatColorPoint(prcntFreq)
