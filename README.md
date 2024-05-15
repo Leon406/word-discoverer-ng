@@ -8,11 +8,14 @@
 
 # Chrome Extension: Word Discoverer Next Generation
 
-## todo
+## RoadMap
 
 - [x] 词典idioms数据更新
 - [ ] 词典lemma数据更新 (无COCA 6W来源)
+- [x] 缓存生词bing翻译
+- [x] 在线词典支持第三方协议 (如 goldendict://)
 - [x] 右键复制生词
+
 
 
 
