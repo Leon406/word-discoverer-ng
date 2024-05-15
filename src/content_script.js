@@ -110,9 +110,9 @@ function renderBubble() {
   // 加入缓存，key为小写字母
   let cacheResult = cache.get(wdSpanText.toLowerCase())
   if (cacheResult) {
-    console.log("use Cache",wdSpanText)
+    console.log('use Cache', wdSpanText)
     wdnTranslateBingDom.innerHTML = `<div>${cacheResult.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>`
-  }else {
+  } else {
     chrome.runtime.sendMessage(
       {
         type: 'fetch',
@@ -422,6 +422,10 @@ function doHighlightText(textNodes) {
 function onNodeInserted(event) {
   const inobj = event.target
   if (!inobj) return
+  // todo ignore editor
+  if (inobj.closest('#wd_selection_bubble,.cm-editor')) {
+    return
+  }
   let classattr = null
   if (typeof inobj.getAttribute !== 'function') {
     return
