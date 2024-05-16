@@ -110,9 +110,26 @@ function renderBubble() {
   wdnTranslateBingDom.innerHTML = ''
   // 加入缓存，key为小写字母
   let cacheResult = cache.get(wdSpanText.toLowerCase())
+  function bingHtml(result) {
+    let inf_html = ""
+    let phonetic_html = ""
+    console.log("audio1",result)
+    if (result.phsym && result.phsym.length) {
+      phonetic_html =  `<div class="phonetic">
+        <audio id="player_us" src="${result.phsym[0].pron}"></audio>
+        <audio id="player_uk" src="${result.phsym[1].pron}"></audio>
+        <span onclick="document.getElementById('player_us').play()">${result.phsym[0].lang}</span>
+        <span onclick="document.getElementById('player_uk').play()">${result.phsym[1].lang}</span>
+      </div>`
+    }
+    if (result.infs && result.infs.length) {
+      inf_html =  `<div class="inflection"><span>屈折变化</span>${result.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
+    }
+    wdnTranslateBingDom.innerHTML = phonetic_html + `<div>${result.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>` + inf_html
+  }
   if (cacheResult) {
     console.log('use Cache', wdSpanText)
-    wdnTranslateBingDom.innerHTML = `<div>${cacheResult.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>`
+    bingHtml(cacheResult)
   } else {
     chrome.runtime.sendMessage(
       {
@@ -123,19 +140,20 @@ function renderBubble() {
         const doc = new DOMParser().parseFromString(res, 'text/html')
         console.log(doc)
         if (doc.querySelector('.client_def_hd_hd')) {
+          // todo
           const { audio, result } = handleLexResult(
             doc,
             {
               tense: true,
               phsym: true,
               cdef: true,
-              related: true,
-              sentence: 4
+              related: false,
+              sentence: 0
             },
             null
           )
           cache.set(wdSpanText.toLowerCase(), result)
-          wdnTranslateBingDom.innerHTML = `<div>${result.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>`
+          bingHtml(result)
         }
       }
     )

@@ -21,11 +21,8 @@
   line-height: 65% !important;
   cursor: pointer !important;
   box-shadow: none !important;
-  padding: 0px !important;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-  margin-bottom: 0px;
-  margin-top: 0px !important;
+  padding: 4px 0px !important;
+  margin: 0 4px !important;
   border: none !important;
   border-radius: 0px !important;
   border-style: none !important;
@@ -123,7 +120,7 @@
   line-height: 65% !important;
 }
 #wdn_translate_bing {
-  padding: 12px;
+  padding: 0 12px 12px;
   width: 400px;
   font-size: 14px;
   color: #000;
@@ -131,16 +128,24 @@
     line-height: 28px;
     > span {
       display: inline-block;
-      width: 48px;
+      width: 56px;
+      color: white;
+      text-align: center;
+      font-size: 12px;
       margin-right: 8px;
       background-color: cadetblue;
     }
+  }
+  > div.phonetic span {
+      width: auto;
+      color: #777;
+      background-color:transparent;
   }
 }
 .addAndAudioWrap {
   display: flex;
   margin-top: 18px;
-  padding: 12px;
+  padding: 12px 12px 0;
   > button {
     flex: 1;
   }

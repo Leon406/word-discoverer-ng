@@ -3,6 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <style>
+      .addAndAudioWrap {
+          display: flex;
+          padding: 12px 12px 0;
+          > button {
+              flex: 1;
+          }
+      }
+
+      #wdn_translate_bing {
+          padding: 0 12px 12px;
+          width: 400px;
+          font-size: 14px;
+          color: #000;
+          > div {
+              line-height: 28px;
+              > span {
+                  display: inline-block;
+                  width: 56px;
+                  color: white;
+                  text-align: center;
+                  font-size: 12px;
+                  margin-right: 8px;
+                  background-color: cadetblue;
+              }
+          }
+          > div.phonetic span {
+              width: auto;
+              color: #777;
+              background-color:transparent;
+          }
+      }
+  </style>
 </head>
 <body>
 <div>
@@ -16,6 +49,31 @@
 <div>
   won’t
   hasn’t
+</div>
+<div>
+  <div class="wdSelectionBubble" id="wd_selection_bubble" style="display: block; top: 29px; left: 32px;">
+    <span id="wd_selection_bubble_text" class="wdInfoSpan" title="haven">haven</span><span id="wd_selection_bubble_freq"
+                                                                                           class="wdFreqSpan"
+                                                                                           style="background-color: rgb(89, 255, 0);">1%</span>
+    <div class="addAndAudioWrap">
+      <button class="wdAddButton" style="margin-bottom: 4px;">添加到词汇</button>
+      <button class="wdAddButton" style="margin-bottom: 4px;">Audio</button>
+    </div>
+    <div id="wdn_translate_bing">
+      <div class="phonetic">
+        <audio id="player_us"
+               src="https://dictionary.blob.core.chinacloudapi.cn/media/audio/tom/c4/03/C403124A98350A8127643C1A2E3D2A34.mp3"></audio>
+        <audio id="player_uk"
+               src="https://dictionary.blob.core.chinacloudapi.cn/media/audio/george/c4/03/C403124A98350A8127643C1A2E3D2A34.mp3"></audio>
+        <span onclick="document.getElementById('player_us').play()">美:&nbsp;[ˈheɪv(ə)n] </span>
+        <span onclick="document.getElementById('player_uk').play()">英:&nbsp;['heɪv(ə)n] </span>
+      </div>
+      <div><span>n.</span>避难所；安全的地方；保护区<br><span>v.</span>把(船)开进港；掩护<br><span>网络</span>港湾；港口；避风港
+      </div>
+      <div class="inflection"><span>屈折变化</span>havens&nbsp;&nbsp;</div>
+    </div>
+  </div>
+
 </div>
 
 </body>
