@@ -59,6 +59,11 @@ function get_word_percentile(word) {
   const wf = dict_words[word]
   return Math.ceil((wf[1] * 100) / word_max_rank)
 }
+function get_word_level(word) {
+  if (!dict_words.hasOwnProperty(word)) return undefined
+  const wf = dict_words[word]
+  return Math.ceil(wf[1] /1000)
+}
 
 function assert(condition, message) {
   if (!condition) {
@@ -162,7 +167,8 @@ function renderBubble() {
   bubbleText.textContent = limit_text_len(wdSpanText)
   bubbleText.setAttribute('title', lemma)
   const prcntFreq = get_word_percentile(wdSpanText.toLowerCase())
-  bubbleFreq.textContent = prcntFreq ? `${prcntFreq}%` : 'n/a'
+  const level = get_word_level(wdSpanText.toLowerCase())
+  bubbleFreq.textContent = prcntFreq ? `${level} K (${prcntFreq}%)` : 'n/a'
   bubbleFreq.style.backgroundColor = getHeatColorPoint(prcntFreq)
   current_lexeme = wdSpanText
   const bcr = node_to_render.getBoundingClientRect()
