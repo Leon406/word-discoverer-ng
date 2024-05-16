@@ -128,7 +128,7 @@ function renderBubble() {
       </div>`
     }
     if (result.infs && result.infs.length) {
-      inf_html =  `<div class="inflection"><span>屈折变化</span>${result.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
+      inf_html =  `<div class="inflection"><span>词形变换</span>${result.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
     }
     wdnTranslateBingDom.innerHTML = phonetic_html + `<div>${result.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>` + inf_html
   }
