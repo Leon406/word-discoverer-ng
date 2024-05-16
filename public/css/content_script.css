@@ -126,6 +126,7 @@
   color: #000;
   > div {
     line-height: 28px;
+    margin-right: 16px;
     > span {
       display: inline-block;
       width: 56px;
