@@ -59,10 +59,11 @@ function get_word_percentile(word) {
   const wf = dict_words[word]
   return Math.ceil((wf[1] * 100) / word_max_rank)
 }
+
 function get_word_level(word) {
   if (!dict_words.hasOwnProperty(word)) return undefined
   const wf = dict_words[word]
-  return Math.ceil(wf[1] /1000)
+  return Math.ceil(wf[1] / 1000)
 }
 
 function assert(condition, message) {
@@ -84,6 +85,20 @@ function getHeatColorPoint(freqPercent) {
   freqPercent = Math.max(0, Math.min(100, freqPercent))
   const hue = 100 - freqPercent
   return `hsl(${hue}, 100%, 50%)`
+}
+
+/**
+ *  Can't use inline js, CSP
+ * Refused to execute inline event handler because it violates the following Content Security Policy directive
+ */
+function addPhoneticClickEvent() {
+  let us = document.getElementById('play_us')
+  let uk = document.getElementById('play_uk')
+  if (!us || !uk) return
+  us.addEventListener('click',
+    () => document.getElementById('player_us').play())
+  uk.addEventListener('click',
+    () => document.getElementById('player_uk').play())
 }
 
 function renderBubble() {
@@ -115,23 +130,26 @@ function renderBubble() {
   wdnTranslateBingDom.innerHTML = ''
   // 加入缓存，key为小写字母
   let cacheResult = cache.get(wdSpanText.toLowerCase())
+
   function bingHtml(result) {
-    let inf_html = ""
-    let phonetic_html = ""
-    console.log("audio1",result)
+    let inf_html = ''
+    let phonetic_html = ''
+    console.log('audio1', result)
     if (result.phsym && result.phsym.length) {
-      phonetic_html =  `<div class="phonetic">
+      phonetic_html = `<div class="phonetic">
         <audio id="player_us" src="${result.phsym[0].pron}"></audio>
         <audio id="player_uk" src="${result.phsym[1].pron}"></audio>
-        <span onclick="document.getElementById('player_us').play()">${result.phsym[0].lang}</span>
-        <span onclick="document.getElementById('player_uk').play()">${result.phsym[1].lang}</span>
+        <span id="play_us">${result.phsym[0].lang}</span>
+        <span id="play_uk">${result.phsym[1].lang}</span>
       </div>`
     }
     if (result.infs && result.infs.length) {
-      inf_html =  `<div class="inflection"><span>词形变换</span>${result.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
+      inf_html = `<div class="inflection"><span>词形变换</span>${result.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
     }
     wdnTranslateBingDom.innerHTML = phonetic_html + `<div>${result.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>` + inf_html
+    addPhoneticClickEvent()
   }
+
   if (cacheResult) {
     console.log('use Cache', wdSpanText)
     bingHtml(cacheResult)
