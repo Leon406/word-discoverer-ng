@@ -433,7 +433,9 @@ function initialize_extension() {
         console.log('request fetchArrayBuffer', request)
         fetch(request.audioUrl)
           .then((response) => response.arrayBuffer())
-          .then((buffer) => JSON.stringify({ data: new Uint8Array(buffer) }))
+          .then((buffer) => JSON.stringify({
+            data: Array.apply(null, new Uint8Array(buffer))
+          }))
           .then(sendResponse)
         return true // Will respond asynchronously.
       }

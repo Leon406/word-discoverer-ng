@@ -11,6 +11,7 @@ const options = {
 }
 
 const cache = new LRUCache(options)
+const cacheAudio = new LRUCache(options)
 
 let dict_words = null
 let dict_idioms = null
@@ -111,32 +112,29 @@ function addPhoneticClickEvent() {
 }
 
 function play(audioUrl) {
-  try {
-    new Audio(audioUrl).play()
-  }catch (e) {
-    console.error(e)
-    // todo fix arraybuffer play
-    let cached = cacheAudio.get(audioUrl)
-    if (cached) {
-      console.log('use Cache arraybuffer')
-      playArrayBuffer(cached)
-    } else {
+  console.debug('play', audioUrl)
+  // try {
+  new Audio(audioUrl).play()
+    .catch((e) => {
+      console.error(e)
+      let cached = cacheAudio.get(audioUrl)
+      if (cached) {
+        console.log('use Cache arraybuffer')
+        playArrayBuffer(cached)
+      } else {
       chrome.runtime.sendMessage(
         {
           type: 'fetchArrayBuffer',
           audioUrl
         },
         (res) => {
-          console.log('arraybuffer', res)
-          console.log('arraybuffer2', JSON.parse(res).data)
           const arraybuffer = new Uint8Array(JSON.parse(res).data).buffer
-          console.log('arraybuffer', arraybuffer)
           cacheAudio.set(audioUrl, arraybuffer)
           playArrayBuffer(arraybuffer)
         }
       )
-    }
-  }
+      }
+    })
 }
 
 /**播放 ArrayBuffer 音频*/
