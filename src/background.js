@@ -21,7 +21,7 @@ function do_load_dictionary(file_text) {
     }
     rare_words[form] = [lemma, rank]
     if (form.includes('’')) {
-      rare_words[form.replace(/’/g,"'")] = [lemma, rank]
+      rare_words[form.replace(/’/g, '\'')] = [lemma, rank]
     }
   }
   const local_storage = chrome.storage.local
@@ -36,8 +36,8 @@ function load_eng_dictionary() {
     .then(do_load_dictionary)
 }
 
-function deriveKey(key, rare_words,value) {
-  let tmp = key.replace(/’/g, "'")
+function deriveKey(key, rare_words, value) {
+  let tmp = key.replace(/’/g, '\'')
   if (tmp !== key) {
     rare_words[tmp] = value
   }
@@ -426,6 +426,14 @@ function initialize_extension() {
           `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${request.q}`
         )
           .then((response) => response.text())
+          .then(sendResponse)
+        return true // Will respond asynchronously.
+      }
+      if (request.type === 'fetchArrayBuffer') {
+        console.log('request fetchArrayBuffer', request)
+        fetch(request.audioUrl)
+          .then((response) => response.arrayBuffer())
+          .then((buffer) => JSON.stringify({ data: new Uint8Array(buffer) }))
           .then(sendResponse)
         return true // Will respond asynchronously.
       }

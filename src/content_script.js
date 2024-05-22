@@ -102,12 +102,53 @@ function addPhoneticClickEvent() {
   let us = document.getElementById('play_us')
   let uk = document.getElementById('play_uk')
   if (!us || !uk) return
-  let usClick = () => document.getElementById('player_us').play()
-  let ukClick = () => document.getElementById('player_uk').play()
-  us.addEventListener('click', usClick)
-  us.addEventListener('mouseover', usClick)
-  uk.addEventListener('click', ukClick)
-  uk.addEventListener('mouseover', ukClick)
+
+  let clickFunc = (evt) => play(evt.target.getAttribute('data-src'))
+  us.addEventListener('click', clickFunc)
+  us.addEventListener('mouseover', clickFunc)
+  uk.addEventListener('click', clickFunc)
+  uk.addEventListener('mouseover', clickFunc)
+}
+
+function play(audioUrl) {
+  try {
+    new Audio(audioUrl).play()
+  }catch (e) {
+    console.error(e)
+    // todo fix arraybuffer play
+    let cached = cacheAudio.get(audioUrl)
+    if (cached) {
+      console.log('use Cache arraybuffer')
+      playArrayBuffer(cached)
+    } else {
+      chrome.runtime.sendMessage(
+        {
+          type: 'fetchArrayBuffer',
+          audioUrl
+        },
+        (res) => {
+          console.log('arraybuffer', res)
+          console.log('arraybuffer2', JSON.parse(res).data)
+          const arraybuffer = new Uint8Array(JSON.parse(res).data).buffer
+          console.log('arraybuffer', arraybuffer)
+          cacheAudio.set(audioUrl, arraybuffer)
+          playArrayBuffer(arraybuffer)
+        }
+      )
+    }
+  }
+}
+
+/**播放 ArrayBuffer 音频*/
+function playArrayBuffer(arrayBuffer) {
+  var context = new AudioContext()
+
+  context.decodeAudioData(arrayBuffer.slice(0), audioBuffer => { // `slice(0)`克隆一份（`decodeAudioData`后原数组清空）
+    const bufferSource = context.createBufferSource()
+    bufferSource.buffer = audioBuffer
+    bufferSource.connect(context.destination)
+    bufferSource.start(0)
+  })
 }
 
 function renderBubble() {
@@ -147,10 +188,8 @@ function renderBubble() {
     console.log('audio1', result)
     if (result.phsym && result.phsym.length) {
       phonetic_html = `<div class="phonetic">
-        <audio id="player_us" src="${result.phsym[0].pron}"></audio>
-        <audio id="player_uk" src="${result.phsym[1].pron}"></audio>
-        <span id="play_us">${result.phsym[0].lang}</span>
-        <span id="play_uk">${result.phsym[1].lang}</span>
+        <span id="play_us" data-src="${result.phsym[0].pron}">${result.phsym[0].lang}</span>
+        <span id="play_uk" data-src="${result.phsym[1].pron}">${result.phsym[1].lang}</span>
       </div>`
     }
     if (result.infs && result.infs.length) {
