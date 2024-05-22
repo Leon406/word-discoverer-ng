@@ -1,6 +1,7 @@
 import { add_lexeme, make_hl_style, make_id_suffix } from './common_lib'
 import { handleLexResult } from './utils/bing'
 import { LRUCache } from 'lru-cache'
+import { get_dict_definition_url } from './context_menu_lib'
 
 const options = {
   max: 100,
@@ -104,7 +105,7 @@ function addPhoneticClickEvent() {
   let usClick = () => document.getElementById('player_us').play()
   let ukClick = () => document.getElementById('player_uk').play()
   us.addEventListener('click', usClick)
-  us.addEventListener("mouseover",usClick)
+  us.addEventListener('mouseover', usClick)
   uk.addEventListener('click', ukClick)
   uk.addEventListener('mouseover', ukClick)
 }
@@ -192,6 +193,15 @@ function renderBubble() {
   }
 
   bubbleText.textContent = limit_text_len(wdSpanText)
+  bubbleText.onclick = function(e) {
+    e.preventDefault()
+    e.stopImmediatePropagation()
+    let thirdDict = wd_online_dicts.findLast(dict => !dict.url.startsWith('http'))
+    if (thirdDict) {
+      window.open(get_dict_definition_url(thirdDict.url, wdSpanText))
+    }
+  }
+
   bubbleText.setAttribute('title', lemma)
   const prcntFreq = get_word_percentile(wdSpanText.toLowerCase())
   const level = get_word_level(wdSpanText.toLowerCase())
@@ -592,23 +602,6 @@ function create_bubble() {
     bubble_handle_tts(current_lexeme)
   })
   addAndAudioWrapDom.appendChild(speakButton)
-
-  // dictPairs = makeDictionaryPairs();
-  //   var dictPairs = wd_online_dicts
-  //   for (var i = 0; i < dictPairs.length; ++i) {
-  //     var dictButton = document.createElement('button')
-  //     dictButton.setAttribute('class', 'wdAddButton')
-  //     dictButton.textContent = dictPairs[i].title
-  //     dictButton.setAttribute('wdDictRefUrl', dictPairs[i].url)
-  //     dictButton.addEventListener('click', function (e) {
-  //       target = e.target
-  //       dictUrl = target.getAttribute('wdDictRefUrl')
-  //       var newTabUrl = get_dict_definition_url(dictUrl, current_lexeme)
-  //       chrome.runtime.sendMessage({ wdm_new_tab_url: newTabUrl })
-  //     })
-  //     bubbleDOM.appendChild(dictButton)
-  //   }
-
   const div = document.createElement('div')
   div.id = 'wdn_translate_bing'
   bubbleDOM.appendChild(div)
