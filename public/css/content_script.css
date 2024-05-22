@@ -133,13 +133,14 @@
       color: white;
       text-align: center;
       font-size: 12px;
-      margin-right: 8px;
+      margin: 0 8px 2px 0;
       background-color: cadetblue;
     }
   }
   > div.phonetic span {
       width: auto;
       color: #777;
+      cursor: pointer;
       background-color:transparent;
   }
 }

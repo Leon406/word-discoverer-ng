@@ -59,10 +59,17 @@ function get_word_percentile(word) {
   const wf = dict_words[word]
   return Math.ceil((wf[1] * 100) / word_max_rank)
 }
+
+function get_word_rank(word) {
+  if (!dict_words.hasOwnProperty(word)) return undefined
+  const wf = dict_words[word]
+  return wf[1]
+}
+
 function get_word_level(word) {
   if (!dict_words.hasOwnProperty(word)) return undefined
   const wf = dict_words[word]
-  return Math.ceil(wf[1] /1000)
+  return Math.ceil(wf[1] / 1000)
 }
 
 function assert(condition, message) {
@@ -115,12 +122,13 @@ function renderBubble() {
   wdnTranslateBingDom.innerHTML = ''
   // 加入缓存，key为小写字母
   let cacheResult = cache.get(wdSpanText.toLowerCase())
+
   function bingHtml(result) {
-    let inf_html = ""
-    let phonetic_html = ""
-    console.log("audio1",result)
+    let inf_html = ''
+    let phonetic_html = ''
+    console.log('audio1', result)
     if (result.phsym && result.phsym.length) {
-      phonetic_html =  `<div class="phonetic">
+      phonetic_html = `<div class="phonetic">
         <audio id="player_us" src="${result.phsym[0].pron}"></audio>
         <audio id="player_uk" src="${result.phsym[1].pron}"></audio>
         <span onclick="document.getElementById('player_us').play()">${result.phsym[0].lang}</span>
@@ -128,10 +136,11 @@ function renderBubble() {
       </div>`
     }
     if (result.infs && result.infs.length) {
-      inf_html =  `<div class="inflection"><span>词形变换</span>${result.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
+      inf_html = `<div class="inflection"><span>词形变换</span>${result.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
     }
     wdnTranslateBingDom.innerHTML = phonetic_html + `<div>${result.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>` + inf_html
   }
+
   if (cacheResult) {
     console.log('use Cache', wdSpanText)
     bingHtml(cacheResult)
@@ -168,7 +177,9 @@ function renderBubble() {
   bubbleText.setAttribute('title', lemma)
   const prcntFreq = get_word_percentile(wdSpanText.toLowerCase())
   const level = get_word_level(wdSpanText.toLowerCase())
+  const rank = get_word_rank(wdSpanText.toLowerCase())
   bubbleFreq.textContent = prcntFreq ? `${level} K (${prcntFreq}%)` : 'n/a'
+  bubbleFreq.title = rank ? rank : ''
   bubbleFreq.style.backgroundColor = getHeatColorPoint(prcntFreq)
   current_lexeme = wdSpanText
   const bcr = node_to_render.getBoundingClientRect()

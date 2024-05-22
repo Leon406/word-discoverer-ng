@@ -59,10 +59,8 @@ export function handleLexResult(
       searchResult.result.phsym = $prons.map((el) => {
         let pron = ''
         const $audio = el.querySelector('.client_aud_o')
-        console.log("audio",$audio)
         if ($audio) {
           pron = (($audio.getAttribute('data-pronunciation') || '').match(/https.*\.mp3/) || [''])[0]
-          console.log("pron",pron)
         }
         return {
           lang: getText(el, '.client_def_hd_pn'),
