@@ -101,10 +101,12 @@ function addPhoneticClickEvent() {
   let us = document.getElementById('play_us')
   let uk = document.getElementById('play_uk')
   if (!us || !uk) return
-  us.addEventListener('click',
-    () => document.getElementById('player_us').play())
-  uk.addEventListener('click',
-    () => document.getElementById('player_uk').play())
+  let usClick = () => document.getElementById('player_us').play()
+  let ukClick = () => document.getElementById('player_uk').play()
+  us.addEventListener('click', usClick)
+  us.addEventListener("mouseover",usClick)
+  uk.addEventListener('click', ukClick)
+  uk.addEventListener('mouseover', ukClick)
 }
 
 function renderBubble() {
@@ -126,7 +128,8 @@ function renderBubble() {
   }
 
   const wdSpanText = node_to_render.textContent
-  const lemma = node_to_render.getAttribute('lemma')
+  let lemma = node_to_render.getAttribute('lemma')
+  lemma = lemma ? lemma : ''
   const bubbleDOM = document.getElementById('wd_selection_bubble')
   const bubbleText = document.getElementById('wd_selection_bubble_text')
   const bubbleFreq = document.getElementById('wd_selection_bubble_freq')
