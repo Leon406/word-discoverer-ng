@@ -122,17 +122,17 @@ function play(audioUrl) {
         console.log('use Cache arraybuffer')
         playArrayBuffer(cached)
       } else {
-      chrome.runtime.sendMessage(
-        {
-          type: 'fetchArrayBuffer',
-          audioUrl
-        },
-        (res) => {
-          const arraybuffer = new Uint8Array(JSON.parse(res).data).buffer
-          cacheAudio.set(audioUrl, arraybuffer)
-          playArrayBuffer(arraybuffer)
-        }
-      )
+        chrome.runtime.sendMessage(
+          {
+            type: 'fetchArrayBuffer',
+            audioUrl
+          },
+          (res) => {
+            const arraybuffer = new Uint8Array(JSON.parse(res).data).buffer
+            cacheAudio.set(audioUrl, arraybuffer)
+            playArrayBuffer(arraybuffer)
+          }
+        )
       }
     })
 }
@@ -140,7 +140,6 @@ function play(audioUrl) {
 /**播放 ArrayBuffer 音频*/
 function playArrayBuffer(arrayBuffer) {
   var context = new AudioContext()
-
   context.decodeAudioData(arrayBuffer.slice(0), audioBuffer => { // `slice(0)`克隆一份（`decodeAudioData`后原数组清空）
     const bufferSource = context.createBufferSource()
     bufferSource.buffer = audioBuffer
@@ -230,11 +229,12 @@ function renderBubble() {
   }
 
   bubbleText.textContent = limit_text_len(wdSpanText)
-  bubbleText.onclick = function(e) {
-    e.preventDefault()
-    e.stopImmediatePropagation()
-    let thirdDict = wd_online_dicts.findLast(dict => !dict.url.startsWith('http'))
-    if (thirdDict) {
+  // if config third schema, use last one
+  let thirdDict = wd_online_dicts.findLast(dict => !dict.url.startsWith('http'))
+  if (thirdDict) {
+    bubbleText.onclick = function(e) {
+      e.preventDefault()
+      e.stopImmediatePropagation()
       window.open(get_dict_definition_url(thirdDict.url, wdSpanText))
     }
   }
@@ -247,9 +247,14 @@ function renderBubble() {
   bubbleFreq.title = rank ? rank : ''
   bubbleFreq.style.backgroundColor = getHeatColorPoint(prcntFreq)
   current_lexeme = wdSpanText
+  let maxLeft = window.innerWidth - 424
+  let maxTop = window.innerHeight - 300
   const bcr = node_to_render.getBoundingClientRect()
-  bubbleDOM.style.top = `${bcr.bottom}px`
-  bubbleDOM.style.left = `${Math.max(5, Math.floor((bcr.left + bcr.right) / 2) - 100)}px`
+
+  let topPx = Math.min(maxTop, bcr.bottom)
+  bubbleDOM.style.top = `${topPx}px`
+  let leftPx =Math.min(maxLeft, Math.max(5, Math.floor((bcr.left + bcr.right) / 2) - 100))
+  bubbleDOM.style.left = `${leftPx}px`
   bubbleDOM.style.display = 'block'
   rendered_node_id = node_to_render_id
 
