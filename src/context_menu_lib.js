@@ -189,7 +189,7 @@ function openUrl(url) {
 
 
 function copy_vocabulary() {
-  const voca = Array.from(new Set(Array.from(document.querySelectorAll('wdautohl-customtag[lemma]'))
+  const voca = Array.from(new Set(Array.from(document.querySelectorAll('wdhl[lemma]'))
     .map(ele => ele.getAttribute('lemma')))).join('\r\n')
   const textArea = document.createElement('textarea')
   textArea.value = voca

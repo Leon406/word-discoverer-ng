@@ -38,9 +38,9 @@ let node_to_render_id = null
 
 function make_class_name(lemma) {
   if (lemma) {
-    return `wdautohl_${make_id_suffix(lemma)}`
+    return `wdhl_${make_id_suffix(lemma)}`
   }
-  return 'wdautohl_none_none'
+  return 'wdhl_none_none'
 }
 
 function get_rare_lemma(word) {
@@ -156,7 +156,7 @@ function renderBubble() {
   if (!node_to_render) return
 
   const classattr = node_to_render.getAttribute('class')
-  const is_highlighted = classattr !== 'wdautohl_none_none'
+  const is_highlighted = classattr !== 'wdhl_none_none'
   const param_key = is_highlighted ? 'hl_hover' : 'ow_hover'
   const param_value = wd_hover_settings[param_key]
   if (
@@ -325,7 +325,7 @@ function processMouse(e) {
     process_hl_leave()
     return
   }
-  if (!classattr || !classattr.startsWith('wdautohl_')) {
+  if (!classattr || !classattr.startsWith('wdhl_')) {
     process_hl_leave()
     return
   }
@@ -452,7 +452,7 @@ function text_to_hl_nodes(text, dst) {
       text_style = make_hl_style(hlParams)
     } else if (match.kind === 'word') {
       text_style =
-        'font:inherit;display:inline;color:inherit;background-color:inherit;'
+        'font:inherit;color:inherit;background-color:inherit;'
     }
     if (text_style) {
       insert_count += 1
@@ -463,13 +463,13 @@ function text_to_hl_nodes(text, dst) {
       }
       last_hl_end_pos = match.end
       // span = document.createElement("span");
-      const span = document.createElement('wdautohl-customtag')
+      const span = document.createElement('wdhl')
       span.textContent = text.slice(match.begin, last_hl_end_pos)
       span.setAttribute('style', text_style)
       if (match.normalized) {
         span.setAttribute('lemma', match.normalized)
       }
-      span.id = `wdautohl_id_${cur_wd_node_id}`
+      span.id = `wdhl_id_${cur_wd_node_id}`
       cur_wd_node_id += 1
       const wdclassname = make_class_name(match.normalized)
       span.setAttribute('class', wdclassname)
@@ -573,7 +573,7 @@ function onNodeInserted(event) {
   } catch (e) {
     return
   }
-  if (!classattr || !classattr.startsWith('wdautohl_')) {
+  if (!classattr || !classattr.startsWith('wdhl_')) {
     const textNodes = textNodesUnder(inobj)
     doHighlightText(textNodes)
   }
@@ -586,9 +586,9 @@ function unhighlight(lemma) {
     const span = hlNodes[0]
     span.setAttribute(
       'style',
-      'font-weight:inherit;color:inherit;font-size:inherit;background-color:inherit;display:inline;'
+      'font-weight:inherit;color:inherit;background-color:inherit;'
     )
-    span.setAttribute('class', 'wdautohl_none_none')
+    span.setAttribute('class', 'wdhl_none_none')
   }
 }
 
