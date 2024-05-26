@@ -44,7 +44,7 @@ export function handleLexResult(
   doc: Document,
   options: BingConfigOption,
   transform: null | ((text: string) => string),
-): BingSearchResultLex | Promise<BingSearchResultLex> {
+): BingSearchResultLex {
   const searchResult: DictSearchResult<BingResultLex> = {
     result: {
       type: 'lex',
@@ -136,6 +136,6 @@ export function handleLexResult(
   if (Object.keys(searchResult.result).length > 2) {
     return searchResult
   }
-  return handleNoResult()
+  return null
 }
 

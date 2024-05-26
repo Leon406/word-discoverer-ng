@@ -83,7 +83,7 @@ function assert(condition, message) {
 function limit_text_len(word) {
   if (!word) return word
   word = word.toLowerCase()
-  const max_len = 20
+  const max_len = 60
   if (word.length <= max_len) return word
   return `${word.slice(0, max_len)}...`
 }
@@ -188,12 +188,38 @@ function renderBubble() {
         <span id="play_us" data-src="${result.phsym[0].pron}">${result.phsym[0].lang}</span>
         <span id="play_uk" data-src="${result.phsym[1].pron}">${result.phsym[1].lang}</span>
       </div>`
+    } else {
+      const q = wdSpanText.toLowerCase()
+      phonetic_html = `<div>♫
+      <a target="_blank" href="https://youglish.com/search/${q}">
+      YouGlish</a>
+      <a target="_blank" href="https://www.playphrase.me/#/search?q=${q}">
+      PlayPhrase</a>
+      <a target="_blank" href="https://getyarn.io/yarn-find?text=${q}">
+      Yarn</a>
+    </div>`
     }
     if (result.infs && result.infs.length) {
       inf_html = `<div class="inflection"><span>词形变换</span>${result.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
     }
     wdnTranslateBingDom.innerHTML = phonetic_html + `<div>${result.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>` + inf_html
     addPhoneticClickEvent()
+  }
+
+  function errorHtml() {
+    const q = wdSpanText.toLowerCase()
+    const dict_html = `<div >Definition: 
+    <a target="_blank" href="https://www.google.com/search?q=${q}+definition">Google</a>
+</div>`
+    const pron_html = `<div>♫
+  <a target="_blank" href="https://youglish.com/search/${q}">
+  YouGlish</a>
+  <a target="_blank" href="https://www.playphrase.me/#/search?q=${q}">
+  PlayPhrase</a>
+  <a target="_blank" href="https://getyarn.io/yarn-find?text=${q}">
+  Yarn</a>
+</div>`
+    wdnTranslateBingDom.innerHTML = dict_html + pron_html
   }
 
   if (cacheResult) {
@@ -207,10 +233,8 @@ function renderBubble() {
       },
       (res) => {
         const doc = new DOMParser().parseFromString(res, 'text/html')
-        console.log(doc)
         if (doc.querySelector('.client_def_hd_hd')) {
-          // todo
-          const { audio, result } = handleLexResult(
+          let lexResult = handleLexResult(
             doc,
             {
               tense: true,
@@ -221,8 +245,15 @@ function renderBubble() {
             },
             null
           )
-          cache.set(wdSpanText.toLowerCase(), result)
-          bingHtml(result)
+          if (lexResult) {
+            const { result } = lexResult
+            cache.set(wdSpanText.toLowerCase(), result)
+            bingHtml(result)
+          } else {
+            errorHtml()
+          }
+        } else {
+          errorHtml()
         }
       }
     )
@@ -253,7 +284,7 @@ function renderBubble() {
 
   let topPx = Math.min(maxTop, bcr.bottom)
   bubbleDOM.style.top = `${topPx}px`
-  let leftPx =Math.min(maxLeft, Math.max(5, Math.floor((bcr.left + bcr.right) / 2) - 100))
+  let leftPx = Math.min(maxLeft, Math.max(5, Math.floor((bcr.left + bcr.right) / 2) - 100))
   bubbleDOM.style.left = `${leftPx}px`
   bubbleDOM.style.display = 'block'
   rendered_node_id = node_to_render_id
@@ -625,6 +656,7 @@ function create_bubble() {
 
   const addAndAudioWrapDom = document.createElement('div')
   addAndAudioWrapDom.setAttribute('class', 'addAndAudioWrap')
+  addAndAudioWrapDom.style.marginBottom = '8px'
   bubbleDOM.appendChild(addAndAudioWrapDom)
 
   const addButton = document.createElement('button')
