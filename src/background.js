@@ -9,20 +9,21 @@ function do_load_dictionary(file_text) {
   const lines = file_text.split(/[\r\n]+/)
   const rare_words = {}
   let rank = 0
-  let prev_lemma = null
   for (let i = 0; i < lines.length; ++i) {
     const fields = lines[i].split('\t')
-    if (i + 1 === lines.length && fields.length === 1) break
-    const form = fields[0]
-    const lemma = fields[1]
-    if (lemma !== prev_lemma) {
-      rank += 1
-      prev_lemma = lemma
-    }
-    rare_words[form] = [lemma, rank]
-    if (form.includes('’')) {
-      rare_words[form.replace(/’/g, '\'')] = [lemma, rank]
-    }
+    if (!fields.length) break
+    const lemma = fields[0]
+    rank++
+    fields.forEach(item => {
+        if (item) {
+          rare_words[item] = [lemma, rank]
+          if (item.includes('’')) {
+            rare_words[item.replace(/’/g, '\'')] = [lemma, rank]
+          }
+        }
+      }
+    )
+
   }
   const local_storage = chrome.storage.local
   local_storage.set({ words_discoverer_eng_dict: rare_words })
