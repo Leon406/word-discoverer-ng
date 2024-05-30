@@ -538,7 +538,7 @@ function onNodeChanged(event) {
   const inobj = event.target
   if (!inobj) return
   // todo ignore editor
-  if (inobj.closest('#wd_selection_bubble,.cm-editor')) {
+  if (inobj.closest('.wdSelectionBubble,.cm-editor')) {
     return
   }
   let classattr = null
