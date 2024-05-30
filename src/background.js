@@ -27,7 +27,7 @@ function do_load_dictionary(file_text) {
   }
   const local_storage = chrome.storage.local
   local_storage.set({ words_discoverer_eng_dict: rare_words })
-  local_storage.set({ wd_word_max_rank: rank })
+  chrome.storage.sync.set({ wd_word_max_rank: rank })
 }
 
 function load_eng_dictionary() {
@@ -510,25 +510,16 @@ function initialize_extension() {
     }
   )
 
-  chrome.storage.local.get(
-    [
-      'words_discoverer_eng_dict',
+  function loadConfig() {
+    chrome.storage.sync.get(['wd_show_percents',
+      'wd_is_enabled',
       'wd_hl_settings',
       'wd_online_dicts',
       'wd_hover_settings',
-      'wd_idioms',
-      'wd_show_percents',
-      'wd_is_enabled',
-      'wd_user_vocabulary',
       'wd_black_list',
       'wd_white_list',
-      'wd_gd_sync_enabled',
-      'wd_enable_tts'
-    ],
-    function(result) {
-      load_eng_dictionary()
-      load_idioms()
-      let { wd_hl_settings } = result
+      'wd_enable_tts'], function(result) {
+      let { wd_hl_settings, wd_enable_tts, wd_hover_settings ,wd_online_dicts,show_percents,black_list,white_list} = result
       if (typeof wd_hl_settings === 'undefined') {
         const word_hl_params = {
           enabled: true,
@@ -552,44 +543,49 @@ function initialize_extension() {
           wordParams: word_hl_params,
           idiomParams: idiom_hl_params
         }
-        chrome.storage.local.set({ wd_hl_settings })
+        chrome.storage.sync.set({ wd_hl_settings })
       }
-      const { wd_enable_tts } = result
       if (typeof wd_enable_tts === 'undefined') {
-        chrome.storage.local.set({ wd_enable_tts: false })
+        chrome.storage.sync.set({ wd_enable_tts: false })
       }
-      let { wd_hover_settings } = result
       if (typeof wd_hover_settings === 'undefined') {
         wd_hover_settings = { hl_hover: 'always', ow_hover: 'never' }
-        chrome.storage.local.set({ wd_hover_settings })
+        chrome.storage.sync.set({ wd_hover_settings })
       }
-      let { wd_online_dicts } = result
       if (typeof wd_online_dicts === 'undefined') {
         wd_online_dicts = make_default_online_dicts()
-        chrome.storage.local.set({ wd_online_dicts })
+        chrome.storage.sync.set({ wd_online_dicts })
       }
       initContextMenus(wd_online_dicts)
 
-      const show_percents = result.wd_show_percents
       if (typeof show_percents === 'undefined') {
-        chrome.storage.local.set({ wd_show_percents: 15 })
+        chrome.storage.sync.set({ wd_show_percents: 15 })
       }
       const { wd_is_enabled } = result
       if (typeof wd_is_enabled === 'undefined') {
-        chrome.storage.local.set({ wd_is_enabled: true })
+        chrome.storage.sync.set({ wd_is_enabled: true })
       }
+      if (typeof black_list === 'undefined') {
+        chrome.storage.sync.set({ wd_black_list: {} })
+      }
+      if (typeof white_list === 'undefined') {
+        chrome.storage.sync.set({ wd_white_list: {} })
+      }
+    })
+  }
+
+  chrome.storage.local.get(
+    [
+      'wd_user_vocabulary'
+    ],
+    function(result) {
+      load_eng_dictionary()
+      load_idioms()
       const user_vocabulary = result.wd_user_vocabulary
       if (typeof user_vocabulary === 'undefined') {
         chrome.storage.local.set({ wd_user_vocabulary: {} })
       }
-      const black_list = result.wd_black_list
-      if (typeof black_list === 'undefined') {
-        chrome.storage.local.set({ wd_black_list: {} })
-      }
-      const white_list = result.wd_white_list
-      if (typeof white_list === 'undefined') {
-        chrome.storage.local.set({ wd_white_list: {} })
-      }
+      loadConfig()
     }
   )
 

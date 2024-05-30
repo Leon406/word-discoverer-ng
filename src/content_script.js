@@ -179,14 +179,14 @@ function renderBubble() {
   // 加入缓存，key为小写字母
   let cacheResult = cache.get(wdSpanText.toLowerCase())
 
-  function bingHtml(result) {
+  function bingHtml(bingResult) {
     let inf_html = ''
     let phonetic_html = ''
-    console.log('audio1', result)
-    if (result.phsym && result.phsym.length) {
+    console.log('audio1', bingResult)
+    if (bingResult.phsym && bingResult.phsym.length) {
       phonetic_html = `<div class="phonetic">
-        <span id="play_us" data-src="${result.phsym[0].pron}">${result.phsym[0].lang}</span>
-        <span id="play_uk" data-src="${result.phsym[1].pron}">${result.phsym[1].lang}</span>
+        <span id="play_us" data-src="${bingResult.phsym[0].pron}">${bingResult.phsym[0].lang}</span>
+        <span id="play_uk" data-src="${bingResult.phsym[1].pron}">${bingResult.phsym[1].lang}</span>
       </div>`
     } else {
       const q = wdSpanText.toLowerCase()
@@ -199,10 +199,10 @@ function renderBubble() {
       Yarn</a>
     </div>`
     }
-    if (result.infs && result.infs.length) {
-      inf_html = `<div class="inflection"><span>词形变换</span>${result.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
+    if (bingResult.infs && bingResult.infs.length) {
+      inf_html = `<div class="inflection"><span>词形变换</span>${bingResult.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
     }
-    wdnTranslateBingDom.innerHTML = phonetic_html + `<div>${result.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>` + inf_html
+    wdnTranslateBingDom.innerHTML = phonetic_html + `<div>${bingResult.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>` + inf_html
     addPhoneticClickEvent()
   }
 
@@ -707,77 +707,82 @@ function initForPage() {
   chrome.storage.local.get(
     [
       'words_discoverer_eng_dict',
-      'wd_online_dicts',
       'wd_idioms',
-      'wd_hover_settings',
-      'wd_word_max_rank',
-      'wd_show_percents',
-      'wd_is_enabled',
       'wd_user_vocabulary',
-      'wd_hl_settings',
-      'wd_black_list',
-      'wd_white_list',
-      'wd_enable_tts'
     ],
     function(result) {
       dict_words = result.words_discoverer_eng_dict
       dict_idioms = result.wd_idioms
-      wd_online_dicts = result.wd_online_dicts
-      wd_enable_tts = result.wd_enable_tts
       user_vocabulary = result.wd_user_vocabulary
-      wd_hover_settings = result.wd_hover_settings
-      word_max_rank = result.wd_word_max_rank
-      const show_percents = result.wd_show_percents
-      wd_hl_settings = result.wd_hl_settings
-      min_show_rank = (show_percents * word_max_rank) / 100
-      is_enabled = result.wd_is_enabled
-      const black_list = result.wd_black_list
-      const white_list = result.wd_white_list
+      chrome.storage.sync.get(
+        [
+          'wd_online_dicts',
+          'wd_hover_settings',
+          'wd_show_percents',
+          'wd_is_enabled',
+          'wd_hl_settings',
+          'wd_black_list',
+          'wd_white_list',
+          'wd_word_max_rank',
+          'wd_enable_tts'
+        ],
+        function(config) {
+          wd_online_dicts = config.wd_online_dicts
+          wd_enable_tts = config.wd_enable_tts
+          wd_hover_settings = config.wd_hover_settings
+          word_max_rank = config.wd_word_max_rank
+          const show_percents = config.wd_show_percents
+          wd_hl_settings = config.wd_hl_settings
+          min_show_rank = (show_percents * word_max_rank) / 100
+          is_enabled = config.wd_is_enabled
+          const black_list = config.wd_black_list
+          const white_list = config.wd_white_list
+          get_verdict(is_enabled, black_list, white_list, function(verdict) {
+            console.log('get_verdict', verdict)
+            chrome.runtime.sendMessage({ wdm_verdict: verdict })
+            // 支持非英文网页
+            if (verdict !== 'highlight' && verdict !== 'page language is not English') return
 
-      get_verdict(is_enabled, black_list, white_list, function(verdict) {
-        console.log('get_verdict', verdict)
-        chrome.runtime.sendMessage({ wdm_verdict: verdict })
-        // 支持非英文网页
-        if (verdict !== 'highlight' && verdict !== 'page language is not English') return
+            document.addEventListener('keydown', function(event) {
+              if (event.keyCode === 17) {
+                function_key_is_pressed = true
+                renderBubble()
+                return
+              }
+              const elementTagName = event.target.tagName
+              if (!disable_by_keypress && elementTagName !== 'BODY') {
+                // 例如新建issue，写md，然后预览会触发
+                // workaround to prevent highlighting in facebook messages
+                // this logic can also be helpful in other situations, it's better play safe and stop highlighting when user enters data.
+                disable_by_keypress = true
+                chrome.runtime.sendMessage({ wdm_verdict: 'keyboard' })
+              }
+            })
 
-        document.addEventListener('keydown', function(event) {
-          if (event.keyCode === 17) {
-            function_key_is_pressed = true
-            renderBubble()
-            return
-          }
-          const elementTagName = event.target.tagName
-          if (!disable_by_keypress && elementTagName !== 'BODY') {
-            // 例如新建issue，写md，然后预览会触发
-            // workaround to prevent highlighting in facebook messages
-            // this logic can also be helpful in other situations, it's better play safe and stop highlighting when user enters data.
-            disable_by_keypress = true
-            chrome.runtime.sendMessage({ wdm_verdict: 'keyboard' })
-          }
+            document.addEventListener('keyup', function(event) {
+              if (event.keyCode === 17) {
+                function_key_is_pressed = false
+              }
+            })
+
+            const textNodes = textNodesUnder(document.body)
+            doHighlightText(textNodes)
+
+            const bubbleDOM = create_bubble()
+            document.body.appendChild(bubbleDOM)
+            document.addEventListener('mousedown', hideBubble(true), false)
+            document.addEventListener('mousemove', processMouse, false)
+            new MutationObserver((mutationList, observer) => {
+              mutationList.forEach(onNodeChanged)
+            }).observe(document, { subtree: true, childList: true })
+
+            window.addEventListener('scroll', function() {
+              node_to_render_id = null
+              hideBubble(true)
+            })
+          })
         })
 
-        document.addEventListener('keyup', function(event) {
-          if (event.keyCode === 17) {
-            function_key_is_pressed = false
-          }
-        })
-
-        const textNodes = textNodesUnder(document.body)
-        doHighlightText(textNodes)
-
-        const bubbleDOM = create_bubble()
-        document.body.appendChild(bubbleDOM)
-        document.addEventListener('mousedown', hideBubble(true), false)
-        document.addEventListener('mousemove', processMouse, false)
-        new MutationObserver((mutationList, observer) => {
-          mutationList.forEach(onNodeChanged)
-        }).observe(document, { subtree: true, childList: true })
-
-        window.addEventListener('scroll', function() {
-          node_to_render_id = null
-          hideBubble(true)
-        })
-      })
     }
   )
 }

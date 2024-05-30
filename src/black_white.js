@@ -7,10 +7,10 @@ const list_section_names = {
 }
 
 function process_delete_simple(list_name, key) {
-  chrome.storage.local.get([list_name], function (result) {
+  chrome.storage.sync.get([list_name], function (result) {
     const user_list = result[list_name]
     delete user_list[key]
-    chrome.storage.local.set({ [list_name]: user_list })
+    chrome.storage.sync.set({ [list_name]: user_list })
     show_user_list(list_name, user_list)
   })
 }
@@ -105,7 +105,7 @@ function process_display() {
     list_name = 'wd_user_vocabulary'
   }
 
-  chrome.storage.local.get([list_name], function (result) {
+  chrome.storage.sync.get([list_name], function (result) {
     const user_list = result[list_name]
     show_user_list(list_name, user_list)
   })

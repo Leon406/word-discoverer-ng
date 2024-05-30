@@ -179,7 +179,7 @@ function process_delete_old_dict(e) {
   if (!btn_id.startsWith('delDict')) return
   const btn_no = parseInt(btn_id.split('_')[1], 10)
   wd_online_dicts.splice(btn_no, 1)
-  chrome.storage.local.set({ wd_online_dicts })
+  chrome.storage.sync.set({ wd_online_dicts })
   initContextMenus(wd_online_dicts)
   show_user_dicts()
 }
@@ -231,7 +231,7 @@ function process_add_dict() {
   dictUrl = dictUrl.trim()
   if (!dictName || !dictUrl) return
   wd_online_dicts.push({ title: dictName, url: dictUrl })
-  chrome.storage.local.set({ wd_online_dicts })
+  chrome.storage.sync.set({ wd_online_dicts })
   initContextMenus(wd_online_dicts)
   show_user_dicts()
   document.getElementById('addDictName').value = ''
@@ -361,7 +361,7 @@ function hover_rb_handler() {
       }
     }
   }
-  chrome.storage.local.set({ wd_hover_settings })
+  chrome.storage.sync.set({ wd_hover_settings })
 }
 
 function add_hover_rb_listeners() {
@@ -377,7 +377,7 @@ function add_hover_rb_listeners() {
 
 function process_display() {
   window.onload = function() {
-    chrome.storage.local.get(
+    chrome.storage.sync.get(
       [
         'wd_hl_settings',
         'wd_hover_settings',
@@ -478,14 +478,14 @@ function process_display() {
         document
           .getElementById('saveVisuals')
           .addEventListener('click', function() {
-            chrome.storage.local.set({ wd_hl_settings })
+            chrome.storage.sync.set({ wd_hl_settings })
           })
 
         document
           .getElementById('defaultDicts')
           .addEventListener('click', function() {
             wd_online_dicts = make_default_online_dicts()
-            chrome.storage.local.set({ wd_online_dicts })
+            chrome.storage.sync.set({ wd_online_dicts })
             initContextMenus(wd_online_dicts)
             show_user_dicts()
           })
@@ -494,7 +494,7 @@ function process_display() {
           .getElementById('pronunciationEnabled')
           .addEventListener('click', function(e) {
             wd_enable_tts = e.target.checked
-            chrome.storage.local.set({ wd_enable_tts })
+            chrome.storage.sync.set({ wd_enable_tts })
           })
 
         display_sync_interface()
