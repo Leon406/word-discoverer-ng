@@ -1,7 +1,19 @@
 import { initContextMenus, make_default_online_dicts } from './context_menu_lib'
+import { LRUCache } from 'lru-cache'
 
 let gapi_loaded = false
 let gapi_inited = false
+
+const options = {
+  max: 100,
+  dispose: (value, key) => {
+    console.log('Cache Evict', key, value)
+  }
+}
+
+const cache = new LRUCache(options)
+const cacheAudio = new LRUCache(options)
+
 
 // TODO check chrome.runtime.lastError for all storage.local operations
 
@@ -428,22 +440,42 @@ function initialize_extension() {
   chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
       if (request.type === 'fetch') {
+        let cacheHtml = cache.get(request.q.toLowerCase())
         console.log('request', request)
+        if (cacheHtml) {
+          console.log('request', 'cache bing ' + request.q)
+          sendResponse(cacheHtml)
+          return true
+        }
         fetch(
           `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${request.q}`
         )
           .then((response) => response.text())
-          .then(sendResponse)
+          .then(html=>{
+            cache.set(request.q.toLowerCase(), html)
+            sendResponse(html)
+          })
         return true // Will respond asynchronously.
       }
       if (request.type === 'fetchArrayBuffer') {
         console.log('request fetchArrayBuffer', request)
-        fetch(request.audioUrl)
-          .then((response) => response.arrayBuffer())
-          .then((buffer) => JSON.stringify({
-            data: Array.apply(null, new Uint8Array(buffer))
-          }))
-          .then(sendResponse)
+        let cached = cacheAudio.get(request.audioUrl)
+        if (cached) {
+          console.log('use Cache arraybuffer ' + request.audioUrl)
+          sendResponse(cached)
+        } else {
+          fetch(request.audioUrl)
+            .then((response) => response.arrayBuffer())
+            .then((buffer) => {
+              let jsonBuffer = JSON.stringify({
+                data: Array.apply(null, new Uint8Array(buffer))
+              })
+              cacheAudio.set(request.audioUrl, jsonBuffer)
+              return jsonBuffer
+            })
+            .then(sendResponse)
+        }
+
         return true // Will respond asynchronously.
       }
       if (request.wdm_request === 'hostname') {
@@ -519,7 +551,15 @@ function initialize_extension() {
       'wd_black_list',
       'wd_white_list',
       'wd_enable_tts'], function(result) {
-      let { wd_hl_settings, wd_enable_tts, wd_hover_settings ,wd_online_dicts,show_percents,black_list,white_list} = result
+      let {
+        wd_hl_settings,
+        wd_enable_tts,
+        wd_hover_settings,
+        wd_online_dicts,
+        show_percents,
+        black_list,
+        white_list
+      } = result
       if (typeof wd_hl_settings === 'undefined') {
         const word_hl_params = {
           enabled: true,

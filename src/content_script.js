@@ -1,17 +1,8 @@
 import { add_lexeme, make_hl_style, make_id_suffix } from './common_lib'
 import { handleLexResult } from './utils/bing'
-import { LRUCache } from 'lru-cache'
+
 import { get_dict_definition_url } from './context_menu_lib'
 
-const options = {
-  max: 100,
-  dispose: (value, key) => {
-    console.log('Cache Evict', key, value)
-  }
-}
-
-const cache = new LRUCache(options)
-const cacheAudio = new LRUCache(options)
 
 let dict_words = null
 let dict_idioms = null
@@ -117,29 +108,22 @@ function play(audioUrl) {
   new Audio(audioUrl).play()
     .catch((e) => {
       console.error(e)
-      let cached = cacheAudio.get(audioUrl)
-      if (cached) {
-        console.log('use Cache arraybuffer')
-        playArrayBuffer(cached)
-      } else {
-        chrome.runtime.sendMessage(
-          {
-            type: 'fetchArrayBuffer',
-            audioUrl
-          },
-          (res) => {
-            const arraybuffer = new Uint8Array(JSON.parse(res).data).buffer
-            cacheAudio.set(audioUrl, arraybuffer)
-            playArrayBuffer(arraybuffer)
-          }
-        )
-      }
+      chrome.runtime.sendMessage(
+        {
+          type: 'fetchArrayBuffer',
+          audioUrl
+        },
+        (res) => {
+          const arraybuffer = new Uint8Array(JSON.parse(res).data).buffer
+          playArrayBuffer(arraybuffer)
+        }
+      )
     })
 }
 
 /**播放 ArrayBuffer 音频*/
 function playArrayBuffer(arrayBuffer) {
-  var context = new AudioContext()
+  const context = new AudioContext()
   context.decodeAudioData(arrayBuffer.slice(0), audioBuffer => { // `slice(0)`克隆一份（`decodeAudioData`后原数组清空）
     const bufferSource = context.createBufferSource()
     bufferSource.buffer = audioBuffer
@@ -176,8 +160,6 @@ function renderBubble() {
     document.getElementById('wdn_translate_bing')
   // 避免网络问题，显示上一次内容
   wdnTranslateBingDom.innerHTML = ''
-  // 加入缓存，key为小写字母
-  let cacheResult = cache.get(wdSpanText.toLowerCase())
 
   function bingHtml(bingResult) {
     let inf_html = ''
@@ -209,55 +191,49 @@ function renderBubble() {
   function errorHtml() {
     const q = wdSpanText.toLowerCase()
     const dict_html = `<div >Definition: 
-    <a target="_blank" href="https://www.google.com/search?q=${q}+definition">Google</a>
-</div>`
+          <a target="_blank" href="https://www.google.com/search?q=${q}+definition">Google</a>
+          </div>`
     const pron_html = `<div>♫
-  <a target="_blank" href="https://youglish.com/search/${q}">
-  YouGlish</a>
-  <a target="_blank" href="https://www.playphrase.me/#/search?q=${q}">
-  PlayPhrase</a>
-  <a target="_blank" href="https://getyarn.io/yarn-find?text=${q}">
-  Yarn</a>
-</div>`
+          <a target="_blank" href="https://youglish.com/search/${q}">
+          YouGlish</a>
+          <a target="_blank" href="https://www.playphrase.me/#/search?q=${q}">
+          PlayPhrase</a>
+          <a target="_blank" href="https://getyarn.io/yarn-find?text=${q}">
+          Yarn</a>
+        </div>`
     wdnTranslateBingDom.innerHTML = dict_html + pron_html
   }
 
-  if (cacheResult) {
-    console.log('use Cache', wdSpanText)
-    bingHtml(cacheResult)
-  } else {
-    chrome.runtime.sendMessage(
-      {
-        type: 'fetch',
-        q: wdSpanText
-      },
-      (res) => {
-        const doc = new DOMParser().parseFromString(res, 'text/html')
-        if (doc.querySelector('.client_def_hd_hd')) {
-          let lexResult = handleLexResult(
-            doc,
-            {
-              tense: true,
-              phsym: true,
-              cdef: true,
-              related: false,
-              sentence: 0
-            },
-            null
-          )
-          if (lexResult) {
-            const { result } = lexResult
-            cache.set(wdSpanText.toLowerCase(), result)
-            bingHtml(result)
-          } else {
-            errorHtml()
-          }
+  chrome.runtime.sendMessage(
+    {
+      type: 'fetch',
+      q: wdSpanText
+    },
+    (res) => {
+      const doc = new DOMParser().parseFromString(res, 'text/html')
+      if (doc.querySelector('.client_def_hd_hd')) {
+        let lexResult = handleLexResult(
+          doc,
+          {
+            tense: true,
+            phsym: true,
+            cdef: true,
+            related: false,
+            sentence: 0
+          },
+          null
+        )
+        if (lexResult) {
+          const { result } = lexResult
+          bingHtml(result)
         } else {
           errorHtml()
         }
+      } else {
+        errorHtml()
       }
-    )
-  }
+    }
+  )
 
   bubbleText.textContent = limit_text_len(wdSpanText)
   // if config third schema, use last one
@@ -708,7 +684,7 @@ function initForPage() {
     [
       'words_discoverer_eng_dict',
       'wd_idioms',
-      'wd_user_vocabulary',
+      'wd_user_vocabulary'
     ],
     function(result) {
       dict_words = result.words_discoverer_eng_dict
