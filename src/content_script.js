@@ -271,6 +271,7 @@ function renderBubble() {
 }
 
 function hideBubble(force) {
+  function_key_is_pressed = false
   const bubbleDOM = document.getElementById('wd_selection_bubble')
   if (
     force ||
