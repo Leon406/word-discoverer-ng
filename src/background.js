@@ -45,20 +45,26 @@ function deriveKey(key, rare_words, value) {
 }
 
 function do_load_idioms(file_text) {
-  const lines = file_text.split(/[\r\n]+/)
+  const lines = file_text.split(/[\r\n]+/).filter(line => !line.startsWith('#'))
   const rare_words = {}
+
   for (let lno = 0; lno < lines.length; ++lno) {
     const fields = lines[lno].split('\t')
-    if (lno + 1 === lines.length && fields.length === 1) break
-    const words = fields[0].toLowerCase().split(' ')
-    for (let i = 0; i + 1 < words.length; ++i) {
-      const key = words.slice(0, i + 1).join(' ')
-      if (key) rare_words[key] = -1
-      deriveKey(key, rare_words, -1)
-    }
-    const key = fields[0].toLowerCase()
-    rare_words[key] = fields[1]
-    deriveKey(key, rare_words, fields[1])
+    if (!fields.length) break
+    const idiom = fields[0]
+    fields.forEach(item => {
+      if (item) {
+        const words = item.toLowerCase().split(' ')
+        for (let i = 0; i + 1 < words.length; ++i) {
+          const key = words.slice(0, i + 1).join(' ')
+          if (key) rare_words[key] = -1
+          deriveKey(key, rare_words, -1)
+        }
+        const key = item.toLowerCase()
+        rare_words[key] = idiom
+        deriveKey(key, rare_words, idiom)
+      }
+    })
   }
   const local_storage = chrome.storage.local
   local_storage.set({ wd_idioms: rare_words })
