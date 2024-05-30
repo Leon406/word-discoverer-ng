@@ -509,6 +509,7 @@ function mygoodfilter(node) {
 function textNodesUnder(el) {
   let n
   const a = []
+
   const walk = document.createTreeWalker(
     el,
     NodeFilter.SHOW_TEXT,
@@ -557,7 +558,7 @@ function doHighlightText(textNodes) {
   }
 }
 
-function onNodeInserted(event) {
+function onNodeChanged(event) {
   const inobj = event.target
   if (!inobj) return
   // todo ignore editor
@@ -734,8 +735,10 @@ function initForPage() {
       const white_list = result.wd_white_list
 
       get_verdict(is_enabled, black_list, white_list, function(verdict) {
+        console.log('get_verdict', verdict)
         chrome.runtime.sendMessage({ wdm_verdict: verdict })
-        if (verdict !== 'highlight') return
+        // 支持非英文网页
+        if (verdict !== 'highlight' && verdict !== 'page language is not English') return
 
         document.addEventListener('keydown', function(event) {
           if (event.keyCode === 17) {
@@ -766,9 +769,8 @@ function initForPage() {
         document.body.appendChild(bubbleDOM)
         document.addEventListener('mousedown', hideBubble(true), false)
         document.addEventListener('mousemove', processMouse, false)
-        // document.addEventListener("DOMNodeInserted", onNodeInserted, false);
         new MutationObserver((mutationList, observer) => {
-          mutationList.forEach(onNodeInserted)
+          mutationList.forEach(onNodeChanged)
         }).observe(document, { subtree: true, childList: true })
 
         window.addEventListener('scroll', function() {
