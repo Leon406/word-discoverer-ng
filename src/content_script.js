@@ -461,36 +461,54 @@ function text_to_hl_nodes(text, dst) {
   return insert_count
 }
 
-const good_tags_list = [
-  'P',
-  'H1',
-  'H2',
-  'H3',
-  'H4',
-  'H5',
-  'H6',
-  'B',
-  'SMALL',
-  'STRONG',
-  'Q',
-  'DIV',
-  'SPAN'
+const invalidTags = [
+  'SCRIPT',
+  'STYLE',
+  'VIDEO',
+  'SVG',
+  'CODE',
+  'NOSCRIPT',
+  'NOFRAMES',
+  'INPUT',
+  'TEXTAREA',
+  'ABBR',
+  'AREA',
+  'CODE',
+  'PRE',
+  'AUDIO',
+  'VIDEO',
+  'CANVAS',
+  'HEAD',
+  'MAP',
+  'META',
+  'OBJECT',
+  'WH-ROOT',
+  'WDHL',
+  'W-MARK-T'
 ]
+const EN_REG = /\b[a-z]{2,}\b/ig
 
-function mygoodfilter(node) {
-  if (good_tags_list.indexOf(node.parentNode.tagName) !== -1)
-    return NodeFilter.FILTER_ACCEPT
-  return NodeFilter.FILTER_SKIP
+function filterType(node) {
+  // 过滤可编辑文本
+  if (node.isContentEditable || node.parentElement.isContentEditable) {
+    return NodeFilter.FILTER_SKIP
+  }
+  // 不包含字母
+  if (!EN_REG.exec(node.textContent)) {
+    return NodeFilter.FILTER_SKIP
+  }
+
+  return invalidTags.includes(node.tagName) || invalidTags.includes(node.parentNode.tagName) ?
+    NodeFilter.FILTER_SKIP : NodeFilter.FILTER_ACCEPT
 }
 
 function textNodesUnder(el) {
   let n
   const a = []
-
   const walk = document.createTreeWalker(
     el,
     NodeFilter.SHOW_TEXT,
-    mygoodfilter,
+    filterType,
     false
   )
   while ((n = walk.nextNode())) {
@@ -540,8 +558,10 @@ function onNodeChanged(event) {
   if (!inobj) return
   // todo ignore editor
   if (inobj.closest('.wdSelectionBubble,.cm-editor')) {
+    console.info('bypass', inobj)
     return
   }
+
   let classattr = null
   if (typeof inobj.getAttribute !== 'function') {
     return
@@ -553,7 +573,10 @@ function onNodeChanged(event) {
   }
   if (!classattr || !classattr.startsWith('wdhl_')) {
     const textNodes = textNodesUnder(inobj)
-    doHighlightText(textNodes)
+    if (textNodes.length) {
+      console.log('onNodeChanged highlight', textNodes)
+      doHighlightText(textNodes)
+    }
   }
 }
 
