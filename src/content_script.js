@@ -151,6 +151,7 @@ function renderBubble() {
   }
 
   const wdSpanText = node_to_render.textContent
+  const q = wdSpanText.toLowerCase()
   let lemma = node_to_render.getAttribute('lemma')
   lemma = lemma ? lemma : ''
   const bubbleDOM = document.getElementById('wd_selection_bubble')
@@ -171,7 +172,7 @@ function renderBubble() {
         <span id="play_uk" data-src="${bingResult.phsym[1].pron}">${bingResult.phsym[1].lang}</span>
       </div>`
     } else {
-      const q = wdSpanText.toLowerCase()
+
       phonetic_html = `<div>♫
       <a target="_blank" href="https://youglish.com/search/${q}">
       YouGlish</a>
@@ -189,7 +190,6 @@ function renderBubble() {
   }
 
   function errorHtml() {
-    const q = wdSpanText.toLowerCase()
     const dict_html = `<div >Definition: 
           <a target="_blank" href="https://www.google.com/search?q=${q}+definition">Google</a>
           </div>`
@@ -247,11 +247,12 @@ function renderBubble() {
   }
 
   bubbleText.setAttribute('title', lemma)
-  const prcntFreq = get_word_percentile(wdSpanText.toLowerCase())
-  const level = get_word_level(wdSpanText.toLowerCase())
-  const rank = get_word_rank(wdSpanText.toLowerCase())
+  const prcntFreq = get_word_percentile(q)
+  const level = get_word_level(q)
+  const rank = get_word_rank(q)
   bubbleFreq.textContent = prcntFreq ? `${level} K (${prcntFreq}%)` : 'n/a'
-  bubbleFreq.title = rank ? rank : ''
+  let pageLemmaCounts = document.querySelectorAll(`wdhl[lemma="${lemma}"]`).length
+  bubbleFreq.title = `count: ${pageLemmaCounts}` + (rank ? ` rank: ${rank}` : "")
   bubbleFreq.style.backgroundColor = getHeatColorPoint(prcntFreq)
   current_lexeme = wdSpanText
   let maxLeft = window.innerWidth - 424
