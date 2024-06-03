@@ -7,7 +7,7 @@ const list_section_names = {
 }
 
 function process_delete_simple(list_name, key) {
-  chrome.storage.sync.get([list_name], function (result) {
+  chrome.storage.sync.get([list_name], function(result) {
     const user_list = result[list_name]
     delete user_list[key]
     chrome.storage.sync.set({ [list_name]: user_list })
@@ -18,7 +18,7 @@ function process_delete_simple(list_name, key) {
 function process_delete_vocab_entry(key) {
   chrome.storage.local.get(
     ['wd_user_vocabulary', 'wd_user_vocab_added', 'wd_user_vocab_deleted'],
-    function (result) {
+    function(result) {
       const user_vocabulary = result.wd_user_vocabulary
       const { wd_user_vocab_added } = result
       const { wd_user_vocab_deleted } = result
@@ -43,11 +43,11 @@ function create_button(list_name, text) {
   result.setAttribute('class', 'deleteButton')
   result.expression_text = text
   if (list_name === 'wd_user_vocabulary') {
-    result.addEventListener('click', function () {
+    result.addEventListener('click', function() {
       process_delete_vocab_entry(this.expression_text)
     })
   } else {
-    result.addEventListener('click', function () {
+    result.addEventListener('click', function() {
       process_delete_simple(list_name, this.expression_text)
     })
   }
@@ -105,12 +105,14 @@ function process_display() {
     list_name = 'wd_user_vocabulary'
   }
 
-  chrome.storage.sync.get([list_name], function (result) {
+  const storage = list_name === 'wd_user_vocabulary' ?
+    chrome.storage.local : chrome.storage.sync
+  storage.get([list_name], function(result) {
     const user_list = result[list_name]
     show_user_list(list_name, user_list)
   })
 }
 
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener('DOMContentLoaded', function(event) {
   process_display()
 })
