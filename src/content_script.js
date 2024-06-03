@@ -21,7 +21,7 @@ let disable_by_keypress = false
 let current_lexeme = ''
 let cur_wd_node_id = 1
 
-const word_re = /^[a-z][a-z]*$/
+const word_re = /^[a-z'’]+$/
 
 let function_key_is_pressed = false
 let rendered_node_id = null
@@ -45,6 +45,15 @@ function get_rare_lemma(word) {
   return !user_vocabulary || !user_vocabulary.hasOwnProperty(lemma)
     ? lemma
     : undefined
+}
+
+function get_rare_lemma2(word) {
+  let wf
+  if (dict_words.hasOwnProperty(word)) {
+    wf = dict_words[word]
+  }
+  if (!wf || wf[1] < min_show_rank) return undefined
+  return wf ? wf[0] : undefined
 }
 
 function get_word_percentile(word) {
@@ -252,9 +261,9 @@ function renderBubble() {
   const rank = get_word_rank(q)
   bubbleFreq.textContent = prcntFreq ? `${level} K (${prcntFreq}%)` : 'n/a'
   let pageLemmaCounts = document.querySelectorAll(`wdhl[lemma="${lemma}"]`).length
-  bubbleFreq.title = `count: ${pageLemmaCounts}` + (rank ? ` rank: ${rank}` : "")
+  bubbleFreq.title = `count: ${pageLemmaCounts}` + (rank ? ` rank: ${rank}` : '')
   bubbleFreq.style.backgroundColor = getHeatColorPoint(prcntFreq)
-  current_lexeme = wdSpanText
+  current_lexeme = lemma
   let maxLeft = window.innerWidth - 424
   let maxTop = window.innerHeight - 300
   const bcr = node_to_render.getBoundingClientRect()
@@ -321,8 +330,8 @@ function text_to_hl_nodes(text, dst) {
   )
 
   ws_text = ws_text.replace(/[^\w '\u2019]/g, '.')
-
   const tokens = ws_text.split(' ')
+  console.log('tokens',text,ws_text, tokens)
   let num_good = 0 // number of found dictionary words
   let num_nonempty = 0
   let ibegin = 0 // beginning of word
@@ -333,11 +342,13 @@ function text_to_hl_nodes(text, dst) {
   const tokenize_other = wd_hover_settings.ow_hover !== 'never'
 
   while (wnum < tokens.length) {
+    console.log("tt",tokens[wnum])
     if (!tokens[wnum].length) {
       wnum += 1
       ibegin += 1
       continue
     }
+
     num_nonempty += 1
     let match
     if (!match && wd_hl_settings.idiomParams.enabled) {
@@ -390,7 +401,7 @@ function text_to_hl_nodes(text, dst) {
     if (
       tokenize_other &&
       !match &&
-      tokens[wnum].length >= 3 &&
+      tokens[wnum].length >= 2 &&
       word_re.test(tokens[wnum])
     ) {
       match = {
@@ -401,6 +412,7 @@ function text_to_hl_nodes(text, dst) {
       }
       ibegin += tokens[wnum].length + 1
       wnum += 1
+      num_good += 1
     }
     if (dict_words.hasOwnProperty(tokens[wnum])) {
       num_good += 1
@@ -412,7 +424,6 @@ function text_to_hl_nodes(text, dst) {
       wnum += 1
     }
   }
-
   if (num_good / num_nonempty < 0.1) {
     return 0
   }
@@ -446,6 +457,11 @@ function text_to_hl_nodes(text, dst) {
       span.setAttribute('style', text_style)
       if (match.normalized) {
         span.setAttribute('lemma', match.normalized)
+      } else {
+        console.log('ll', span.textContent.toLowerCase().trim())
+        const lemma = get_rare_lemma2(span.textContent.toLowerCase().trim())
+        console.log('ll', lemma)
+        span.setAttribute('lemma', lemma)
       }
       span.id = `wdhl_id_${cur_wd_node_id}`
       cur_wd_node_id += 1
@@ -487,7 +503,7 @@ const invalidTags = [
   'WDHL',
   'W-MARK-T'
 ]
-const EN_REG = /\b[a-z]{2,}\b/ig
+const EN_REG = /\b[a-z'’]{2,}\b/ig
 
 function filterType(node) {
   // 过滤可编辑文本
@@ -584,7 +600,7 @@ function onNodeChanged(event) {
 function unhighlight(lemma) {
   const wdclassname = make_class_name(lemma)
   const hlNodes = document.getElementsByClassName(wdclassname)
-  Array.from(hlNodes).forEach(span=>{
+  Array.from(hlNodes).forEach(span => {
     span.setAttribute(
       'style',
       'font-weight:inherit;color:inherit;background-color:inherit;'
@@ -666,6 +682,7 @@ function create_bubble() {
   addButton.style.marginBottom = '4px'
   addButton.addEventListener('click', function() {
     add_lexeme(current_lexeme, bubble_handle_add_result)
+    user_vocabulary[current_lexeme] = 1
   })
   addAndAudioWrapDom.appendChild(addButton)
 
