@@ -1,31 +1,37 @@
-the	
-a	an
-and	
-it	its
-you	
-that	
-in	ins
-for	
-but	
-have	haven’t	hasn’t	has	had	haves	having	havings
-with	
+the
 be	is	am	amn’t	isn’t	ain’t	been	bees	beings	was	wasn’t	were	weren’t
-this	
-not	
+to
+and
+a	an
+of
+in	ins
+i
+you
+it	its
+have	haven’t	hasn’t	has	had	haves	having	havings
+that
+for
+do	don’t	doesn’t	did	does	doing	doings	done
+on
+he	hes
+with
+this
+as
+not	n’t
+we
+but
+they
+at
 are	aren’t	ares
-they	
-as	
 just	juster	justest
 can	cann’t	caned	canes	caning	canned	canning	cans
 like	liked	liker	likes	likest	likings
 so	sos
-your	
-he	hes
-what	
+your
+what
 me	mes
 would	wouldn’t
-do	don’t	doesn’t	did	does	doing	doings	done
-all	
+all
 there	theres
 about	
 don	donned	donning	dons
@@ -565,7 +571,7 @@ specific	specifics
 size	sized	sizer	sizes	sizings
 send	sended	sendings	sends
 starting	
-wife	wifes
+wife	wives
 generally	
 clearly	
 google	googled	googles	googling
