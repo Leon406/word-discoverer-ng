@@ -66,8 +66,7 @@ export function add_lexeme(lexeme, result_handler) {
       result_handler('bad', undefined)
       return
     }
-    lexeme = lexeme.toLowerCase()
-    lexeme = lexeme.trim()
+    lexeme = lexeme.toLowerCase().trim()
     if (!lexeme) {
       result_handler('bad', undefined)
       return
@@ -119,7 +118,7 @@ export function make_hl_style(hl_params) {
     result += `background-color:${hl_params.backgroundColor};`
   if (hl_params.useColor) result += `color:${hl_params.color};`
   if (!result) return undefined
-  result += 'font-size:inherit;display:inline;'
+  result += 'font-size:inherit;'
   return result
 }
 

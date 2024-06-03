@@ -584,14 +584,13 @@ function onNodeChanged(event) {
 function unhighlight(lemma) {
   const wdclassname = make_class_name(lemma)
   const hlNodes = document.getElementsByClassName(wdclassname)
-  while (hlNodes && hlNodes.length > 0) {
-    const span = hlNodes[0]
+  Array.from(hlNodes).forEach(span=>{
     span.setAttribute(
       'style',
       'font-weight:inherit;color:inherit;background-color:inherit;'
     )
     span.setAttribute('class', 'wdhl_none_none')
-  }
+  })
 }
 
 function get_verdict(isEnabled, black_list, white_list, callback_func) {
