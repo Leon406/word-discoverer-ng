@@ -342,7 +342,6 @@ function text_to_hl_nodes(text, dst) {
   const tokenize_other = wd_hover_settings.ow_hover !== 'never'
 
   while (wnum < tokens.length) {
-    console.log("tt",tokens[wnum])
     if (!tokens[wnum].length) {
       wnum += 1
       ibegin += 1
@@ -458,9 +457,7 @@ function text_to_hl_nodes(text, dst) {
       if (match.normalized) {
         span.setAttribute('lemma', match.normalized)
       } else {
-        console.log('ll', span.textContent.toLowerCase().trim())
-        const lemma = get_rare_lemma2(span.textContent.toLowerCase().trim())
-        console.log('ll', lemma)
+         const lemma = get_rare_lemma2(span.textContent.toLowerCase().trim())
         span.setAttribute('lemma', lemma)
       }
       span.id = `wdhl_id_${cur_wd_node_id}`
