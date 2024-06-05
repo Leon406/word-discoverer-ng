@@ -15,8 +15,12 @@ let wd_hl_settings = null
 let wd_hover_settings = null
 let wd_online_dicts = null
 let wd_enable_tts = null
+let wd_enable_prefetch = null
 
 let disable_by_keypress = false
+
+let pre_words = new Set()
+
 
 let current_lexeme = ''
 let cur_wd_node_id = 1
@@ -322,6 +326,19 @@ function processMouse(e) {
   }, 200)
 }
 
+function preFetchBing(q) {
+  if (wd_enable_prefetch && !pre_words.has(q)) {
+    pre_words.add(q)
+    chrome.runtime.sendMessage(
+      {
+        type: 'fetch',
+        q: q
+      }, function(res) {
+        console.log(`prefetch ${q}`)
+      })
+  }
+}
+
 function text_to_hl_nodes(text, dst) {
   const lc_text = text.toLowerCase()
   let ws_text = lc_text.replace(
@@ -456,8 +473,9 @@ function text_to_hl_nodes(text, dst) {
       span.setAttribute('style', text_style)
       if (match.normalized) {
         span.setAttribute('lemma', match.normalized)
+        preFetchBing(match.normalized)
       } else {
-         const lemma = get_rare_lemma2(span.textContent.toLowerCase().trim())
+        const lemma = get_rare_lemma2(span.textContent.toLowerCase().trim())
         span.setAttribute('lemma', lemma)
       }
       span.id = `wdhl_id_${cur_wd_node_id}`
@@ -738,11 +756,13 @@ function initForPage() {
           'wd_black_list',
           'wd_white_list',
           'wd_word_max_rank',
+          'wd_enable_prefetch',
           'wd_enable_tts'
         ],
         function(config) {
           wd_online_dicts = config.wd_online_dicts
           wd_enable_tts = config.wd_enable_tts
+          wd_enable_prefetch = config.wd_enable_prefetch
           wd_hover_settings = config.wd_hover_settings
           word_max_rank = config.wd_word_max_rank
           const show_percents = config.wd_show_percents

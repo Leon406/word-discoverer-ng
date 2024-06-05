@@ -6,6 +6,7 @@ let wd_hl_settings = null
 let wd_hover_settings = null
 let wd_online_dicts = null
 let wd_enable_tts = false
+let wd_enable_prefetch = false
 
 const wc_rb_ids = ['wc1', 'wc2', 'wc3', 'wc4', 'wc5']
 const ic_rb_ids = ['ic1', 'ic2', 'ic3', 'ic4', 'ic5']
@@ -144,6 +145,41 @@ function process_import() {
   )
 }
 
+function process_config_export() {
+  chrome.storage.sync.get([
+    'wd_hl_settings',
+    'wd_hover_settings',
+    'wd_online_dicts',
+    'wd_developer_mode',
+    'wd_enable_tts',
+    'wd_enable_prefetch'
+  ], function(config) {
+
+    const file_content = JSON.stringify(config)
+    console.log(file_content)
+    const blob = new Blob([file_content], { type: 'text/plain;charset=utf-8' })
+    saveAs(blob, 'wd_config.json', true)
+  })
+}
+
+function process_config_import() {
+  let openConfigFile = document.getElementById('openFile')
+  const file = openConfigFile.files[0]
+  if (!file) {
+    alert('Plz Choose config.json first!')
+    return
+  }
+  const reader = new FileReader()
+  reader.onload = function(e) {
+    let config = reader.result
+    console.log('config', JSON.parse(config))
+
+    chrome.storage.sync.set(JSON.parse(config))
+      .then(reloadData)
+  }
+  reader.readAsText(file)
+}
+
 function highlight_example_text(hl_params, text_id, lq_id, rq_id) {
   document.getElementById(lq_id).textContent = ''
   document.getElementById(rq_id).textContent = ''
@@ -246,7 +282,7 @@ function process_test_new_dict() {
 }
 
 function _openDict(dictUrl) {
-  const url = get_dict_definition_url(dictUrl, "test")
+  const url = get_dict_definition_url(dictUrl, 'test')
   if (url.startsWith('http')) {
     chrome.tabs.create({ url }, function(tab) {
     })
@@ -280,6 +316,7 @@ function show_internal_state() {
   document.getElementById('idiomsColor').checked = idiom_hl_params.useColor
 
   document.getElementById('pronunciationEnabled').checked = wd_enable_tts
+  document.getElementById('bingPrefetchEnabled').checked = wd_enable_prefetch
 
   document.getElementById('wcRadioBlock').style.display =
     word_hl_params.useColor ? 'block' : 'none'
@@ -375,133 +412,126 @@ function add_hover_rb_listeners() {
   }
 }
 
-function process_display() {
-  window.onload = function() {
-    chrome.storage.sync.get(
-      [
-        'wd_hl_settings',
-        'wd_hover_settings',
-        'wd_online_dicts',
-        'wd_developer_mode',
-        'wd_enable_tts'
-      ],
-      function(result) {
-        assign_back_labels()
-        wd_hl_settings = result.wd_hl_settings
-        wd_hover_settings = result.wd_hover_settings
-        wd_online_dicts = result.wd_online_dicts
-        wd_enable_tts = !!result.wd_enable_tts
+function idClickFunc(id, func) {
+  document
+    .getElementById(id)
+    .addEventListener('click', func)
+}
 
-        const { wd_developer_mode } = result
+function reloadData() {
+  chrome.storage.sync.get(
+    [
+      'wd_hl_settings',
+      'wd_hover_settings',
+      'wd_online_dicts',
+      'wd_developer_mode',
+      'wd_enable_tts',
+      'wd_enable_prefetch'
+    ],
+    function(result) {
+      assign_back_labels()
+      wd_hl_settings = result.wd_hl_settings
+      wd_hover_settings = result.wd_hover_settings
+      wd_online_dicts = result.wd_online_dicts
+      wd_enable_tts = !!result.wd_enable_tts
+      wd_enable_prefetch = !!result.wd_enable_prefetch
 
-        // TODO fix this monstrosity using this wrapper-function hack:
-        // http://stackoverflow.com/questions/7053965/when-using-callbacks-inside-a-loop-in-javascript-is-there-any-way-to-save-a-var
-        handle_rb_loop(wc_rb_ids, wd_hl_settings.wordParams, 'color')
-        handle_rb_loop(ic_rb_ids, wd_hl_settings.idiomParams, 'color')
-        handle_rb_loop(wb_rb_ids, wd_hl_settings.wordParams, 'backgroundColor')
-        handle_rb_loop(ib_rb_ids, wd_hl_settings.idiomParams, 'backgroundColor')
+      const { wd_developer_mode } = result
 
-        add_cb_event_listener(
-          'wordsEnabled',
-          wd_hl_settings.wordParams,
-          'enabled'
-        )
-        add_cb_event_listener(
-          'idiomsEnabled',
-          wd_hl_settings.idiomParams,
-          'enabled'
-        )
-        add_cb_event_listener('wordsBold', wd_hl_settings.wordParams, 'bold')
-        add_cb_event_listener('idiomsBold', wd_hl_settings.idiomParams, 'bold')
-        add_cb_event_listener(
-          'wordsBackground',
-          wd_hl_settings.wordParams,
-          'useBackground'
-        )
-        add_cb_event_listener(
-          'idiomsBackground',
-          wd_hl_settings.idiomParams,
-          'useBackground'
-        )
-        add_cb_event_listener(
-          'wordsColor',
-          wd_hl_settings.wordParams,
-          'useColor'
-        )
-        add_cb_event_listener(
-          'idiomsColor',
-          wd_hl_settings.idiomParams,
-          'useColor'
-        )
+      // TODO fix this monstrosity using this wrapper-function hack:
+      // http://stackoverflow.com/questions/7053965/when-using-callbacks-inside-a-loop-in-javascript-is-there-any-way-to-save-a-var
+      handle_rb_loop(wc_rb_ids, wd_hl_settings.wordParams, 'color')
+      handle_rb_loop(ic_rb_ids, wd_hl_settings.idiomParams, 'color')
+      handle_rb_loop(wb_rb_ids, wd_hl_settings.wordParams, 'backgroundColor')
+      handle_rb_loop(ib_rb_ids, wd_hl_settings.idiomParams, 'backgroundColor')
 
-        add_hover_rb_listeners()
+      add_cb_event_listener(
+        'wordsEnabled',
+        wd_hl_settings.wordParams,
+        'enabled'
+      )
+      add_cb_event_listener(
+        'idiomsEnabled',
+        wd_hl_settings.idiomParams,
+        'enabled'
+      )
+      add_cb_event_listener('wordsBold', wd_hl_settings.wordParams, 'bold')
+      add_cb_event_listener('idiomsBold', wd_hl_settings.idiomParams, 'bold')
+      add_cb_event_listener(
+        'wordsBackground',
+        wd_hl_settings.wordParams,
+        'useBackground'
+      )
+      add_cb_event_listener(
+        'idiomsBackground',
+        wd_hl_settings.idiomParams,
+        'useBackground'
+      )
+      add_cb_event_listener(
+        'wordsColor',
+        wd_hl_settings.wordParams,
+        'useColor'
+      )
+      add_cb_event_listener(
+        'idiomsColor',
+        wd_hl_settings.idiomParams,
+        'useColor'
+      )
 
-        if (wd_developer_mode) {
-          document.getElementById('debugControl').style.display = 'block'
-        }
+      add_hover_rb_listeners()
 
-        document
-          .getElementById('gdSyncButton')
-          .addEventListener('click', request_permissions_and_sync)
-        document
-          .getElementById('gdStopSyncButton')
-          .addEventListener('click', stop_synchronization)
-
-        document
-          .getElementById('saveVocab')
-          .addEventListener('click', process_export)
-        document
-          .getElementById('loadVocab')
-          .addEventListener('click', process_import)
-
-        document
-          .getElementById('getFromStorageBtn')
-          .addEventListener('click', process_get_dbg)
-        document
-          .getElementById('setToStorageBtn')
-          .addEventListener('click', process_set_dbg)
-
-        document
-          .getElementById('testManifestWarningsBtn')
-          .addEventListener('click', process_test_warnings)
-
-        document
-          .getElementById('addDict')
-          .addEventListener('click', process_add_dict)
-        document
-          .getElementById('testNewDict')
-          .addEventListener('click', process_test_new_dict)
-
-        document.getElementById('moreInfoLink').href =
-          chrome.runtime.getURL('sync_help.html')
-
-        document
-          .getElementById('saveVisuals')
-          .addEventListener('click', function() {
-            chrome.storage.sync.set({ wd_hl_settings })
-          })
-
-        document
-          .getElementById('defaultDicts')
-          .addEventListener('click', function() {
-            wd_online_dicts = make_default_online_dicts()
-            chrome.storage.sync.set({ wd_online_dicts })
-            initContextMenus(wd_online_dicts)
-            show_user_dicts()
-          })
-
-        document
-          .getElementById('pronunciationEnabled')
-          .addEventListener('click', function(e) {
-            wd_enable_tts = e.target.checked
-            chrome.storage.sync.set({ wd_enable_tts })
-          })
-
-        display_sync_interface()
-        show_internal_state()
+      if (wd_developer_mode) {
+        document.getElementById('debugControl').style.display = 'block'
       }
-    )
-  }
+
+      idClickFunc('gdSyncButton', request_permissions_and_sync)
+      idClickFunc('gdStopSyncButton', stop_synchronization)
+
+      idClickFunc('saveVocab', process_export)
+      idClickFunc('loadVocab', process_import)
+
+      idClickFunc('exportConfig', process_config_export)
+      idClickFunc('importConfig', process_config_import)
+
+
+      idClickFunc('getFromStorageBtn', process_get_dbg)
+      idClickFunc('setToStorageBtn', process_set_dbg)
+
+
+      idClickFunc('testManifestWarningsBtn', process_test_warnings)
+      idClickFunc('addDict', process_add_dict)
+      idClickFunc('testNewDict', process_test_new_dict)
+      idClickFunc('saveVisuals', function() {
+        chrome.storage.sync.set({ wd_hl_settings })
+      })
+      idClickFunc('defaultDicts', function() {
+        wd_online_dicts = make_default_online_dicts()
+        chrome.storage.sync.set({ wd_online_dicts })
+        initContextMenus(wd_online_dicts)
+        show_user_dicts()
+      })
+
+      document.getElementById('moreInfoLink').href =
+        chrome.runtime.getURL('sync_help.html')
+
+      idClickFunc('pronunciationEnabled', function(e) {
+        wd_enable_tts = e.target.checked
+        chrome.storage.sync.set({ wd_enable_tts })
+      })
+
+      idClickFunc('bingPrefetchEnabled', function(e) {
+        wd_enable_prefetch = e.target.checked
+        chrome.storage.sync.set({ wd_enable_prefetch })
+      })
+
+      display_sync_interface()
+      show_internal_state()
+    }
+  )
+}
+
+function process_display() {
+  window.onload = reloadData
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {

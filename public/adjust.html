@@ -189,10 +189,13 @@
       <button class="longButton" id="testManifestWarningsBtn">view manifest warnings</button>
     </div>
     <fieldset>
+      <button class="longButton" id="exportConfig">Export Config</button>
+      <button class="longButton" id="importConfig">Import Config</button>
+      <input id="openFile" type="file"  />
+      <br />
       <button class="longButton" id="saveVocab">__MSG_saveVocab__</button>
       <button class="longButton" id="loadVocab">__MSG_loadVocab__</button>
-      <br />
-      <br />
+      <br>
     </fieldset>
     <br />
     <fieldset class="hidden">
@@ -211,16 +214,6 @@
       </div>
       <br />
     </fieldset>
-    <br />
-
-    <!--pronunciation section-->
-    <div id="adjustPronunciationSection">
-      <fieldset>
-        <span class="smallHeader">Adjust Pronunciation</span><br />
-        <input type="checkbox" id="pronunciationEnabled" />Enable Auto Pronunciation
-      </fieldset>
-    </div>
-    <br />
 
     <div id="adjustBubbleSection">
       <fieldset>
@@ -414,5 +407,17 @@
         <button class="longButton" id="saveVisuals">__MSG_saveVisuals__</button>
       </fieldset>
     </div>
+    <br/>
+    <!--pronunciation section-->
+    <div id="adjustPronunciationSection">
+      <fieldset>
+        <label class="smallHeader">Other Config</label><br>
+        <input type="checkbox" id="pronunciationEnabled" />
+        <label for="pronunciationEnabled">Auto TTS</label>
+        <input type="checkbox" id="bingPrefetchEnabled" />
+        <label for="bingPrefetchEnabled">Bing Prefetch</label>
+      </fieldset>
+    </div>
+    <br />
   </body>
 </html>
