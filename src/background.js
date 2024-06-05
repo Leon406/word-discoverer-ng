@@ -7,7 +7,7 @@ let gapi_inited = false
 const options = {
   max: 100,
   dispose: (value, key) => {
-    console.log('Cache Evict', key, value)
+    console.log('Cache Evict', key)
   }
 }
 
@@ -451,7 +451,7 @@ function initialize_extension() {
           `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${request.q}`
         )
           .then((response) => response.text())
-          .then(html=>{
+          .then(html => {
             cache.set(request.q.toLowerCase(), html)
             sendResponse(html)
           })
@@ -585,32 +585,32 @@ function initialize_extension() {
           wordParams: word_hl_params,
           idiomParams: idiom_hl_params
         }
-        default_options["wd_hl_settings"] = wd_hl_settings
+        default_options['wd_hl_settings'] = wd_hl_settings
       }
       if (typeof wd_enable_tts === 'undefined') {
-        default_options["wd_enable_tts"] = false
+        default_options['wd_enable_tts'] = false
       }
       if (typeof wd_hover_settings === 'undefined') {
         wd_hover_settings = { hl_hover: 'always', ow_hover: 'never' }
-        default_options["wd_hover_settings"] = wd_hover_settings
+        default_options['wd_hover_settings'] = wd_hover_settings
       }
       if (typeof wd_online_dicts === 'undefined') {
         wd_online_dicts = make_default_online_dicts()
-        default_options["wd_online_dicts"] = wd_online_dicts
+        default_options['wd_online_dicts'] = wd_online_dicts
       }
       initContextMenus(wd_online_dicts)
 
       if (typeof wd_show_percents === 'undefined') {
-        default_options["wd_show_percents"] = 12
+        default_options['wd_show_percents'] = 12
       }
       if (typeof wd_is_enabled === 'undefined') {
-        default_options["wd_is_enabled"] = true
+        default_options['wd_is_enabled'] = true
       }
       if (typeof black_list === 'undefined') {
-        default_options["wd_black_list"] = {}
+        default_options['wd_black_list'] = {}
       }
       if (typeof white_list === 'undefined') {
-        default_options["wd_white_list"] = {}
+        default_options['wd_white_list'] = {}
       }
       if (Object.keys(default_options).length) {
         chrome.storage.sync.set(default_options)

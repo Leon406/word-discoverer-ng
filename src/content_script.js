@@ -327,7 +327,8 @@ function processMouse(e) {
 }
 
 function preFetchBing(q) {
-  if (wd_enable_prefetch && !pre_words.has(q)) {
+  // 只预缓存 100
+  if (wd_enable_prefetch && !pre_words.has(q) && pre_words.size < 100) {
     pre_words.add(q)
     chrome.runtime.sendMessage(
       {
