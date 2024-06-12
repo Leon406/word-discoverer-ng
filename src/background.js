@@ -2,9 +2,9 @@ import { initContextMenus, make_default_online_dicts } from './context_menu_lib'
 import { LRUCache } from 'lru-cache'
 
 const options = {
-  max: 100,
+  max: 200,
   dispose: (value, key) => {
-    console.log('Cache Evict', key)
+    console.info('Cache Evict', key)
   }
 }
 
@@ -93,7 +93,7 @@ function initialize_extension() {
         let cacheHtml = cache.get(request.q.toLowerCase())
         console.log('request q:', request.q)
         if (cacheHtml) {
-          console.log('request', 'cache bing ' + request.q)
+          console.info('bing cache: ' + request.q)
           sendResponse(cacheHtml)
           return true
         }
@@ -102,8 +102,12 @@ function initialize_extension() {
         )
           .then((response) => response.text())
           .then(html => {
-            cache.set(request.q.toLowerCase(), html)
-            sendResponse(html)
+            const minimizeHtml = html
+              .replace(/<script [\s\S]+?<\/script>/g, '')
+              .replace(/<style[\s\S]+?<\/style>/g, '')
+              .replace(/(<a class="client_sen_[ce]n_word")[^>]+>/g, '$1>')
+            cache.set(request.q.toLowerCase(), minimizeHtml)
+            sendResponse(minimizeHtml)
           })
         return true // Will respond asynchronously.
       }
