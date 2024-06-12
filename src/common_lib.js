@@ -27,27 +27,6 @@ export function make_id_suffix(text) {
   return after
 }
 
-export function sync_if_needed() {
-  const req_keys = ['wd_last_sync', 'wd_gd_sync_enabled', 'wd_last_sync_error']
-  chrome.storage.local.get(req_keys, function (result) {
-    const { wd_last_sync } = result
-    const { wd_gd_sync_enabled } = result
-    const { wd_last_sync_error } = result
-    if (!wd_gd_sync_enabled || wd_last_sync_error != null) {
-      return
-    }
-    const cur_date = new Date()
-    const mins_passed = (cur_date.getTime() - wd_last_sync) / (60 * 1000)
-    const sync_period_mins = 30
-    if (mins_passed >= sync_period_mins) {
-      chrome.runtime.sendMessage({
-        wdm_request: 'gd_sync',
-        interactive_mode: false,
-      })
-    }
-  })
-}
-
 export function add_lexeme(lexeme, result_handler) {
   const req_keys = [
     'words_discoverer_eng_dict',
@@ -104,7 +83,6 @@ export function add_lexeme(lexeme, result_handler) {
     }
 
     chrome.storage.local.set(new_state, function () {
-      sync_if_needed()
       result_handler('ok', key)
     })
   })

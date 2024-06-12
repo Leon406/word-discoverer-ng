@@ -4,7 +4,7 @@
   "name": "__MSG_appName__",
   "description": "__MSG_appDesc__",
   "default_locale": "zh_CN",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "icons": {
     "48": "assets/result48.png",
     "128": "assets/icon_128.png"
@@ -31,10 +31,6 @@
   "host_permissions": ["<all_urls>"],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
-  },
-  "oauth2": {
-    "client_id": "1093363650045-qndvaqnh5ma7mabluj3arkmta53lubo5.apps.googleusercontent.com",
-    "scopes": ["https://www.googleapis.com/auth/drive.file"]
   },
   "web_accessible_resources": [
     {

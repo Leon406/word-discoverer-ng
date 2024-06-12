@@ -1,5 +1,3 @@
-import { sync_if_needed } from './common_lib'
-
 const list_section_names = {
   wd_black_list: 'blackListSection',
   wd_white_list: 'whiteListSection',
@@ -32,7 +30,7 @@ function process_delete_vocab_entry(key) {
         wd_user_vocab_deleted[key] = 1
         new_state.wd_user_vocab_deleted = wd_user_vocab_deleted
       }
-      chrome.storage.local.set(new_state, sync_if_needed)
+      chrome.storage.local.set(new_state)
       show_user_list('wd_user_vocabulary', user_vocabulary)
     },
   )

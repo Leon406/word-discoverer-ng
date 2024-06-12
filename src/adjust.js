@@ -16,83 +16,6 @@ const ib_rb_ids = ['ib1', 'ib2', 'ib3', 'ib4', 'ib5']
 const hover_popup_types = ['never', 'key', 'always']
 const target_types = ['hl', 'ow']
 
-function display_sync_interface() {
-  chrome.storage.local.get(
-    ['wd_gd_sync_enabled', 'wd_last_sync_error', 'wd_last_sync'],
-    function(result) {
-      const { wd_last_sync_error } = result
-      const { wd_gd_sync_enabled } = result
-      const { wd_last_sync } = result
-      if (!wd_gd_sync_enabled) {
-        document.getElementById('gdStopSyncButton').style.display = 'none'
-        document.getElementById('syncStatusFeedback').style.display = 'none'
-        return
-      }
-      document.getElementById('gdStopSyncButton').style.display = 'inline-block'
-      document.getElementById('syncStatusFeedback').style.display = 'inline'
-      if (wd_last_sync_error != null) {
-        document.getElementById('syncStatusFeedback').textContent =
-          `Error: ${wd_last_sync_error}`
-      } else {
-        document.getElementById('syncStatusFeedback').textContent =
-          'Synchronized.'
-      }
-      if (typeof wd_last_sync !== 'undefined') {
-        const cur_date = new Date()
-        let seconds_passed = (cur_date.getTime() - wd_last_sync) / 1000
-        const p_days = Math.floor(seconds_passed / (3600 * 24))
-        seconds_passed %= 3600 * 24
-        const p_hours = Math.floor(seconds_passed / 3600)
-        seconds_passed %= 3600
-        const p_minutes = Math.floor(seconds_passed / 60)
-        const p_seconds = Math.floor(seconds_passed % 60)
-        let passed_time_msg = ''
-        if (p_days > 0) passed_time_msg += `${p_days} days, `
-        if (p_hours > 0 || p_days > 0) passed_time_msg += `${p_hours} hours, `
-        if (p_minutes > 0 || p_hours > 0 || p_days > 0)
-          passed_time_msg += `${p_minutes} minutes, `
-        passed_time_msg += `${p_seconds} seconds since the last sync.`
-        const syncDateLabel = document.getElementById('lastSyncDate')
-        syncDateLabel.style.display = 'inline'
-        syncDateLabel.textContent = passed_time_msg
-      }
-    }
-  )
-}
-
-function synchronize_now() {
-  chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if (request.sync_feedback) {
-        display_sync_interface()
-      }
-    }
-  )
-  document.getElementById('syncStatusFeedback').style.display = 'inline'
-  document.getElementById('syncStatusFeedback').textContent =
-    'Synchronization started...'
-  chrome.storage.local.set({ wd_gd_sync_enabled: true }, function() {
-    chrome.runtime.sendMessage({
-      wdm_request: 'gd_sync',
-      interactive_mode: true
-    })
-  })
-}
-
-function request_permissions_and_sync() {
-  chrome.permissions.request({ origins: ['https://*/*'] }, function(granted) {
-    if (!granted) return
-    synchronize_now()
-  })
-}
-
-function stop_synchronization() {
-  chrome.storage.local.set(
-    { wd_gd_sync_enabled: false },
-    display_sync_interface
-  )
-}
-
 function process_test_warnings() {
   chrome.management.getPermissionWarningsByManifest(prompt(), console.log)
 }
@@ -484,9 +407,6 @@ function reloadData() {
         document.getElementById('debugControl').style.display = 'block'
       }
 
-      idClickFunc('gdSyncButton', request_permissions_and_sync)
-      idClickFunc('gdStopSyncButton', stop_synchronization)
-
       idClickFunc('saveVocab', process_export)
       idClickFunc('loadVocab', process_import)
 
@@ -511,9 +431,6 @@ function reloadData() {
         show_user_dicts()
       })
 
-      document.getElementById('moreInfoLink').href =
-        chrome.runtime.getURL('sync_help.html')
-
       idClickFunc('pronunciationEnabled', function(e) {
         wd_enable_tts = e.target.checked
         chrome.storage.sync.set({ wd_enable_tts })
@@ -524,7 +441,6 @@ function reloadData() {
         chrome.storage.sync.set({ wd_enable_prefetch })
       })
 
-      display_sync_interface()
       show_internal_state()
     }
   )
