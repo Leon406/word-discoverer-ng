@@ -18,8 +18,7 @@ function process_delete_vocab_entry(key) {
     ['wd_user_vocabulary', 'wd_user_vocab_added', 'wd_user_vocab_deleted'],
     function(result) {
       const user_vocabulary = result.wd_user_vocabulary
-      const { wd_user_vocab_added } = result
-      const { wd_user_vocab_deleted } = result
+      const { wd_user_vocab_added,wd_user_vocab_deleted } = result
       const new_state = { wd_user_vocabulary: user_vocabulary }
       delete user_vocabulary[key]
       if (typeof wd_user_vocab_added !== 'undefined') {
@@ -81,16 +80,34 @@ function show_user_list(list_name, user_list) {
     div_element.appendChild(document.createElement('br'))
     return
   }
-  for (let i = 0; i < keys.length; i++) {
-    const key = keys[i]
-    if (key.indexOf("'") !== -1 || key.indexOf('"') !== -1) {
-      continue
+  let total = keys.length;
+  let batchSize = 100;
+  let loopCount = Math.ceil(total / batchSize);
+  let countRender = 0;
+  function render() {
+    const targetElement = div_element;
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < batchSize; i++) {
+      const ii = i + batchSize* countRender
+      if (ii >= total) break
+      const key = keys[ii]
+      if (key.indexOf("'") !== -1 || key.indexOf('"') !== -1) {
+        continue
+      }
+      fragment.appendChild(create_button(list_name, key))
+      fragment.appendChild(create_label(key))
+      fragment.appendChild(document.createElement('br'))
     }
-    div_element.appendChild(create_button(list_name, key))
-    div_element.appendChild(create_label(key))
-    div_element.appendChild(document.createElement('br'))
+    targetElement.appendChild(fragment);
+    countRender++;
+    if (countRender < loopCount) {
+      window.requestAnimationFrame(render);
+    }
   }
+  render()
 }
+
+
 
 function process_display() {
   let list_name = ''
