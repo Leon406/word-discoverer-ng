@@ -326,7 +326,8 @@ function processMouse(e) {
   }, 200)
 }
 
-function preFetchBing(q) {
+function preFetchBing(w) {
+  var q = w.toLowerCase().trim()
   // 只预缓存 100
   if (wd_enable_prefetch && !pre_words.has(q) && pre_words.size < 100) {
     pre_words.add(q)
@@ -474,7 +475,7 @@ function text_to_hl_nodes(text, dst) {
       span.setAttribute('style', text_style)
       if (match.normalized) {
         span.setAttribute('lemma', match.normalized)
-        preFetchBing(match.normalized)
+        preFetchBing(span.textContent)
       } else {
         const lemma = get_rare_lemma2(span.textContent.toLowerCase().trim())
         span.setAttribute('lemma', lemma)
