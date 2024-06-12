@@ -1,0 +1,1000 @@
+asset	assets
+observation	observations
+quit	quited	quites	quiting	quits	quitted	quitting
+cream	creamed	creaming	creams
+split	splits	splitting
+attract	attracted	attracting	attracts
+ha
+household	households
+drag	dragged	dragging	drags
+phase	phased	phases	phasing
+harm	harmed	harming	harms
+breathe	breathed	breathes	breathings
+existence	existences
+relief	reliefs
+iraqi	iraqis
+warning
+assault	assaulted	assaulting	assaults
+button	buttoned	buttoning	buttons	buttonses
+heaven	heavens
+literally
+calorie	calories
+technical	technicals
+vast	vaster	vastest
+clip	cliped	clipes	cliping	clipped	clips
+employer	employers
+transition	transitioned	transitioning	transitions
+plot	plots	plotted	plotting
+strip	striped	stripes	stripings	stripped	strips
+disaster	disasters
+nearby
+sale	sales
+mail	mailed	mailes	mailings	mails
+bathroom	bathrooms
+succeed	succeeded	succeeding	succeeds
+consistent
+agenda	agendas
+enforcement	enforcements
+spin	spined	spines	spins	spun
+blind	blinded	blindest	blinding	blindings	blinds
+journalist	journalists
+bible	bibles	bibless
+queen	queened	queening	queenings	queens
+expense	expensed	expenses	expensing
+shout	shouted	shoutings	shouts
+defeat	defeated	defeating	defeats
+exposure	exposures
+priority	priorities
+angel	angels
+principal	principals
+chip	chipped	chipses
+embrace	embraced	embraces	embracing
+urge	urged	urges	urgings
+relevant
+cheese	cheesed	cheeses	cheesing
+sink	sank	sinked	sinkings	sinks	sunk	sunken
+bedroom	bedrooms
+fool	fooled	fooless	fooling	foolings	fools
+landscape	landscaped	landscapes	landscaping
+selection	selections
+perfectly
+coat	coated	coates	coatings	coats
+suck	sucked	suckings	sucks
+pro	pros
+gap	gaped	gapes	gaping	gaps
+disagree	disagreed	disagreeing	disagrees	disagreing
+protein	proteins
+resolution	resolutions
+solar
+upper	upperer	upperest	uppers
+mount	mounted	mountings	mounts
+gate	gated	gates	gating	gatings
+cap	caped	capes	capped	capping	caps
+bend	bended	bendings	bends
+depression	depressions
+dude	dudes
+buck	bucked	bucking	buckings	bucks
+sin	sinned	sinning	sins
+visual
+initiative	initiatives
+whenever
+pose	posed	poses	posings
+entry	entries
+profile	profiled	profiles	profilings
+assistance	assistances
+height	heights
+compete	competed	competes	competing
+plain	plained	plainer	plainest	plaining	plainings	plains
+pretend	pretended	pretending	pretends
+reasonable
+essentially
+musical	musicals
+recover	recovered	recovering	recovers
+criticism	criticisms
+bitch	bitched	bitches	bitching
+faculty	faculties
+pause	paused	pauses	pausing	pausings
+layer	layered	layering	layerings	layers
+achievement	achievements
+alcohol	alcohols
+therapy	therapies
+ideal	ideals
+offense	offenses
+contemporary	contemporaries
+killer	killers
+personality	personalities
+flag	flagged	flags
+deeply
+trap	traped	trapes	trapesed	trapeses	trapesing	trapesings	traping	trapped	traps
+highlight	highlighted	highlighting	highlights
+fairly
+trick	tricked	tricking	trickings	tricks
+column	columns
+peak	peaked	peaking	peaks
+golf	golfed	golfings	golfs
+opponent	opponents
+pour	poured	pouring	pourings	pours
+counter	countered	countering	counters
+distribution	distributions
+pregnant
+unable
+boot	booted	bootes	booting	boots	bootses
+portion	portioned	portiones	portioning	portions
+violent
+beneath
+register	registered	registering	registers
+divorce	divorced	divorcees	divorces	divorcing
+acquire	acquired	acquires	acquiring
+suicide	suicides
+deficit	deficits
+symptom	symptoms
+construct	constructed	constructing	constructs
+constant	constants
+stir	stired	stires	stiring	stirred	stirs
+sigh	sighed	sighing	sighs
+complaint	complaints
+capable	capabler	capablest
+analyze	analyzed	analyzes	analyzing
+spiritual	spirituals
+whisper	whispered	whisperings	whispers
+ally	allies	allied	allying
+scared	scareder	scaredest
+supporter	supporters
+knife	knifed	knifes	knifing	knifings	knives
+pace	paced	paces	pacing
+twenty	twenties
+philosophy	philosophies
+childhood	childhoods
+lower	lowered	lowering	lowers
+pepper	peppered	peppering	pepperings	peppers
+dust	dusted	dusting	dustings	dusts
+wealth	wealths
+welfare	welfares
+poverty	poverties
+sharp	sharpest	sharps
+prosecutor	prosecutors
+yield	yielded	yieldings	yields
+pant	panted	pantings	pants
+evaluate	evaluated	evaluates	evaluating
+reward	rewarded	rewarding	rewards
+intellectual	intellectuals
+disorder	disordered	disordering	disorders
+shooting
+fundamental	fundamentals
+tech	techs
+detective	detectives
+creature	creatures
+desert	deserted	deserting	deserts
+rescue	rescued	rescues	rescuing
+rent	rented	rentes	renting	rents
+closely
+industrial
+housing
+cable	cabled	cables	cabling	cablings
+iron	ironed	ironer	irones	ironings	irons
+regardless
+zero	zeroed	zeroes	zeroing	zeros
+numerous
+bread	breaded	breading	breads
+resolve	resolved	resolves	resolving
+trace	traced	traces	tracings
+medium	media	mediums
+civilian	civilians
+exception	exceptions
+passion	passions
+breakfast	breakfasted	breakfasting	breakfasts
+highway	highways
+pure	purer	purest
+wire	wired	wireds	wires	wirings
+commander	commanders
+alien	aliened	aliener	aliening	aliens
+publication	publications
+assist	assisted	assisting	assists
+mystery	mysteries
+championship	championships
+install	installs
+tale	tales
+liberty	liberties
+proof	proofed	proofer	proofing	proofings	proofs
+cake	caked	cakes	caking	cakings
+passenger	passengers
+phrase	phrased	phrases	phrasings
+roof	roofed	roofings	roofs
+physician	physicians
+minor	minors
+substance	substances
+atmosphere	atmospheres
+beside
+comfort	comforted	comforting	comforts
+sudden
+passage	passages
+emphasize	emphasized	emphasizes	emphasizing
+wound	wounded	wounder	woundings	wounds
+recipe	recipes
+hook	hooked	hooking	hooks
+preserve	preserved	preserves	preserving
+vegetable	vegetables
+smooth	smoothed	smoothes	smoothest	smoothing	smoothings	smooths
+accomplish	accomplished	accomplishes	accomplishing
+abandon	abandoned	abandoning	abandons
+attribute	attributed	attributes	attributing
+silent	silenter	silentest
+snap	snapped	snapping	snaps
+habit	habited	habiting	habits
+discovery	discoveries
+ruin	ruined	ruinings	ruins
+yell	yelled	yellings	yells
+hurry	hurries	hurried	hurryings
+minimum	minima	minimums
+recovery	recoveries
+territory	territories
+girlfriend	girlfriends
+consist	consisted	consisting	consists
+surely
+nervous
+immediate
+parking
+string	stringed	stringing	stringings	strings	strung
+unusual
+rice	riced	rices	ricing
+tap	taped	tapes	taping	tapped	tapping	taps
+engineering
+innocent	innocenter	innocentest	innocents
+bury	buries	buried	burying	burys
+anonymous
+brush	brushed	brushes	brushings
+telephone	telephoned	telephones	telephoning
+toy	toyed	toying	toys
+sacrifice	sacrificed	sacrifices	sacrificing
+angle	angled	angles	anglings
+sand	sanded	sanding	sandings	sands
+rural
+interpretation	interpretations
+saving
+tower	towered	towering	towers
+pink	pinked	pinker	pinkest	pinking	pinkings	pinks
+severe	severer	severest
+wet	wets	wetted	wetter	wettest	wetting
+pot	pots	potted	potting
+asian	asians
+adjust	adjusted	adjusting	adjusts
+transform	transformed	transforming	transformings	transforms
+reduction	reductions
+constantly
+gear	geared	geares	gearings	gears
+downtown	downtowner	downtowns
+electric	electrics
+pile	piled	piles	pilings
+primarily
+occasion	occasioned	occasioning	occasionings	occasions
+entertainment	entertainments
+exhibit	exhibited	exhibiting	exhibits
+academy	academies
+teaspoon	teaspoons
+junior	juniors
+clinical
+swear	swearings	swears	swore	sworn
+avenue	avenues
+working
+priest	priests
+employment	employments
+relax	relaxed	relaxes	relaxing
+practical
+owe	owed	owes	owing
+grass	grassed	grasses	grassing	grassings
+mexican	mexicans
+ethnic	ethnics
+scholar	scholars
+edition	editions
+infection	infections
+suggestion	suggestions
+resistance	resistances
+prince	princes
+illness	illnesses
+republic	republics
+evaluation	evaluations
+slave	slaved	slaves	slaving
+tune	tuned	tunes	tunings
+bind	bindings	binds
+awesome
+index	indexed	indexes	indexings	indices
+champion	championed	championess	championesses	championing	champions
+dirty	dirtier	dirties	dirtiest	dirtied	dirtying
+perceive	perceived	perceives	perceiving	perceivings
+mode	modes
+assumption	assumptions
+designer	designers
+planning	plannings
+discipline	disciplined	disciplines	disciplining
+leading
+widely
+approximately
+retire	retired	retirees	retires	retiring
+elsewhere
+festival	festivals
+twin	twined	twines	twining	twinings	twinned	twinning	twins
+attach	attached	attaches	attaching
+mechanism	mechanisms
+intention	intentions
+italian	italians
+scenario	scenarios
+incredible
+strongly
+racial
+transportation	transportations
+stem	stemed	stemes	steming	stemmed	stemming	stems
+boyfriend	boyfriends
+toss	tossed	tosses	tossing	tossings
+consideration	considerations
+retirement	retirements
+rarely
+trigger	triggered	triggering	triggers
+enormous
+cigarette	cigarettes
+factory	factories
+valuable	valuables
+submit	submits	submitted	submitting
+effectively
+craft	crafted	crafting	crafts
+chart	charted	charting	chartings	charts
+prize	prized	prizer	prizes	prizing
+participation	participations
+screw	screwed	screwings	screws
+rid	ridded	ridding	rides	riding	rids
+origin	origins
+teen	teener	teens
+decrease	decreased	decreases	decreasing
+slice	sliced	slices	slicings
+stake	staked	stakes	staking
+pump	pumped	pumping	pumps
+congressional
+twitter	twittered	twittering	twitterings	twitters
+flood	flooded	floodings	floods
+impose	imposed	imposes	imposing
+provision	provisioned	provisioning	provisions
+clock	clocked	clockings	clocks
+curriculum	curricula	curriculums
+insight	insights
+freeze	freezed	freezes	freezings	froze	frozen
+investigator	investigators
+offensive	offensives
+virus	viruses
+hurricane	hurricanes
+accurate
+royal	royals
+communicate	communicated	communicatees	communicates	communicating
+motor	motored	motorings	motors
+loose	loosed	looser	looses	loosest	loosing
+vary	varies	varied	varying	varyings
+jacket	jacketed	jacketing	jackets
+equally
+implication	implications
+fiction	fictions
+mama	mamas
+belt	belted	beltings	belts
+imply	implies	implied	implying
+burden	burdened	burdening	burdens
+prospect	prospected	prospecting	prospectings	prospects
+ease	eased	eases	easing
+steel	steeled	steeling	steelings	steels
+potentially
+radical	radicals
+crop	cropped	cropping	crops
+seal	sealed	sealess	sealings	seals
+dramatic
+repair	repaired	repairing	repairs
+enhance	enhanced	enhances	enhancing
+math	maths
+compromise	compromised	compromises	compromising
+silver	silvered	silverer	silvering	silverings	silvers
+sequence	sequenced	sequences	sequencing	sequencings
+aunt	aunts
+vacation	vacationed	vacationing	vacations
+mood	moods
+shower	showered	showering	showerings	showers
+praise	praised	praises	praising	praisings
+settlement	settlements
+gang	ganged	ganges	ganging	gangings	gangs
+justify	justifies	justified	justifying
+hunt	hunted	huntings	hunts
+depth	depths
+butter	buttered	buttering	butters
+juice	juices
+formal	formals
+contest	contested	contesting	contests
+virtually
+gallery	galleries
+tension	tensions
+monster	monsters
+throat	throats
+uniform	uniformed	uniformer	uniformest	uniforming	uniforms
+elite	elites
+jet	jets	jetted	jetting
+shame
+exact	exacted	exacter	exactest	exacting	exacts
+reputation	reputations
+normally
+joy	joyed	joying	joys
+ordinary	ordinaries
+reverse	reversed	reverser	reverses	reversing	reversings
+remark	remarked	remarking	remarks
+enterprise	enterprises
+salary	salaries
+moreover
+cousin	cousins
+fake	faked	fakes	faking
+evolution	evolutions
+palm	palmed	palming	palms
+rough	roughed	rougher	roughest	roughing	roughings	roughs
+essay	essayed	essaying	essays
+helpful
+routine	routineer	routines
+competitive
+lovely	lovelies	loveliest	lovelier
+fishing
+log	loges	logged	logging	logs
+anxiety	anxieties
+wolf	wolfed	wolfing	wolfings	wolfs	wolves
+carbon	carbons
+combat	combated	combating	combats	combatted	combatting
+founder	foundered	foundering	founders
+drama	dramas
+odd	odder	oddest
+stranger	strangers
+mobile	mobiles
+fifth	fifths
+formula	formulae	formulas
+potato	potatoes
+sweep	sweepings	sweeps	swept
+pet	pets	petted	petting
+navy	navies
+criticize	criticized	criticizes	criticizing
+prisoner	prisoners
+negotiation	negotiations
+maximum	maxima	maximums
+assign	assigned	assigning	assigns
+swim	swam	swims	swum
+bullet	bullets
+awareness	awarenesses
+unknown	unknowns
+illustrate	illustrated	illustrateds	illustrates	illustrating
+provider	providers
+moderate	moderated	moderates	moderating
+activist	activists
+canadian	canadians
+poem	poems
+weigh	weighed	weighings	weighs
+privacy	privacies
+arrange	arranged	arranges	arranging
+penalty	penalties
+stomach	stomached	stomaches	stomaching	stomachs
+concert	concerted	concerting	concerts
+originally
+electronic
+properly
+bureau	bureaus	bureaux
+wipe	wiped	wipes	wiping	wipings
+shelter	sheltered	sheltering	shelterings	shelters
+recommendation	recommendations
+maker	makers
+impression	impressions
+battery	batteries
+arise	arised	arisen	arises	arising	arisings	arose
+sake	sakes
+delivery	deliveries
+forgive	forgave	forgiven	forgives	forgiving
+testing
+visible
+heavily
+stroke	stroked	strokes	strokings
+rep	reps
+diversity	diversities
+rose	roser	roses
+lawsuit	lawsuits
+latter
+cute	cuter
+deputy	deputies
+restore	restored	restores	restoring
+buddy	buddies
+sauce	sauced	sauces	saucing
+psychological
+intense	intenser	intensest
+friendly	friendlies	friendliest	friendlier
+lane	lanes
+ghost	ghosted	ghostess	ghosting	ghostings	ghosts
+hungry	hungriest	hungrier
+bean	beaned	beaning	beans
+dominate	dominated	dominates	dominating
+universal	universals
+twist	twisted	twistings	twists
+fantasy	fantasies	fantasied	fantasying
+absence	absences
+symbol	symbols
+recognition	recognitions
+detect	detected	detecting	detects
+tablespoon	tablespoons
+exit	exited	exiting	exits
+approval	approvals
+scare
+whereas
+gaze	gazed	gazes	gazing
+defensive	defensives
+independence	independences
+apologize	apologized	apologizes	apologizing
+nail	nailed	nailing	nailings	nails
+convert	converted	converting	converts
+involvement	involvements
+permanent	permanents
+punch	punched	punches	punching
+mouse	mice	moused	mousees	mouses	mousing	mousings
+airline	airlines
+nowhere	nowheres
+tag	tagged	tagging	tags
+spell	spelled	spellings	spells	spelt
+constitutional	constitutionals
+sponsor	sponsored	sponsoring	sponsors
+phenomenon	phenomena	phenomenons
+evolve	evolved	evolves	evolving
+cent	cents
+teenager	teenagers
+crucial
+adventure	adventured	adventures	adventuresses	adventuring
+viewer	viewers
+ridiculous
+chocolate	chocolates
+sensitive	sensitives
+grandmother	grandmothers
+missile	missiles
+roughly
+genetic
+ultimate	ultimates
+manufacturer	manufacturers
+bye	byes
+awful
+strain	strained	strainings	strains
+survival	survivals
+dimension	dimensioned	dimensioning	dimensions
+resist	resisted	resisting	resists
+darkness	darknesses
+historic
+educator	educators
+personnel	personnels
+confront	confronted	confronting	confronts
+pride	prided	prides	priding
+dump	dumped	dumpings	dumps
+roman	romans
+occupy	occupies	occupied	occupying
+emphasis	emphases
+destruction	destructions
+raw	rawer	rawest
+inner
+mortgage	mortgaged	mortgagees	mortgages	mortgaging
+proceed	proceeded	proceedings	proceeds
+violate	violated	violates	violating
+latin	latins
+random
+advise	advised	advisees	advises	advising	advisings
+pan	panes	panned	panning	pans
+initially
+unlikely
+dispute	disputed	disputes	disputing
+barrier	barriers
+resort	resorted	resorting	resorts
+concrete	concreted	concreter	concretes	concreting
+horrible
+violation	violations
+idiot	idiots
+lifetime	lifetimes
+rocket	rocketed	rocketing	rockets
+hip	hipper	hippest	hips
+ongoing
+react	reacted	reacting	reacts
+overcome	overcame	overcomes	overcoming
+presentation	presentations
+stadium	stadia	stadiums
+translate	translated	translates	translating
+thread	threaded	threading	threads
+sheriff	sheriffs
+clinic	clinics
+coalition	coalitions
+naturally
+hopefully
+stable	stabled	stabler	stables	stablest	stablings
+menu	menus
+scheme	schemed	schemes	scheming	schemings
+advertising
+interpret	interpreted	interpretess	interpretesses	interpreting	interprets
+dismiss	dismissed	dismisses	dismissing
+apparent
+arrangement	arrangements
+incorporate	incorporated	incorporates	incorporating
+brilliant
+grave	graved	graven	graves	gravest	graving	gravings
+storage	storages
+framework	frameworks
+honestly
+communist	communists
+dare	dared	dares	darings
+assure	assured	assureds	assures	assuring
+utility	utilities
+aggressive
+cookie
+terror	terrors
+wealthy	wealthiest	wealthier
+forum	fora	forums
+venture	ventured	ventures	venturing	venturings
+alliance	alliances
+ballot	balloted	balloting	ballots
+possess	possessed	possesses	possessing
+empire	empires
+curious	curiouser	curiousest
+interior	interiors
+corn	corned	corning	corns
+calculate	calculated	calculates	calculating
+testimony	testimonies
+elementary
+precisely
+substantial
+tissue	tissued	tissues	tissuing
+organic	organics
+concentration	concentrations
+developer	developers
+found	founded	foundings	founds
+consume	consumed	consumes	consuming	consumings
+sum	summed	summing	sums
+biological
+chamber	chambered	chambering	chamberings	chambers
+similarly
+mask	masked	maskings	masks
+tiger	tigers
+concentrate	concentrated	concentrates	concentrating
+float	floated	floatings	floats
+ratio	ratios
+transport	transported	transporting	transportings	transports
+lover	lovers
+quarterback	quarterbacked	quarterbacking	quarterbacks
+greek	greeks
+expansion	expansions
+cure	cured	cures	curing
+occasionally
+unemployment	unemployments
+nut	nuts	nutted	nutting
+laboratory	laboratories
+administrator	administrators
+preparation	preparations
+confident
+hug	hugged	hugging	hugs
+strategic
+script	scripted	scripting	scripts
+steady	steadier	steadies	steadiest	steadied	steadying
+publisher	publishers
+innovation	innovations
+fighter	fighters
+electricity	electricities
+instance	instanced	instances	instancing
+fortune	fortunes
+variation	variations
+negotiate	negotiated	negotiates	negotiating
+recruit	recruited	recruiting	recruits
+laughter	laughters
+wisdom	wisdoms
+correspondent	correspondents
+duck	ducked	duckings	ducks
+mixture	mixtures
+retain	retained	retaining	retains
+tomato	tomatoes
+testify	testifies	testified	testifying
+ingredient	ingredients
+gesture	gestured	gestures	gesturing
+galaxy	galaxies
+qualify	qualifies	qualified	qualifyings
+mandate	mandated	mandates	mandating
+broadcast	broadcasted	broadcastings	broadcasts
+absolute	absoluter	absolutes	absolutest
+tongue	tongued	tongues	tonguing	tonguings
+port	ported	portess	portesses	porting	ports
+shine	shone
+introduction	introductions
+adolescent	adolescents
+comic	comics
+boundary	boundaries
+rally	rallies	rallied	rallyes	rallyings
+tube	tubed	tubes	tubings
+versus
+chef	chefs
+regularly
+ugly	ugliest	uglier
+wise	wiser	wises	wisest
+fiscal
+creek	creeks
+accompany	accompanies	accompanied	accompanying
+terrorism	terrorisms
+respondent	respondents
+narrator	narrators
+drunk	drunker	drunkest	drunks
+refugee	refugees
+assembly	assemblies
+fence	fenced	fences	fencings
+fraud	frauds
+limitation	limitations
+partnership	partnerships
+deck	decked	decking	deckings	decks
+scan	scanned	scans
+fold	folded	foldings	folds
+echo	echoed	echoes	echoing	echos
+sweat	sweated	sweatings	sweats
+representation	representations
+ministry	ministries
+humor	humored	humoring	humors
+leap	leaped	leaping	leaps	leapt
+bug	bugged	bugging	bugs
+external	externals
+comedy	comedies
+infrastructure	infrastructures
+diverse
+grace	graced	graces	gracing
+clue	clued	clueing	clues	cluing
+fate
+dialogue	dialogues
+boost	boosted	boosting	boosts
+frequency	frequencies
+tribe	tribes
+appointment	appointments
+alert	alerted	alerter	alertest	alerting	alerts
+drill	drilled	drillings	drills
+sanction	sanctioned	sanctioning	sanctions
+establishment	establishments
+flavor	flavored	flavorings	flavors
+format	formated	formates	formating	formats	formatted	formatting
+shopping	shoppings
+secondary	secondaries
+celebrity	celebrities
+congressman	congressmen
+impress	impressed	impresses	impressing
+bat	bated	bates	bating	bats	batted	batting
+taxpayer	taxpayers
+adapt	adapted	adapting	adapts
+publicly
+clothing
+rapidly
+domain	domains
+tackle	tackled	tackles	tackless	tackling	tacklings
+mainly
+graphic	graphics
+ceiling	ceilings
+alter	altered	altering	alters
+obligation	obligations
+prompt	prompted	promptest	promptings	prompts
+ruling
+beg	begged	begging	begs
+collective	collectives
+asleep
+musician	musicians
+extraordinary
+dirt	dirts
+bell	belled	belles	bellings	bells
+boom	boomed	booming	boomings	booms
+ceremony	ceremonies
+guideline	guidelines
+regret	regrets	regretted	regretting
+burst	bursted	bursting	bursts
+pregnancy	pregnancies
+comprehensive	comprehensives
+grip	griped	gripes	griping	gripped	gripping	grips	gript
+borrow	borrowed	borrowings	borrows
+conventional
+tourist	tourists
+incentive	incentives
+custom	customs
+cheek	cheeked	cheeking	cheeks
+devil	deviled	deviless	devilesses	deviling	devilings	devilled	devilling	devils
+rub	rubbed	rubbing	rubes	rubs
+tournament	tournaments
+satellite	satellited	satellites	satelliting
+weekly	weeklies
+progressive	progressives
+medication	medications
+equivalent	equivalents
+educate	educated	educates	educating
+efficient
+bow	bowed	bowing	bows
+slight	slighted	slighter	slightest	slighting	slights
+psychology	psychologies
+logic	logics
+economics
+nevertheless
+thirty	thirties
+headline	headlined	headlines	headlining
+tail	tailed	tailings	tails
+crap	craped	crapes	craping	crapped	crapping	craps
+charity	charities
+fiber	fibers
+friendship	friendships
+specialist	specialists
+squeeze	squeezed	squeezes	squeezings
+motivation	motivations
+differently
+freak	freaked	freaking	freaks
+rat	rated	rates	ratings	rats	ratted	ratting
+flip	fliped	fliping	flipped	flipping	flips
+observer	observers
+superior	superiors
+bench	benched	benches	benching
+humanity	humanities
+survivor	survivors
+remote	remoter	remotes	remotest
+quietly
+ski	skied	skiing	skis
+funeral	funerals
+spokesman	spokesmen
+extension	extensions
+historian	historians
+singer	singers
+shade	shaded	shades	shadings
+segment	segmented	segmenting	segments
+cooperation	cooperations
+onion	onions
+cheat	cheated	cheatings	cheats
+distribute	distributed	distributees	distributes	distributing
+silly	sillies	silliest	sillier
+reflection	reflections
+shortly
+database	databases
+hint	hinted	hinting	hints
+compound	compounded	compounder	compounding	compounds
+permission	permissions
+remarkable
+everyday
+lifestyle	lifestyles
+naked	nakeder	nakedest
+sufficient
+coming
+lion	lions
+consumption	consumptions
+capability	capabilities
+legitimate	legitimated	legitimates	legitimating
+emission	emissions
+sidebar	sidebars
+worldwide
+dealer	dealers
+measurement	measurements
+vital
+impressive
+bake	baked	bakes	bakings
+pipe
+fantastic
+adviser	advisers
+pin	pined	pines	pining	pinned	pinning	pins
+mere	merer	meres	merest
+imagination	imaginations
+tragedy	tragedies
+export	exported	exporting	exports
+korean	koreans
+scary	scariest	scarier
+consultant	consultants
+lieutenant	lieutenants
+attractive
+acre	acres
+drawing
+newly
+scandal	scandals
+ambassador	ambassadors
+rear	reared	rearer	rearing	rears
+odds
+dependent	dependents
+horror	horrors
+vulnerable
+prevention	preventions
+blast	blasted	blasting	blastings	blasts
+patch	patched	patches	patchings
+constitute	constituted	constitutes	constituting
+badly
+bias	biased	biases	biasing	biasings	biassed	biasses	biassing
+bless	blesses	blessings	blest
+literary
+implementation	implementations
+rip	ripped	ripping	rips
+romantic	romantics
+desperate
+distant
+pig	pigged	pigging	pigs
+preference	preferences
+politically
+feedback	feedbacks
+privilege	privileged	privileges	privileging
+shield	shielded	shieldings	shields
+rumor	rumored	rumoring	rumors
+cow	cowed	cowing	cows
+buyer	buyers
+intent	intents
+dumb	dumber	dumbest
+profession	professions
+counsel	counseled	counselings	counselled	counsels
+incredibly
+killing
+sue	sued	sues	suing
+cheer	cheered	cheering	cheers	cheerses
+photographer	photographers
+engagement	engagements
+differ	differed	differing	differs
+spare	sparest
+extensive
+bid	bade	bidden	bidding	bided	bides	biding	bids
+lobby	lobbies	lobbied	lobbying	lobbyings
+salad	salads
+rival	rivaled	rivaless	rivalesses	rivaling	rivalled	rivalling	rivals
+scope	scopes
+bang	banged	bangings	bangs
+stair	stairs
+flesh	fleshed	fleshes	fleshing	fleshings
+acid	acider	acidest	acids
+vessel	vessels
+entrance	entranced	entrances	entrancing
+assignment	assignments
+distinction	distinctions
+circuit	circuited	circuiting	circuits
+flee	fled	fleeing	flees	fleing
+efficiency	efficiencies
+memorial	memorials
+proportion	proportioned	proportioning	proportionings	proportions
+entity	entities
+punishment	punishments
+drain	drained	draining	drains
+pill	pills
+couch	couched	couches	couching	couchings
+curve	curved	curves	curving
+panic	panicked	panicking	panics
+torture	tortured	tortures	torturings
+liquid	liquids
+anchor	anchored	anchoress	anchoresses	anchoring	anchors
+myth	myths
+economist	economists
+cluster	clustered	clusterings	clusters
+decent	decenter	decentest
+poetry	poetries
+grandfather	grandfathers
+wooden	woodener	woodenest
+confuse	confused	confuses	confusing
+instant	instanter	instants
+coal	coaled	coaling	coals
+characterize	characterized	characterizes	characterizing
+pie	pies
+legacy	legacies
+chop	chopped	chopping	chops
+cruise	cruised	cruises	cruising	cruisings
+alarm	alarmed	alarming	alarms
+frankly
+possession	possessions
+racist	racists
+leak	leaked	leaking	leaks
+download	downloaded	downloading	downloads
+pen	penes	penned	penning	pens	pent
+rebel	rebelled	rebelling	rebels
+filter	filtered	filtering	filters
+cancel	canceled	canceling	cancelled	cancelling	cancels
+derive	derived	derives	deriving
+outline	outlined	outlines	outlining
+hike	hiked	hikes	hiking
+formation	formations
+hence
+margin	margins
+hispanic	hispanics
+exhibition	exhibitions
+legislature	legislatures
+furthermore
+portrait	portraits
+bubble	bubbled	bubbles	bubbling
+sustain	sustained	sustaining	sustainings	sustains
+heel	heeled	heeling	heelings	heels
+parallel	paralleled	paralleler	paralleling	parallelings	parallelled	parallelling	parallels
+pole	poled	poles	poling	polings
+painful
+lecture	lectured	lectures	lecturess	lecturing
+miracle	miracles
+tactic	tactics
+temporary	temporaries
+mainstream	mainstreams
+inflation	inflations
+hunting
+recording
+physically
