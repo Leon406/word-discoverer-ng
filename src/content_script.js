@@ -296,10 +296,6 @@ function hideBubble(force) {
   }
 }
 
-function hideBubbleForce() {
-  hideBubble(true)
-}
-
 function process_hl_leave() {
   node_to_render_id = null
   setTimeout(function() {
@@ -810,7 +806,6 @@ function initForPage() {
 
             const bubbleDOM = create_bubble()
             document.body.appendChild(bubbleDOM)
-            document.addEventListener('mousedown', hideBubbleForce, false)
             document.addEventListener('mousemove', processMouse, false)
             new MutationObserver((mutationList, observer) => {
               mutationList.forEach(onNodeChanged)
