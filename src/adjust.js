@@ -1,4 +1,4 @@
-import { localizeHtmlPage, make_hl_style } from './common_lib'
+import { idClickFunc, localizeHtmlPage, make_hl_style, open_local_tab } from './common_lib'
 import { get_dict_definition_url, initContextMenus, make_default_online_dicts } from './context_menu_lib'
 import { saveAs } from 'file-saver'
 
@@ -39,8 +39,7 @@ function process_set_dbg() {
   }
   console.log(`storage_key:${storage_key}, storage_value:${storage_value}`)
   chrome.storage.local.set({ [storage_key]: storage_value }, function() {
-    const last_error = chrome.runtime.lastError
-    console.log(`last_error:${last_error}`)
+    console.log(`last_error:${(chrome.runtime.lastError)}`)
     console.log('finished setting value')
   })
 }
@@ -61,11 +60,7 @@ function process_export() {
 }
 
 function process_import() {
-  chrome.tabs.create(
-    { url: chrome.runtime.getURL('import.html') },
-    function(tab) {
-    }
-  )
+  open_local_tab('import.html')
 }
 
 function process_config_export() {
@@ -272,11 +267,7 @@ function show_internal_state() {
 function add_cb_event_listener(id, dst_params, dst_key) {
   document.getElementById(id).addEventListener('click', function() {
     const checkboxElem = document.getElementById(id)
-    if (checkboxElem.checked) {
-      dst_params[dst_key] = true
-    } else {
-      dst_params[dst_key] = false
-    }
+    dst_params[dst_key] = !!checkboxElem.checked;
     show_internal_state()
   })
 }
@@ -335,12 +326,6 @@ function add_hover_rb_listeners() {
   }
 }
 
-function idClickFunc(id, func) {
-  document
-    .getElementById(id)
-    .addEventListener('click', func)
-}
-
 function reloadData() {
   chrome.storage.sync.get(
     [
@@ -368,38 +353,14 @@ function reloadData() {
       handle_rb_loop(wb_rb_ids, wd_hl_settings.wordParams, 'backgroundColor')
       handle_rb_loop(ib_rb_ids, wd_hl_settings.idiomParams, 'backgroundColor')
 
-      add_cb_event_listener(
-        'wordsEnabled',
-        wd_hl_settings.wordParams,
-        'enabled'
-      )
-      add_cb_event_listener(
-        'idiomsEnabled',
-        wd_hl_settings.idiomParams,
-        'enabled'
-      )
+      add_cb_event_listener('wordsEnabled', wd_hl_settings.wordParams, 'enabled')
+      add_cb_event_listener('idiomsEnabled', wd_hl_settings.idiomParams, 'enabled')
       add_cb_event_listener('wordsBold', wd_hl_settings.wordParams, 'bold')
       add_cb_event_listener('idiomsBold', wd_hl_settings.idiomParams, 'bold')
-      add_cb_event_listener(
-        'wordsBackground',
-        wd_hl_settings.wordParams,
-        'useBackground'
-      )
-      add_cb_event_listener(
-        'idiomsBackground',
-        wd_hl_settings.idiomParams,
-        'useBackground'
-      )
-      add_cb_event_listener(
-        'wordsColor',
-        wd_hl_settings.wordParams,
-        'useColor'
-      )
-      add_cb_event_listener(
-        'idiomsColor',
-        wd_hl_settings.idiomParams,
-        'useColor'
-      )
+      add_cb_event_listener('wordsBackground', wd_hl_settings.wordParams, 'useBackground')
+      add_cb_event_listener('idiomsBackground', wd_hl_settings.idiomParams, 'useBackground')
+      add_cb_event_listener('wordsColor', wd_hl_settings.wordParams, 'useColor')
+      add_cb_event_listener('idiomsColor', wd_hl_settings.idiomParams, 'useColor')
 
       add_hover_rb_listeners()
 
@@ -450,7 +411,7 @@ function process_display() {
   window.onload = reloadData
 }
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
   localizeHtmlPage()
   process_display()
 })

@@ -187,7 +187,6 @@ function openUrl(url) {
   window.open(url)
 }
 
-
 function copy_vocabulary() {
   const voca = Array.from(new Set(Array.from(document.querySelectorAll('wdhl[lemma]'))
     .map(ele => ele.getAttribute('lemma')))).join('\r\n')
@@ -212,7 +211,6 @@ export function showDefinition(dictUrl, text) {
   } else {
     eval_func(openUrl, [fullUrl])
   }
-
 }
 
 export function createDictionaryEntry(dictPairs) {
@@ -230,7 +228,6 @@ export function context_handle_add_result(report, lemma) {
     request_unhighlight(lemma)
   }
 }
-
 
 export function make_default_online_dicts() {
   const result = []

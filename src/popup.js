@@ -1,4 +1,4 @@
-import { add_lexeme, request_unhighlight, localizeHtmlPage } from './common_lib'
+import { add_lexeme, idClickFunc, localizeHtmlPage, open_local_tab, request_unhighlight } from './common_lib'
 
 let dict_size = null
 let enabled_mode = true
@@ -74,37 +74,21 @@ function process_mode_switch() {
 }
 
 function process_show() {
-  chrome.tabs.create(
-    { url: chrome.runtime.getURL('display.html') },
-    function (tab) {
-      // opens import dialog in new tab
-    },
-  )
+  open_local_tab('display.html')
 }
 
 function process_help() {
-  chrome.tabs.create(
-    { url: chrome.runtime.getURL('help.html') },
-    function (tab) {
-      // opens import dialog in new tab
-    },
-  )
+  open_local_tab('help.html')
 }
 
 function process_adjust() {
-  chrome.tabs.create(
-    { url: chrome.runtime.getURL('adjust.html') },
-    function (tab) {
-      // opens adjust dialog in new tab
-    },
-  )
+  open_local_tab('adjust.html')
 }
 
 function display_vocabulary_size() {
   chrome.storage.local.get(['wd_user_vocabulary'], function (result) {
     const { wd_user_vocabulary } = result
-    const vocab_size = Object.keys(wd_user_vocabulary).length
-    document.getElementById('vocabIndicator').textContent = vocab_size
+    document.getElementById('vocabIndicator').textContent = Object.keys(wd_user_vocabulary).length
   })
 }
 
@@ -169,35 +153,22 @@ function process_rate_p10() {
 
 function init_controls() {
   window.onload = function () {
-    document
-      .getElementById('addToList')
-      .addEventListener('click', process_checkbox)
-    document.getElementById('adjust').addEventListener('click', process_adjust)
-    document.getElementById('showVocab').addEventListener('click', process_show)
-    document.getElementById('getHelp').addEventListener('click', process_help)
-    document
-      .getElementById('addWord')
-      .addEventListener('click', process_add_word)
-    document
-      .getElementById('rateM10')
-      .addEventListener('click', process_rate_m10)
-    document.getElementById('rateM1').addEventListener('click', process_rate_m1)
-    document.getElementById('rateP1').addEventListener('click', process_rate_p1)
-    document
-      .getElementById('rateP10')
-      .addEventListener('click', process_rate_p10)
-    document
-      .getElementById('rb_enabled')
-      .addEventListener('click', process_mode_switch)
-    document
-      .getElementById('rb_disabled')
-      .addEventListener('click', process_mode_switch)
-
+    idClickFunc('addToList',process_checkbox)
+    idClickFunc('adjust',process_adjust)
+    idClickFunc('showVocab',process_show)
+    idClickFunc('getHelp',process_help)
+    idClickFunc('addWord',process_add_word)
+    idClickFunc('rateM10',process_rate_m10)
+    idClickFunc('rateM1',process_rate_m1)
+    idClickFunc('rateP1',process_rate_p1)
+    idClickFunc('rateP10',process_rate_p10)
+    idClickFunc('rb_enabled',process_mode_switch)
+    idClickFunc('rb_disabled',process_mode_switch)
     document
       .getElementById('addText')
       .addEventListener('keyup', function (event) {
         event.preventDefault()
-        if (event.keyCode === 13) {
+        if (event.keyCode === 13) { // Enter
           process_add_word()
         }
       })
@@ -217,7 +188,7 @@ function init_controls() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener('DOMContentLoaded', function () {
   localizeHtmlPage()
   init_controls()
 })

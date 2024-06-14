@@ -11,9 +11,6 @@ const options = {
 const cache = new LRUCache(options)
 const cacheAudio = new LRUCache(options)
 
-
-// TODO check chrome.runtime.lastError for all storage.local operations
-
 function do_load_dictionary(file_text) {
   const lines = file_text.split(/[\r\n]+/)
   const rare_words = {}
@@ -158,6 +155,10 @@ function initialize_extension() {
         const fullUrl = request.wdm_new_tab_url
         chrome.tabs.create({ url: fullUrl }, function(tab) {
         })
+      }else if ((request.type = 'tts_speak')) {
+        if (!!request.word && typeof request.word === 'string') {
+          chrome.tts.speak(request.word, { lang: 'en', gender: 'male' })
+        }
       }
     }
   )
@@ -248,16 +249,6 @@ function initialize_extension() {
         chrome.storage.local.set({ wd_user_vocabulary: {} })
       }
       loadConfig()
-    }
-  )
-
-  chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if ((request.type = 'tts_speak')) {
-        if (!!request.word && typeof request.word === 'string') {
-          chrome.tts.speak(request.word, { lang: 'en', gender: 'male' })
-        }
-      }
     }
   )
 }

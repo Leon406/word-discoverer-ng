@@ -17,10 +17,9 @@ function process_delete_vocab_entry(key) {
   chrome.storage.local.get(
     ['wd_user_vocabulary', 'wd_user_vocab_added', 'wd_user_vocab_deleted'],
     function(result) {
-      const user_vocabulary = result.wd_user_vocabulary
-      const { wd_user_vocab_added,wd_user_vocab_deleted } = result
-      const new_state = { wd_user_vocabulary: user_vocabulary }
-      delete user_vocabulary[key]
+      const {wd_user_vocabulary, wd_user_vocab_added,wd_user_vocab_deleted } = result
+      const new_state = { wd_user_vocabulary }
+      delete wd_user_vocabulary[key]
       if (typeof wd_user_vocab_added !== 'undefined') {
         delete wd_user_vocab_added[key]
         new_state.wd_user_vocab_added = wd_user_vocab_added
@@ -30,7 +29,7 @@ function process_delete_vocab_entry(key) {
         new_state.wd_user_vocab_deleted = wd_user_vocab_deleted
       }
       chrome.storage.local.set(new_state)
-      show_user_list('wd_user_vocabulary', user_vocabulary)
+      show_user_list('wd_user_vocabulary', wd_user_vocabulary)
     },
   )
 }
@@ -106,8 +105,6 @@ function show_user_list(list_name, user_list) {
   }
   render()
 }
-
-
 
 function process_display() {
   let list_name = ''

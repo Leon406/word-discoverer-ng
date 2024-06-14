@@ -296,6 +296,10 @@ function hideBubble(force) {
   }
 }
 
+function hideBubbleForce() {
+  hideBubble(true)
+}
+
 function process_hl_leave() {
   node_to_render_id = null
   setTimeout(function() {
@@ -780,7 +784,7 @@ function initForPage() {
             if (verdict !== 'highlight' && verdict !== 'page language is not English') return
 
             document.addEventListener('keydown', function(event) {
-              if (event.keyCode === 17) {
+              if (event.keyCode === 17) { // Ctrl
                 function_key_is_pressed = true
                 renderBubble()
                 return
@@ -796,7 +800,7 @@ function initForPage() {
             })
 
             document.addEventListener('keyup', function(event) {
-              if (event.keyCode === 17) {
+              if (event.keyCode === 17) { // Ctrl
                 function_key_is_pressed = false
               }
             })
@@ -806,7 +810,7 @@ function initForPage() {
 
             const bubbleDOM = create_bubble()
             document.body.appendChild(bubbleDOM)
-            document.addEventListener('mousedown', hideBubble(true), false)
+            document.addEventListener('mousedown', hideBubbleForce, false)
             document.addEventListener('mousemove', processMouse, false)
             new MutationObserver((mutationList, observer) => {
               mutationList.forEach(onNodeChanged)
@@ -818,7 +822,6 @@ function initForPage() {
             })
           })
         })
-
     }
   )
 }

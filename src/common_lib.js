@@ -18,6 +18,19 @@ export function eval_func(func, args = []) {
   })
 }
 
+export function open_local_tab(url,cb) {
+  chrome.tabs.create(
+    { url: chrome.runtime.getURL(url) },
+    cb,
+  )
+}
+
+export function idClickFunc(id, func) {
+  document
+    .getElementById(id)
+    .addEventListener('click', func)
+}
+
 export function make_id_suffix(text) {
   const before = btoa(text.replace(/['’]/g, '_'))
   const after = before
