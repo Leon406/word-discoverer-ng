@@ -824,3 +824,17 @@ function initForPage() {
 document.addEventListener('DOMContentLoaded', function(event) {
   initForPage()
 })
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'hidden') {
+    pre_words.clear()
+  }
+  // 用户打开或回到页面
+  if (document.visibilityState === 'visible') {
+    // 重新缓存
+    Array.from(document.querySelectorAll('wdhl'))
+      .filter(ele => !ele.classList.contains('wdhl_none_none'))
+      .forEach(
+        ele => preFetchBing(ele.textContent)
+      )
+  }
+})
