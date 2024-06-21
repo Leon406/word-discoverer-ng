@@ -575,6 +575,12 @@ function doHighlightText(textNodes) {
     if (found_count) {
       num_found += found_count
       const parent_node = textNodes[i].parentNode
+      // 修复flex 空格失效
+      let computedValue = getComputedStyle(parent_node) || document.defaultView.getComputedStyle(parent_node);
+      // console.log(parent_node.textContent,computedValue.display)
+      if (computedValue.display === 'flex') {
+        parent_node.style.display = 'inline-block'
+      }
       assert(new_children.length > 0, 'children must be non empty')
       for (let j = 0; j < new_children.length; j++) {
         parent_node.insertBefore(new_children[j], textNodes[i])
@@ -831,8 +837,7 @@ document.addEventListener('visibilitychange', function() {
   // 用户打开或回到页面
   if (document.visibilityState === 'visible') {
     // 重新缓存
-    Array.from(document.querySelectorAll('wdhl'))
-      .filter(ele => !ele.classList.contains('wdhl_none_none'))
+    Array.from(document.querySelectorAll('wdhl:not(.wdhl_none_none)'))
       .forEach(
         ele => preFetchBing(ele.textContent)
       )
