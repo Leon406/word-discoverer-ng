@@ -88,12 +88,13 @@ function initialize_extension() {
     function(request, sender, sendResponse) {
       if (request.type === 'fetch') {
         let cacheHtml = cache.get(request.q.toLowerCase())
-        console.log('request q:', request.q)
+
         if (cacheHtml) {
-          console.info('bing cache: ' + request.q)
+          console.info(`\tfetch cache: ${request.q} size: ${cache.size}`)
           sendResponse(cacheHtml)
           return true
         }
+        console.log('fetch bing: ', request.q)
         fetch(
           `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${request.q}`
         )
@@ -109,12 +110,12 @@ function initialize_extension() {
         return true // Will respond asynchronously.
       }
       if (request.type === 'fetchArrayBuffer') {
-        console.log('request fetchArrayBuffer', request.audioUrl)
         let cached = cacheAudio.get(request.audioUrl)
         if (cached) {
-          console.log('use Cache arraybuffer ' + request.audioUrl)
+          console.info(`\tarraybuffer cache: ${request.audioUrl} size: ${cacheAudio.size}`)
           sendResponse(cached)
         } else {
+          console.log('request fetchArrayBuffer', request.audioUrl)
           fetch(request.audioUrl)
             .then((response) => response.arrayBuffer())
             .then((buffer) => {
