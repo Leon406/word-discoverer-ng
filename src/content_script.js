@@ -532,6 +532,14 @@ function filterType(node) {
     return NodeFilter.FILTER_SKIP
   }
 
+  if (node.parentNode.classList.contains('base-model')) {
+    return NodeFilter.FILTER_SKIP
+  }
+  // mat-select 下拉选择失效
+  // .wdSelectionBubble 翻译bubble
+  if (node.parentNode.closest('mat-option,mat-select,.wdSelectionBubble')) {
+    return NodeFilter.FILTER_SKIP
+  }
   return invalidTags.includes(node.tagName) || invalidTags.includes(node.parentNode.tagName) ?
     NodeFilter.FILTER_SKIP : NodeFilter.FILTER_ACCEPT
 }
@@ -576,7 +584,7 @@ function doHighlightText(textNodes) {
       num_found += found_count
       const parent_node = textNodes[i].parentNode
       // 修复flex 空格失效
-      let computedValue = getComputedStyle(parent_node) || document.defaultView.getComputedStyle(parent_node);
+      let computedValue = getComputedStyle(parent_node) || document.defaultView.getComputedStyle(parent_node)
       // console.log(parent_node.textContent,computedValue.display)
       if (computedValue.display === 'flex') {
         parent_node.style.display = 'inline-block'
@@ -614,7 +622,7 @@ function onNodeChanged(event) {
   if (!classattr || !classattr.startsWith('wdhl_')) {
     const textNodes = textNodesUnder(inobj)
     if (textNodes.length) {
-      console.log('onNodeChanged highlight', textNodes)
+      console.log('onNodeChanged highlight', textNodes.map(e => e.textContent))
       doHighlightText(textNodes)
     }
   }
@@ -807,12 +815,14 @@ function initForPage() {
               }
             })
 
+            // 默认加载
             const textNodes = textNodesUnder(document.body)
             doHighlightText(textNodes)
 
             const bubbleDOM = create_bubble()
             document.body.appendChild(bubbleDOM)
             document.addEventListener('mousemove', processMouse, false)
+            // 动态加载
             new MutationObserver((mutationList, observer) => {
               mutationList.forEach(onNodeChanged)
             }).observe(document, { subtree: true, childList: true })
