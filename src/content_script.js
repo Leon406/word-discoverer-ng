@@ -501,6 +501,7 @@ function text_to_hl_nodes(text, dst) {
 const invalidTags = [
   'SCRIPT',
   'STYLE',
+  'TITLE',
   'VIDEO',
   'SVG',
   'CODE',
