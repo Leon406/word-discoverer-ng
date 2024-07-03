@@ -166,7 +166,7 @@ function renderBubble() {
   const wdSpanText = node_to_render.textContent
   const q = wdSpanText.toLowerCase()
   let lemma = node_to_render.getAttribute('lemma')
-  lemma = lemma ? lemma : ''
+  lemma = lemma && lemma !== 'undefined' ? lemma : ''
   const bubbleDOM = document.getElementById('wd_selection_bubble')
   const bubbleText = document.getElementById('wd_selection_bubble_text')
   const bubbleFreq = document.getElementById('wd_selection_bubble_freq')
@@ -262,10 +262,13 @@ function renderBubble() {
   bubbleText.setAttribute('title', lemma)
   const prcntFreq = get_word_percentile(q)
   const level = get_word_level(q)
-  const rank = get_word_rank(q)
   bubbleFreq.textContent = prcntFreq ? `${level} K (${prcntFreq}%)` : 'n/a'
-  let pageLemmaCounts = document.querySelectorAll(`wdhl[lemma="${lemma}"]`).length
-  bubbleFreq.title = `count: ${pageLemmaCounts}` + (rank ? ` rank: ${rank}` : '')
+  if (lemma) {
+    const rank = get_word_rank(q)
+    let pageLemmaCounts = lemma ? document.querySelectorAll(`wdhl[lemma="${lemma}"]`).length : 1
+    bubbleFreq.title = `count: ${pageLemmaCounts}` + (rank ? ` rank: ${rank}` : '')
+  }
+
   bubbleFreq.style.backgroundColor = getHeatColorPoint(prcntFreq)
   current_lexeme = lemma
   let maxLeft = window.innerWidth - 424
