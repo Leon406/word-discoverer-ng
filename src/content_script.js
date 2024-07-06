@@ -511,10 +511,8 @@ const invalidTags = [
   'TEXTAREA',
   'ABBR',
   'AREA',
-  'CODE',
   'PRE',
   'AUDIO',
-  'VIDEO',
   'CANVAS',
   'HEAD',
   'MAP',
@@ -525,8 +523,6 @@ const invalidTags = [
   'W-MARK-T'
 ]
 const EN_REG = /\b[a-z'’]{2,}\b/ig
-const MAIL_REG = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/ig
-const ULR_REG = /(https?:\/\/)?([a-zA-Z0-9-_]+\.)*([a-zA-Z0-9][a-zA-Z0-9-_]{0,61}[a-zA-Z0-9])\.([a-zA-Z]{2,6}|[a-zA-Z0-9-]{2,}\.?)([^ ]*)?/ig
 const SCHEMA_REG = /:\/\//ig
 
 function filterType(node) {
@@ -539,12 +535,7 @@ function filterType(node) {
   if (!EN_REG.test(trimText)) {
     return NodeFilter.FILTER_SKIP
   }
-  if (MAIL_REG.test(trimText)) {
-    return NodeFilter.FILTER_SKIP
-  }
-  if (ULR_REG.test(trimText)) {
-    return NodeFilter.FILTER_SKIP
-  }
+
   let b1 = SCHEMA_REG.test(trimText)
   if (b1 || SCHEMA_REG.test(trimText)) {
     return NodeFilter.FILTER_SKIP
@@ -553,7 +544,6 @@ function filterType(node) {
   if (node.parentNode.classList.contains('base-model')) {
     return NodeFilter.FILTER_SKIP
   }
-  console.log('filter bbb', `"${trimText}"`, b1)
   // mat-select 下拉选择失效
   // .wdSelectionBubble 翻译bubble
   if (node.parentNode.closest('mat-option,mat-select,.wdSelectionBubble')) {
