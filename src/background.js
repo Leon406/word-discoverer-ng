@@ -179,8 +179,8 @@ function initialize_extension() {
         wd_hover_settings,
         wd_online_dicts,
         wd_show_percents,
-        black_list,
-        white_list,
+        wd_black_list,
+        wd_white_list,
         wd_is_enabled
       } = result
       const default_options = {}
@@ -228,10 +228,10 @@ function initialize_extension() {
       if (typeof wd_is_enabled === 'undefined') {
         default_options['wd_is_enabled'] = true
       }
-      if (typeof black_list === 'undefined') {
+      if (typeof wd_black_list === 'undefined') {
         default_options['wd_black_list'] = {}
       }
-      if (typeof white_list === 'undefined') {
+      if (typeof wd_white_list === 'undefined') {
         default_options['wd_white_list'] = {}
       }
       if (Object.keys(default_options).length) {
