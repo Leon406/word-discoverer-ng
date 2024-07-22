@@ -594,13 +594,15 @@ function doHighlightText(textNodes) {
       const parent_node = textNodes[i].parentNode
       // 修复flex 空格失效
       let computedValue = getComputedStyle(parent_node) || document.defaultView.getComputedStyle(parent_node)
-      // console.log(parent_node.textContent,computedValue.display)
-      if (computedValue.display === 'flex') {
-        parent_node.style.display = 'inline-block'
-      }
+      console.log("doHighlightText",parent_node.textContent,computedValue.display)
+      const isFlex = computedValue.display === 'flex' || computedValue.display === 'inline-flex'
       assert(new_children.length > 0, 'children must be non empty')
       for (let j = 0; j < new_children.length; j++) {
-        parent_node.insertBefore(new_children[j], textNodes[i])
+        const child = new_children[j]
+        if (isFlex) {
+          child.className = "fix"
+        }
+        parent_node.insertBefore(child, textNodes[i])
       }
       parent_node.removeChild(textNodes[i])
     }

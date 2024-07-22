@@ -1,154 +1,170 @@
 .wdAddButton {
-  /* width: 100% !important;
-  min-width: 100% !important;
-  max-width: 100% !important; */
-  height: 20px !important;
-  min-height: 20px !important;
-  max-height: 20px !important;
-  background-color: #4caf50 !important; /* Green */
-  background: linear-gradient(to right, #4caf50, #4caf50) !important;
-  color: white !important;
-  display: block !important;
-  font-size: 12px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  font-variant: normal !important;
-  font-family: Arial !important;
-  text-decoration: none !important;
-  text-transform: none !important;
-  text-align: center !important;
-  transition-duration: 0s !important;
-  line-height: 65% !important;
-  cursor: pointer !important;
-  box-shadow: none !important;
-  padding: 4px 0px !important;
-  margin: 0 4px !important;
-  border: none !important;
-  border-radius: 0px !important;
-  border-style: none !important;
-  border-width: 0px !important;
+    /* width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important; */
+    height: 20px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+    background-color: #4caf50 !important; /* Green */
+    background: linear-gradient(to right, #4caf50, #4caf50) !important;
+    color: white !important;
+    display: block !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-family: Arial !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    text-align: center !important;
+    transition-duration: 0s !important;
+    line-height: 65% !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    padding: 4px 0px !important;
+    margin: 0 4px !important;
+    border: none !important;
+    border-radius: 0px !important;
+    border-style: none !important;
+    border-width: 0px !important;
 }
+
 .wdAddButton:hover {
-  background-color: #102310 !important;
-  background: linear-gradient(to right, #102310, #102310) !important;
-  box-shadow: none !important;
-  border-style: none !important;
-  border-radius: 0px !important;
-  border-width: 0px !important;
-  vertical-align: baseline !important;
+    background-color: #102310 !important;
+    background: linear-gradient(to right, #102310, #102310) !important;
+    box-shadow: none !important;
+    border-style: none !important;
+    border-radius: 0px !important;
+    border-width: 0px !important;
+    vertical-align: baseline !important;
 }
 
 .wdInfoSpan {
-  color: black !important;
-  background-color: orange !important;
-  font-size: 12px !important;
-  font-style: normal !important;
-  font-weight: bold !important;
-  font-variant: normal !important;
-  font-family: Arial !important;
-  text-align: left !important;
-  text-transform: none !important;
-  padding: 5px !important;
-  margin: 0px 0px 0px 0px !important;
-  border-style: none !important;
-  border: none !important;
-  border-width: 0px !important;
-  vertical-align: baseline !important;
-  line-height: 65% !important;
-  min-height: 0 !important;
-  max-height: none !important;
-  height: auto !important;
-  min-width: 0 !important;
-  max-width: none !important;
-  width: auto !important;
-  float: left !important;
+    color: black !important;
+    background-color: orange !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-variant: normal !important;
+    font-family: Arial !important;
+    text-align: left !important;
+    text-transform: none !important;
+    padding: 5px !important;
+    margin: 0px 0px 0px 0px !important;
+    border-style: none !important;
+    border: none !important;
+    border-width: 0px !important;
+    vertical-align: baseline !important;
+    line-height: 65% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+    float: left !important;
 }
 
 .wdFreqSpan {
-  color: black;
-  background-color: orange;
-  font-size: 12px !important;
-  font-style: normal !important;
-  font-weight: bold !important;
-  font-variant: normal !important;
-  font-family: Arial !important;
-  text-align: right !important;
-  text-transform: none !important;
-  padding: 5px 4px 4px 4px !important;
-  margin: 0px 0px 0px 0px !important;
-  border-right-style: none !important;
-  border-right-width: 0px !important;
-  border-top-style: none !important;
-  border-top-width: 0px !important;
-  border-style: none !important;
-  border-width: 0px !important;
-  border-radius: 0px !important;
-  border-left-style: solid !important;
-  border-left-color: black !important;
-  border-left-width: 1px !important;
-  border-bottom-style: solid !important;
-  border-bottom-color: black !important;
-  border-bottom-width: 1px !important;
-  vertical-align: baseline !important;
-  line-height: 65% !important;
-  min-height: 0 !important;
-  max-height: none !important;
-  height: auto !important;
-  min-width: 0 !important;
-  max-width: none !important;
-  width: auto !important;
-  float: right !important;
+    color: black;
+    background-color: orange;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-variant: normal !important;
+    font-family: Arial !important;
+    text-align: right !important;
+    text-transform: none !important;
+    padding: 5px 4px 4px 4px !important;
+    margin: 0px 0px 0px 0px !important;
+    border-right-style: none !important;
+    border-right-width: 0px !important;
+    border-top-style: none !important;
+    border-top-width: 0px !important;
+    border-style: none !important;
+    border-width: 0px !important;
+    border-radius: 0px !important;
+    border-left-style: solid !important;
+    border-left-color: black !important;
+    border-left-width: 1px !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: black !important;
+    border-bottom-width: 1px !important;
+    vertical-align: baseline !important;
+    line-height: 65% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+    float: right !important;
 }
 
 .wdSelectionBubble {
-  width: 400px !important;
-  top: 0px;
-  left: 0px;
-  z-index: 1000000 !important;
-  padding: 0px 0px !important;
-  opacity: 0.9 !important;
-  background-color: orange !important;
-  position: fixed !important;
-  display: none;
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: black !important;
-  border-radius: 0px !important;
-  font-family: Arial !important;
-  font-style: normal !important;
-  font-variant: normal !important;
-  line-height: 65% !important;
+    width: 400px !important;
+    top: 0px;
+    left: 0px;
+    z-index: 1000000 !important;
+    padding: 0px 0px !important;
+    opacity: 0.9 !important;
+    background-color: orange !important;
+    position: fixed !important;
+    display: none;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: black !important;
+    border-radius: 0px !important;
+    font-family: Arial !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    line-height: 65% !important;
 }
+
 #wdn_translate_bing {
-  padding: 0 12px 12px;
-  width: 400px;
-  font-size: 14px;
-  color: #000;
-  > div {
-    line-height: 28px;
-    margin-right: 16px;
-    > span {
-      display: inline-block;
-      width: 56px;
-      color: white;
-      text-align: center;
-      font-size: 12px;
-      margin: 0 8px 2px 0;
-      background-color: cadetblue;
+    padding: 0 12px 12px;
+    width: 400px;
+    font-size: 14px;
+    color: #000;
+
+    > div {
+        line-height: 28px;
+        margin-right: 16px;
+
+        > span {
+            display: inline-block;
+            width: 56px;
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            margin: 0 8px 2px 0;
+            background-color: cadetblue;
+        }
     }
-  }
-  > div.phonetic span {
-      width: auto;
-      color: #777;
-      cursor: pointer;
-      background-color:transparent;
-  }
+
+    > div.phonetic span {
+        width: auto;
+        color: #777;
+        cursor: pointer;
+        background-color: transparent;
+    }
 }
+
 .addAndAudioWrap {
-  display: flex;
-  margin-top: 18px;
-  padding: 12px 12px 0;
-  > button {
-    flex: 1;
-  }
+    display: flex;
+    margin-top: 18px;
+    padding: 12px 12px 0;
+
+    > button {
+        flex: 1;
+    }
+}
+
+wdhl.fix::before {
+    content: "";
+    margin-right: .25rem;
+}
+
+div > wdhl.fix:first-of-type::before, span > wdhl.fix:first-of-type::before {
+    margin-right: 0rem;
 }
