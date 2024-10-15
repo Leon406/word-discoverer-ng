@@ -21,7 +21,7 @@ we
 not	n’t
 but
 they
-say	said	sayings	says
+say	said	saying	sayings	says
 at
 what
 his
@@ -51,12 +51,12 @@ when
 make	made	makes	makings
 more	mores
 no	noes
-think	thinkings	thinks
+think	thinking	thinkings	thinks	thought
 time	timed	times	timings
 see	seeings	seen	sees
 come	came	comes	comings
 people	peopled	peoples	peopling
-take	taked	takeing	taken	takes	taking	takings	took
+take	taken	takes	taking	takings	took
 year	years
 him
 other	otherest
@@ -68,7 +68,7 @@ now
 which
 right	righted	righter	rightest	righting	rightings	rights
 could	couldn’t
-look	looked	lookings	looks
+look	looked	looking	lookings	looks
 than
 our
 into
@@ -200,19 +200,19 @@ name	named	names	namings
 kind	kinder	kindest	kinds
 against
 guy	guyed	guying	guys
-study	studies	studied	studying	studys
+study	studies	studied	studying
 sure	surer	surest
 head	headed	headings	heads
 night	nights
 best	bested	bester	besting	bests
-game	gamed	gamer	games	gamest	gamester	gamings
+game	gamed	gamer	games	gamest	gamester	gaming
 number	numbered	numberings	numbers
 without
 book	booked	bookings	books
 bad	worse
 write	writes	writings	written	wrote
-bring	bringed	bringings	brings	brought
-hold	holdings	holds
+bring	bringing	brings	brought
+hold	held	holding	holds
 money	moneys
 system	systems
 government	governments
@@ -232,10 +232,10 @@ different
 issue	issued	issues	issuing
 open	opened	openest	openings	opens
 word	worded	wordings	words
-stop	stoped	stopes	stoping	stopings	stopped	stops
+stop	stoped	stoping	stopings	stopped	stops
 ever
 though
-report	reported	reportings	reports
+report	reported	reporting	reports
 set	sets
 fact	facts
 enough	enoughs
@@ -243,10 +243,10 @@ pay	paid	payed	paying	pays
 anything
 early	earliest	earlier
 program	programed	programing	programmed	programs
-second	seconded	secondes	seconding	seconds
+second	seconded	seconding	seconds
 read	readings	reads
-course	coursed	courses	coursings
-care	cared	cares	carings
+course	coursed	courses	coursing
+care	cared	cares	caring
 nothing	nothings
 small	smaller	smallest	smalls
 until
@@ -264,24 +264,24 @@ power	powered	powering	powers
 room	roomed	rooming	rooms
 hard	harder	hardest
 idea	ideas
-support	supported	supportings	supports
-team	teamed	teaming	teamings	teams
+support	supported	supporting	supports
+team	teamed	teaming	teams
 percent	percents
 law	laws
-line	lined	lines	linings
-watch	watched	watches	watchings
+line	lined	lines	lining
+watch	watched	watches	watching
 actually
 eye	eyed	eyeing	eyes	eying
 provide	provided	provides	providing
-lose	losed	loses	losing	losings	lost
+lose	loses	losing	losings	lost
 war	wares	warred	warring	wars
 real	realer	reales	realest	reals	reis
-understand	understanded	understandings	understands	understood
-mother	mothered	mothering	motherings	mothers
-wait	waited	waites	waitings	waits
-water	watered	waterings	waters
+understand	understanding	understands	understood
+mother	mothered	mothering	mothers
+wait	waited	waiting	waits
+water	watered	watering	waters
 side	sided	sider	sides	sidest	sidings
-lead	leaded	leadings	leads
+lead	leaded	leading	leads
 stand	standings	stands	stood
 young	younger	youngest	youngs
 service	serviced	services	servicing
@@ -293,10 +293,10 @@ important
 person	persons
 hey
 result	resulted	resulting	results
-thank	thanked	thanking	thankings	thanks
+thank	thanked	thanking	thanks
 someone	someones
 national	nationals
-black	blacked	blacker	blackest	blackings	blacks
+black	blacked	blacker	blackest	blacking	blacks
 however
 hour	hours
 everything
@@ -316,9 +316,9 @@ learn	learned	learnings	learns	learnt
 already
 minute	minuter	minutes	minutest
 kill	killed	killings	kills
-fall	fallen	falling	fallings	falls
+fall	fallen	falling	falls
 party	parties	partying
-reason	reasoned	reasonings	reasons
+reason	reasoned	reasoning	reasons
 cause	caused	causes	causing
 include	included	includes	including
 human	humaner	humanest	humans
@@ -334,28 +334,28 @@ ago
 past	pasterer	pasts
 break	breaking	breakings	breaks	broken
 member	members
-walk	walked	walkings	walks
-light	lighted	lightest	lightings	lights
+walk	walked	walking	walks
+light	lighted	lightest	lighting	lights
 community	communities
 late	later
 social	socials
-stay	stayed	staying	stayings	stays
+stay	stayed	staying	stays
 news	newses
 allow	allowed	allowing	allows
 body	bodies	bodied	bodying
 base	based	baser	bases	basest	basing
-mind	minded	minding	mindings	minds
+mind	minded	minding	minds
 continue	continued	continues	continuing
 whether
 deal	dealings	deals	dealt
-spend	spendings	spends	spent
+spend	spending	spends	spent
 top	topped	tops
 able	abler	ablest
 political
 almost
 boy	boys
 university	universities
-center	centered	centerer	centerings	centers
+center	centered	centerer	centering	centers
 offer	offered	offerings	offers
 research	researched	researches	researching
 white	whited	whiter	whites	whitest	whitings
@@ -363,11 +363,11 @@ add	added	adding	adds
 whole	wholes
 five	fives
 probably
-free	freed	freeings	freer	frees	freest
+free	freed	freeing	freer	frees	freest
 among
 cut	cutest	cuts
 sound	sounded	soundest	soundings	sounds
-form	formed	formes	forming	formings	forms
+form	formed	forming	forms
 die	died	dies	dying
 post	posted	postings	posts
 process	processed	processes	processing
@@ -377,14 +377,14 @@ food	foods
 else
 history	histories
 morning	mornings
-parent	parented	parenting	parentings	parents
+parent	parented	parenting	parents
 office	offices
-figure	figured	figures	figurings
+figure	figured	figures	figuring
 act	acted	acting	acts
-send	sended	sendings	sends
+send	sent	sending	sends
 along
 within
-court	courted	courtings	courts
+court	courted	courting	courts
 return	returned	returning	returns
 low	lowed	lowest	lowing	lows
 drive	driven	drives	drivings
@@ -392,12 +392,12 @@ please	pleased	pleases	pleasings
 note	noted	notes	noting
 door	doors
 several
-grow	grew	growed	growings	grown	grows
+grow	grew	growing	grown	grows
 answer	answered	answering	answers
 across
 moment	moments
-sense	sensed	senses	sensings
-cost	costed	costes	costings	costs
+sense	sensed	senses	sensing
+cost	costed	costings	costs
 age	aged	ageings	ages	agings
 behind	behinder	behinds
 consider	considered	considering	considerings	considers
@@ -414,18 +414,18 @@ sorry	sorriest	sorrier
 general	generals
 rather
 wrong	wronged	wronger	wrongest	wronging	wrongs
-market	marketed	marketings	markets
-share	shared	shares	sharings
+market	marketed	marketing	markets
+share	shared	shares	sharing
 true	trued	trueing	truer	trues	truest	truing
 teacher	teachers
 data
-build	builded	buildings	builds	built
+build	buildings	building	builds	built
 vote	voted	votes	voting
 hit	hits	hitting
 death	deaths
 easy	easiest	easier
 education	educations
-expect	expected	expecting	expectings	expects
+expect	expected	expecting	expects
 tax	taxed	taxes	taxing
 himself
 either
@@ -436,7 +436,7 @@ effect	effected	effecting	effects
 college	colleges
 music	musics
 police	policed	polices	policing
-fight	fightings	fights	fought
+fight	fighting	fights	fought
 republican	republicans
 appear	appeared	appearing	appears
 rate
@@ -447,13 +447,13 @@ season	seasoned	seasonings	seasons
 present	presented	presenting	presents
 half	halfer	halfs
 fire	fired	fires	firings
-air	aired	airings	airs
+air	aired	airing	airs
 heart	hearts
 son	sons
 art	arts
 local	locals
 individual	individuals
-serve	served	serves	servings
+serve	served	serves	serving
 miss	missed	misses	missing
 possible	possibler	possibles	possiblest
 cover	covered	coverings	covers	coversed
@@ -462,18 +462,18 @@ although
 value	valued	values	valuing
 reach	reached	reaches	reaching
 foot	feet	footed	footings	foots
-listen	listened	listenings	listens
-require	required	requires	requiring	requirings
+listen	listened	listening	listens
+require	required	requires	requiring
 pick	picked	pickings	picks
-design	designed	designings	designs
+design	designed	designing	designs
 increase	increased	increases	increasing	increasings
 interest	interested	interesting	interests
-agree	agreed	agreeing	agrees	agreing
+agree	agreed	agreeing	agrees
 anyone
 baby	babies	babied	babying
 front	fronted	fronter	frontes	fronting	fronts
 order	ordered	orderings	orders
-focus	foci	focused	focuses	focusings	focussed	focusses	focussing
+focus	foci	focused	focuses	focusing	focussed	focusses	focussing
 check	checked	checking	checks
 model	modeled	modeless	modelings	modelled	modelling	models
 decide	decided	decides	deciding
@@ -489,17 +489,17 @@ sell	selles	selling	sells
 nation	nations
 couple	coupled	couples	couplings
 action	actioned	actiones	actioning	actions
-pull	pulled	pullings	pulls
+pull	pulled	pulling	pulls
 official	officials
 wife	wives
 decision	decisions
-receive	received	receives	receiving	receivings
+receive	received	receives	receiving
 fine	fineer	finer	finest
-raise	raised	raises	raisings
-field	fielded	fieldings	fields
+raise	raised	raises	raising
+field	fielded	fielding	fields
 outside	outsides
 attack	attacked	attacking	attacks
-project	projected	projecting	projectings	projects
+project	projected	projecting	projects
 soon
 event	events
 site
@@ -510,8 +510,8 @@ remain	remained	remaining	remains
 explain	explained	explaining	explains
 claim	claimed	claiming	claims
 price	priced	prices	pricing
-voice	voiced	voices	voicings
-rest	rested	restes	resting	restinging	restings	rests
+voice	voiced	voices	voicing
+rest	rested	resting	restinging	restings	rests
 church	churched	churches	churching	churchings
 perhaps
 relationship	relationships
@@ -533,18 +533,18 @@ former	formers
 federal	federals
 role	roles
 type	typed	types	typings
-space	spaced	spaces	spacings
+space	spaced	spaces	spacing
 myself
 picture	pictured	pictures	picturing
 effort	efforts
-wear	weared	wearings	wears	wore	worn
+wear	weared	wearing		wearings	wears	wore	worn
 quite
 military	militaries
 finally
 department	departments
 toward
 leader	leaders
-land	landed	landes	landings	lands
+land	landed	landing	landings	lands
 special	specialer	specialest	specials
 dead	deader	deadest	deads
 photo	photos
@@ -552,7 +552,7 @@ lie	lain	lied	lies	lying
 patient	patienter	patientest	patients
 catch	catched	catches	catchings	caught
 drug	drugged	drugging	drugs
-guess	guessed	guesses	guessings
+guess	guessed	guesses	guessing
 arm	armed	arming	arms
 town	towns
 article	articled	articles	articling
@@ -561,49 +561,48 @@ charge	charged	charges	charging
 chance	chanced	chancer	chances	chancing
 road	roads
 economic
-color	coloreds	colorer	colorings	colors
+color	coloreds	colorer	coloring	colors
 press	pressed	presses	pressings
 save	saved	saves	savings
 situation	situations
-join	joined	joinings	joins
+join	joined	joining	joins
 choose	chooses	choosing	chose	chosen
 happy	happiest	happier
 science	sciences
 ground	grounded	groundings	grounds
 risk	risked	risking	risks
 campaign	campaigned	campaigning	campaigns
-teach	taught	teached	teaches	teachings
+teach	taught	teached	teaches	teaching
 image	imaged	images	imagings
-carry	carries	carried	carryed	carrying	carryings	carrys
-develop	developed	developes	developing	develops
+carry	carries	carried	carrying	carrys
+develop	developed	developing	develops
 yourself
-piece	pieced	pieces	piecing	piecings
+piece	pieced	pieces	piecing
 brother	brethren	brothers
 above	aboves
 term	termed	termes	terming	terms
 simply
 evidence	evidenced	evidences	evidencing
-middle	middled	middler	middles	middlings
+middle	middled	middler	middles	middling
 society	societies
-paper	papered	paperings	papers
+paper	papered	papering	papers
 energy	energies
 personal	personals
 stuff	stuffed	stuffings	stuffs
-building
 doctor	doctored	doctoress	doctoresses	doctoring	doctors
-single	singled	singler	singles	singling	singlings
+single	singled	singler	singles	singling
 drop	dropped	dropping	drops
 short	shorted	shorter	shortest	shorting	shorts
-wonder	wondered	wondering	wonderings	wonders
+wonder	wondered	wondering	wonders
 activity	activities
 exactly
 product	products
 ready	readies	readiest	readier	readying
 realize	realized	realizes	realizing
-throw	threw	throwes	throwing	throwings	thrown	throws
+throw	threw	throwes	throwing	thrown	throws
 race	raced	races	racings
 technology	technologies
-source	sourced	sources	sourcing	sourcings
+source	sourced	sources	sourcing
 alone
 produce	produced	produces	producing
 choice	choicer	choices	choicest
@@ -617,8 +616,8 @@ election	elections
 current	currents
 page	paged	pages	pagings
 video	videos
-measure	measured	measures	measurings
-park	parked	parkings	parks
+measure	measured	measures	measuring
+park	parked	parking	parks
 key	keyed	keying	keys
 standard	standards
 itself
@@ -626,7 +625,7 @@ response	responses
 subject	subjected	subjecting	subjects
 whatever
 benefit	benefited	benefiting	benefits	benefitted	benefitting
-visit	visited	visites	visitings	visits
+visit	visited	visiting	visits
 store	stored	stores	storing
 shoot	shootings	shoots
 third	thirds
@@ -634,12 +633,12 @@ recent	recenter	recentest
 oil	oiled	oiling	oils
 available
 opportunity	opportunities
-rise	risen	rises	risings
-release	released	releasees	releases	releasing
+rise	risen	rises	rising
+release	released	releases	releasing
 organization	organizations
 character	charactered	charactering	characters
 address	addressed	addresses	addressing	addrest
-county	counties	countys
+county	counties
 dad	dads
 whose
 challenge	challenged	challenges	challenging
@@ -650,16 +649,16 @@ deep	deeper	deepest	deeps
 attention	attentions
 forget	forgets	forgetting	forgot	forgotten
 per
-account	accounted	accountings	accounts
+account	accounted	accounting	accounts
 plant	planted	plantings	plants
 push	pushed	pushes	pushing
-author	authored	authoresses	authoring	authorings	authors
+author	authored	authoresses	authoring	authors
 red	redder	reddest	reds
-wall	walled	walling	wallings	walls
+wall	walled	walling	walls
 hair	hairs
-sleep	sleepings	sleeps	slept
+sleep	sleeping	sleeps	slept
 daughter	daughters
-bank	banked	bankings	banks
+bank	banked	banking	banks
 review	reviewed	reviewing	reviews
 common	commonest	commons
 truth	truths
@@ -673,7 +672,7 @@ fear	feared	feares	fearing	fears
 series
 officer	officered	officeress	officering	officers
 feature	featured	features	featuring
-wish	wished	wishes	wishings
+wish	wished	wishes	wishing
 dark	darker	darkest	darks
 computer	computers
 thought	thoughts
@@ -685,9 +684,9 @@ certainly
 nearly
 complete	completed	completer	completes	completest	completing
 culture	cultured	cultures	culturing
-dream	dreamed	dreamings	dreams
+dream	dreamed	dreaming	dreams
 north	northest	norths
-blood	blooded	blooding	bloodings	bloods
+blood	blooded	blooding	bloods
 interview	interviewed	interviewing	interviews
 medical	medicals
 everybody
@@ -701,40 +700,40 @@ tree	treed	treeing	trees
 gun	gunned	gunning	guns
 judge	judged	judges	judging
 worker	workers
-date	dated	dates	datings
+date	dated	dates	dating
 worry	worries	worried	worryings
 earth	earthed	earthing	earths
 total	totaled	totaler	totaling	totalled	totalling	totals
-fast	fasted	faster	fastest	fastings	fasts
+fast	fasted	faster	fastest	fasting	fasts
 hundred	hundreder	hundreds
 tonight	tonights
 thousand	thousands
-letter	lettered	letterings	letters
+letter	lettered	lettering	letters
 forward	forwarded	forwarder	forwardest	forwardings	forwards
 hell	hells
 bill	billed	billings	bills
 mention	mentioned	mentioning	mentions
-search	searched	searches	searching	searchings
+search	searched	searches	searching
 simple	simpler	simples	simplesses	simplest
 involve	involved	involves	involving
 poor	poorer	poorest
-score	scored	scores	scorings
+score	scored	scores	scoring
 concern	concerned	concerning	concerns
-message	messaged	messages	messagings
-laugh	laughed	laughing	laughings	laughs
+message	messaged	messages	messaging
+laugh	laughed	laughing	laughs
 left	lefter	leftest	lefts
 nature	natures
 administration	administrations
 touch	touched	touches	touchings
-sort	sorted	sortes	sortings	sorts
+sort	sorted	sortes	sorting	sorts
 song	songs
 enjoy	enjoyed	enjoying	enjoys
 similar
-smile	smiled	smiles	smilings
+smile	smiled	smiles	smiling
 congress	congresses
-fund	funded	fundings	funds
+fund	funded	funding	funds
 fun
-finish	finished	finishes	finishings
+finish	finished	finishes	finishing
 hot	hotter	hottest
 material	materials
 seek	seeking	seeks	sought
@@ -744,16 +743,16 @@ bed	bedded	bedding	beds
 defense	defenses
 final	finals
 cell	cells
-fill	filled	filles	fillings	fills
+fill	filled	filling	fills
 performance	performances
 hospital	hospitals
-green	greened	greener	greenest	greenings	greens
+green	greened	greener	greenest	greening	greens
 trade	traded	trades	tradings
-summer	summered	summering	summerings	summers
+summer	summered	summering	summers
 attempt	attempted	attempting	attempts
 protect	protected	protecting	protects
 century	centuries
-factor	factored	factoress	factorings	factors
+factor	factored	factoress	factoring	factors
 fail	failed	failings	fails
 recently
 example	examples	exampless
@@ -766,7 +765,7 @@ range	ranged	ranges	ranging
 sir	sirs
 beyond
 agency	agencies
-floor	floored	floorings	floors
+floor	floored	flooring	floors
 usually
 significant
 ability	abilities
@@ -778,7 +777,7 @@ entire	entires
 democrat	democrats
 serious
 hurt	hurted	hurter	hurting	hurts
-coach	coached	coaches	coachings	coachs
+coach	coached	coaches	coaching	coachs
 career	careered	careering	careers
 billion	billions
 ahead
@@ -1257,7 +1256,6 @@ communication	communications
 huh
 encourage	encouraged	encourages	encouraging	encouragings
 french	frenched	frenches	frenching
-understanding
 kick	kicked	kicking	kicks
 belief	beliefs
 debt	debts
@@ -1596,7 +1594,6 @@ emergency	emergencies
 experiment	experimented	experimenting	experiments
 nod	nodded	nodding	nodes	nods
 instruction	instructions
-thinking
 soviet	soviets
 coast	coasted	coasting	coastings	coasts
 sad	sadder	saddest
@@ -1617,7 +1614,6 @@ traffic	trafficked	trafficking	traffics
 confirm	confirmed	confirming	confirmings	confirms
 plenty	plenties
 lucky	luckiest	luckier
-growing
 insist	insisted	insisting	insists
 proud	prouder	proudest
 fourth	fourther	fourths
@@ -1705,7 +1701,6 @@ entirely
 slip	sliped	slipes	sliping	slipped	slipping	slips
 thin	thinned	thinnest	thins
 afford	afforded	affording	affords
-teaching
 chairman	chairmaned	chairmaning	chairmans	chairmen
 error	errors
 tall	taller	tallest	talls
@@ -1900,7 +1895,6 @@ estate	estates
 characteristic	characteristics
 branch	branched	branches	branchings
 forth
-spending
 birthday	birthdays
 pray	prayed	praying	prayings	prays
 improvement	improvements
@@ -1912,7 +1906,6 @@ pitch	pitched	pitches	pitchings
 sheet	sheeted	sheetings	sheets
 length	lengths
 elect	elected	electing	elects
-funding
 meanwhile	meanwhiles
 barely
 eliminate	eliminated	eliminates	eliminating
@@ -1928,7 +1921,6 @@ chase	chased	chases	chasing	chasings
 bike	biked	bikes	biking	bikings
 reject	rejected	rejecting	rejects
 proper	properer	properest
-marketing
 approve	approved	approves	approving
 orange	oranger	oranges	orangest
 false	falser	falsest
@@ -2232,7 +2224,6 @@ consist	consisted	consisting	consists
 surely
 nervous
 immediate
-parking
 string	stringed	stringing	stringings	strings	strung
 unusual
 rice	riced	rices	ricing
@@ -2305,7 +2296,6 @@ assumption	assumptions
 designer	designers
 planning	plannings
 discipline	disciplined	disciplines	disciplining
-leading
 widely
 approximately
 retire	retired	retirees	retires	retiring
@@ -3181,7 +3171,6 @@ homeless
 globe	globes
 uncomfortable
 execute	executed	executes	executing
-reporting
 patent	patented	patenter	patenting	patents
 pledge	pledged	pledgees	pledges	pledging
 receiver	receivers
@@ -3195,7 +3184,6 @@ considerable
 grain	grained	graines	grainings	grains
 gospel	gospels
 automatically
-fighting
 crown	crowned	crowning	crownings	crowns
 swallow	swallowed	swallowing	swallows
 dose	dosed	doses	dosing
@@ -3535,7 +3523,6 @@ puzzle	puzzled	puzzles	puzzling	puzzlings
 solo	soli	soloed	soloing	solos
 mature	matured	maturer	matures	maturest	maturing
 probe	probed	probes	probing	probings
-walking
 boring
 suspend	suspended	suspending	suspends
 cholesterol	cholesterols
@@ -3616,7 +3603,6 @@ trunk	trunks
 prohibit	prohibited	prohibiting	prohibits
 sustainable
 gasp	gasped	gasping	gaspings	gasps
-banking
 asshole	assholes
 journalism	journalisms
 stumble	stumbled	stumbles	stumbling
@@ -3703,7 +3689,6 @@ bee
 blessing
 curtain	curtained	curtaining	curtains
 continuous
-landing
 jar	jarred	jarring	jars
 cage	caged	cages	caging
 historically
@@ -3816,7 +3801,6 @@ icon	icons
 grandma	grandmas
 info	infos
 jurisdiction	jurisdictions
-sleeping
 mechanical
 outdoor
 ending
@@ -3914,7 +3898,6 @@ dignity	dignities
 prophet	prophets
 commentary	commentaries
 delight	delighted	delighting	delights
-serving
 safely
 scar	scares	scaring	scarred	scarring	scars
 homework	homeworks
@@ -4253,7 +4236,6 @@ projection	projections
 spur	spurred	spurs
 parental
 collector	collectors
-accounting
 disappointment	disappointments
 afterward
 correlate	correlated	correlates	correlating
@@ -4362,7 +4344,6 @@ testament	testaments
 browser	browsers
 processor	processors
 thigh	thighs
-holding
 merchant	merchants
 preliminary	preliminaries
 quantum	quanta
@@ -4419,9 +4400,7 @@ rib	ribbed	ribbing	ribs
 unhappy	unhappiest	unhappier
 hail	hailed	hailes	hailing	hails
 marketplace	marketplaces
-reasoning
 rim	rimed	rimes	riming	rimmed	rimming	rims
-supporting
 orchestra	orchestras
 manuscript	manuscripts
 advocacy	advocacies
@@ -4438,7 +4417,6 @@ irrelevant
 aesthetic	aesthetics
 weaken	weakened	weakening	weakens
 wireless	wirelesses
-saying
 suspension	suspensions
 prosecute	prosecuted	prosecutes	prosecuting
 undergraduate	undergraduates
@@ -4544,7 +4522,6 @@ vague	vaguer	vaguest
 accountable
 greenhouse	greenhouses
 outsider	outsiders
-lighting
 impulse	impulses
 endeavor	endeavored	endeavoring	endeavors
 papa	papas
@@ -4754,7 +4731,6 @@ plaza	plazas
 sway	swayed	swaying	swayings	sways
 congregation	congregations
 bound	bounded	bounding	bounds
-rising
 theirs
 disrupt	disrupted	disrupting	disrupts
 considerably
@@ -4828,7 +4804,6 @@ economically
 intervene	intervened	intervenes	intervening
 fisherman	fishermen
 planner	planners
-coaching
 fulfil	fulfilled	fulfilling	fulfils
 inequality	inequalities
 workforce	workforces
@@ -4841,7 +4816,7 @@ sovereignty	sovereignties
 hover	hovered	hovering	hovers
 farming
 interstate	interstates
-temper	tempered	temperings	tempers
+temper	tempered	tempering	tempers
 fundamentally
 libertarian	libertarians
 banner	bannerer	banners
@@ -4856,7 +4831,6 @@ payroll	payrolls
 navigation	navigations
 accumulate	accumulated	accumulates	accumulating
 summarize	summarized	summarizes	summarizing
-listening
 drip	dripped	drips
 favorable
 advertise	advertised	advertises	advertisings
@@ -5116,7 +5090,6 @@ affirm	affirmed	affirming	affirms
 preview	previewed	previewing	previews
 sovereign	sovereigns
 whine	whined	whines	whining	whinings
-dating
 ramp	ramped	ramping	rampings	ramps
 soften	softened	softenings	softens
 attachment	attachments
@@ -5456,11 +5429,9 @@ umbrella	umbrellas
 temptation	temptations
 randomly
 mum	mums
-gaming
 undo	undid	undoes	undoing	undoings	undone
 freezing
 mortal	mortals
-visiting
 pub	pubs
 supervision	supervisions
 trajectory	trajectories
@@ -5639,7 +5610,6 @@ scam	scams
 aggregate	aggregated	aggregates	aggregating
 seasonal	seasonals
 knight	knighted	knightess	knighting	knights
-scoring
 deployment	deployments
 outdoors
 thinker	thinkers
@@ -6098,7 +6068,6 @@ dressing
 smoothly
 flirt	flirted	flirtings	flirts
 intensify	intensifies	intensified	intensifying
-caring
 petroleum	petroleums
 devotion	devotions
 confederate	confederated	confederater	confederates	confederating
@@ -6218,7 +6187,6 @@ calling
 skeptic	skeptics
 rove	roved	roves	rovings
 rot	rots	rotted	rotting
-smiling
 steering
 uncommon	uncommoner	uncommonest
 catastrophic
@@ -6960,7 +6928,6 @@ consolidate	consolidated	consolidates	consolidating
 madam	madams
 hawaiian	hawaiians
 fascination	fascinations
-filling
 tsunami	tsunamis
 spinach	spinaches
 sleek	sleeked	sleeker	sleekest	sleeking	sleekings	sleeks
@@ -7676,7 +7643,6 @@ turnaround	turnarounds
 indifference	indifferences
 converge	converged	converges	converging
 knob	knobs
-sharing
 wee	weeing	weer	wees	weest
 cadet	cadets
 thwart	thwarted	thwartings	thwarts
@@ -8260,7 +8226,6 @@ climber	climbers
 bikini	bikinis
 nostril	nostrils
 robotic
-raising
 presumption	presumptions
 glamor	glamors
 gust	gusts
@@ -8427,7 +8392,6 @@ horribly
 faulty	faultiest	faultier
 raspberry	raspberries
 hymn	hymned	hymning	hymns
-lining
 quartet	quartets
 bigotry	bigotries
 lunge	lunged	lungees	lungeing	lunges	lunging
@@ -8827,7 +8791,6 @@ lofty	loftiest	loftier
 seasoning
 oust	ousted	ousting	ousts
 powerhouse	powerhouses
-finishing
 destroyer	destroyers
 provisional
 determinant	determinants
@@ -8866,7 +8829,6 @@ nylon	nylons
 confound	confounded	confounding	confounds
 paraphrase	paraphrased	paraphrases	paraphrasing
 watchdog	watchdogs
-messaging
 guise	guises
 piston	pistons
 predicament	predicaments
@@ -9940,7 +9902,6 @@ blare	blared	blares	blaring
 winding
 plugin
 keynote	keynoted	keynotes	keynoting
-looking
 uptown	uptowner	uptowns
 casserole	casseroles
 secretive
@@ -11156,7 +11117,6 @@ weakly	weakliest	weaklier
 truthfully
 rationally
 fender	fenders
-coloring
 pap	paps
 pinnacle	pinnacled	pinnacles	pinnacling
 din	dined	dines	dining	dinned	dinning	dins
@@ -11357,7 +11317,6 @@ devalue	devalued	devalues	devaluing
 prelude	preluded	preludes	preluding
 extracurricular
 semblance	semblances
-watering
 vehemently
 raptor	raptors
 disengage	disengaged	disengages	disengaging
@@ -11895,7 +11854,6 @@ scorch	scorched	scorches	scorching	scorchings	scorchs
 harmonic	harmonics
 seaweed	seaweeds
 benefactor	benefactors
-scaffolding
 confederation	confederations
 swagger	swaggered	swaggering	swaggerings	swaggers
 obligatory
@@ -12354,7 +12312,6 @@ heartbroken
 noose	noosed	nooses	noosing
 atypical
 bayonet	bayoneted	bayoneting	bayonets	bayonetted	bayonetting
-airing
 juxtapose	juxtaposed	juxtaposes	juxtaposing
 steamer	steamered	steamering	steamers
 solicitation	solicitations
@@ -12541,7 +12498,6 @@ omelet	omelets
 nozzle	nozzles
 purification	purifications
 muffle	muffled	muffles	muffling
-flooring
 ire
 unease	uneases
 entangle	entangled	entangles	entangling
@@ -12585,7 +12541,6 @@ knead	kneaded	kneading	kneads
 misrepresentation	misrepresentations
 jerky	jerkies	jerkiest	jerkier
 ticker	tickers
-spacing
 medallion	medallions
 sikh	sikhs
 sobriety	sobrieties
@@ -12932,7 +12887,7 @@ executor	executors
 impassioned
 predisposition	predispositions
 counterinsurgency	counterinsurgencies
-resell	reselling	resells
+resell	reselling	resells	resold
 woefully
 shaggy	shaggiest	shaggier
 leeway	leeways
@@ -12951,7 +12906,6 @@ extradition	extraditions
 custard	custards
 crucifixion	crucifixions
 authentication	authentications
-measuring
 gunpoint	gunpoints
 jukebox	jukeboxes
 parasitic
@@ -13003,7 +12957,7 @@ spoke	spokes
 blackboard	blackboards
 metaphorically
 antagonism	antagonisms
-foreshadow	foreshadowed	foreshadowings	foreshadows
+foreshadow	foreshadowed	foreshadowing	foreshadowings	foreshadows
 sterilize	sterilized	sterilizes	sterilizing
 renegotiate	renegotiated	renegotiates	renegotiating
 couture	coutures
@@ -13235,7 +13189,7 @@ dispersion	dispersions
 conqueror	conquerors
 philosophically
 crystalline
-scaffold	scaffolded	scaffoldings	scaffolds
+scaffold	scaffolded	scaffolding	scaffoldings	scaffolds
 incredulous
 trimester	trimesters
 sellout	sellouts
@@ -13248,7 +13202,7 @@ disinterested
 upland	uplander	uplands
 stubble	stubbles
 concomitant	concomitants
-disinformation	disinformations
+disinformation
 patronize	patronized	patronizes	patronizing
 legume	legumes
 interdependent
@@ -13295,7 +13249,6 @@ freshness	freshnesses
 superfluous
 exuberance	exuberances
 passively
-dreaming
 defraud	defrauded	defrauding	defrauds
 fraternal
 sear	seared	searer	searest	searing	searings	sears
@@ -13338,7 +13291,7 @@ flavorful
 musing
 discernment	discernments
 pernicious
-jest	jested	jesting	jestings	jests
+jest	jested	jesting	jests
 fabled
 teaser	teasers
 backtrack	backtracked	backtracking	backtrackings	backtracks
@@ -13360,7 +13313,6 @@ penance	penances
 violator	violators
 hedgehog	hedgehogs
 alcove	alcoves
-sensing
 hypnosis	hypnoses
 ugliness	uglinesses
 careen	careened	careening	careens
@@ -13381,7 +13333,7 @@ provenance	provenances
 hatchet	hatchets
 aryan	aryans
 parka	parkas
-leach	leached	leaches	leachings
+leach	leached	leaches	leaching
 seethe	seethed	seethes	seething	seethings
 flashing
 sissy	sissies
@@ -13398,7 +13350,7 @@ bender	benders
 infrequent
 bloke	blokes
 promenade	promenaded	promenades	promenading
-whir	whirred	whirs
+whir	whirred	whirs	whirr	whirring	whirrings	whirrs
 expertly
 recast	recasting	recasts
 contemplative	contemplatives
@@ -13579,7 +13531,7 @@ undersecretary	undersecretaries
 intelligently
 fro
 spinner	spinners
-belie	belied	belies	beliing	belying
+belie	belied	belies	belying
 smashing
 lard	larded	larding	lards
 suture	sutured	sutures	suturing
@@ -14054,7 +14006,7 @@ hooray	hoorays
 womanhood	womanhoods
 fleshy	fleshiest	fleshier
 flak	flaks
-matte	mattes	mattings
+matte	mattes	matted	matting	mattings
 dissimilar
 councilman	councilmen
 newscaster	newscasters
@@ -14382,7 +14334,6 @@ tyrannical
 decimal	decimals
 thoroughfare	thoroughfares
 hindrance	hindrances
-lettering
 digress	digressed	digresses	digressing
 precautionary
 nerdy
@@ -15041,7 +14992,6 @@ touchstone	touchstones
 stingy	stingiest	stingier
 enliven	enlivened	enlivening	enlivens
 haggle	haggled	haggles	haggling
-wearing
 irreplaceable
 jurisdictional
 matron	matrons
@@ -16343,7 +16293,6 @@ bereavement	bereavements
 dioxin	dioxins
 ruckus	ruckuses
 dike	diked	dikes	diking
-watching
 nomenclature	nomenclatures
 antiseptic	antiseptics
 seaport	seaports
@@ -16710,7 +16659,6 @@ pairwise
 bonobo	bonobos
 concurrence	concurrences
 ewe	ewes
-middling
 pall	palls
 calligraphy	calligraphies
 brutalize	brutalized	brutalizes	brutalizing
@@ -17176,7 +17124,6 @@ seabed	seabeds
 subspace	subspaces
 javelin	javelins
 footwork	footworks
-sorting
 archeological
 motorbike	motorbiked	motorbikes	motorbiking
 banister	banisters
@@ -17811,7 +17758,6 @@ manhole	manholes
 inky	inkiest	inkier
 spinster	spinsters
 russet	russets
-sending
 tarot	tarots
 haggard	haggards
 maven	mavens
@@ -18112,7 +18058,6 @@ interoperability	interoperabilities
 honeysuckle	honeysuckles
 vise	vises
 trundle	trundled	trundles	trundling
-fasting
 ultrasonic
 barnacle	barnacles
 lunchroom	lunchrooms
@@ -18242,7 +18187,6 @@ unseal	unsealed	unsealing	unseals
 undersized
 yelling
 chaff	chaffed	chaffing	chaffings	chaffs
-pulling
 unconsciousness	unconsciousnesses
 hither
 verbalize	verbalized	verbalizes	verbalizing
@@ -18445,7 +18389,6 @@ eigenvalue	eigenvalues
 sensitize	sensitized	sensitizes	sensitizing
 warlike
 vocalization	vocalizations
-guessing
 histone	histones
 gravelly
 humorist	humorists
@@ -19717,7 +19660,6 @@ dramatist	dramatists
 cannery	canneries
 perfusion	perfusions
 delimit	delimited	delimiting	delimits
-joining
 ionic	ionics
 immemorial
 titillate	titillated	titillates	titillating
@@ -22213,7 +22155,6 @@ conscientiousness	conscientiousnesses
 sashay	sashayed	sashaying	sashays
 scamming
 damask	damasks
-focusing
 sandalwood	sandalwoods
 scheduler	schedulers
 echinacea	echinaceas
@@ -22510,7 +22451,6 @@ motherfucking
 interpolate	interpolated	interpolates	interpolating
 foreleg	forelegs
 inextricable
-held	helder
 impala	impalas
 incontinent
 redfish	redfishes
@@ -22757,7 +22697,6 @@ procreative
 debilitate	debilitated	debilitates	debilitating
 toady	toadies	toadied	toadying
 phenolic	phenolics
-whirring
 porosity	porosities
 ethnocentrism	ethnocentrisms
 slovenly
@@ -22862,7 +22801,6 @@ emplacement	emplacements
 yammer	yammered	yammering	yammerings	yammers
 kaput
 sprocket	sprockets
-foreshadowing
 sonorous
 tableware	tablewares
 leaver	leavers
@@ -22886,7 +22824,6 @@ bushman	bushmen
 constrictor	constrictors
 periodicity	periodicities
 polymorphic
-designing
 delicatessen	delicatessens
 decamp	decamped	decamping	decamps
 sashimi	sashimis
@@ -23640,7 +23577,6 @@ pilothouse	pilothouses
 churlish
 clothier	clothiers
 contravention	contraventions
-courting
 nonentity	nonentities
 luger	lugers
 gizzard	gizzards
@@ -24372,7 +24308,6 @@ relegation	relegations
 highfalutin
 sibilant	sibilants
 turnkey	turnkeys
-freeing
 lacuna	lacunae	lacunas
 gymnastic
 undisguised
@@ -24544,7 +24479,6 @@ ethnology	ethnologies
 expressively
 seagoing
 porcine
-greening
 demagogic
 compulsivity	compulsivities
 sandpiper	sandpipers
@@ -25074,7 +25008,6 @@ hotcake	hotcakes
 unicycle	unicycled	unicycles	unicycling
 umpteen
 unfreeze	unfreezes	unfreezing	unfroze	unfrozen
-matting
 atropine	atropines
 amoxicillin	amoxicillins
 arachnid	arachnids
@@ -25204,7 +25137,6 @@ ephedrine	ephedrines
 ethnologist	ethnologists
 plenum	plena	plenums
 thawing
-centering
 freehand
 fief	fiefs
 profligacy	profligacies
@@ -26578,7 +26510,6 @@ emulsify	emulsifies	emulsified	emulsifying
 tailgater	tailgaters
 fratricide	fratricides
 freon	freons
-wishing
 religiousness	religiousnesses
 toucan	toucans
 snorting
@@ -26675,7 +26606,6 @@ stele	steles
 flyweight	flyweights
 wakeful
 gryphon	gryphons
-whirr	whirrings	whirrs
 winder	winders
 variate	variates
 vaunt	vaunted	vaunting	vauntings	vaunts
@@ -27146,7 +27076,6 @@ reoccurring
 spermicide	spermicides
 enervate	enervated	enervates	enervating
 stitcher	stitchers
-voicing
 homemaking	homemakings
 unworldly
 urbanity	urbanities
@@ -27212,7 +27141,6 @@ unquiet	unquieter	unquietest
 thickener	thickeners
 whistleblower	whistleblowers
 welshman	welshmen
-leaching
 lithosphere	lithospheres
 vagus	vagi
 vacuole	vacuoles
@@ -27886,7 +27814,6 @@ concertmaster
 perfunctorily
 deftness	deftnesses
 dentition	dentitions
-figuring
 scleroderma	sclerodermas
 croaking
 sculpin	sculpins
@@ -29808,7 +29735,6 @@ driveshaft	driveshafts
 duckweed	duckweeds
 prerecord	prerecorded	prerecording	prerecords
 experimentalism	experimentalisms
-factoring
 smokiness
 conciliate	conciliated	conciliates	conciliating
 promisingly
@@ -31751,7 +31677,6 @@ croft	crofts
 circuitously
 chondrosarcoma	chondrosarcomas
 overbooked
-coursing
 glamorously
 abstractness	abstractnesses
 ablate	ablated	ablates	ablating
@@ -32191,7 +32116,6 @@ panama	panamas
 wellington	wellingtons
 andromeda	andromedas
 farthest
-fielding
 uninstalling
 burke	burkes
 blinks
@@ -32427,7 +32351,6 @@ padre	padres
 dearest	dearests
 wicca	wiccas
 dali	dalis
-resold
 trad	trads
 scorpio	scorpios
 evangelicals
@@ -32469,7 +32392,6 @@ libra	librae	libras
 proteus	proteuses
 vanessa	vanessas
 leone	leones
-blacking
 baddest
 clarence	clarences
 closeup	closeups
@@ -32721,7 +32643,6 @@ crapper	crappers
 lade	laded	lades	ladings
 kern	kerned	kernes	kerning	kernings	kerns
 somerset	somersets
-tempering
 bethel	bethels
 davy	davies
 senor	senores	senors
@@ -34509,7 +34430,6 @@ skinniness	skinninesses
 oneida	oneidas
 calumet	calumets
 palatinate	palatinates
-papering
 tovarisch	tovarisches
 willet	willets
 shlock
