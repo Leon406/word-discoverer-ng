@@ -48,7 +48,7 @@ would	wouldn’t
 just	juster	justest
 up	upped	upping	ups
 when
-make	made	makes	making  makings
+make	made	makes	making	makings
 more	mores
 no	noes
 think	thinking	thinks	thought
@@ -439,7 +439,7 @@ police	policed	polices	policing
 fight	fighting	fights	fought
 republican	republicans
 appear	appeared	appearing	appears
-rate    rated	rates	rating
+rate	rated	rates	rating
 sign	signed	signings	signs
 class	classed	classes	classing
 bit	bits
@@ -610,7 +610,7 @@ near	neared	nearer	nearest	nearing	nears
 describe	described	describes	describing
 mom	moms
 director	directors
-international	internationals
+international	internationals	int'l
 certain	certainer	certainest
 election	elections
 current	currents
@@ -1555,7 +1555,7 @@ obtain	obtained	obtaining	obtains
 conclusion	conclusions
 tape
 grand	grander	grandest	grands
-chicken	chickens    chickening  chickened
+chicken	chickens	chickening	chickened
 assessment	assessments
 aid	aided	aides	aiding	aids
 defend	defended	defending	defends
@@ -2171,7 +2171,7 @@ publication	publications
 assist	assisted	assisting	assists
 mystery	mysteries
 championship	championships
-install	installs    instal	installed	installing	instals
+install	installs	instal	installed	installing	instals
 tale	tales
 liberty	liberties
 proof	proofed	proofer	proofing	proofings	proofs
@@ -11200,7 +11200,7 @@ mite	mites
 apprenticeship	apprenticeships
 horny	horniest	hornier
 pronoun	pronouns
-whiteness   whitenesses
+whiteness	whitenesses
 kinetic
 outgrow	outgrew	outgrowing	outgrown	outgrows
 smuggling
@@ -18467,7 +18467,7 @@ ritualistic
 lasso	lassoed	lassoes	lassoing	lassos
 intramural
 caramelize	caramelized	caramelizes	caramelizing
-distill	distills	distilled   distil	distilling	distils
+distill	distills	distilled	distil	distilling	distils
 discoverer	discoverers
 barnyard	barnyards
 arguable
