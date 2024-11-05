@@ -53,7 +53,7 @@ more	mores
 no	noes
 think	thinking	thinks	thought
 time	timed	times	timing	timings
-see	seeing	seeings	seen	sees
+see	seeing	seeings	saw	seen	sees
 come	came	comes	coming
 people	peopled	peoples	peopling
 take	taken	takes	taking	takings	took
@@ -5577,7 +5577,7 @@ interpreter	interpreters
 protagonist	protagonists
 evacuate	evacuated	evacuates	evacuating
 citation	citations
-fingerprint	fingerprinted	fingerprinting	fingerprintings	fingerprints
+fingerprint	fingerprinted	fingerprinting	fingerprints
 stripe
 deprive	deprived	deprives	depriving
 timeline	timelines
@@ -5586,7 +5586,7 @@ intimacy	intimacies
 battlefield	battlefields
 formulate	formulated	formulates	formulating
 saw	sawed	sawing	sawn	saws
-query	queries	queried	querying	queryings
+query	queries	queried	querying
 insure	insureds	insures	insuring
 dictator	dictators
 rebellion	rebellions
@@ -5940,7 +5940,7 @@ den	dens
 template	templates
 neatly
 gunman	gunmen
-lament	lamented	lamenting	lamentings	laments
+lament	lamented	lamenting	laments
 situate	situated	situates	situating
 adore	adored	adores	adoring
 squirrel	squirrels	squirreled	squirreling	squirrelled	squirrelling
@@ -6123,7 +6123,7 @@ radically
 renewal	renewals
 stubborn	stubborner	stubbornest
 definite
-fearful
+fearful	fearfully
 rethink	rethinking	rethinks	rethought
 postpone	postponed	postpones	postponing
 cedar	cedars
@@ -6675,7 +6675,7 @@ shriek	shrieked	shrieking	shrieks
 loosely
 deposition	depositions
 ethic	ethics
-dope	doped	dopes	doping	dopings
+dope	doped	dopes	doping
 slippery
 golfer	golfers
 trivial
@@ -6690,7 +6690,7 @@ biscuit	biscuits
 lumber	lumbered	lumbering	lumbers
 grate	grated	grates	grating	gratings
 vibration	vibrations
-beetle	beetled	beetler	beetles	beetling	beetlings
+beetle	beetled	beetler	beetles	beetling
 constellation	constellations
 relish	relished	relishes	relishing
 haitian	haitians
@@ -6710,7 +6710,7 @@ peripheral	peripherals
 honeymoon	honeymooned	honeymooning	honeymoons
 reversal	reversals
 multicultural
-rake	raked	rakees	rakes	raking	rakings
+rake	raked	rakes	raking
 marxist	marxists
 contaminate	contaminated	contaminates	contaminating
 revolt	revolted	revolting	revolts
@@ -6800,7 +6800,7 @@ hawaiian	hawaiians
 fascination	fascinations
 tsunami	tsunamis
 spinach	spinaches
-sleek	sleeked	sleeker	sleekest	sleeking	sleekings	sleeks
+sleek	sleeked	sleeker	sleekest	sleeking	sleeks
 obstruction	obstructions
 amaze	amazed	amazes	amazing
 redefine	redefined	redefines	redefining
@@ -6860,7 +6860,7 @@ disbelief	disbeliefs
 doctoral
 cruelty	cruelties
 culminate	culminated	culminates	culminating
-compass	compassed	compasses	compassing	compassings
+compass	compassed	compasses	compassing
 intensely
 hypocrisy	hypocrisies
 embargo	embargoed	embargoes	embargoing	embargos
@@ -10372,7 +10372,7 @@ whomever
 instructive
 biologically
 arid	arider	aridest
-logistical
+logistical	logistically
 wither	withered	withering	witherings	withers
 cholera	choleras
 conclusive
@@ -14499,7 +14499,7 @@ downwind
 brooch	brooched	brooches	brooching
 strangeness	strangenesses
 unwieldy
-tearful
+tearful	tearfully
 quagmire	quagmires
 nonhuman
 liquidation	liquidations
@@ -19036,7 +19036,6 @@ rediscovery	rediscoveries
 impetuous
 wonderment	wonderments
 inoperable
-tearfully
 wanker	wankers
 matador	matadors
 shucks
@@ -19510,7 +19509,6 @@ contravene	contravened	contravenes	contravening
 prudently
 prissy	prissiest	prissier
 disdainful
-fearfully
 crabby	crabbiest	crabbier
 revelry	revelries
 paganism	paganisms
@@ -19647,7 +19645,7 @@ unobserved
 warfarin	warfarins
 sparkler	sparklers
 fossa	fossas
-fitful
+fitful	fitfully
 toga	togas
 troposphere	tropospheres
 wrangler	wranglers
@@ -20201,11 +20199,9 @@ racquetball	racquetballs
 humdrum	humdrums
 inordinately
 grayish
-fitfully
 tabby	tabbies
 kowtow	kowtowed	kowtowing	kowtows
 irritably
-logistically
 apogee	apogees
 mispronounce	mispronounced	mispronounces	mispronouncing
 cagey	cagier	cagiest
