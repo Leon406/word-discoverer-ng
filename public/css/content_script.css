@@ -6,7 +6,6 @@
     min-height: 20px !important;
     max-height: 20px !important;
     background-color: #4caf50 !important; /* Green */
-    background: linear-gradient(to right, #4caf50, #4caf50) !important;
     color: white !important;
     display: block !important;
     font-size: 12px !important;
@@ -21,21 +20,17 @@
     line-height: 65% !important;
     cursor: pointer !important;
     box-shadow: none !important;
-    padding: 4px 0px !important;
+    padding: 4px 0 !important;
     margin: 0 4px !important;
-    border: none !important;
-    border-radius: 0px !important;
-    border-style: none !important;
-    border-width: 0px !important;
+    border: none 0 !important;
+    border-radius: 4px !important;
 }
 
 .wdAddButton:hover {
     background-color: #102310 !important;
-    background: linear-gradient(to right, #102310, #102310) !important;
     box-shadow: none !important;
-    border-style: none !important;
-    border-radius: 0px !important;
-    border-width: 0px !important;
+    border: none 0 !important;
+    border-radius: 0 !important;
     vertical-align: baseline !important;
 }
 
@@ -50,10 +45,8 @@
     text-align: left !important;
     text-transform: none !important;
     padding: 5px !important;
-    margin: 0px 0px 0px 0px !important;
-    border-style: none !important;
-    border: none !important;
-    border-width: 0px !important;
+    margin: 0 !important;
+    border: none 0!important;
     vertical-align: baseline !important;
     line-height: 65% !important;
     min-height: 0 !important;
@@ -68,22 +61,13 @@
 .wdFreqSpan {
     color: black;
     background-color: orange;
-    font-size: 12px !important;
-    font-style: normal !important;
-    font-weight: bold !important;
-    font-variant: normal !important;
-    font-family: Arial !important;
+    font: 12px bold  Arial !important;
     text-align: right !important;
     text-transform: none !important;
     padding: 5px 4px 4px 4px !important;
-    margin: 0px 0px 0px 0px !important;
-    border-right-style: none !important;
-    border-right-width: 0px !important;
-    border-top-style: none !important;
-    border-top-width: 0px !important;
-    border-style: none !important;
-    border-width: 0px !important;
-    border-radius: 0px !important;
+    margin: 0 !important;
+    border: none 0!important;
+    border-radius: 0 !important;
     border-left-style: solid !important;
     border-left-color: black !important;
     border-left-width: 1px !important;
@@ -103,18 +87,15 @@
 
 .wdSelectionBubble {
     width: 400px !important;
-    top: 0px;
-    left: 0px;
-    z-index: 1000000 !important;
-    padding: 0px 0px !important;
-    opacity: 0.9 !important;
-    background-color: orange !important;
     position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 1000000 !important;
+    padding: 0 !important;
+    background-color: orange !important;
     display: none;
-    border-width: 1px !important;
-    border-style: solid !important;
-    border-color: black !important;
-    border-radius: 0px !important;
+    border: solid 1px #86A845 !important;
+    border-radius: 4px !important;
     font-family: Arial !important;
     font-style: normal !important;
     font-variant: normal !important;
@@ -128,7 +109,7 @@
     color: #000;
 
     > div {
-        line-height: 28px;
+        line-height: 20px;
         margin-right: 16px;
 
         > span {
@@ -138,6 +119,7 @@
             text-align: center;
             font-size: 12px;
             margin: 0 8px 2px 0;
+            border-radius: 2px;
             background-color: cadetblue;
         }
     }
@@ -166,5 +148,5 @@ wdhl.fix::before {
 }
 
 div > wdhl.fix:first-of-type::before, span > wdhl.fix:first-of-type::before {
-    margin-right: 0rem;
+    margin-right: 0;
 }
