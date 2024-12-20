@@ -8,8 +8,60 @@ const options = {
   }
 }
 
-const cache = new LRUCache(options)
 const cacheAudio = new LRUCache(options)
+
+let db
+
+function initDatabase() {
+  const request = indexedDB.open('WordDiscovererDB', 1)
+
+  request.onerror = function(event) {
+    console.error('Database error:', event.target.errorCode)
+  }
+
+  request.onsuccess = function(event) {
+    db = event.target.result
+    console.log('Database initialized.')
+  }
+
+  request.onupgradeneeded = function(event) {
+    db = event.target.result
+    const objectStore = db.createObjectStore('dictionary', { keyPath: 'q' })
+    objectStore.createIndex('q', 'q', { unique: true })
+  }
+}
+
+function saveToIndexedDB(q, data) {
+  const transaction = db.transaction(['dictionary'], 'readwrite')
+  const objectStore = transaction.objectStore('dictionary')
+  console.log('save to db', data)
+  const request = objectStore.add({ q: q.toLowerCase(), data: data })
+
+  request.onsuccess = function(event) {
+    console.log('Data saved to IndexedDB:', q)
+  }
+
+  request.onerror = function(event) {
+    console.error('Error saving data to IndexedDB:', event.target.errorCode)
+  }
+}
+
+function getFromIndexedDB(q) {
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction(['dictionary'], 'readonly')
+    const objectStore = transaction.objectStore('dictionary')
+    const request = objectStore.get(q.toLowerCase())
+
+    request.onsuccess = function(event) {
+      resolve(event.target.result ? event.target.result.data : null)
+    }
+
+    request.onerror = function(event) {
+      reject(event.target.errorCode)
+    }
+  })
+}
+
 
 function do_load_dictionary(file_text) {
   const lines = file_text.split(/[\r\n]+/)
@@ -84,85 +136,96 @@ function load_idioms() {
 }
 
 function initialize_extension() {
-  chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if (request.type === 'fetch') {
-        let cacheHtml = cache.get(request.q.toLowerCase())
-
-        if (cacheHtml) {
-          console.info(`\tfetch cache: ${request.q} size: ${cache.size}`)
-          sendResponse(cacheHtml)
-          return true
-        }
-        console.log('fetch bing: ', request.q)
-        fetch(
-          `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${request.q}`
-        )
-          .then((response) => response.text())
-          .then(html => {
-            const minimizeHtml = html
-              .replace(/<script [\s\S]+?<\/script>/g, '')
-              .replace(/<style[\s\S]+?<\/style>/g, '')
-              .replace(/(<a class="client_sen_[ce]n_word")[^>]+>/g, '$1>')
-            cache.set(request.q.toLowerCase(), minimizeHtml)
-            sendResponse(minimizeHtml)
-          })
-        return true // Will respond asynchronously.
-      }
-      if (request.type === 'fetchArrayBuffer') {
-        let cached = cacheAudio.get(request.audioUrl)
-        if (cached) {
-          console.info(`\tarraybuffer cache: ${request.audioUrl} size: ${cacheAudio.size}`)
-          sendResponse(cached)
-        } else {
-          console.log('request fetchArrayBuffer', request.audioUrl)
-          fetch(request.audioUrl)
-            .then((response) => response.arrayBuffer())
-            .then((buffer) => {
-              let jsonBuffer = JSON.stringify({
-                data: Array.apply(null, new Uint8Array(buffer))
+  initDatabase()
+  chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.type === 'fetch') {
+      getFromIndexedDB(request.q)
+        .then(cachedData => {
+          if (cachedData) {
+            console.info(`\t==>db cache : ${request.q}`)
+            sendResponse(cachedData)
+          } else {
+            console.log('fetch bing: ', request.q)
+            return fetch(
+              `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${encodeURIComponent(request.q)}`
+            ).then(response => response.text())
+              .then(html => {
+                const minimizeHtml = html
+                  .replace(/<script [\s\S]+?<\/script>/g, '')
+                  .replace(/<style[\s\S]+?<\/style>/g, '')
+                  // 删除无用跳转数据
+                  .replace(/<a class="client_sen_[ce]n_word"[^>]+>[^>]+?<\/a>/g, '')
+                  .replace('<span class="client_sen_word"></span>', '')
+                saveToIndexedDB(request.q, minimizeHtml)
+                sendResponse(minimizeHtml)
               })
-              cacheAudio.set(request.audioUrl, jsonBuffer)
-              return jsonBuffer
-            })
-            .then(sendResponse)
-        }
+          }
+        })
+        .catch(error => {
+          console.error('Error handling message:', error)
+          sendResponse(null) // 或者返回一个错误对象
+        })
 
-        return true // Will respond asynchronously.
-      }
-      if (request.wdm_request === 'hostname') {
-        const tab_url = sender.tab.url
-        const url = new URL(tab_url)
-        const domain = url.hostname
-        sendResponse({ wdm_hostname: domain })
-      } else if (request.wdm_request === 'page_language') {
-        chrome.tabs.detectLanguage(sender.tab.id, function(iso_language_code) {
-          sendResponse({ wdm_iso_language_code: iso_language_code })
-        })
-        return true // This is to indicate that sendResponse would be sent asynchronously and keep the message channel open, see https://developer.chrome.com/extensions/runtime#event-onMessage
-      } else if (request.wdm_verdict) {
-        if (request.wdm_verdict === 'keyboard') {
-          chrome.action.setIcon({
-            path: '../assets/no_dynamic.png',
-            tabId: sender.tab.id
+      return true // Will respond asynchronously.
+    } else if (request.type === 'fetchArrayBuffer') {
+      let cached = cacheAudio.get(request.audioUrl)
+      if (cached) {
+        console.info(`\tarraybuffer cache: ${request.audioUrl} size: ${cacheAudio.size}`)
+        sendResponse(cached)
+      } else {
+        console.log('request fetchArrayBuffer', request.audioUrl)
+        fetch(request.audioUrl)
+          .then(response => response.arrayBuffer())
+          .then((buffer) => {
+            let jsonBuffer = JSON.stringify({
+              data: Array.apply(null, new Uint8Array(buffer))
+            })
+            cacheAudio.set(request.audioUrl, jsonBuffer)
+            return jsonBuffer
           })
-        } else {
-          chrome.action.setIcon({
-            path: '../assets/result48_gray.png',
-            tabId: sender.tab.id
+          .then(sendResponse)
+          .catch(error => {
+            console.error('Error fetching array buffer:', error)
+            sendResponse(null) // 或者返回一个错误对象
           })
-        }
-      } else if (request.wdm_new_tab_url) {
-        const fullUrl = request.wdm_new_tab_url
-        chrome.tabs.create({ url: fullUrl }, function(tab) {
-        })
-      }else if ((request.type = 'tts_speak')) {
-        if (!!request.word && typeof request.word === 'string') {
-          chrome.tts.speak(request.word, { lang: 'en', gender: 'male' })
-        }
       }
+
+      return true // Will respond asynchronously.
+    } else if (request.wdm_request === 'hostname') {
+      const tab_url = sender.tab.url
+      const url = new URL(tab_url)
+      const domain = url.hostname
+      sendResponse({ wdm_hostname: domain })
+    } else if (request.wdm_request === 'page_language') {
+      chrome.tabs.detectLanguage(sender.tab.id, function(iso_language_code) {
+        sendResponse({ wdm_iso_language_code: iso_language_code })
+      })
+      return true // Will respond asynchronously.
+    } else if (request.wdm_verdict) {
+      if (request.wdm_verdict === 'keyboard') {
+        chrome.action.setIcon({
+          path: '../assets/no_dynamic.png',
+          tabId: sender.tab.id
+        })
+      } else {
+        chrome.action.setIcon({
+          path: '../assets/result48_gray.png',
+          tabId: sender.tab.id
+        })
+      }
+      sendResponse() // 确保发送空响应
+    } else if (request.wdm_new_tab_url) {
+      const fullUrl = request.wdm_new_tab_url
+      chrome.tabs.create({ url: fullUrl }, function(tab) {
+      })
+      sendResponse() // 确保发送空响应
+    } else if (request.type === 'tts_speak') {
+      if (!!request.word && typeof request.word === 'string') {
+        chrome.tts.speak(request.word, { lang: 'en', gender: 'male' })
+      }
+      sendResponse() // 确保发送空响应
     }
-  )
+  })
 
   function loadConfig() {
     chrome.storage.sync.get(['wd_show_percents',
