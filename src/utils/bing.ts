@@ -60,7 +60,10 @@ export function handleLexResult(
         let pron = ''
         const $audio = el.querySelector('.client_aud_o')
         if ($audio) {
-          pron = (($audio.getAttribute('data-pronunciation') || '').match(/https.*\.mp3/) || [''])[0]
+          pron = $audio.getAttribute('data-pronunciation')
+          if(pron && pron.startsWith("/")) {
+            pron = HOST + pron;
+          }
         }
         return {
           lang: getText(el, '.client_def_hd_pn'),
