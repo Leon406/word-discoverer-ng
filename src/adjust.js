@@ -7,6 +7,7 @@ let wd_hover_settings = null
 let wd_online_dicts = null
 let wd_enable_tts = false
 let wd_enable_prefetch = false
+let wd_online_vocabulary_url = ""
 
 const wc_rb_ids = ['wc1', 'wc2', 'wc3', 'wc4', 'wc5']
 const ic_rb_ids = ['ic1', 'ic2', 'ic3', 'ic4', 'ic5']
@@ -70,7 +71,8 @@ function process_config_export() {
     'wd_online_dicts',
     'wd_developer_mode',
     'wd_enable_tts',
-    'wd_enable_prefetch'
+    'wd_enable_prefetch',
+    'wd_online_vocabulary_url',
   ], function(config) {
 
     const file_content = JSON.stringify(config)
@@ -334,7 +336,8 @@ function reloadData() {
       'wd_online_dicts',
       'wd_developer_mode',
       'wd_enable_tts',
-      'wd_enable_prefetch'
+      'wd_enable_prefetch',
+      "wd_online_vocabulary_url",
     ],
     function(result) {
       assign_back_labels()
@@ -343,6 +346,7 @@ function reloadData() {
       wd_online_dicts = result.wd_online_dicts
       wd_enable_tts = !!result.wd_enable_tts
       wd_enable_prefetch = !!result.wd_enable_prefetch
+      wd_online_vocabulary_url = result.wd_online_vocabulary_url
 
       const { wd_developer_mode } = result
 
@@ -401,6 +405,18 @@ function reloadData() {
         wd_enable_prefetch = e.target.checked
         chrome.storage.sync.set({ wd_enable_prefetch })
       })
+      let onlineVocabularyEle = document.getElementById('onlineVocabularyUrl')
+
+      if (wd_online_vocabulary_url) {
+        onlineVocabularyEle.value = wd_online_vocabulary_url
+      }
+      onlineVocabularyEle
+        .addEventListener('blur', function(e){
+          wd_online_vocabulary_url = e.target.value
+          if (wd_online_vocabulary_url.startsWith("http")){
+            chrome.storage.sync.set({ wd_online_vocabulary_url })
+          }
+        });
 
       show_internal_state()
     }

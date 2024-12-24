@@ -45,12 +45,31 @@ function process_change() {
 
 function process_submit() {
   const inputElem = document.getElementById('doLoadVocab')
-  const file = inputElem.files[0]
-  const reader = new FileReader()
-  reader.onload = function(e) {
-    add_new_words(parse_vocabulary(reader.result))
+  const configUrl = document.getElementById('configUrl').value
+  if (configUrl && configUrl.startsWith("http")) {
+    fetch(configUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(config => {
+        console.log('config', config.length);
+        add_new_words(parse_vocabulary(config))
+      })
+      .catch(error => {
+        console.error('Failed to import config:', error);
+        alert('Failed to import config. Please check the URL and try again.');
+      });
+  }else {
+    const file = inputElem.files[0]
+    const reader = new FileReader()
+    reader.onload = function(e) {
+      add_new_words(parse_vocabulary(reader.result))
+    }
+    reader.readAsText(file)
   }
-  reader.readAsText(file)
 }
 
 function init_controls() {
@@ -58,6 +77,9 @@ function init_controls() {
     localizeHtmlPage()
     idClickFunc('vocabSubmit', process_submit)
     idClickFunc('doLoadVocab', process_change)
+    chrome.storage.sync.get(['wd_online_vocabulary_url'], function(config) {
+      document.getElementById('configUrl').value = config.wd_online_vocabulary_url || ''
+    })
   }
 }
 
