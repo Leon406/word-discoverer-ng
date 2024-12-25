@@ -6500,8 +6500,7 @@ pull your horns in
 pull your punches	
 pull your socks up	
 pull your weight	
-pull yourself up by your bootstraps	
-pull yourself up by your own bootstraps	
+pull yourself up by your bootstraps	pull yourself up by your own bootstraps	
 pulled pork	
 pump action	
 pump and dump	
@@ -6563,9 +6562,8 @@ put in the picture
 put in the shade	
 put in their place	
 put in your two cents’ worth	
-put in your two pennyworth	
-put in your two penn’orth	
-put into effect	
+put in your two pennyworth	put in your two penn’orth
+put into effect
 put into reverse	
 put it about	
 put mind at ease	
@@ -6606,9 +6604,8 @@ put the clocks back	put the clock back
 put the clocks forward	
 put the fear of God into	
 put the frighteners on	
-put the kibosh on	
+put the kibosh on	put the kybosh on
 put the knife in	put the knife into
-put the kybosh on	
 put the lid on	
 put the mockers on	
 put the pedal to the metal	
@@ -7394,7 +7391,7 @@ spell it out
 spelling bee	
 spend a penny	
 spend the night with	
-spick and span	
+spick and span	spic and span
 spill the beans	
 spill your guts	
 spin a tale	
@@ -9225,7 +9222,7 @@ you see
 you snooze you lose	
 you started it	
 you win	
-you you’ve got to laugh	
+you’ve got to laugh	you have got to laugh
 you're alright	
 young at heart	
 your Sunday best	
