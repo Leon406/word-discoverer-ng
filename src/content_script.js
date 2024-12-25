@@ -848,9 +848,8 @@ function initForPage() {
   )
 }
 
-document.addEventListener('DOMContentLoaded', function(event) {
-  initForPage()
-})
+document.addEventListener('DOMContentLoaded', initForPage)
+
 document.addEventListener('visibilitychange', function() {
   if (document.visibilityState === 'hidden') {
     pre_words.clear()
