@@ -188,13 +188,13 @@ function openUrl(url) {
 }
 
 function copy_vocabulary() {
-  const voca = Array.from(
-    new Set(
-      Array.from(document.querySelectorAll('wdhl[lemma]')).map((ele) =>
-        ele.getAttribute('lemma'),
-      ),
-    ),
-  ).join('\r\n')
+
+  let vocabularies = [...new Set(
+    [...document.querySelectorAll('wdhl:not(.wdhl_none_none)')]
+      .map(ele => ele.getAttribute('lemma'))
+  )]
+  if (!vocabularies.length) return
+  const voca = vocabularies.join('\n');
   const textArea = document.createElement('textarea')
   textArea.value = voca
   textArea.style.position = 'fixed'
@@ -204,7 +204,7 @@ function copy_vocabulary() {
   textArea.select()
   document.execCommand('copy')
   document.body.removeChild(textArea)
-  alert('Copied')
+  alert(`${vocabularies.length} Copied`)
 }
 
 export function showDefinition(dictUrl, text) {
