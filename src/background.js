@@ -34,11 +34,10 @@ function initDatabase() {
 function saveToIndexedDB(q, data) {
   const transaction = db.transaction(['dictionary'], 'readwrite')
   const objectStore = transaction.objectStore('dictionary')
-  console.log('save to db', data)
   const request = objectStore.add({ q: q.toLowerCase(), data: data })
 
   request.onsuccess = function(event) {
-    console.log('Data saved to IndexedDB:', q)
+    console.info(`\x1B[31msaved to DB ==> \x1B[34m${q}`)
   }
 
   request.onerror = function(event) {
@@ -142,7 +141,7 @@ function initialize_extension() {
       getFromIndexedDB(request.q)
         .then(cachedData => {
           if (cachedData) {
-            console.info(`\t==>db cache : ${request.q}`)
+            console.info(`\tcache: \x1b[43m${request.q}`)
             sendResponse(cachedData)
           } else {
             console.log('fetch bing: ', request.q)
@@ -152,10 +151,10 @@ function initialize_extension() {
               .then(html => {
                 const minimizeHtml = html
                   .replace(/<script [\s\S]+?<\/script>/g, '')
-                  .replace(/<style[\s\S]+?<\/style>/g, '')
+                  .replace(/<head[\s\S]+?<\/head>/g, '')
                   // 删除无用跳转数据
-                  .replace(/<a class="client_sen_[ce]n_word"[^>]+>[^>]+?<\/a>/g, '')
-                  .replace('<span class="client_sen_word"></span>', '')
+                  .replace(/<span id="anchor1">[\s\S]+?<span id="dictionaryvoiceid"><\/span>/g, '</div></div></div>')
+                // console.log("minimizeHtml",minimizeHtml)
                 saveToIndexedDB(request.q, minimizeHtml)
                 sendResponse(minimizeHtml)
               })
