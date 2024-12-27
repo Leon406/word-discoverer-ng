@@ -1,4 +1,10 @@
-import { add_lexeme, idClickFunc, localizeHtmlPage, open_local_tab, request_unhighlight } from './common_lib'
+import {
+  add_lexeme,
+  idClickFunc,
+  localizeHtmlPage,
+  open_local_tab,
+  request_unhighlight,
+} from './common_lib'
 
 let dict_size = null
 let enabled_mode = true
@@ -88,7 +94,8 @@ function process_adjust() {
 function display_vocabulary_size() {
   chrome.storage.local.get(['wd_user_vocabulary'], function (result) {
     const { wd_user_vocabulary } = result
-    document.getElementById('vocabIndicator').textContent = Object.keys(wd_user_vocabulary).length
+    document.getElementById('vocabIndicator').textContent =
+      Object.keys(wd_user_vocabulary).length
   })
 }
 
@@ -153,22 +160,23 @@ function process_rate_p10() {
 
 function init_controls() {
   window.onload = function () {
-    idClickFunc('addToList',process_checkbox)
-    idClickFunc('adjust',process_adjust)
-    idClickFunc('showVocab',process_show)
-    idClickFunc('getHelp',process_help)
-    idClickFunc('addWord',process_add_word)
-    idClickFunc('rateM10',process_rate_m10)
-    idClickFunc('rateM1',process_rate_m1)
-    idClickFunc('rateP1',process_rate_p1)
-    idClickFunc('rateP10',process_rate_p10)
-    idClickFunc('rb_enabled',process_mode_switch)
-    idClickFunc('rb_disabled',process_mode_switch)
+    idClickFunc('addToList', process_checkbox)
+    idClickFunc('adjust', process_adjust)
+    idClickFunc('showVocab', process_show)
+    idClickFunc('getHelp', process_help)
+    idClickFunc('addWord', process_add_word)
+    idClickFunc('rateM10', process_rate_m10)
+    idClickFunc('rateM1', process_rate_m1)
+    idClickFunc('rateP1', process_rate_p1)
+    idClickFunc('rateP10', process_rate_p10)
+    idClickFunc('rb_enabled', process_mode_switch)
+    idClickFunc('rb_disabled', process_mode_switch)
     document
       .getElementById('addText')
       .addEventListener('keyup', function (event) {
         event.preventDefault()
-        if (event.keyCode === 13) { // Enter
+        if (event.keyCode === 13) {
+          // Enter
           process_add_word()
         }
       })

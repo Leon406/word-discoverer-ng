@@ -157,11 +157,12 @@
         margin: 4px 20px;
       }
       .hidden {
-          display: none;
+        display: none;
       }
-      .radioBlock input[type=radio],#adjustPronunciationSection input[type=checkbox]{
-          position: relative;
-          top: 2px;
+      .radioBlock input[type='radio'],
+      #adjustPronunciationSection input[type='checkbox'] {
+        position: relative;
+        top: 2px;
       }
     </style>
     <title>Advanced Settings</title>
@@ -175,20 +176,25 @@
         class="dictAddUrl"
       /><button class="longButton" id="setToStorageBtn">storage set dbg</button>
       <br />
-      <input type="text" id="getFromStorageKey" class="dictAddUrl" /><button class="longButton" id="getFromStorageBtn">
+      <input type="text" id="getFromStorageKey" class="dictAddUrl" /><button
+        class="longButton"
+        id="getFromStorageBtn"
+      >
         storage get dbg
       </button>
       <br />
-      <button class="longButton" id="testManifestWarningsBtn">view manifest warnings</button>
+      <button class="longButton" id="testManifestWarningsBtn">
+        view manifest warnings
+      </button>
     </div>
     <fieldset>
       <button class="longButton" id="exportConfig">Export Config</button>
       <button class="longButton" id="importConfig">Import Config</button>
-      <input id="openFile" type="file"  />
+      <input id="openFile" type="file" />
       <br />
       <button class="longButton" id="saveVocab">__MSG_saveVocab__</button>
       <button class="longButton" id="loadVocab">__MSG_loadVocab__</button>
-      <br>
+      <br />
     </fieldset>
     <br />
     <div id="adjustBubbleSection">
@@ -196,18 +202,36 @@
         <span class="smallHeader">__MSG_adjustPopupHlHeader__</span><br />
         <br />
         <form>
-          <input type="radio" name="hlBubble" id="hlb_never" /><span class="cbLabel">__MSG_rbNever__</span><br />
-          <input type="radio" name="hlBubble" id="hlb_key" /><span class="cbLabel">__MSG_rbKey__</span><br />
-          <input type="radio" name="hlBubble" id="hlb_always" /><span class="cbLabel">__MSG_rbAlways__</span><br />
+          <input type="radio" name="hlBubble" id="hlb_never" /><span
+            class="cbLabel"
+            >__MSG_rbNever__</span
+          ><br />
+          <input type="radio" name="hlBubble" id="hlb_key" /><span
+            class="cbLabel"
+            >__MSG_rbKey__</span
+          ><br />
+          <input type="radio" name="hlBubble" id="hlb_always" /><span
+            class="cbLabel"
+            >__MSG_rbAlways__</span
+          ><br />
         </form>
         <br />
         <br />
         <span class="smallHeader">__MSG_adjustPopupOwHeader__</span><br />
         <br />
         <form>
-          <input type="radio" name="owBubble" id="owb_never" /><span class="cbLabel">__MSG_rbNever__</span><br />
-          <input type="radio" name="owBubble" id="owb_key" /><span class="cbLabel">__MSG_rbKey__</span><br />
-          <input type="radio" name="owBubble" id="owb_always" /><span class="cbLabel">__MSG_rbAlways__</span><br />
+          <input type="radio" name="owBubble" id="owb_never" /><span
+            class="cbLabel"
+            >__MSG_rbNever__</span
+          ><br />
+          <input type="radio" name="owBubble" id="owb_key" /><span
+            class="cbLabel"
+            >__MSG_rbKey__</span
+          ><br />
+          <input type="radio" name="owBubble" id="owb_always" /><span
+            class="cbLabel"
+            >__MSG_rbAlways__</span
+          ><br />
         </form>
       </fieldset>
     </div>
@@ -224,8 +248,12 @@
           id="addDictUrl"
           class="dictAddUrl"
         /><button class="shortButton" id="testNewDict">__MSG_testBtn__</button
-        ><button class="imgButton" id="addDict"><img src="../assets/add.png" /></button><br />
-        <button class="longButton" id="defaultDicts">__MSG_restoreDefaults__</button>
+        ><button class="imgButton" id="addDict">
+          <img src="../assets/add.png" /></button
+        ><br />
+        <button class="longButton" id="defaultDicts">
+          __MSG_restoreDefaults__
+        </button>
       </fieldset>
     </div>
     <br />
@@ -233,15 +261,24 @@
       <fieldset>
         <span class="smallHeader">__MSG_adjustColorsHeader__</span><br />
         <br />
-        <input type="checkbox" class="checkbox" id="wordsEnabled" /><span class="cbHeaderLabel"
+        <input type="checkbox" class="checkbox" id="wordsEnabled" /><span
+          class="cbHeaderLabel"
           >__MSG_enableWordsLabel__</span
         ><br />
         <div id="wordsBlock">
-          <input type="checkbox" class="checkbox" id="wordsBold" /><span class="cbLabel">__MSG_useBold__</span><br />
-          <input type="checkbox" class="checkbox" id="wordsColor" /><span class="cbLabel">__MSG_useText__</span><br />
+          <input type="checkbox" class="checkbox" id="wordsBold" /><span
+            class="cbLabel"
+            >__MSG_useBold__</span
+          ><br />
+          <input type="checkbox" class="checkbox" id="wordsColor" /><span
+            class="cbLabel"
+            >__MSG_useText__</span
+          ><br />
           <div id="wcRadioBlock" class="radioBlock">
             <form>
-              <input type="radio" name="wordColor" id="wc1" /><label for="wc1" style="color: red; background-color: red"
+              <input type="radio" name="wordColor" id="wc1" /><label
+                for="wc1"
+                style="color: red; background-color: red"
                 >___</label
               >
               <input type="radio" name="wordColor" id="wc2" /><label
@@ -266,7 +303,8 @@
               >
             </form>
           </div>
-          <input type="checkbox" class="checkbox" id="wordsBackground" /><span class="cbLabel"
+          <input type="checkbox" class="checkbox" id="wordsBackground" /><span
+            class="cbLabel"
             >__MSG_useBackground__</span
           ><br />
           <div id="wbRadioBlock" class="radioBlock">
@@ -300,18 +338,26 @@
           </div>
           <br />
           <span class="hlExample"
-            >Example of <span id="wql"></span><span id="wordHlText">highlighted</span><span id="wqr"></span> English
-            word.</span
+            >Example of <span id="wql"></span
+            ><span id="wordHlText">highlighted</span
+            ><span id="wqr"></span> English word.</span
           ><br />
           <br />
         </div>
         <br />
-        <input type="checkbox" class="checkbox" id="idiomsEnabled" /><span class="cbHeaderLabel"
+        <input type="checkbox" class="checkbox" id="idiomsEnabled" /><span
+          class="cbHeaderLabel"
           >__MSG_enableIdiomsLabel__</span
         ><br />
         <div id="idiomsBlock">
-          <input type="checkbox" class="checkbox" id="idiomsBold" /><span class="cbLabel">__MSG_useBold__</span><br />
-          <input type="checkbox" class="checkbox" id="idiomsColor" /><span class="cbLabel">__MSG_useText__</span><br />
+          <input type="checkbox" class="checkbox" id="idiomsBold" /><span
+            class="cbLabel"
+            >__MSG_useBold__</span
+          ><br />
+          <input type="checkbox" class="checkbox" id="idiomsColor" /><span
+            class="cbLabel"
+            >__MSG_useText__</span
+          ><br />
           <div id="icRadioBlock" class="radioBlock">
             <form>
               <input type="radio" name="idiomColor" id="ic1" /><label
@@ -341,7 +387,8 @@
               >
             </form>
           </div>
-          <input type="checkbox" class="checkbox" id="idiomsBackground" /><span class="cbLabel"
+          <input type="checkbox" class="checkbox" id="idiomsBackground" /><span
+            class="cbLabel"
             >__MSG_useBackground__</span
           ><br />
           <div id="ibRadioBlock" class="radioBlock">
@@ -375,7 +422,8 @@
           </div>
           <br />
           <span class="hlExample"
-            >Example of <span id="iql"></span><span id="idiomHlText">highlighted English</span
+            >Example of <span id="iql"></span
+            ><span id="idiomHlText">highlighted English</span
             ><span id="iqr"></span> expression.</span
           ><br />
           <br />
@@ -383,18 +431,24 @@
         <button class="longButton" id="saveVisuals">__MSG_saveVisuals__</button>
       </fieldset>
     </div>
-    <br/>
+    <br />
     <!--pronunciation section-->
     <div id="adjustPronunciationSection">
       <fieldset>
-        <label class="smallHeader">Other Config</label><br>
+        <label class="smallHeader">Other Config</label><br />
         <input type="checkbox" id="pronunciationEnabled" />
         <label for="pronunciationEnabled">Auto TTS</label>
         <input type="checkbox" id="bingPrefetchEnabled" />
         <label for="bingPrefetchEnabled">Bing Prefetch</label>
-        <br/>
-        <label for="onlineVocabularyUrl" title="online synchronization">Vocabulary Url:</label>
-        <input type="text" id="onlineVocabularyUrl"  placeholder="Enter online vocabulary URL" />
+        <br />
+        <label for="onlineVocabularyUrl" title="online synchronization"
+          >Vocabulary Url:</label
+        >
+        <input
+          type="text"
+          id="onlineVocabularyUrl"
+          placeholder="Enter online vocabulary URL"
+        />
       </fieldset>
     </div>
     <br />

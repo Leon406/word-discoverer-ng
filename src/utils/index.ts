@@ -1,4 +1,4 @@
-import * as DOMPurify  from 'dompurify'
+import * as DOMPurify from 'dompurify'
 
 export interface DictSearchResult<Result> {
   /** search result */
@@ -33,7 +33,6 @@ export interface DictSearchResult<Result> {
 
 /** Return a dictionary source page url for the dictionary header */
 
-
 export function handleNoResult<T = any>(): Promise<T> {
   return Promise.reject(new Error('NO_RESULT'))
 }
@@ -45,11 +44,21 @@ export function handleNetWorkError(): Promise<never> {
 /**
  * Get the textContent of a node or its child.
  */
-export function getText(parent: ParentNode | null, selector?: string, transform?: null | ((text: string) => string)): string
-export function getText(parent: ParentNode | null, transform?: null | ((text: string) => string), selector?: string): string
 export function getText(
   parent: ParentNode | null,
-  ...args: [string?, (null | ((text: string) => string))?] | [(null | ((text: string) => string))?, string?]
+  selector?: string,
+  transform?: null | ((text: string) => string),
+): string
+export function getText(
+  parent: ParentNode | null,
+  transform?: null | ((text: string) => string),
+  selector?: string,
+): string
+export function getText(
+  parent: ParentNode | null,
+  ...args:
+    | [string?, (null | ((text: string) => string))?]
+    | [(null | ((text: string) => string))?, string?]
 ): string {
   if (!parent) {
     return ''
@@ -65,7 +74,9 @@ export function getText(
     }
   }
 
-  const child = selector ? parent.querySelector(selector) : (parent as HTMLElement)
+  const child = selector
+    ? parent.querySelector(selector)
+    : (parent as HTMLElement)
   if (!child) {
     return ''
   }
@@ -92,8 +103,19 @@ const defaultDOMPurifyConfig: DOMPurify.Config = {
   FORBID_ATTR: ['style'],
 }
 
-export function getHTML(parent: ParentNode, { mode = 'innerHTML', selector, transform, host, config = defaultDOMPurifyConfig }: GetHTMLConfig = {}): string {
-  const node = selector ? parent.querySelector<HTMLElement>(selector) : (parent as HTMLElement)
+export function getHTML(
+  parent: ParentNode,
+  {
+    mode = 'innerHTML',
+    selector,
+    transform,
+    host,
+    config = defaultDOMPurifyConfig,
+  }: GetHTMLConfig = {},
+): string {
+  const node = selector
+    ? parent.querySelector<HTMLElement>(selector)
+    : (parent as HTMLElement)
   if (!node) {
     return ''
   }
@@ -109,7 +131,9 @@ export function getHTML(parent: ParentNode, { mode = 'innerHTML', selector, tran
       if (isInternalPage() && el.getAttribute('srcset')) {
         el.setAttribute(
           'srcset',
-          el.getAttribute('srcset')!.replace(/(,| |^)\/\//g, (_, head) => head + 'https://')
+          el
+            .getAttribute('srcset')!
+            .replace(/(,| |^)\/\//g, (_, head) => head + 'https://'),
         )
       }
     }
@@ -126,22 +150,36 @@ export function getHTML(parent: ParentNode, { mode = 'innerHTML', selector, tran
     RETURN_DOM_FRAGMENT: true,
   })
 
-  const content = fragment.firstChild ? (fragment.firstChild as HTMLElement)[mode] : ''
+  const content = fragment.firstChild
+    ? (fragment.firstChild as HTMLElement)[mode]
+    : ''
 
   return transform ? transform(content) : content
 }
 
-export function getInnerHTML(host: string, parent: ParentNode, selectorOrConfig: string | Omit<GetHTMLConfig, 'mode' | 'host'> = {}) {
+export function getInnerHTML(
+  host: string,
+  parent: ParentNode,
+  selectorOrConfig: string | Omit<GetHTMLConfig, 'mode' | 'host'> = {},
+) {
   return getHTML(
     parent,
-    typeof selectorOrConfig === 'string' ? { selector: selectorOrConfig, host, mode: 'innerHTML' } : { ...selectorOrConfig, host, mode: 'innerHTML' }
+    typeof selectorOrConfig === 'string'
+      ? { selector: selectorOrConfig, host, mode: 'innerHTML' }
+      : { ...selectorOrConfig, host, mode: 'innerHTML' },
   )
 }
 
-export function getOuterHTML(host: string, parent: ParentNode, selectorOrConfig: string | Omit<GetHTMLConfig, 'mode' | 'host'> = {}) {
+export function getOuterHTML(
+  host: string,
+  parent: ParentNode,
+  selectorOrConfig: string | Omit<GetHTMLConfig, 'mode' | 'host'> = {},
+) {
   return getHTML(
     parent,
-    typeof selectorOrConfig === 'string' ? { selector: selectorOrConfig, host, mode: 'outerHTML' } : { ...selectorOrConfig, host, mode: 'outerHTML' }
+    typeof selectorOrConfig === 'string'
+      ? { selector: selectorOrConfig, host, mode: 'outerHTML' }
+      : { ...selectorOrConfig, host, mode: 'outerHTML' },
   )
 }
 
@@ -186,7 +224,10 @@ export function getFullLink(host: string, el: Element, attr: string): string {
  * xhtml returns small case
  */
 export function isTagName(node: Node, tagName: string): boolean {
-  return ((node as HTMLElement).tagName || '').toLowerCase() === tagName.toLowerCase()
+  return (
+    ((node as HTMLElement).tagName || '').toLowerCase() ===
+    tagName.toLowerCase()
+  )
 }
 
 export const isInternalPage = () => false

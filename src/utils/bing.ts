@@ -1,4 +1,9 @@
-import { handleNoResult, getText, getInnerHTML, DictSearchResult } from './index'
+import {
+  handleNoResult,
+  getText,
+  getInnerHTML,
+  DictSearchResult,
+} from './index'
 
 const HOST = 'https://cn.bing.com'
 
@@ -32,7 +37,7 @@ export interface BingResultLex {
   }>
 }
 
-type BingConfigOption={
+type BingConfigOption = {
   tense: boolean
   phsym: boolean
   cdef: boolean
@@ -61,8 +66,8 @@ export function handleLexResult(
         const $audio = el.querySelector('.client_aud_o')
         if ($audio) {
           pron = $audio.getAttribute('data-pronunciation')
-          if(pron && pron.startsWith("/")) {
-            pron = HOST + pron;
+          if (pron && pron.startsWith('/')) {
+            pron = HOST + pron
           }
         }
         return {
@@ -71,14 +76,17 @@ export function handleLexResult(
         }
       })
 
-      searchResult.audio = searchResult.result.phsym.reduce((audio: any, { lang, pron }) => {
-        if (/us|美/i.test(lang)) {
-          audio.us = pron
-        } else if (/uk|英/i.test(lang)) {
-          audio.uk = pron
-        }
-        return audio
-      }, {})
+      searchResult.audio = searchResult.result.phsym.reduce(
+        (audio: any, { lang, pron }) => {
+          if (/us|美/i.test(lang)) {
+            audio.us = pron
+          } else if (/uk|英/i.test(lang)) {
+            audio.uk = pron
+          }
+          return audio
+        },
+        {},
+      )
     }
   }
 
@@ -100,19 +108,27 @@ export function handleLexResult(
   if (options.tense) {
     const $infs = Array.from(doc.querySelectorAll('.client_word_change_word'))
     if ($infs.length > 0) {
-      searchResult.result.infs = $infs.map((el) => (el.textContent || '').trim())
+      searchResult.result.infs = $infs.map((el) =>
+        (el.textContent || '').trim(),
+      )
     }
   }
 
   if (options.sentence > 0) {
     const $sens = doc.querySelectorAll('.client_sentence_list')
     const sentences: typeof searchResult.result.sentences = []
-    for (let i = 0; i < $sens.length && sentences.length < options.sentence; i++) {
+    for (
+      let i = 0;
+      i < $sens.length && sentences.length < options.sentence;
+      i++
+    ) {
       const el = $sens[i]
       let mp3 = ''
       const $audio = el.querySelector('.client_aud_o')
       if ($audio) {
-        mp3 = (($audio.getAttribute('onclick') || '').match(/https.*\.mp3/) || [''])[0]
+        mp3 = (($audio.getAttribute('onclick') || '').match(/https.*\.mp3/) || [
+          '',
+        ])[0]
       }
       el.querySelectorAll('.client_sen_en_word').forEach(($word) => {
         $word.outerHTML = getText($word)
@@ -141,4 +157,3 @@ export function handleLexResult(
   }
   return null
 }
-

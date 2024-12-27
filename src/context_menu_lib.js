@@ -174,12 +174,12 @@ const isoLangs = {
   xh: 'Xhosa',
   yi: 'Yiddish',
   yo: 'Yoruba',
-  za: 'Zhuang'
+  za: 'Zhuang',
 }
 
 export function get_dict_definition_url(dictUrl, text) {
-  return dictUrl.includes('%wd_text%') ?
-    dictUrl.replace('%wd_text%', encodeURIComponent(text))
+  return dictUrl.includes('%wd_text%')
+    ? dictUrl.replace('%wd_text%', encodeURIComponent(text))
     : dictUrl + encodeURIComponent(text)
 }
 
@@ -188,8 +188,13 @@ function openUrl(url) {
 }
 
 function copy_vocabulary() {
-  const voca = Array.from(new Set(Array.from(document.querySelectorAll('wdhl[lemma]'))
-    .map(ele => ele.getAttribute('lemma')))).join('\r\n')
+  const voca = Array.from(
+    new Set(
+      Array.from(document.querySelectorAll('wdhl[lemma]')).map((ele) =>
+        ele.getAttribute('lemma'),
+      ),
+    ),
+  ).join('\r\n')
   const textArea = document.createElement('textarea')
   textArea.value = voca
   textArea.style.position = 'fixed'
@@ -205,7 +210,7 @@ function copy_vocabulary() {
 export function showDefinition(dictUrl, text) {
   const fullUrl = get_dict_definition_url(dictUrl, text)
   if (fullUrl.startsWith('http')) {
-    chrome.tabs.create({ url: fullUrl }, function(tab) {
+    chrome.tabs.create({ url: fullUrl }, function (tab) {
       // opens definition in a new tab
     })
   } else {
@@ -218,7 +223,7 @@ export function createDictionaryEntry(dictPairs) {
     chrome.contextMenus.create({
       title: dictPairs[i].title,
       contexts: ['selection'],
-      id: `wd_define_${i}`
+      id: `wd_define_${i}`,
     })
   }
 }
@@ -238,37 +243,37 @@ export function make_default_online_dicts() {
     const langName = isoLangs[uiLang]
     result.push({
       title: `Translate to ${langName} in Google`,
-      url: `https://translate.google.com/#en/${uiLang}/`
+      url: `https://translate.google.com/#en/${uiLang}/`,
     })
   }
   result.push({
     title: 'Define in Merriam-Webster',
-    url: 'https://www.merriam-webster.com/dictionary/'
+    url: 'https://www.merriam-webster.com/dictionary/',
   })
   result.push({
     title: 'Define in Google',
-    url: 'https://encrypted.google.com/search?hl=en&gl=en&q=define:'
+    url: 'https://encrypted.google.com/search?hl=en&gl=en&q=define:',
   })
   result.push({
     title: 'View pictures in Google',
-    url: 'https://encrypted.google.com/search?hl=en&gl=en&tbm=isch&q='
+    url: 'https://encrypted.google.com/search?hl=en&gl=en&tbm=isch&q=',
   })
   return result
 }
 
 export function initContextMenus(dictPairs) {
-  chrome.contextMenus.removeAll(function() {
+  chrome.contextMenus.removeAll(function () {
     const title = chrome.i18n.getMessage('menuItem')
     chrome.contextMenus.create({
       title,
       contexts: ['selection'],
-      id: 'vocab_select_add'
+      id: 'vocab_select_add',
     })
     chrome.contextMenus.create({
       title: 'Copy Vocabulary',
-      id: 'vocab_copy'
+      id: 'vocab_copy',
     })
-    chrome.contextMenus.onClicked.addListener(function(info, tab) {
+    chrome.contextMenus.onClicked.addListener(function (info, tab) {
       console.log('ContextMenus', info)
       const word = info.selectionText
       if (info.menuItemId === 'vocab_select_add') {
@@ -284,7 +289,7 @@ export function initContextMenus(dictPairs) {
     chrome.contextMenus.create({
       type: 'separator',
       contexts: ['selection'],
-      id: 'wd_separator_id'
+      id: 'wd_separator_id',
     })
     createDictionaryEntry(dictPairs)
   })

@@ -5,7 +5,7 @@ const list_section_names = {
 }
 
 function process_delete_simple(list_name, key) {
-  chrome.storage.sync.get([list_name], function(result) {
+  chrome.storage.sync.get([list_name], function (result) {
     const user_list = result[list_name]
     delete user_list[key]
     chrome.storage.sync.set({ [list_name]: user_list })
@@ -16,8 +16,9 @@ function process_delete_simple(list_name, key) {
 function process_delete_vocab_entry(key) {
   chrome.storage.local.get(
     ['wd_user_vocabulary', 'wd_user_vocab_added', 'wd_user_vocab_deleted'],
-    function(result) {
-      const {wd_user_vocabulary, wd_user_vocab_added,wd_user_vocab_deleted } = result
+    function (result) {
+      const { wd_user_vocabulary, wd_user_vocab_added, wd_user_vocab_deleted } =
+        result
       const new_state = { wd_user_vocabulary }
       delete wd_user_vocabulary[key]
       if (typeof wd_user_vocab_added !== 'undefined') {
@@ -39,11 +40,11 @@ function create_button(list_name, text) {
   result.setAttribute('class', 'deleteButton')
   result.expression_text = text
   if (list_name === 'wd_user_vocabulary') {
-    result.addEventListener('click', function() {
+    result.addEventListener('click', function () {
       process_delete_vocab_entry(this.expression_text)
     })
   } else {
-    result.addEventListener('click', function() {
+    result.addEventListener('click', function () {
       process_delete_simple(list_name, this.expression_text)
     })
   }
@@ -79,15 +80,15 @@ function show_user_list(list_name, user_list) {
     div_element.appendChild(document.createElement('br'))
     return
   }
-  let total = keys.length;
-  let batchSize = 100;
-  let loopCount = Math.ceil(total / batchSize);
-  let countRender = 0;
+  let total = keys.length
+  let batchSize = 100
+  let loopCount = Math.ceil(total / batchSize)
+  let countRender = 0
   function render() {
-    const targetElement = div_element;
-    const fragment = document.createDocumentFragment();
+    const targetElement = div_element
+    const fragment = document.createDocumentFragment()
     for (let i = 0; i < batchSize; i++) {
-      const ii = i + batchSize* countRender
+      const ii = i + batchSize * countRender
       if (ii >= total) break
       const key = keys[ii]
       if (key.indexOf("'") !== -1 || key.indexOf('"') !== -1) {
@@ -97,10 +98,10 @@ function show_user_list(list_name, user_list) {
       fragment.appendChild(create_label(key))
       fragment.appendChild(document.createElement('br'))
     }
-    targetElement.appendChild(fragment);
-    countRender++;
+    targetElement.appendChild(fragment)
+    countRender++
     if (countRender < loopCount) {
-      window.requestAnimationFrame(render);
+      window.requestAnimationFrame(render)
     }
   }
   render()
@@ -117,14 +118,16 @@ function process_display() {
     list_name = 'wd_user_vocabulary'
   }
 
-  const storage = list_name === 'wd_user_vocabulary' ?
-    chrome.storage.local : chrome.storage.sync
-  storage.get([list_name], function(result) {
+  const storage =
+    list_name === 'wd_user_vocabulary'
+      ? chrome.storage.local
+      : chrome.storage.sync
+  storage.get([list_name], function (result) {
     const user_list = result[list_name]
     show_user_list(list_name, user_list)
   })
 }
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function (event) {
   process_display()
 })

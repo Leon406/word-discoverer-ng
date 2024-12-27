@@ -1,5 +1,14 @@
-import { idClickFunc, localizeHtmlPage, make_hl_style, open_local_tab } from './common_lib'
-import { get_dict_definition_url, initContextMenus, make_default_online_dicts } from './context_menu_lib'
+import {
+  idClickFunc,
+  localizeHtmlPage,
+  make_hl_style,
+  open_local_tab,
+} from './common_lib'
+import {
+  get_dict_definition_url,
+  initContextMenus,
+  make_default_online_dicts,
+} from './context_menu_lib'
 import { saveAs } from 'file-saver'
 
 let wd_hl_settings = null
@@ -7,7 +16,7 @@ let wd_hover_settings = null
 let wd_online_dicts = null
 let wd_enable_tts = false
 let wd_enable_prefetch = false
-let wd_online_vocabulary_url = ""
+let wd_online_vocabulary_url = ''
 
 const wc_rb_ids = ['wc1', 'wc2', 'wc3', 'wc4', 'wc5']
 const ic_rb_ids = ['ic1', 'ic2', 'ic3', 'ic4', 'ic5']
@@ -23,7 +32,7 @@ function process_test_warnings() {
 
 function process_get_dbg() {
   const storage_key = document.getElementById('getFromStorageKey').value
-  chrome.storage.local.get([storage_key], function(result) {
+  chrome.storage.local.get([storage_key], function (result) {
     const storage_value = result[storage_key]
     console.log(`key: ${storage_key}; value: ${JSON.stringify(storage_value)}`)
   })
@@ -39,14 +48,14 @@ function process_set_dbg() {
     storage_value = JSON.parse(storage_value)
   }
   console.log(`storage_key:${storage_key}, storage_value:${storage_value}`)
-  chrome.storage.local.set({ [storage_key]: storage_value }, function() {
-    console.log(`last_error:${(chrome.runtime.lastError)}`)
+  chrome.storage.local.set({ [storage_key]: storage_value }, function () {
+    console.log(`last_error:${chrome.runtime.lastError}`)
     console.log('finished setting value')
   })
 }
 
 function process_export() {
-  chrome.storage.local.get(['wd_user_vocabulary'], function(result) {
+  chrome.storage.local.get(['wd_user_vocabulary'], function (result) {
     const user_vocabulary = result.wd_user_vocabulary
     const keys = []
     Object.keys(user_vocabulary).forEach((key) => {
@@ -65,21 +74,25 @@ function process_import() {
 }
 
 function process_config_export() {
-  chrome.storage.sync.get([
-    'wd_hl_settings',
-    'wd_hover_settings',
-    'wd_online_dicts',
-    'wd_developer_mode',
-    'wd_enable_tts',
-    'wd_enable_prefetch',
-    'wd_online_vocabulary_url',
-  ], function(config) {
-
-    const file_content = JSON.stringify(config)
-    console.log(file_content)
-    const blob = new Blob([file_content], { type: 'text/plain;charset=utf-8' })
-    saveAs(blob, 'wd_config.json', true)
-  })
+  chrome.storage.sync.get(
+    [
+      'wd_hl_settings',
+      'wd_hover_settings',
+      'wd_online_dicts',
+      'wd_developer_mode',
+      'wd_enable_tts',
+      'wd_enable_prefetch',
+      'wd_online_vocabulary_url',
+    ],
+    function (config) {
+      const file_content = JSON.stringify(config)
+      console.log(file_content)
+      const blob = new Blob([file_content], {
+        type: 'text/plain;charset=utf-8',
+      })
+      saveAs(blob, 'wd_config.json', true)
+    },
+  )
 }
 
 function process_config_import() {
@@ -90,12 +103,11 @@ function process_config_import() {
     return
   }
   const reader = new FileReader()
-  reader.onload = function(e) {
+  reader.onload = function (e) {
     let config = reader.result
     console.log('config', JSON.parse(config))
 
-    chrome.storage.sync.set(JSON.parse(config))
-      .then(reloadData)
+    chrome.storage.sync.set(JSON.parse(config)).then(reloadData)
   }
   reader.readAsText(file)
 }
@@ -204,8 +216,7 @@ function process_test_new_dict() {
 function _openDict(dictUrl) {
   const url = get_dict_definition_url(dictUrl, 'test')
   if (url.startsWith('http')) {
-    chrome.tabs.create({ url }, function(tab) {
-    })
+    chrome.tabs.create({ url }, function (tab) {})
   } else {
     openUrl(url)
   }
@@ -267,9 +278,9 @@ function show_internal_state() {
 }
 
 function add_cb_event_listener(id, dst_params, dst_key) {
-  document.getElementById(id).addEventListener('click', function() {
+  document.getElementById(id).addEventListener('click', function () {
     const checkboxElem = document.getElementById(id)
-    dst_params[dst_key] = !!checkboxElem.checked;
+    dst_params[dst_key] = !!checkboxElem.checked
     show_internal_state()
   })
 }
@@ -286,7 +297,7 @@ function process_rb(dst_params, dst_key, ids) {
 
 function handle_rb_loop(ids, dst_params, dst_key) {
   for (let i = 0; i < ids.length; i++) {
-    document.getElementById(ids[i]).addEventListener('click', function() {
+    document.getElementById(ids[i]).addEventListener('click', function () {
       process_rb(dst_params, dst_key, ids)
     })
   }
@@ -337,9 +348,9 @@ function reloadData() {
       'wd_developer_mode',
       'wd_enable_tts',
       'wd_enable_prefetch',
-      "wd_online_vocabulary_url",
+      'wd_online_vocabulary_url',
     ],
-    function(result) {
+    function (result) {
       assign_back_labels()
       wd_hl_settings = result.wd_hl_settings
       wd_hover_settings = result.wd_hover_settings
@@ -357,14 +368,34 @@ function reloadData() {
       handle_rb_loop(wb_rb_ids, wd_hl_settings.wordParams, 'backgroundColor')
       handle_rb_loop(ib_rb_ids, wd_hl_settings.idiomParams, 'backgroundColor')
 
-      add_cb_event_listener('wordsEnabled', wd_hl_settings.wordParams, 'enabled')
-      add_cb_event_listener('idiomsEnabled', wd_hl_settings.idiomParams, 'enabled')
+      add_cb_event_listener(
+        'wordsEnabled',
+        wd_hl_settings.wordParams,
+        'enabled',
+      )
+      add_cb_event_listener(
+        'idiomsEnabled',
+        wd_hl_settings.idiomParams,
+        'enabled',
+      )
       add_cb_event_listener('wordsBold', wd_hl_settings.wordParams, 'bold')
       add_cb_event_listener('idiomsBold', wd_hl_settings.idiomParams, 'bold')
-      add_cb_event_listener('wordsBackground', wd_hl_settings.wordParams, 'useBackground')
-      add_cb_event_listener('idiomsBackground', wd_hl_settings.idiomParams, 'useBackground')
+      add_cb_event_listener(
+        'wordsBackground',
+        wd_hl_settings.wordParams,
+        'useBackground',
+      )
+      add_cb_event_listener(
+        'idiomsBackground',
+        wd_hl_settings.idiomParams,
+        'useBackground',
+      )
       add_cb_event_listener('wordsColor', wd_hl_settings.wordParams, 'useColor')
-      add_cb_event_listener('idiomsColor', wd_hl_settings.idiomParams, 'useColor')
+      add_cb_event_listener(
+        'idiomsColor',
+        wd_hl_settings.idiomParams,
+        'useColor',
+      )
 
       add_hover_rb_listeners()
 
@@ -378,30 +409,28 @@ function reloadData() {
       idClickFunc('exportConfig', process_config_export)
       idClickFunc('importConfig', process_config_import)
 
-
       idClickFunc('getFromStorageBtn', process_get_dbg)
       idClickFunc('setToStorageBtn', process_set_dbg)
-
 
       idClickFunc('testManifestWarningsBtn', process_test_warnings)
       idClickFunc('addDict', process_add_dict)
       idClickFunc('testNewDict', process_test_new_dict)
-      idClickFunc('saveVisuals', function() {
+      idClickFunc('saveVisuals', function () {
         chrome.storage.sync.set({ wd_hl_settings })
       })
-      idClickFunc('defaultDicts', function() {
+      idClickFunc('defaultDicts', function () {
         wd_online_dicts = make_default_online_dicts()
         chrome.storage.sync.set({ wd_online_dicts })
         initContextMenus(wd_online_dicts)
         show_user_dicts()
       })
 
-      idClickFunc('pronunciationEnabled', function(e) {
+      idClickFunc('pronunciationEnabled', function (e) {
         wd_enable_tts = e.target.checked
         chrome.storage.sync.set({ wd_enable_tts })
       })
 
-      idClickFunc('bingPrefetchEnabled', function(e) {
+      idClickFunc('bingPrefetchEnabled', function (e) {
         wd_enable_prefetch = e.target.checked
         chrome.storage.sync.set({ wd_enable_prefetch })
       })
@@ -410,16 +439,15 @@ function reloadData() {
       if (wd_online_vocabulary_url) {
         onlineVocabularyEle.value = wd_online_vocabulary_url
       }
-      onlineVocabularyEle
-        .addEventListener('blur', function(e){
-          wd_online_vocabulary_url = e.target.value
-          if (wd_online_vocabulary_url.startsWith("http")){
-            chrome.storage.sync.set({ wd_online_vocabulary_url })
-          }
-        });
+      onlineVocabularyEle.addEventListener('blur', function (e) {
+        wd_online_vocabulary_url = e.target.value
+        if (wd_online_vocabulary_url.startsWith('http')) {
+          chrome.storage.sync.set({ wd_online_vocabulary_url })
+        }
+      })
 
       show_internal_state()
-    }
+    },
   )
 }
 
@@ -427,7 +455,7 @@ function process_display() {
   window.onload = reloadData
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   localizeHtmlPage()
   process_display()
 })

@@ -13,22 +13,17 @@ export function eval_func(func, args = []) {
     chrome.scripting.executeScript({
       target: { tabId: tabs[0].id },
       func,
-      args
+      args,
     })
   })
 }
 
-export function open_local_tab(url,cb) {
-  chrome.tabs.create(
-    { url: chrome.runtime.getURL(url) },
-    cb,
-  )
+export function open_local_tab(url, cb) {
+  chrome.tabs.create({ url: chrome.runtime.getURL(url) }, cb)
 }
 
 export function idClickFunc(id, func) {
-  document
-    .getElementById(id)
-    .addEventListener('click', func)
+  document.getElementById(id).addEventListener('click', func)
 }
 
 export function make_id_suffix(text) {
@@ -127,4 +122,3 @@ export function localizeHtmlPage() {
     }
   }
 }
-

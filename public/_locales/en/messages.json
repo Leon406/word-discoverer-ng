@@ -1,149 +1,149 @@
 {
-    "appName": {
-        "message": "Word Discoverer: Expand your vocabulary",
-        "description": "The title of the application, displayed in the web store. Note to the translator: Do not translate first two words 'Words Discoverer'"
-    },
-    "appDesc": {
-        "message": "Highlights rare English dictionary words and idioms on web pages. Facilitates English language learning and expands your vocabulary.",
-        "description":"The description of the application, displayed in the web store."
-    },
-    "menuItem": {
-        "message": "Add to vocabulary",
-        "description": "Text in context menu"
-    },
-    "rateTranslateDbg": {
-        "message": "Not highlighting 100 most common English words"
-    },
-    "rateInfo1": {
-        "message": "Not highlighting",
-        "description": "1-st part of \"Not highlighting 100 most common English words\" sentence"
-    },
-    "rateInfo2": {
-        "message": "most common English words.",
-        "description": "2-nd part of \"Not highlighting 100 most common English words\" sentence"
-    },
-    "adjust": {
-        "message": "More Settings..."
-    },
-    "vocabSizeTranslateDbg": {
-        "message": "Your vocabulary size: 100 words."
-    },
-    "vocabSizeInfo1": {
-        "message": "Your vocabulary size:",
-        "description": "1-st part of \"Your vocabulary size: 100 words.\" sentence"
-    },
-    "vocabSizeInfo2": {
-        "message": "words.",
-        "description": "2-nd part of \"Your vocabulary size: 100 words.\" sentence"
-    },
-    "showVocab": {
-        "message": "Show Vocabulary"
-    },
-    "saveVocab": {
-        "message": "Export Vocabulary"
-    },
-    "loadVocab": {
-        "message": "Import Vocabulary"
-    },
-    "tipInfo": {
-        "message": "To add a new expression to your vocabulary you can use mouse hover menu or browser context menu (select text + right click) or this input field:"
-    },
-    "addErrorDupp": {
-        "message": "Already added."
-    },
-    "addErrorBad": {
-        "message": "Unable to add."
-    },
-    "addSuccess": {
-        "message": "Added."
-    },
-    "saveVisuals": {
-        "message": "Save"
-    },
-    "enableWordsLabel": {
-        "message": "Enable words highlighting"
-    },
-    "enableIdiomsLabel": {
-        "message": "Enable expressions highlighting"
-    },
-    "useQuotes": {
-        "message": "Use quotes (instead of highlighting)"
-    },
-    "useText": {
-        "message": "Use text highlighting"
-    },
-    "useBackground": {
-        "message": "Use background highlighting"
-    },
-    "useBold": {
-        "message": "Use bold font"
-    },
-    "enabledDescription": {
-        "message": "Highlight all Internet except \"Skip List\" sites"
-    },
-    "disabledDescription": {
-        "message": "Highlight only \"Favorites List\" sites"
-    },
-    "addVerb": {
-        "message": "Add",
-        "description": "part of 'Add example.org to Favorites List' sentence"
-    },
-    "toVerb": {
-        "message": "to",
-        "description": "part of 'Add example.org to Favorites List' sentence"
-    },
-    "addTranslateDbg": {
-        "message": "Add [example.org] to [Favorites List]"
-    },
-    "addFavoritesLabel": {
-        "message": "Favorites List"
-    },
-    "addSkippedLabel": {
-        "message": "Skip List"
-    },
-    "emptyListError": {
-        "message": "The list is empty ;)"
-    },
-    "adjustPopupHlHeader": {
-        "message": "Adjust popup menu for highlighted expressions"
-    },
-    "rbNever": {
-        "message": "Do not show popup menu"
-    },
-    "rbKey": {
-        "message": "Show popup menu on mouse hover and [Ctrl] key"
-    },
-    "rbAlways": {
-        "message": "Show popup menu on mouse hover"
-    },
-    "adjustPopupOwHeader": {
-        "message": "Adjust popup menu for not highlighted words"
-    },
-    "adjustOnlineDicts": {
-        "message": "Adjust online dictionaries for hover and context menus"
-    },
-    "dictNameHeader": {
-        "message": "Dictionary Name:"
-    },
-    "dictUrlHeader": {
-        "message": "Dictionary query URL:"
-    },
-    "testBtn": {
-        "message": "Test"
-    },
-    "restoreDefaults": {
-        "message": "Restore Defaults"
-    },
-    "adjustColorsHeader": {
-        "message": "Adjust highlighting color"
-    },
-    "importInfo": {
-        "message": "New words will be added to your current vocabulary."
-    },
-    "selectFile": {
-        "message": "Select File..."
-    },
-    "switchModeLabel": {
-        "message": "Switch Mode"
-    }
+  "appName": {
+    "message": "Word Discoverer: Expand your vocabulary",
+    "description": "The title of the application, displayed in the web store. Note to the translator: Do not translate first two words 'Words Discoverer'"
+  },
+  "appDesc": {
+    "message": "Highlights rare English dictionary words and idioms on web pages. Facilitates English language learning and expands your vocabulary.",
+    "description": "The description of the application, displayed in the web store."
+  },
+  "menuItem": {
+    "message": "Add to vocabulary",
+    "description": "Text in context menu"
+  },
+  "rateTranslateDbg": {
+    "message": "Not highlighting 100 most common English words"
+  },
+  "rateInfo1": {
+    "message": "Not highlighting",
+    "description": "1-st part of \"Not highlighting 100 most common English words\" sentence"
+  },
+  "rateInfo2": {
+    "message": "most common English words.",
+    "description": "2-nd part of \"Not highlighting 100 most common English words\" sentence"
+  },
+  "adjust": {
+    "message": "More Settings..."
+  },
+  "vocabSizeTranslateDbg": {
+    "message": "Your vocabulary size: 100 words."
+  },
+  "vocabSizeInfo1": {
+    "message": "Your vocabulary size:",
+    "description": "1-st part of \"Your vocabulary size: 100 words.\" sentence"
+  },
+  "vocabSizeInfo2": {
+    "message": "words.",
+    "description": "2-nd part of \"Your vocabulary size: 100 words.\" sentence"
+  },
+  "showVocab": {
+    "message": "Show Vocabulary"
+  },
+  "saveVocab": {
+    "message": "Export Vocabulary"
+  },
+  "loadVocab": {
+    "message": "Import Vocabulary"
+  },
+  "tipInfo": {
+    "message": "To add a new expression to your vocabulary you can use mouse hover menu or browser context menu (select text + right click) or this input field:"
+  },
+  "addErrorDupp": {
+    "message": "Already added."
+  },
+  "addErrorBad": {
+    "message": "Unable to add."
+  },
+  "addSuccess": {
+    "message": "Added."
+  },
+  "saveVisuals": {
+    "message": "Save"
+  },
+  "enableWordsLabel": {
+    "message": "Enable words highlighting"
+  },
+  "enableIdiomsLabel": {
+    "message": "Enable expressions highlighting"
+  },
+  "useQuotes": {
+    "message": "Use quotes (instead of highlighting)"
+  },
+  "useText": {
+    "message": "Use text highlighting"
+  },
+  "useBackground": {
+    "message": "Use background highlighting"
+  },
+  "useBold": {
+    "message": "Use bold font"
+  },
+  "enabledDescription": {
+    "message": "Highlight all Internet except \"Skip List\" sites"
+  },
+  "disabledDescription": {
+    "message": "Highlight only \"Favorites List\" sites"
+  },
+  "addVerb": {
+    "message": "Add",
+    "description": "part of 'Add example.org to Favorites List' sentence"
+  },
+  "toVerb": {
+    "message": "to",
+    "description": "part of 'Add example.org to Favorites List' sentence"
+  },
+  "addTranslateDbg": {
+    "message": "Add [example.org] to [Favorites List]"
+  },
+  "addFavoritesLabel": {
+    "message": "Favorites List"
+  },
+  "addSkippedLabel": {
+    "message": "Skip List"
+  },
+  "emptyListError": {
+    "message": "The list is empty ;)"
+  },
+  "adjustPopupHlHeader": {
+    "message": "Adjust popup menu for highlighted expressions"
+  },
+  "rbNever": {
+    "message": "Do not show popup menu"
+  },
+  "rbKey": {
+    "message": "Show popup menu on mouse hover and [Ctrl] key"
+  },
+  "rbAlways": {
+    "message": "Show popup menu on mouse hover"
+  },
+  "adjustPopupOwHeader": {
+    "message": "Adjust popup menu for not highlighted words"
+  },
+  "adjustOnlineDicts": {
+    "message": "Adjust online dictionaries for hover and context menus"
+  },
+  "dictNameHeader": {
+    "message": "Dictionary Name:"
+  },
+  "dictUrlHeader": {
+    "message": "Dictionary query URL:"
+  },
+  "testBtn": {
+    "message": "Test"
+  },
+  "restoreDefaults": {
+    "message": "Restore Defaults"
+  },
+  "adjustColorsHeader": {
+    "message": "Adjust highlighting color"
+  },
+  "importInfo": {
+    "message": "New words will be added to your current vocabulary."
+  },
+  "selectFile": {
+    "message": "Select File..."
+  },
+  "switchModeLabel": {
+    "message": "Switch Mode"
+  }
 }

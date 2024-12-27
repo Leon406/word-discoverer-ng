@@ -3,7 +3,6 @@ import { handleLexResult } from './utils/bing'
 
 import { get_dict_definition_url } from './context_menu_lib'
 
-
 let dict_words = null
 let dict_idioms = null
 
@@ -20,7 +19,6 @@ let wd_enable_prefetch = null
 let disable_by_keypress = false
 
 let pre_words = new Set()
-
 
 let current_lexeme = ''
 let cur_wd_node_id = 1
@@ -118,26 +116,26 @@ function addPhoneticClickEvent() {
 function play(audioUrl) {
   console.debug('play', audioUrl)
   // try {
-  new Audio(audioUrl).play()
-    .catch((e) => {
-      console.error(e)
-      chrome.runtime.sendMessage(
-        {
-          type: 'fetchArrayBuffer',
-          audioUrl
-        },
-        (res) => {
-          const arraybuffer = new Uint8Array(JSON.parse(res).data).buffer
-          playArrayBuffer(arraybuffer)
-        }
-      )
-    })
+  new Audio(audioUrl).play().catch((e) => {
+    console.error(e)
+    chrome.runtime.sendMessage(
+      {
+        type: 'fetchArrayBuffer',
+        audioUrl,
+      },
+      (res) => {
+        const arraybuffer = new Uint8Array(JSON.parse(res).data).buffer
+        playArrayBuffer(arraybuffer)
+      },
+    )
+  })
 }
 
 /**播放 ArrayBuffer 音频*/
 function playArrayBuffer(arrayBuffer) {
   const context = new AudioContext()
-  context.decodeAudioData(arrayBuffer.slice(0), audioBuffer => { // `slice(0)`克隆一份（`decodeAudioData`后原数组清空）
+  context.decodeAudioData(arrayBuffer.slice(0), (audioBuffer) => {
+    // `slice(0)`克隆一份（`decodeAudioData`后原数组清空）
     const bufferSource = context.createBufferSource()
     bufferSource.buffer = audioBuffer
     bufferSource.connect(context.destination)
@@ -170,8 +168,7 @@ function renderBubble() {
   const bubbleDOM = document.getElementById('wd_selection_bubble')
   const bubbleText = document.getElementById('wd_selection_bubble_text')
   const bubbleFreq = document.getElementById('wd_selection_bubble_freq')
-  const wdnTranslateBingDom =
-    document.getElementById('wdn_translate_bing')
+  const wdnTranslateBingDom = document.getElementById('wdn_translate_bing')
   // 避免网络问题，显示上一次内容
   wdnTranslateBingDom.innerHTML = ''
 
@@ -185,7 +182,6 @@ function renderBubble() {
         <span id="play_uk" data-src="${bingResult.phsym[1].pron}">${bingResult.phsym[1].lang}</span>
       </div>`
     } else {
-
       phonetic_html = `<div>♫
       <a target="_blank" href="https://youglish.com/search/${q}">
       YouGlish</a>
@@ -198,7 +194,10 @@ function renderBubble() {
     if (bingResult.infs && bingResult.infs.length) {
       inf_html = `<div class="inflection"><span>词形变换</span>${bingResult.infs.map((c) => `${c}&nbsp;&nbsp;`).join('')}</div>`
     }
-    wdnTranslateBingDom.innerHTML = phonetic_html + `<div>${bingResult.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>` + inf_html
+    wdnTranslateBingDom.innerHTML =
+      phonetic_html +
+      `<div>${bingResult.cdef.map((c) => `<span>${c.pos}</span>${c.def}`).join('<br />')}</div>` +
+      inf_html
     addPhoneticClickEvent()
   }
 
@@ -220,7 +219,7 @@ function renderBubble() {
   chrome.runtime.sendMessage(
     {
       type: 'fetch',
-      q: wdSpanText
+      q: wdSpanText,
     },
     (res) => {
       const doc = new DOMParser().parseFromString(res, 'text/html')
@@ -232,9 +231,9 @@ function renderBubble() {
             phsym: true,
             cdef: true,
             related: false,
-            sentence: 0
+            sentence: 0,
           },
-          null
+          null,
         )
         if (lexResult) {
           const { result } = lexResult
@@ -245,14 +244,16 @@ function renderBubble() {
       } else {
         errorHtml()
       }
-    }
+    },
   )
 
   bubbleText.textContent = limit_text_len(wdSpanText)
   // if config third schema, use last one
-  let thirdDict = wd_online_dicts.findLast(dict => !dict.url.startsWith('http'))
+  let thirdDict = wd_online_dicts.findLast(
+    (dict) => !dict.url.startsWith('http'),
+  )
   if (thirdDict) {
-    bubbleText.onclick = function(e) {
+    bubbleText.onclick = function (e) {
       e.preventDefault()
       e.stopImmediatePropagation()
       window.open(get_dict_definition_url(thirdDict.url, wdSpanText))
@@ -265,8 +266,11 @@ function renderBubble() {
   bubbleFreq.textContent = prcntFreq ? `${level} K (${prcntFreq}%)` : 'n/a'
   if (lemma) {
     const rank = get_word_rank(q)
-    let pageLemmaCounts = lemma ? document.querySelectorAll(`wdhl[lemma="${lemma}"]`).length : 1
-    bubbleFreq.title = `count: ${pageLemmaCounts}` + (rank ? ` rank: ${rank}` : '')
+    let pageLemmaCounts = lemma
+      ? document.querySelectorAll(`wdhl[lemma="${lemma}"]`).length
+      : 1
+    bubbleFreq.title =
+      `count: ${pageLemmaCounts}` + (rank ? ` rank: ${rank}` : '')
   }
 
   bubbleFreq.style.backgroundColor = getHeatColorPoint(prcntFreq)
@@ -277,7 +281,10 @@ function renderBubble() {
 
   let topPx = Math.min(maxTop, bcr.bottom)
   bubbleDOM.style.top = `${topPx}px`
-  let leftPx = Math.min(maxLeft, Math.max(5, Math.floor((bcr.left + bcr.right) / 2) - 100))
+  let leftPx = Math.min(
+    maxLeft,
+    Math.max(5, Math.floor((bcr.left + bcr.right) / 2) - 100),
+  )
   bubbleDOM.style.left = `${leftPx}px`
   bubbleDOM.style.display = 'block'
   rendered_node_id = node_to_render_id
@@ -301,7 +308,7 @@ function hideBubble(force) {
 
 function process_hl_leave() {
   node_to_render_id = null
-  setTimeout(function() {
+  setTimeout(function () {
     hideBubble(false)
   }, 100)
 }
@@ -324,7 +331,7 @@ function processMouse(e) {
     return
   }
   node_to_render_id = hitNode.id
-  setTimeout(function() {
+  setTimeout(function () {
     renderBubble()
   }, 200)
 }
@@ -337,10 +344,12 @@ function preFetchBing(w) {
     chrome.runtime.sendMessage(
       {
         type: 'fetch',
-        q: q
-      }, function(res) {
+        q: q,
+      },
+      function (res) {
         console.log(`prefetch ${q}`)
-      })
+      },
+    )
   }
 }
 
@@ -348,7 +357,7 @@ function text_to_hl_nodes(text, dst) {
   const lc_text = text.toLowerCase()
   let ws_text = lc_text.replace(
     /[,;()?!`:".\s\-\u2013\u2014\u201C\u201D]/g,
-    ' '
+    ' ',
   )
 
   ws_text = ws_text.replace(/[^\w '\u2019]/g, '.')
@@ -394,7 +403,7 @@ function text_to_hl_nodes(text, dst) {
             normalized: wf,
             kind: 'idiom',
             begin: ibegin,
-            end: ibegin + mwe_prefix.length
+            end: ibegin + mwe_prefix.length,
           }
           ibegin += mwe_prefix.length + 1
           num_good += lwnum - wnum + 1
@@ -412,7 +421,7 @@ function text_to_hl_nodes(text, dst) {
           normalized: lemma,
           kind: 'lemma',
           begin: ibegin,
-          end: ibegin + tokens[wnum].length
+          end: ibegin + tokens[wnum].length,
         }
         ibegin += tokens[wnum].length + 1
         wnum += 1
@@ -429,7 +438,7 @@ function text_to_hl_nodes(text, dst) {
         normalized: null,
         kind: 'word',
         begin: ibegin,
-        end: ibegin + tokens[wnum].length
+        end: ibegin + tokens[wnum].length,
       }
       ibegin += tokens[wnum].length + 1
       wnum += 1
@@ -461,14 +470,13 @@ function text_to_hl_nodes(text, dst) {
       const hlParams = wd_hl_settings.idiomParams
       text_style = make_hl_style(hlParams)
     } else if (match.kind === 'word') {
-      text_style =
-        'font:inherit;color:inherit;background-color:inherit;'
+      text_style = 'font:inherit;color:inherit;background-color:inherit;'
     }
     if (text_style) {
       insert_count += 1
       if (last_hl_end_pos < match.begin) {
         dst.push(
-          document.createTextNode(text.slice(last_hl_end_pos, match.begin))
+          document.createTextNode(text.slice(last_hl_end_pos, match.begin)),
         )
       }
       last_hl_end_pos = match.end
@@ -520,10 +528,10 @@ const invalidTags = [
   'OBJECT',
   'WH-ROOT',
   'WDHL',
-  'W-MARK-T'
+  'W-MARK-T',
 ]
-const EN_REG = /\b[a-z'’]{2,}\b/ig
-const SCHEMA_REG = /:\/\//ig
+const EN_REG = /\b[a-z'’]{2,}\b/gi
+const SCHEMA_REG = /:\/\//gi
 
 function filterType(node) {
   // 过滤可编辑文本
@@ -549,8 +557,10 @@ function filterType(node) {
   if (node.parentNode.closest('mat-option,mat-select,.wdSelectionBubble')) {
     return NodeFilter.FILTER_SKIP
   }
-  return invalidTags.includes(node.tagName) || invalidTags.includes(node.parentNode.tagName) ?
-    NodeFilter.FILTER_SKIP : NodeFilter.FILTER_ACCEPT
+  return invalidTags.includes(node.tagName) ||
+    invalidTags.includes(node.parentNode.tagName)
+    ? NodeFilter.FILTER_SKIP
+    : NodeFilter.FILTER_ACCEPT
 }
 
 function textNodesUnder(el) {
@@ -560,7 +570,7 @@ function textNodesUnder(el) {
     el,
     NodeFilter.SHOW_TEXT,
     filterType,
-    false
+    false,
   )
   while ((n = walk.nextNode())) {
     a.push(n)
@@ -593,14 +603,22 @@ function doHighlightText(textNodes) {
       num_found += found_count
       const parent_node = textNodes[i].parentNode
       // 修复flex 空格失效
-      let computedValue = getComputedStyle(parent_node) || document.defaultView.getComputedStyle(parent_node)
-      console.log("doHighlightText",parent_node.textContent,computedValue.display)
-      const isFlex = computedValue.display === 'flex' || computedValue.display === 'inline-flex'
+      let computedValue =
+        getComputedStyle(parent_node) ||
+        document.defaultView.getComputedStyle(parent_node)
+      console.log(
+        'doHighlightText',
+        parent_node.textContent,
+        computedValue.display,
+      )
+      const isFlex =
+        computedValue.display === 'flex' ||
+        computedValue.display === 'inline-flex'
       assert(new_children.length > 0, 'children must be non empty')
       for (let j = 0; j < new_children.length; j++) {
         const child = new_children[j]
         if (isFlex) {
-          child.className = "fix"
+          child.className = 'fix'
         }
         parent_node.insertBefore(child, textNodes[i])
       }
@@ -633,7 +651,10 @@ function onNodeChanged(event) {
   if (!classattr || !classattr.startsWith('wdhl_')) {
     const textNodes = textNodesUnder(inobj)
     if (textNodes.length) {
-      console.log('onNodeChanged highlight', textNodes.map(e => e.textContent))
+      console.log(
+        'onNodeChanged highlight',
+        textNodes.map((e) => e.textContent),
+      )
       doHighlightText(textNodes)
     }
   }
@@ -642,17 +663,17 @@ function onNodeChanged(event) {
 function unhighlight(lemma) {
   const wdclassname = make_class_name(lemma)
   const hlNodes = document.getElementsByClassName(wdclassname)
-  Array.from(hlNodes).forEach(span => {
+  Array.from(hlNodes).forEach((span) => {
     span.setAttribute(
       'style',
-      'font-weight:inherit;color:inherit;background-color:inherit;'
+      'font-weight:inherit;color:inherit;background-color:inherit;',
     )
     span.setAttribute('class', 'wdhl_none_none')
   })
 }
 
 function get_verdict(isEnabled, black_list, white_list, callback_func) {
-  chrome.runtime.sendMessage({ wdm_request: 'hostname' }, function(response) {
+  chrome.runtime.sendMessage({ wdm_request: 'hostname' }, function (response) {
     if (!response) {
       callback_func('unknown error')
       return
@@ -672,7 +693,7 @@ function get_verdict(isEnabled, black_list, white_list, callback_func) {
     }
     chrome.runtime.sendMessage(
       { wdm_request: 'page_language' },
-      function(lang_response) {
+      function (lang_response) {
         if (!lang_response) {
           callback_func('unknown error')
           return
@@ -680,9 +701,9 @@ function get_verdict(isEnabled, black_list, white_list, callback_func) {
         callback_func(
           lang_response.wdm_iso_language_code === 'en'
             ? 'highlight'
-            : 'page language is not English'
+            : 'page language is not English',
         )
-      }
+      },
     )
   })
 }
@@ -722,7 +743,7 @@ function create_bubble() {
   addButton.setAttribute('class', 'wdAddButton')
   addButton.textContent = chrome.i18n.getMessage('menuItem')
   addButton.style.marginBottom = '4px'
-  addButton.addEventListener('click', function() {
+  addButton.addEventListener('click', function () {
     add_lexeme(current_lexeme, bubble_handle_add_result)
     user_vocabulary[current_lexeme] = 1
   })
@@ -732,7 +753,7 @@ function create_bubble() {
   speakButton.setAttribute('class', 'wdAddButton')
   speakButton.textContent = 'Audio'
   speakButton.style.marginBottom = '4px'
-  speakButton.addEventListener('click', function() {
+  speakButton.addEventListener('click', function () {
     bubble_handle_tts(current_lexeme)
   })
   addAndAudioWrapDom.appendChild(speakButton)
@@ -740,11 +761,11 @@ function create_bubble() {
   div.id = 'wdn_translate_bing'
   bubbleDOM.appendChild(div)
 
-  bubbleDOM.addEventListener('mouseleave', function(e) {
+  bubbleDOM.addEventListener('mouseleave', function (e) {
     bubbleDOM.wdMouseOn = false
     hideBubble(false)
   })
-  bubbleDOM.addEventListener('mouseenter', function(e) {
+  bubbleDOM.addEventListener('mouseenter', function (e) {
     bubbleDOM.wdMouseOn = true
   })
 
@@ -755,21 +776,17 @@ function initForPage() {
   if (!document.body) return
 
   chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
+    function (request, sender, sendResponse) {
       if (request.wdm_unhighlight) {
         const lemma = request.wdm_unhighlight
         unhighlight(lemma)
       }
-    }
+    },
   )
 
   chrome.storage.local.get(
-    [
-      'words_discoverer_eng_dict',
-      'wd_idioms',
-      'wd_user_vocabulary'
-    ],
-    function(result) {
+    ['words_discoverer_eng_dict', 'wd_idioms', 'wd_user_vocabulary'],
+    function (result) {
       dict_words = result.words_discoverer_eng_dict
       dict_idioms = result.wd_idioms
       user_vocabulary = result.wd_user_vocabulary
@@ -784,9 +801,9 @@ function initForPage() {
           'wd_white_list',
           'wd_word_max_rank',
           'wd_enable_prefetch',
-          'wd_enable_tts'
+          'wd_enable_tts',
         ],
-        function(config) {
+        function (config) {
           wd_online_dicts = config.wd_online_dicts
           wd_enable_tts = config.wd_enable_tts
           wd_enable_prefetch = config.wd_enable_prefetch
@@ -798,14 +815,19 @@ function initForPage() {
           is_enabled = config.wd_is_enabled
           const black_list = config.wd_black_list
           const white_list = config.wd_white_list
-          get_verdict(is_enabled, black_list, white_list, function(verdict) {
+          get_verdict(is_enabled, black_list, white_list, function (verdict) {
             console.log('get_verdict', verdict)
             chrome.runtime.sendMessage({ wdm_verdict: verdict })
             // 支持非英文网页
-            if (verdict !== 'highlight' && verdict !== 'page language is not English') return
+            if (
+              verdict !== 'highlight' &&
+              verdict !== 'page language is not English'
+            )
+              return
 
-            document.addEventListener('keydown', function(event) {
-              if (event.keyCode === 17) { // Ctrl
+            document.addEventListener('keydown', function (event) {
+              if (event.keyCode === 17) {
+                // Ctrl
                 function_key_is_pressed = true
                 renderBubble()
                 return
@@ -820,8 +842,9 @@ function initForPage() {
               }
             })
 
-            document.addEventListener('keyup', function(event) {
-              if (event.keyCode === 17) { // Ctrl
+            document.addEventListener('keyup', function (event) {
+              if (event.keyCode === 17) {
+                // Ctrl
                 function_key_is_pressed = false
               }
             })
@@ -838,28 +861,28 @@ function initForPage() {
               mutationList.forEach(onNodeChanged)
             }).observe(document, { subtree: true, childList: true })
 
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
               node_to_render_id = null
               hideBubble(true)
             })
           })
-        })
-    }
+        },
+      )
+    },
   )
 }
 
 document.addEventListener('DOMContentLoaded', initForPage)
 
-document.addEventListener('visibilitychange', function() {
+document.addEventListener('visibilitychange', function () {
   if (document.visibilityState === 'hidden') {
     pre_words.clear()
   }
   // 用户打开或回到页面
   if (document.visibilityState === 'visible') {
     // 重新缓存
-    Array.from(document.querySelectorAll('wdhl:not(.wdhl_none_none)'))
-      .forEach(
-        ele => preFetchBing(ele.textContent)
-      )
+    Array.from(document.querySelectorAll('wdhl:not(.wdhl_none_none)')).forEach(
+      (ele) => preFetchBing(ele.textContent),
+    )
   }
 })
