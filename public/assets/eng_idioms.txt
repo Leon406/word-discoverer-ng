@@ -1,4 +1,3 @@
-a and a
 a and b
 a b movie
 a babe in arms
@@ -496,9 +495,10 @@ a den of thieves
 a deplorable
 a designated driver
 a destroying angel
-a deuce of a
 a deus ex machina
-a devil of a
+a devil of a fellow
+a devil of a job
+a devil of a time
 a dialogue of the deaf
 a diamond in the rough
 a dickens of a time
@@ -843,7 +843,6 @@ a handle on
 a handle to her name
 a handoff
 a handout
-a hang of a
 a hanging offence
 a happy accident
 a happy camper
@@ -887,9 +886,12 @@ a heavy purse makes a light heart
 a heavy silence
 a heavy weight
 a heavyweight
-a heck of a
+a heck of a lot of
 a hedge between keeps friendship green
-a hell of a
+a hell of a lot of
+a hell of a mess
+a hell of a note
+a hell of a time
 a hell on earth
 a helping hand
 a hen night
@@ -1380,7 +1382,6 @@ a pat on the back
 a pea in the shoe
 a peace dividend
 a peace offering
-a peach of a
 a pearl of great price
 a pearl of wisdom
 a pecking order
@@ -1806,7 +1807,8 @@ a slice of the cake
 a slice of the pie
 a slim chance
 a slime ball
-a slip of a
+a slip of a boy
+a slip of a girl
 a slip of the lips
 a slip of the pen
 a slip of the tongue
@@ -2632,7 +2634,6 @@ air monkey
 air of pretension
 air off
 air one out
-air one`s dirty laundry in public
 air ones dirty laundry in public
 air one’s dirty laundry in public
 air out
@@ -2655,7 +2656,6 @@ airplane driver
 airplane rule
 airs and graces
 airsick pigeon
-airy a
 aitch dropper
 aj squared away
 ak amp
@@ -2880,7 +2880,32 @@ all systems go
 all talk
 all teed up
 all that
-all the
+all the bells and whistles
+all the best
+all the better
+all the difference in the world
+all the eighths
+all the feels
+all the fives
+all the fixings
+all the go
+all the harder
+all the livelong day
+all the marbles
+all the more
+all the rage
+all the same
+all the tea in china
+all the thing
+all the time
+all the trimmings
+all the way
+all the while
+all the world and his dog
+all the world and his wife
+all the world loves a lover
+all the worse
+all there
 all things are difficult before they are easy
 all things being equal
 all things come to those who wait
@@ -4220,7 +4245,106 @@ at straws
 at stud
 at table
 at that
-at the
+at the altar of the porcelain god
+at the appointed time
+at the back of
+at the beck and call of
+at the best
+at the bit
+at the bottom of it
+at the bottom of the food chain
+at the bottom of the heap
+at the bottom of the hour
+at the bottom of the ladder
+at the bottom of the pile
+at the break of dawn
+at the buzzer
+at the chalkface
+at the coalface
+at the crack of dawn
+at the crossroads
+at the cutting edge
+at the door
+at the dot
+at the double
+at the drop of a dime
+at the drop of a hat
+at the eleventh hour
+at the end of nowhere
+at the end of ones rope
+at the end of one’s rope
+at the end of rope
+at the end of the day
+at the end of the line
+at the end of the rainbow
+at the end of your rope
+at the end of your tether
+at the expense of
+at the feet of
+at the forefront
+at the grass roots
+at the great porcelain throne
+at the greek calends
+at the hand of
+at the hands of
+at the height of
+at the helm
+at the high port
+at the instance of
+at the kill
+at the last chance saloon
+at the last count
+at the last gasp
+at the last minute
+at the latest
+at the least
+at the longest
+at the mercy of
+at the moment
+at the most
+at the outset
+at the outside
+at the point of
+at the porcelain altar
+at the post
+at the present time
+at the ready
+at the rear of
+at the receiving end
+at the right spot at the right time
+at the ripe old age
+at the risk of
+at the same time
+at the seams
+at the sink
+at the stroke of
+at the summit of her success
+at the table
+at the tender age of
+at the time
+at the top of agenda
+at the top of game
+at the top of her game
+at the top of his voice
+at the top of lungs
+at the top of the agenda
+at the top of the food chain
+at the top of the heap
+at the top of the hour
+at the top of the ladder
+at the top of the pile
+at the top of the tree
+at the top of voice
+at the top of your lungs
+at the top of your voice
+at the touch of a button
+at the track
+at the very least
+at the very worst
+at the wash
+at the wheel
+at the worst
+at the zenith of
 at third hand
 at this juncture
 at this moment
@@ -4522,7 +4646,6 @@ back line
 back number
 back of
 back on feet
-back on one`s feet
 back on ones feet
 back on one’s feet
 back on track
@@ -4889,7 +5012,6 @@ bank shot
 bank teller job
 bank up
 banked out
-banker`s hours
 bankers hours
 banker’s hours
 banter play
@@ -5787,12 +5909,22 @@ bicker with
 bicycle lamp
 bicycle pump
 biddle move
-bide one`s time
 bide one’s time
 bide quiet
 bide time
 bide your time
-big a
+big air
+big alley
+big an heavies
+big and bold
+big and bulky
+big and burly
+big apple
+big around as a molasses barrel
+big as a house
+big as all outdoors
+big as life
+big ask
 big b
 big c
 big d
@@ -8176,7 +8308,61 @@ by rote
 by stealth
 by storm
 by surprise
-by the
+by the back door
+by the balls
+by the board
+by the book
+by the bootstraps
+by the by
+by the cringe
+by the day
+by the dozen
+by the end of the day
+by the grace of god
+by the gross
+by the handful
+by the holy old twist
+by the hook
+by the horns
+by the hour
+by the hundred
+by the look of things
+by the looks of things
+by the minute
+by the month
+by the moon
+by the name
+by the nape of the neck
+by the neck
+by the nose
+by the numbers
+by the piece
+by the same token
+by the scruff of her neck
+by the scruff of neck
+by the scruff of the neck
+by the seat of her pants
+by the seat of pants
+by the seat of the pants
+by the seat of your pants
+by the short hairs
+by the skin of his teeth
+by the skin of ones teeth
+by the skin of one’s teeth
+by the skin of teeth
+by the skin of their teeth
+by the skin of your teeth
+by the sweat of brow
+by the sweat of your brow
+by the thousand
+by the time
+by the unit
+by the way
+by the week
+by the yard
+by the year
+by themselves
+by there
 by trade
 by trial and error
 by turn
@@ -8197,7 +8383,6 @@ bye now
 bygone days
 bystander effect
 bête noire
-c and a
 c and b there
 c and d
 c and e
@@ -8725,7 +8910,12 @@ castor and pollux
 castor oil
 castro clone
 casus belli
-cat a
+cat among the pigeons
+cat and class
+cat and dog
+cat and kitty
+cat and mouse
+cat around
 cat burglar
 cat can look at a king
 cat city
@@ -9346,7 +9536,6 @@ chip head
 chip in
 chip off
 chip on his shoulder
-chip on one`s shoulder
 chip on ones shoulder
 chip on one’s shoulder
 chip on shoulder
@@ -10852,7 +11041,6 @@ cross mind
 cross my heart
 cross of the north
 cross off
-cross one`s mind
 cross ones mind
 cross one’s mind
 cross out
@@ -11760,7 +11948,8 @@ devil is meeting his wife
 devil looks after his own
 devil makes hard work for idle hands
 devil may care
-devil of a
+devil of a job
+devil of a time
 devil of it
 devil screecher
 devil snatcher
@@ -12630,7 +12819,31 @@ down pat
 down payment
 down six
 down south
-down the
+down the banks
+down the big white telephone
+down the block
+down the carsey
+down the chute
+down the drain
+down the flush
+down the food chain
+down the garden path
+down the gurgler
+down the hatch
+down the line
+down the little red lane
+down the mine
+down the pan
+down the pike
+down the plughole
+down the river
+down the road
+down the steps
+down the street
+down the toilet
+down the track
+down the tube
+down there
 down through
 down time
 down to
@@ -13837,7 +14050,6 @@ eyes of blue
 eyes open
 eyes peeled
 eyes pop out
-f a
 f beep beep k
 f bomb
 face about
@@ -14210,7 +14422,6 @@ feather and flip
 feather brain
 feather hauler
 feather in cap
-feather in one`s cap
 feather in ones cap
 feather in one’s cap
 feather in your cap
@@ -14986,7 +15197,7 @@ fly the nest
 fly tipper
 fly trap
 flyer with the roof slightly higher
-flying a
+flying arse
 flying banana
 flying blind
 flying boxcar
@@ -15647,7 +15858,41 @@ from start to finish
 from stem to stern
 from that day forth
 from that time forth
-from the
+from the bottom of heart
+from the bottom of my heart
+from the bottom of ones heart
+from the bottom of one’s heart
+from the bottom of your heart
+from the corner of eye
+from the corner of your eye
+from the cradle to the grave
+from the dead
+from the department of the bleeding obvious
+from the depths of heart
+from the door
+from the face of the earth
+from the first
+from the floor
+from the four corners of the earth
+from the frying pan into the fire
+from the ground up
+from the heart
+from the horse’s mouth
+from the left field
+from the neck up
+from the old school
+from the outset
+from the past
+from the ridiculous to the sublime
+from the sidelines
+from the stretch
+from the sublime to the ridiculous
+from the top
+from the very first
+from the word go
+from the wrong side of the tracks
+from the year dot
+from there to here
 from thin air
 from this day forth
 from this day forward
@@ -15741,7 +15986,6 @@ fuck knows
 fuck like bunnies
 fuck load
 fuck me
-fuck of a
 fuck pig
 fuck stick
 fucked if i can
@@ -16411,7 +16655,7 @@ ghost at the feast
 ghost battalion
 ghost hand
 ghost in the machine
-ghost of a
+ghost of a chance
 ghost speech
 ghost town
 ghost train
@@ -18776,7 +19020,7 @@ heavens opened
 heavens to betsy
 heaves and squirts
 heaviness of heart
-heavy a
+heavy artillery
 heavy bevvy
 heavy bread
 heavy brigade
@@ -18817,7 +19061,7 @@ heavy with child
 heavy wizardry
 heavy worker
 heavyweight jones
-heck of a
+heck of a lot of
 heck of it
 hedge and ditch
 hedge bets
@@ -24418,7 +24662,19 @@ mack man
 mack on
 mackerel and sprat
 mad about
-mad as a
+mad as a badger
+mad as a beetle
+mad as a brush
+mad as a chinaman
+mad as a cut snake
+mad as a goanna
+mad as a gum tree full of galahs
+mad as a hatter
+mad as a hornet
+mad as a march hare
+mad as a satchel of knees
+mad as a snake
+mad as a wet hen
 mad as hell
 mad as hops
 mad as sand
@@ -24684,7 +24940,6 @@ man and boy
 man and man
 man and wife
 man aroma
-man at c&a
 man boobs
 man cannot live by bread alone
 man cave
@@ -24773,7 +25028,7 @@ many benny
 many hands make light work
 many happy returns
 many is me
-many is the
+many is the time
 many moons ago
 many years
 man’s best friend
@@ -25984,7 +26239,6 @@ multi kativa
 multiplies it by
 mum and dad
 mum is the word
-mum`s the word
 mumble and mutter
 mumbo jumbo
 mummy bag
@@ -26205,7 +26459,7 @@ narrow escape
 narrow minded
 narrow squeak
 narrow yellow
-nary a
+nary a word
 naseem hamed
 nasty boat
 nasty days
@@ -26837,7 +27091,6 @@ nobby stiles
 noble savage
 noble weed
 nobody home
-nobody`s fool
 nobodys fool
 nobody’s fool
 nod at
@@ -27714,7 +27967,27 @@ odds on
 odor of sanctity
 odour of sanctity
 oedipus rex
-of a
+of a bitch
+of a certain age
+of a chance
+of a doodah
+of a gun
+of a high order
+of a kind
+of a lifetime
+of a mind to
+of a piece
+of a single mind
+of a size
+of a sort
+of a sudden
+of advanced years
+of age
+of all people
+of all places
+of all the nerve
+of all things
+of all time
 of bad report
 of benefit
 of biblical proportions
@@ -28120,7 +28393,91 @@ oliver reed
 oliver twist
 ollie beak
 omar sharif
-on a
+on a beach
+on a biblical scale
+on a bit of a sticky wicket
+on a cloud
+on a coke frame
+on a collision course
+on a crosstown bus
+on a diet
+on a dime
+on a fishing expedition
+on a fizzer
+on a full stomach
+on a handshake
+on a hiding to nothing
+on a high
+on a hunch
+on a kick
+on a lark
+on a level with
+on a lighter note
+on a limb
+on a mish
+on a par
+on a pedestal
+on a pension
+on a plate
+on a platter
+on a power trip
+on a promise
+on a raft
+on a rampage
+on a regular basis
+on a riverbank
+on a roll
+on a scratched horse
+on a shoestring
+on a short lead
+on a short leash
+on a side note
+on a silver platter
+on a sixpence
+on a slippery slope
+on a slow boat to china
+on a solomons
+on a stick
+on a string
+on a tangent
+on a tank
+on a tear
+on a tickey
+on a tight lead
+on a tight leash
+on a toot
+on a toss of a coin
+on a trial
+on a trip
+on a volcano
+on a wait list
+on a waiting list
+on a whim
+on a wing and a prayer
+on about
+on account
+on active duty
+on advance notice
+on again
+on agenda
+on aggregate
+on air
+on all four
+on all hands
+on all sides
+on an average
+on an empty stomach
+on an even keel
+on an irregular basis
+on and off
+on and on
+on any account
+on appeal
+on approval
+on auto pilot
+on automatic
+on autopilot
+on average
 on back
 on bad terms
 on balance
@@ -28310,7 +28667,309 @@ on tenterhooks
 on terms
 on that account
 on that score
-on the
+on the abraham
+on the act
+on the agenda
+on the air
+on the alert
+on the anvil
+on the arm
+on the attack
+on the average
+on the back
+on the bad side of one
+on the balance of evidence
+on the balance of probability
+on the ball
+on the bandwagon
+on the barrel
+on the batter
+on the beam
+on the bean
+on the beat
+on the bench
+on the bias
+on the big side
+on the big white telephone
+on the bird
+on the bleeding edge
+on the blink
+on the blob
+on the block
+on the blower
+on the boil
+on the books
+on the borderline
+on the bottle
+on the bounce
+on the box
+on the brain
+on the breadline
+on the brew
+on the bright side
+on the brink
+on the briny
+on the bubble
+on the bum
+on the bung
+on the button
+on the card
+on the carpet
+on the case
+on the cellar
+on the chance
+on the cheap
+on the chin
+on the chopping block
+on the clock
+on the club
+on the coattails
+on the contrary
+on the cotton wool
+on the couch
+on the credit side
+on the creep
+on the crest of a wave
+on the crest of the wave
+on the cross
+on the cuff
+on the cutting edge
+on the cutting room floor
+on the defensive
+on the distaff side
+on the dl
+on the dole
+on the doorstep
+on the dot
+on the double
+on the drawing board
+on the drip
+on the earhole
+on the edge
+on the elbow
+on the eve of
+on the face of it
+on the face of the earth
+on the factory floor
+on the fast track
+on the fence
+on the fiddle
+on the firing line
+on the flat
+on the flip side
+on the floor
+on the fly
+on the fringe
+on the fritz
+on the front burner
+on the front foot
+on the front line of
+on the front lines of
+on the gad
+on the game
+on the go
+on the grapevine
+on the gravy train
+on the ground
+on the heavy bevvie
+on the heels
+on the high seas
+on the high side
+on the hip
+on the hob
+on the hog
+on the home front
+on the home straight
+on the home stretch
+on the hoof
+on the hook
+on the hop
+on the horizon
+on the horn
+on the horse
+on the hot seat
+on the hotseat
+on the hour
+on the house
+on the huh
+on the hush
+on the hustings
+on the improve
+on the in
+on the jar
+on the job
+on the juice
+on the jump
+on the junk
+on the knees of the gods
+on the knob
+on the knock
+on the lam
+on the lash
+on the latch
+on the lawn
+on the leading edge
+on the level
+on the limp
+on the line
+on the lips
+on the lookout
+on the loose
+on the low
+on the make
+on the map
+on the march
+on the margins of
+on the mark
+on the mat
+on the mend
+on the merits
+on the mojo
+on the money
+on the move
+on the mud
+on the nail
+on the natch
+on the needle
+on the nest
+on the nod
+on the nose
+on the numbers
+on the off chance
+on the one hand
+on the open market
+on the order of
+on the other
+on the outs
+on the pad
+on the panel
+on the part of
+on the phone
+on the pill
+on the piss
+on the point of
+on the porcelain telephone
+on the premises
+on the prod
+on the prowl
+on the pull
+on the qt
+on the qui vive
+on the quiet
+on the rack
+on the radar
+on the rag
+on the rails
+on the rampage
+on the range
+on the razzle
+on the rebound
+on the receiving end
+on the record
+on the reezie
+on the reg
+on the rezzie
+on the right foot
+on the right lines
+on the right tack
+on the right track
+on the rilla
+on the rio caca
+on the rise
+on the road
+on the rocks
+on the ropes
+on the rory
+on the run
+on the safe side
+on the salmon
+on the same lines
+on the same page
+on the same wavelength
+on the sauce
+on the scene
+on the scent
+on the schnozz
+on the scrap heap
+on the scrapheap
+on the scrounge
+on the shady side of
+on the shelf
+on the shit list
+on the side
+on the skids
+on the slate
+on the sly
+on the small side
+on the sniff
+on the spectrum
+on the spot
+on the spur of the moment
+on the square
+on the squiff
+on the stage
+on the stand
+on the starting blocks
+on the stick
+on the stocks
+on the straight and narrow
+on the strap
+on the street
+on the strength of
+on the string
+on the strugglebus
+on the stump
+on the sunny side of
+on the surface
+on the table
+on the take
+on the tank
+on the tap
+on the telephone
+on the television
+on the telly
+on the threshold of
+on the throne
+on the thumb
+on the tiles
+on the tip of my tongue
+on the tip of tongue
+on the tip of your tongue
+on the town
+on the track of
+on the trail of
+on the trigger
+on the trot
+on the turkey
+on the turn
+on the understanding that
+on the up and up
+on the up side
+on the upgrade
+on the upswing
+on the uptake
+on the verge
+on the vine
+on the wagon
+on the waiting list
+on the wallaby
+on the wane
+on the warpath
+on the watch
+on the way
+on the western front
+on the whole
+on the wild side
+on the wing
+on the wires
+on the wonk
+on the words
+on the wrong end of
+on the wrong foot
+on the wrong scent
+on the wrong side
+on the wrong tack
+on the wrong track
 on thin ice
 on this account
 on this score
@@ -28376,7 +29035,12 @@ on your tod
 on your toes
 on your uppers
 on your way
-once a
+once a priest always a priest
+once a week
+once again
+once and again
+once and for all
+once and future
 once bitten twice shy
 once every pancake day
 once for all
@@ -28443,7 +29107,8 @@ one good turn deserves another
 one half of the world does not know how the other half lives
 one hand for and one for the ship
 one hand washes the other
-one hell of a
+one hell of a boy
+one hell of a time
 one hit wonder
 one hitta quitta
 one hitter
@@ -28536,9 +29201,6 @@ one way
 one who got away
 one word from you and he does as he likes
 one word leads to another
-one`s cup of tea
-one`s hands are tied
-one`s heart is in one`s mouth
 ones and twos
 ones cup of tea
 ones hands are tied
@@ -28808,7 +29470,6 @@ over him
 over medium
 over my dead body
 over my head
-over one`s dead body
 over ones dead body
 over one’s dead body
 over shoes over boots
@@ -30421,7 +31082,7 @@ postage stamp
 poster boy
 poster child
 poster girl
-pot a
+pot and pan
 pot belly
 pot boiler
 pot call the kettle black
@@ -31206,7 +31867,6 @@ putty in your hands
 pyjama cricket
 pyjama game
 pyrrhic victory
-q and a
 q boat
 q tip
 quaff a brew
@@ -31387,7 +32047,6 @@ rack duty
 rack face
 rack monster
 rack off
-rack one`s brain
 rack ones brain
 rack one’s brain
 rack out
@@ -32102,7 +32761,6 @@ right stuff
 right tack
 right to
 right under her nose
-right under one`s nose
 right under ones nose
 right under one’s nose
 right up alley
@@ -34289,7 +34947,6 @@ skeet shooting
 skein of thread
 skeleton in closet
 skeleton in cupboard
-skeleton in one`s closet
 skeleton in ones closet
 skeleton in one’s closet
 skeleton in the closet
@@ -34460,7 +35117,6 @@ slim pickings
 slime bag
 sling mud at
 sling your hook
-slip of a
 slip of the lip
 slip of the pen
 slip of the tongue
@@ -34775,7 +35431,6 @@ snow tank
 snow time
 snow white
 snowball effect
-snowball`s chance in hell
 snowballs chance in hell
 snowball’s chance in hell
 snowed in
@@ -35944,7 +36599,6 @@ straight down the line
 straight edge
 straight face
 straight flush wannabe
-straight from the horse`s mouth
 straight from the horses mouth
 straight from the horse’s mouth
 straight from the shoulder
@@ -36449,7 +37103,6 @@ sweet deedee
 sweet dreams
 sweet dying jesus
 sweet evening breeze
-sweet f a
 sweet fa
 sweet fuck all
 sweet heart
@@ -36517,8 +37170,6 @@ syrupped up
 system d
 systems go
 systems kicker
-t & a
-t and a
 t and e
 t and t
 t bowl
@@ -36998,7 +37649,8 @@ temper temper
 temper that with
 temperance punch
 tempers fray
-tempest in a
+tempest in a teacup
+tempest in a teapot
 temple balls
 temple bells
 temple du vin
@@ -38266,7 +38918,13 @@ thirty pieces of silver
 this and that
 this here
 this instance
-this is
+this is how the cookie crumbles
+this is it
+this is me
+this is my floor
+this is the life
+this is where i came in
+this is where we came in
 this just in
 this means war
 this minute
@@ -39846,7 +40504,6 @@ twice as natural
 twice over
 twice pipes
 twiddle her thumbs
-twiddle one`s thumbs
 twiddle ones thumbs
 twiddle one’s thumbs
 twiddle thumbs
@@ -40284,7 +40941,6 @@ urge to purge
 uriah heep
 urine express
 urine test
-us of a
 us versus them
 use a sledgehammer to crack a nut
 use case
@@ -40305,7 +40961,6 @@ usher to
 usual suspects
 utility room
 utter a word
-v and a
 v and t
 v and x
 v girl
@@ -40468,7 +41123,6 @@ visible to the naked eye
 visually impaired
 vit k
 vital statistics
-vitamin a
 vitamin b
 vitamin c
 vitamin d
@@ -40942,7 +41596,14 @@ whale belly
 whale in the bay
 whale into
 whale kisser
-whale of a
+whale of a bill
+whale of a difference
+whale of a game
+whale of a job
+whale of a party
+whale of a problem
+whale of a story
+whale of a time
 whale on
 whale sperm
 whale tail
@@ -41030,7 +41691,17 @@ what possessed her to
 what price
 what said
 what say goes
-what the
+what the actual fuck
+what the dickens
+what the eff
+what the eye doesn’t see
+what the f
+what the hay
+what the heck
+what the hell
+what the hey
+what the sam hill
+what the shit
 what was he smoking
 what was i thinking of
 what was that
@@ -42337,7 +43008,11 @@ you and me
 you and the horse you rode in on
 you and whose army
 you and yours
-you are
+you are all over
+you are more than welcome
+you are never too old to learn
+you are welcome
+you are what you eat
 you attract more flies with honey than vinegar
 you be the judge of that
 you beaut
@@ -42493,7 +43168,6 @@ you win
 you wish
 you would think
 you're alright
-you`re kidding
 young at heart
 young blood
 young fogey
