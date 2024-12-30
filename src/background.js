@@ -32,6 +32,10 @@ function initDatabase() {
 }
 
 function saveToIndexedDB(q, data) {
+  if (!db) {
+    console.log('Database not initialized')
+    return
+  }
   const transaction = db.transaction(['dictionary'], 'readwrite')
   const objectStore = transaction.objectStore('dictionary')
   const request = objectStore.add({ q: q.toLowerCase(), data: data })
@@ -47,6 +51,11 @@ function saveToIndexedDB(q, data) {
 
 function getFromIndexedDB(q) {
   return new Promise((resolve, reject) => {
+    if (!db) {
+      console.log('Database not initialized')
+      resolve(null)
+      return
+    }
     const transaction = db.transaction(['dictionary'], 'readonly')
     const objectStore = transaction.objectStore('dictionary')
     const request = objectStore.get(q.toLowerCase())
@@ -133,6 +142,33 @@ function load_idioms() {
     .then(do_load_idioms)
 }
 
+function handleMessage(request,sendResponse){
+ return  fetch(
+    `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${encodeURIComponent(request.q)}`,
+  )
+    .then((response) => response.text())
+    .then((html) => {
+      const minimizeHtml = html
+        .replace(/<script [\s\S]+?<\/script>/g, '')
+        .replace(/<head[\s\S]+?<\/head>/g, '')
+        // 删除无用跳转数据
+        .replace(
+          /<span id="anchor1">[\s\S]+?<span id="dictionaryvoiceid"><\/span>/g,
+          '</div></div></div>',
+        )
+      // console.log("minimizeHtml",minimizeHtml)
+      if (db) {
+        saveToIndexedDB(request.q, minimizeHtml)
+      }else {
+        console.log('waiting for DB...')
+        setTimeout(function () {
+          saveToIndexedDB(request.q, minimizeHtml)
+        }, 3000)
+      }
+      sendResponse(minimizeHtml)
+    })
+}
+
 function initialize_extension() {
   initDatabase()
   chrome.runtime.onMessage.addListener(
@@ -145,23 +181,7 @@ function initialize_extension() {
               sendResponse(cachedData)
             } else {
               console.log('fetch bing: ', request.q)
-              return fetch(
-                `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${encodeURIComponent(request.q)}`,
-              )
-                .then((response) => response.text())
-                .then((html) => {
-                  const minimizeHtml = html
-                    .replace(/<script [\s\S]+?<\/script>/g, '')
-                    .replace(/<head[\s\S]+?<\/head>/g, '')
-                    // 删除无用跳转数据
-                    .replace(
-                      /<span id="anchor1">[\s\S]+?<span id="dictionaryvoiceid"><\/span>/g,
-                      '</div></div></div>',
-                    )
-                  // console.log("minimizeHtml",minimizeHtml)
-                  saveToIndexedDB(request.q, minimizeHtml)
-                  sendResponse(minimizeHtml)
-                })
+              return handleMessage(request, sendResponse)
             }
           })
           .catch((error) => {
