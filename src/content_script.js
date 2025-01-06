@@ -235,7 +235,7 @@ function renderBubble() {
           },
           null,
         )
-        if (lexResult) {
+        if (lexResult && lexResult.result && lexResult.result.cdef) {
           const { result } = lexResult
           bingHtml(result)
         } else {
