@@ -2315,7 +2315,6 @@ able to fog a mirror
 able to get a word in edgewise
 able to make
 able to take a joke
-abound with
 about as much as a fish needs a bicycle
 about as much as a hole in the head
 about business
@@ -2387,7 +2386,6 @@ accommodating as a hog on ice
 accommodation arrest
 accompanied her
 accompany her on a journey
-accord with
 according to all accounts
 according to gunter
 according to hoyle
@@ -2535,7 +2533,6 @@ advise against doing
 advise her on
 aeroplane blond
 aeroplane skirt
-affiliate with
 affirmative action
 affy bud
 afghani black
@@ -2746,14 +2743,13 @@ alibi ike
 alight from
 alight upon
 align oneself with
-align with
 alike as peas in a pod
 alike as two peas
 alimony gallery
 alive and kicking
 alive and well
 alive or dead
-alive with
+alive with people or things
 alky tank
 all a penny
 all aboard
@@ -3091,7 +3087,6 @@ along the same lines
 along the way
 along these lines
 along those lines
-along with
 alpha and omega
 alpha charlie
 alpha geek
@@ -3116,7 +3111,6 @@ alter ego
 alter kocker
 alternate between
 alternate history
-alternated with
 alternative dentation
 alternative fact
 alternative right
@@ -4213,10 +4207,10 @@ asshole of the world
 asshole to belly button
 assholes and elbows
 assimilate themselves into
-assimilate with
+assimilate with some people
 assist her at
 associate oneself with
-associate with
+associate with so
 assume a low profile
 assume airs
 assume the mantle
@@ -4644,7 +4638,9 @@ away out of line
 away the trip
 away to the hills
 away to the races
-away with
+away with the band
+away with the fairies
+away with the pixies
 awe inspiring
 awful wedded
 awkward age
@@ -5145,7 +5141,6 @@ band rat
 band together
 bandage factory
 bandalu business
-bandied with
 bandit country
 bandit odds
 bandit territory
@@ -5308,7 +5303,6 @@ barry white
 bart simpson
 barter away
 barter with so
-bartered with
 base binge
 base bludger
 base camp commando
@@ -5532,7 +5526,9 @@ bear the sight of
 bear trap
 bear watching
 bear whiz beer
-bear with
+bear with a sore head
+bear with her
+bear with me
 bear witness
 beard in den
 beard in their den
@@ -6173,7 +6169,8 @@ bice and a half
 bice and a roht
 bice of tenners
 bicker about
-bicker with
+bicker with her about
+bicker with her over
 bicycle lamp
 bicycle pump
 bid adieu to
@@ -6258,7 +6255,9 @@ big wheel
 big white
 big wig
 big win
-big with
+big with child
+big with her
+big with so
 big yard
 big yawn
 big year
@@ -6622,7 +6621,6 @@ blah blah
 blame canada
 blame game
 blame shifting
-blanched with
 blank canvas
 blank check
 blank cheque
@@ -6639,7 +6637,6 @@ blanket party
 blanket roll
 blanket term
 blanket treatment
-blanket with
 blast away
 blast from the past
 blast off for
@@ -7065,7 +7062,7 @@ board knees
 board of trade duff
 board shorts
 board sock
-board with
+board with so
 boarded the gravy train
 boarding house
 boarding school
@@ -7156,7 +7153,6 @@ boil away
 boil down
 boil the ocean
 boil the pot
-boil with
 boiled beef
 boiled down
 boiled owl
@@ -7193,7 +7189,6 @@ bolts and nuts
 bomb off the map
 bomb out of
 bombard her with questions
-bombard with
 bombay bloomers
 bombay roll
 bombay welsh
@@ -7814,7 +7809,8 @@ break the spell
 break through
 break up with
 break wind
-break with
+break with so
+break with tradition
 break word
 break your back
 break your balls
@@ -7912,7 +7908,6 @@ brighton line
 brighton pier
 brighton rock
 brim over with
-brim with
 bring a charge against
 bring a dog to heel
 bring a knife to a gunfight
@@ -8013,7 +8008,8 @@ bring you to knees
 bring you to your knees
 bring you up short
 brink of disaster
-bristle with
+bristle with anger
+bristle with rage
 bristol cities
 bristol city
 brit hop
@@ -8310,7 +8306,6 @@ built like a brick shithouse
 built like a tank
 built on sand
 bulb snatcher
-bulged with
 bulk bill
 bulk large
 bulked large
@@ -8641,7 +8636,6 @@ busy beaver
 busy bee
 busy little beaver
 busy oneself with
-busy with
 busy work
 but for her
 but for the grace of god
@@ -8752,7 +8746,6 @@ buzz job
 buzz round
 buzz ticket
 buzz wagon
-buzz with
 buzz word
 buzzing your tits off
 buzzy house
@@ -9900,7 +9893,6 @@ charge it off
 charge it to the dust and let the rain settle it
 charge the earth
 charge top dollar
-charge with
 charity begins at home
 charity dame
 charity fuck
@@ -10395,7 +10387,6 @@ chopping block
 chord progression
 chore whore
 chortle about
-chortle with
 chorus and verse
 chow for now
 chow hall
@@ -10649,7 +10640,6 @@ clear the way
 clear throat
 clear up after
 clear waivers
-clear with
 clear your name
 clear your throat
 cleave to so
@@ -10769,7 +10759,6 @@ close to the wind
 close to your heart
 close up shop
 close up to
-close with
 close work
 close your ears to
 close your eyes to
@@ -11411,7 +11400,7 @@ common run
 common salt
 common sense
 common touch
-communicate with
+communicate with so
 community chest
 commute between
 commute from
@@ -11428,7 +11417,6 @@ compare apples to oranges
 compare notes
 comparisons are odious
 compete against so
-compete with
 complain to so
 complete game
 completely cute
@@ -11457,7 +11445,6 @@ concentrate at some place
 concentrate the mind
 concentration camp
 concern about
-concern with
 concerned about
 conchie joe
 conchy joe
@@ -11468,7 +11455,6 @@ concrete wheels
 condescend to do
 condescend to so
 condition one to
-condole with
 coney island
 confer about it
 confer on her with
@@ -11478,16 +11464,12 @@ confine her to
 confine or an animal to
 confirmation bias
 conflict of interest
-conflict with
-conform with
 confound it
 confound you
-confront with
 confucius he say
 confuse about
 confuse or an animal with
 confuse the issue
-confuse with
 conger eel
 congo dirt
 congregate housing
@@ -11501,7 +11483,7 @@ conscience money
 consider it done
 consolation prize
 console her on
-consort with
+consort with so
 conspicuous by absence
 conspicuous by its absence
 conspicuous by your absence
@@ -11512,27 +11494,23 @@ conspiracy theorist
 conspiracy theory
 conspiracy to commit murder
 conspiracy to murder
-conspire with
 constant dripping wears away a stone
 constant screecher
 constitution of an ox
 consult her about
-consult with
+consult with her about
 consume mass quantities
 consumed by desire
 consumer goods
 consumer items
 contact lens
-contact with
+contact with so
 contend with a problem
 contend with her
 content myself with
-content with
 continental breakfast
-continued with
 contract out on
 contract rider
-contract with
 contradiction in terms
 contrary to all reason
 contrary to popular belief
@@ -11807,12 +11785,11 @@ count to ten
 count toward
 count up to
 count upon
-count with
+count with so
 count your blessings
 count your chickens
 counter clockwise
 counter hopper
-counter with
 counting cards
 country bama
 country booboo
@@ -11836,7 +11813,7 @@ county mounty
 county shoes
 county time
 couple of bob
-couple with
+couple with so
 courage of convictions
 courage pill
 course note
@@ -12021,9 +11998,8 @@ crawl back into her shell
 crawl back to
 crawl on my hands and knees over broken glass just to see her photo
 crawl out of the woodwork
-crawl with
 crawling horror
-crawling with
+crawling with so
 cray cray
 crazy about
 crazy alley
@@ -12067,7 +12043,6 @@ creature of habit
 credibility gap
 credit card
 credit where credit is due
-credit with
 creep  to
 creep game
 creep out of the woodwork
@@ -12174,7 +12149,6 @@ cross the stream where it is shallowest
 cross the wire
 cross to bear
 cross top
-cross with
 cross your fingers
 cross your mind
 cross your path
@@ -12214,7 +12188,6 @@ crowd round
 crowd the mourners
 crowd through
 crowd together
-crowd with
 crowded cabin
 crowded space
 crown and anchor
@@ -12447,7 +12420,6 @@ curse of mexico
 curse of scotland
 curse rag
 curse the day he was born
-curse with
 curse word
 curtain call
 curtain comes down on
@@ -12646,7 +12618,6 @@ da kine
 da nuts
 dab hand
 dab on them folks
-dabble with
 dad and dave
 dad and mum
 daddy mac
@@ -12680,7 +12651,7 @@ daisy cutter
 daisy dormer
 daisy dukes
 daisy roots
-dally with
+dally with so
 dama blanca
 damage control
 damaged goods
@@ -12726,7 +12697,9 @@ dance to a tune
 dance to another tune
 dance to tune
 dance up a storm
-dance with
+dance with death
+dance with so
+dance with the one who brought you
 dancer cases
 dancing academy
 dancing girls
@@ -12820,7 +12793,6 @@ date with destiny
 date with dipalma
 dates you
 dats da brakes
-daubed with
 daughter of a manse
 dave clark
 david beckham
@@ -12993,8 +12965,9 @@ deal her out of
 deal me in
 deal stock
 deal the race card
-deal with
-deals with
+deal with her
+deal with it
+deal with so
 dean of men
 dear departed
 dear god
@@ -13288,7 +13261,7 @@ did your block
 did yourself proud
 diddle for middle
 diddle out of
-diddle with
+diddle with it
 diddley bop
 diddley diddley band
 diddling miss daisy
@@ -13507,7 +13480,7 @@ dirty word
 dirty work
 dirty your hands
 dis war
-disagree with
+disagree with so
 disappear into the woodwork
 disappear into thin air
 disappear off the face of the earth
@@ -13534,7 +13507,6 @@ discretion is the greater part of valour
 discriminate between
 disease to please
 diseases of the soul are more dangerous than those of the body
-disgusted with
 dish bitch
 dish fit for the gods
 dish it out
@@ -13553,7 +13525,6 @@ dismounted from
 disobey the pope
 dispense with formalities
 dispose of so
-disputing with
 dissociate from
 distance lends enchantment
 distance yourself from
@@ -14113,7 +14084,6 @@ dot con artist
 dot cotton
 dot head
 dot on the card
-dot with
 dot your i’s and cross your t’s
 dots and carefuls
 dotted lines
@@ -14223,7 +14193,6 @@ doughnut head
 dougla tonic
 douglas hurd
 dover boat
-dovetail with
 down a peg
 down among the dead men
 down and dirty
@@ -14304,7 +14273,11 @@ down tools
 down trip
 down trou
 down under
-down with
+down with a cold
+down with a disease
+down with the dust
+down with the haps
+down with the swirl
 downhill all the way
 downhill from here on
 downing street
@@ -14527,7 +14500,6 @@ drinks on the house
 drip and suck
 drip drop
 drip dry
-drip with
 dripping and toast
 dripping for it
 dripping toast
@@ -15115,7 +15087,6 @@ ebb and flow
 ebb away
 echo back to
 echo chamber
-echo with
 ecology freak
 economical with the truth
 eddie grundies
@@ -15127,7 +15098,6 @@ edge away
 edge case
 edge city
 edge note
-edge with
 edge work
 edinburgh fringe
 edison medicine
@@ -15328,13 +15298,10 @@ end up by
 end up in the poorhouse
 end up somewhere
 end up with
-end with
 end your days
 end your life
 end zone
 endless sleep
-endow with
-endowed with
 ends of the earth
 enema queen
 enema sue
@@ -15343,7 +15310,6 @@ enemy of my enemy is my friend
 energy powder
 engage in small talk
 engage upon
-engage with
 engelbert humerdinck
 engelbert humperdinck
 engine bay
@@ -15670,13 +15636,11 @@ experience is the best teacher
 experience is the father of wisdom
 experience is the mother of wisdom
 experience is the teacher of fools
-experiment with
 explain at great length
 explain away
 explain her to
 explain yourself
 explode a bombshell
-exploded with
 explore all avenues
 explore every avenue
 exponential growth
@@ -15791,8 +15755,6 @@ face to face
 face train
 face up to
 face value
-face with
-faced with
 faces and spaces
 fact is stranger than fiction
 fact of life
@@ -16032,7 +15994,6 @@ false pride
 false start
 false step
 falsie basket
-familiar with
 familiarity breeds contempt
 family jewels
 family man
@@ -16217,7 +16178,6 @@ faucet nose
 faunch around
 faux pas
 faux queen
-favor with
 faze me out
 fb stalk
 fe true
@@ -16250,7 +16210,6 @@ feathered friends
 feathers fly
 feathers will fly
 feature creature
-feature with
 featured dancer
 fecal burp
 fecal freak
@@ -16380,7 +16339,6 @@ fence painting
 fence parole
 fence rider
 fence sitter
-fence with
 fend and prove
 fend for oneself
 fend for yourself
@@ -16399,7 +16357,6 @@ fetch it in
 fetch it out
 fetch up at
 feud about
-feud with
 fever breaks
 fever pitch
 fevver clucker
@@ -16424,10 +16381,8 @@ fiddle face
 fiddle stick
 fiddle the books
 fiddle while rome burns
-fiddle with
 fiddlers three
 fiddling while rome burns
-fidgeted with
 fido dido
 field a grounder
 field a question
@@ -16859,7 +16814,9 @@ fix it til it is
 fix or repair daily
 fix up with
 fix wagon
-fix with
+fix with a gaze
+fix with a look
+fix with a stare
 fix your wagon
 fixed bayonet
 fixed for life
@@ -17052,7 +17009,8 @@ flip the bird
 flip the script
 flip you for it
 flip your lid
-flirt with
+flirt with so
+flirt with the idea of doing
 flit from it to
 flit from person to person
 flo is coming to town
@@ -17086,7 +17044,6 @@ flog to death
 flogging a dead horse
 flood back
 flood her out of
-flood with
 flooded the market
 floor box
 floor it
@@ -17146,7 +17103,6 @@ flu shot
 flub the dub
 flube tube
 fluctuated between and
-fluctuated with
 flue faker
 fluff and buff
 fluff girl
@@ -17163,9 +17119,7 @@ flush him out of
 flush out of some place
 flush out the bird
 flush the birds out of the bushes
-flush with
 flushed down the tubes
-flushed with
 flute around
 flute player
 flutter about
@@ -17819,7 +17773,7 @@ friendly city
 friendly fire
 friendly footing
 friends in high places
-friends with
+friends with so
 friendship with benefits
 frig about
 frig around
@@ -18223,7 +18177,6 @@ fur tongue
 furious fifties
 furlough baby
 furnace and organ
-furnish with
 furry cup
 furry folds
 furry hoop
@@ -18239,7 +18192,6 @@ future proof
 future shock
 futz around
 futz her
-futz with
 fuzz box
 fuzz one
 fuzz station
@@ -19960,7 +19912,6 @@ glazed drunk
 glazey doughnut
 gleam in eye
 gleam in your eye
-gleamed with
 gleesome threesome
 glesga grin
 glesga kiss
@@ -19969,10 +19920,8 @@ glide across
 glide time
 glimmer man
 glimmer twins
-glinting with
 glitter fairy
 glitter gulch
-glittered with
 glom one
 glom onto
 gloom and doom
@@ -20968,14 +20917,12 @@ grab you by the throat
 grace me with
 grace period
 grace sb with your presence
-grace with
-graced with
+graced with it
 graceful as a swan
 grad wrecks
 grade her down
 grade inflation
 graduate from
-graduate with
 graeme hick
 graft away
 graft onto
@@ -21300,7 +21247,6 @@ groan about
 groan and grunt
 groan box
 groan under
-groan with
 groaty to the max
 grocery boy
 grocery french
@@ -21586,7 +21532,6 @@ hadaway and shite
 haddock and bloater
 haddock and cod
 haggis mcbagpipe
-haggle with
 hail a cab
 hail a taxi
 hail and rain
@@ -23539,7 +23484,6 @@ hell raiser
 hell to breakfast
 hell to pay
 hell week
-hell with
 hell’s teeth
 help a lame dog over a stile
 help desk
@@ -24083,7 +24027,7 @@ hold up as
 hold up end
 hold up your head
 hold water
-hold with
+hold with the hare and run with the hounds
 hold you hard
 hold you up
 hold your breath
@@ -24605,7 +24549,8 @@ howdy doody
 however much
 howl in pain
 howl like a banshee
-howl with
+howl with laughter
+howl with pain
 howling drunk
 howling fantods
 howling fifties
@@ -24631,7 +24576,7 @@ hugs and kisses
 hula hoop
 hum and haw
 hum job
-hum with
+hum with activity
 human being
 human interest
 human sea
@@ -24909,7 +24854,6 @@ idea box
 idea hamster
 ideal home
 ideas hamster
-identify with
 identity politics
 identity theft
 idiot blocks
@@ -25042,7 +24986,6 @@ ill will
 illegal tegel
 illegitimi non carborundum
 image macro
-imbue with
 immediate circle
 immediate families
 immediate family
@@ -26032,7 +25975,8 @@ in way
 in weal and woe
 in well with
 in wisdom
-in with
+in with a shout
+in with so
 in words of one syllable
 in work
 in writing
@@ -26137,7 +26081,6 @@ industrial strength
 inexplicable mob
 infant killer
 infant mortality
-infatuated with
 inferiority complex
 infiltrate it
 infinite loop
@@ -26148,7 +26091,6 @@ inform her of
 inform on so
 information leak
 information theory
-infuse with
 ingersol willie
 ingratiate herself into
 ingratiate herself with
@@ -26181,7 +26123,6 @@ ins and outs
 insanely great
 insanity stripe
 inscribed in granite
-inscribed with
 insects and ants
 insensitive care unit
 inside a week
@@ -26212,7 +26153,6 @@ intelligence centre
 intelligence department
 inter alios
 interact with so
-interfere with
 interior decorating
 interlake potato
 intermarry with so
@@ -26228,9 +26168,8 @@ interrogation by altitude
 intersperse among
 intersperse it between
 intersperse it throughout
-interview with
 intimate apparel
-intimate with
+intimate with so
 intimidate her with
 intimidate him into
 into a flat spin
@@ -26279,7 +26218,7 @@ into the toilet
 into the wide blue yonder
 into the wild blue yonder
 into thin air
-intrigue with
+intrigue with her against
 introduce her to
 introduce him into introduce her into introduce us into
 intrude into it
@@ -26299,8 +26238,7 @@ involuntary dismount
 involuntary personal protein spill
 involve her in
 involve her with
-involve with
-involved with
+involved with it
 ipsissima verba
 ipso facto
 iq anniversary
@@ -26622,7 +26560,6 @@ j bay
 j carroll naish
 j city
 jab pop
-jab with
 jabber about
 jabber away
 jabbing jabba
@@ -26698,7 +26635,7 @@ jam the brakes on
 jam together
 jam tomorrow
 jam week
-jam with
+jam with so
 jamaica rum
 jamaican assault vehicle
 jamaican blue mountain
@@ -26816,7 +26753,7 @@ jersey yodel
 jesse james
 jesse owens
 jest about
-jest with
+jest with so
 jesus and his brothers
 jesus boots
 jesus christing
@@ -26858,7 +26795,6 @@ jewish tank
 jewish typewriter
 jewy louis
 jheri curl
-jibe with
 jick head
 jig act
 jig is up
@@ -27115,7 +27051,7 @@ jooky jam
 josh around
 jostle around
 jostle aside
-jostle with
+jostle with so
 jot and tittle
 jot or tittle
 joy bang
@@ -27165,7 +27101,6 @@ jug wine
 juggle around
 juggle balls in the air
 juggle frogs
-juggle with
 juggling act
 juice and cookies
 juice back
@@ -28286,7 +28221,6 @@ lace her into
 lack for nothing
 lack the courage of convictions
 lack the courage of your convictions
-laded with
 ladies and gentlemen
 ladies and gents
 ladies of the evening
@@ -28403,7 +28337,6 @@ land up somehow
 land up someplace
 land up with
 land upon
-land with
 landing deck
 landing gear
 landing ship
@@ -28430,7 +28363,6 @@ lapis lazuli
 lapse from grace
 lard ass
 lard head
-lard with
 largactil shuffle
 large adult son
 large as life
@@ -29116,7 +29048,8 @@ level playing field
 level the field
 level the locks
 level the playing field
-level with
+level with her
+level with you
 levels on the splonk
 levels you devils
 lever arch files
@@ -29579,7 +29512,6 @@ lit up like a christmas tree
 litmus test
 litter box
 litter lout
-litter with
 little and large
 little better than
 little big horn
@@ -30202,7 +30134,6 @@ louse house
 louse ladder
 lousy brown
 lousy lou
-lousy with
 love an romancin
 love and hate
 love and kisses
@@ -30322,7 +30253,6 @@ lull into a false sense of security
 lull you into
 lumber along
 lumber wagon
-lumber with
 lumber yard
 lump and else together
 lump her in with
@@ -31116,7 +31046,7 @@ man with headache stick
 man with no arms
 man with the book of many years
 man with the minties
-manage with
+manage without
 manchester city
 manchester united
 maneuver her into
@@ -31269,7 +31199,6 @@ masala relationship
 mash and dash
 mash list
 mash mouth
-mash with
 mashed potato
 masking tape
 mass destruction
@@ -31435,7 +31364,6 @@ meat with two vegetables
 meatball surgery
 mechanical digger
 medallion man
-meddled with
 media circus
 media darling
 media flu
@@ -31535,12 +31463,12 @@ merry widow
 merry xmas
 meryl streep
 mesh together
-mesh with
 mess about
 mess around
 mess face up
 mess her over
-mess with
+mess with head
+mess with the bull and you get the horns
 messenger bag
 meta data
 metabolic clinic
@@ -31880,7 +31808,6 @@ mix it
 mix one up in
 mix up in
 mix up with
-mix with
 mix you up
 mixed bag
 mixed blessing
@@ -31893,7 +31820,6 @@ mixed up in
 mixed up with
 mixing stick
 moan about
-moaned with
 moaning minnie
 mob scene
 mobile dungheap
@@ -32009,7 +31935,6 @@ monkey wagon
 monkey walk
 monkey ward
 monkey water
-monkey with
 monkey wrench
 monopoly money
 monsoon bucket
@@ -32706,7 +32631,7 @@ neck and neck
 neck breaker
 neck of the woods
 neck or nothing
-neck with
+neck with so
 necking knob
 necklace of fire
 necktie party
@@ -32743,7 +32668,7 @@ negative chug
 negative reinforcement
 negotiable grass
 negotiate about
-negotiate with
+negotiate with her over
 neighborhood play
 neither a borrower nor a lender be
 neither can
@@ -34354,7 +34279,7 @@ off to one side
 off to the races
 off to the side
 off topic
-off with
+off with you
 off your chump
 off your food
 off your game
@@ -34794,7 +34719,13 @@ on no condition
 on oath
 on occasion
 on offer
-on one
+on one hand
+on one side
+on ones last leg
+on ones shoulders
+on oneself
+on one’s last leg
+on one’s shoulders
 on opposite sides of the barricade
 on order
 on our last legs
@@ -35182,7 +35113,8 @@ on wax
 on way
 on welfare
 on wheels
-on with
+on with so
+on with the motley
 on words
 on yer bike
 on your ass
@@ -35438,7 +35370,6 @@ ooh la la
 oop north
 ooze from
 ooze out of
-oozed with
 op shop
 open a can of worms
 open a conversation
@@ -35497,7 +35428,6 @@ open to criticism
 open to question
 open up a can of worms
 open up to
-open with
 open work
 open wound
 open your eyes
@@ -35563,7 +35493,6 @@ oriental dancer
 original gangster
 original sin
 originate from
-originated with
 orphan annie
 osama yo mama
 oscar asche
@@ -35833,7 +35762,7 @@ out to sea
 out to win
 out trouting
 out west
-out with
+out with it
 outa here
 outboard motor
 outdo ourselves
@@ -35900,7 +35829,6 @@ over your head
 overcoat maker
 overdo it
 overegg the pudding
-overflowed with
 overland route
 overnight success
 overplay hand
@@ -36201,7 +36129,6 @@ part of the furniture
 part timer
 part to play
 part ways
-part with
 partial to
 partially sighted
 partick thistle
@@ -36553,7 +36480,6 @@ pep pill
 pep talk
 pepper and salt punter
 pepper spray
-pepper with
 peppermint flavour
 peppermint rocks
 pepsi cola habit
@@ -36582,7 +36508,6 @@ perhaps a little later
 period of grace
 perish from
 perish the thought
-perish with
 perk along
 perk up ears
 permeated it with it
@@ -36592,7 +36517,6 @@ permit her through
 permit her up
 perp walk
 perry como
-persevered with
 persian brown
 persian mafia
 persian rugs
@@ -36685,7 +36609,6 @@ photo finish
 photo op
 phou gas
 phutz around
-phutzed with
 phyllis dixie
 physical jerk
 piano tied to your ass
@@ -37150,7 +37073,6 @@ place to be
 place your life in hands
 placenta poker
 plague on both your houses
-plague with
 plain and gravy
 plain and jam
 plain and simple
@@ -37399,7 +37321,7 @@ plead for so
 plead guilty
 plead not guilty
 plead the fifth
-plead with
+plead with so
 pleasantly plastered
 please excuse my dear aunt sally
 please god
@@ -37410,7 +37332,8 @@ please the eye
 please yourself
 pleased as punch
 pleased to meet you
-pleased with
+pleased with herself
+pleased with yourself
 pleasing to the eye
 pleasure and pain
 plenty of other fish
@@ -37429,7 +37352,7 @@ plot device
 plot hole
 plot it on
 plot thickens
-plot with
+plot with so
 plough a lone furrow
 plough a lonely furrow
 plough ahead
@@ -37474,7 +37397,6 @@ ply for business
 ply for hire
 ply for trade
 ply trade
-ply with
 ply your trade
 plymouth argyll
 plymouth cloak
@@ -37870,7 +37792,6 @@ power tool
 power trip
 power user
 power vacuum
-power with
 powers that be
 pox docs
 practical joke
@@ -37920,7 +37841,6 @@ pregnant duck
 pregnant pause
 pregnant rollerskate
 pregnant skateboard
-pregnant with
 prepare her for
 prepare like crazy
 prepare the ground
@@ -38092,7 +38012,6 @@ profit from
 prog rock
 progress bar
 progress toward
-progress with
 project it on
 project management
 projectile style
@@ -39052,12 +38971,10 @@ q boat
 q tip
 quaff a brew
 quail before
-quailed with
 quake in boots
 quake in his boots
 quake in my shoes
 quake like a leaf
-quaked with
 quaker oat
 qualified us as
 qualified us for
@@ -39067,7 +38984,7 @@ quantum leap
 quar ice
 quare hawk
 quare one
-quarrel with
+quarrel with them over
 quart into a pint pot
 quart store
 quarter bird
@@ -39174,7 +39091,6 @@ quite some time
 quite the contrary
 quite the little
 quite the thing
-quivered with
 quiz about
 quiz her on
 quiz kid
@@ -39221,7 +39137,6 @@ race to some place
 race to stand still
 race to the bottom
 race up to
-race with
 racehorse charley
 racehorse charlie
 racial profiling
@@ -39238,7 +39153,8 @@ rack ones brain
 rack one’s brain
 rack time
 rack your brain
-racked with
+racked with guilt
+racked with pain
 racket boy
 racket jacket
 racketty coo
@@ -39434,7 +39350,6 @@ rank and file
 rank below
 rank higher than
 rank on so
-rank with
 rant about
 rant and rave
 ranty tanty
@@ -39449,7 +39364,7 @@ rap parlor
 rap partner
 rap session
 rap sheet
-rap with
+rap with so
 rap your knuckles
 rape culture
 rape tools
@@ -39658,7 +39573,7 @@ rearrange my face
 rearrange the deckchairs on the titanic
 rears its head
 rears its ugly head
-reason with
+reason with so
 reassigns t
 reassure her about
 reassure her of
@@ -39678,7 +39593,7 @@ recharge your batteries
 recipe for disaster
 reck our own rede
 reckless eyeballing
-reckon with
+reckon without
 recognize one for what one is
 recoil at the sight
 recoil at the thought
@@ -39813,7 +39728,6 @@ reduced to doing
 reductio ad absurdum
 reef a sail in
 reef in the jib
-reeked with
 reeling and rocking
 reelings and rockings
 reels of cotton
@@ -39832,7 +39746,6 @@ refresh your memory
 refuse it to
 refuse to do
 regain from
-regale with
 regard her as
 reggie and ronnie
 register her in
@@ -39898,8 +39811,6 @@ remember to write
 remind her about
 reminisce about
 reminisce with so
-reminisced with
-remonstrated with
 removed one from
 ren and stimpy
 rend it to
@@ -39938,7 +39849,7 @@ reside in some place
 resign from
 resign oneself
 resign under fire
-resonate with
+resonate with so
 respect due
 responsible parties
 rest her in
@@ -39985,7 +39896,6 @@ revenge of the cradle
 revenge of the nursery
 revenge porn
 reverberate through
-reverberate with
 reverend ronald knox
 reverse cowgirl
 reverse diarrhoea
@@ -40028,7 +39938,6 @@ rice rocket
 rich as croesus
 rich beyond any dream of avarice
 rich seam
-rich with
 richard and judy
 richard briars
 richard burton
@@ -40056,7 +39965,6 @@ ridden it to
 ridden it with
 ridden with the punches
 riddle me this
-riddle with
 ride a desk
 ride a horse foaled by an acorn
 ride a horse foaled of an acorn
@@ -40200,7 +40108,6 @@ ring the curtain up
 ring the knell of
 ring the shed
 ring true
-ring with
 ringo starr
 rings a bell
 ringside seat
@@ -40559,7 +40466,7 @@ room temperature iq
 room time
 room to swing a cat
 room together
-room with
+room with so
 rooster comb
 rooster tail
 root about
@@ -41047,8 +40954,7 @@ sadder but wiser
 saddle an animal up
 saddle shoe
 saddle tramp
-saddle with
-saddled with
+saddled with debt
 saddling paddock
 sadie and masie
 sadie masie
@@ -41558,7 +41464,6 @@ scream like a banshee
 scream loudest
 scream out at
 scream the place down
-scream with
 scream your head off
 screamer and creamer
 screaming abdabs
@@ -41590,7 +41495,6 @@ screw up face
 screw up the courage
 screw up your courage
 screw up your face
-screw with
 screw your buddy
 screwed tight
 scrimp and save
@@ -41648,7 +41552,6 @@ seal the deal
 sealed with a kiss
 seam shooter
 seam squirrels
-seam with
 seamus heaney
 seamy side
 search and avoid
@@ -41834,8 +41737,6 @@ seize the moment
 seize the moral high ground
 seize the opportunity
 seize upon
-seize with
-seized with
 seldom seen
 selective breeding
 self care
@@ -42148,7 +42049,6 @@ settle old scores
 settle out of court
 settle stomach
 settle up with
-settle with
 settle your stomach
 seven and seven
 seven and six
@@ -42192,7 +42092,6 @@ shabbat shalom
 shack house
 shack rat
 shack up with
-shackle with
 shade spade
 shade tree
 shades of grey
@@ -42562,7 +42461,8 @@ short straw
 short strokes
 short temper
 short time
-short with
+short with me
+short with so
 shortcake artist
 shortie pyjamas
 shortness of breath
@@ -42689,7 +42589,6 @@ shower head
 shower of shit
 shower scum
 shower upon
-shower with
 shrewd head
 shriek like a banshee
 shrieking sixties
@@ -42770,7 +42669,7 @@ side of the mouth
 side of the tracks
 side squeeze
 side street
-side with
+side with so
 side work
 sidehill gouger
 sidehill winder
@@ -43473,7 +43372,6 @@ smooth the path
 smooth the way
 smooth trade
 smother game
-smother with
 smuggle into some place
 smuggling peanuts
 smurf account
@@ -43976,7 +43874,7 @@ spank the plank
 spank your very crotch
 spanking the monkey
 spanner in the works
-spar with
+spar with so
 spare at the spigot and spill at the bung
 spare change
 spare no effort to
@@ -43988,7 +43886,6 @@ spark plug
 spark scene
 sparkle plenty
 sparks fly
-sparred with
 sparring partner
 sparrow brain
 sparrow grass
@@ -44220,7 +44117,6 @@ spoon it up
 sport fucking
 sport girl
 sport of kings
-sported with
 sporting blood
 sporting chance
 sporting girl
@@ -44311,7 +44207,6 @@ spy upon
 squab job
 squabble about
 squabble with so
-squabbled with
 squad halt
 squander it away
 squander it on
@@ -44352,7 +44247,7 @@ square up to
 square up with so
 square weed
 square wife
-square with
+square with so
 square woman
 square your shoulders
 squared away
@@ -44373,7 +44268,6 @@ squeaking wheel gets the oil
 squeaky clean
 squeaky wheel
 squeal like a stuck pig
-squealed with
 squeegee band
 squeeze an orange
 squeeze blood out of a turnip
@@ -44387,7 +44281,6 @@ squidgy black
 squiffy doo
 squint like a bag of nails
 squirm seat
-squirmed with
 squirrel away
 squirrel cage
 squirrel out of
@@ -44873,7 +44766,7 @@ stick to your ribs
 stick together
 stick two fingers up at
 stick up for
-stick with
+stick with it
 stick your head above the parapet
 stick your neck out
 stick your nose into
@@ -44897,7 +44790,6 @@ stiff luck
 stiff one
 stiff turps
 stiff upper lip
-stiff with
 stiffing the stroll
 still and all
 still as death
@@ -45588,7 +45480,6 @@ swap notes
 swap places with
 swap spit
 swap with so
-swarm with
 swave and blaze
 sway back and forth
 sway from side to side
@@ -46533,10 +46424,8 @@ tall story
 tall tale
 tall timber
 tallied it up
-tallied with
 tam rag
 tampa pilot
-tamper with
 tampon dick
 tan her hide
 tan hide
@@ -46544,7 +46433,6 @@ tan valise
 tangerine dream
 tangier tiger
 tangle up in
-tangle with
 tangled up with
 tangled web
 tango boat
@@ -46600,7 +46488,6 @@ taunt her into
 taunt her with
 taury rope
 tax trap
-tax with
 tea and cocoa
 tea and crumpets
 tea and sympathy
@@ -46697,7 +46584,6 @@ teddy bear
 teddy boy
 tee hee
 tee off on
-teem with
 teeny weeny
 teeter on the brink
 teeter on the edge
@@ -48191,7 +48077,6 @@ thrift shop
 thrill one to death
 thrill pill
 thrill to pieces
-thrill with
 thrilla in manilla
 thrilled to bits
 thrilled to death
@@ -48228,7 +48113,7 @@ through the slips
 through the wringer
 through thick and thin
 through train
-through with
+through with flying colors
 throw a bennie
 throw a bone
 throw a curve
@@ -48622,7 +48507,6 @@ tiniest thing
 tinker about
 tinker around
 tinker to evers to chance
-tinker with
 tinkle the ivories
 tinned dog
 tinny house
@@ -48646,7 +48530,6 @@ tip sb the wink
 tip the balance
 tip the scale
 tip the wink
-tip with
 tip your hand
 tipping point
 tiptoe around
@@ -49211,7 +49094,6 @@ top totty
 top wack
 top weight
 top whack
-top with
 topping shed
 topple from
 tops and bottoms
@@ -49272,13 +49154,12 @@ touch on the raw
 touch paper
 touch to the quick
 touch upon
-touch with
+touch with a barge pole
 touch wood
 touch you
 touche eclat
 touched by the moon
 touched in the head
-touched with
 tough act to follow
 tough as an old boot
 tough as nails
@@ -49344,7 +49225,9 @@ toxic waste dump
 toy boy
 toy dolls
 toy otter
-toy with
+toy with an
+toy with so
+toy with the idea
 toyko rose
 trace around
 trace it back
@@ -49366,7 +49249,6 @@ trade queen
 trade secret
 trade up from
 trade upon
-trade with
 trading stamp
 traditional discipline
 trafalgar square
@@ -49417,7 +49299,7 @@ travel broadens the mind
 travel in a body
 travel light
 travel off the beaten path
-travel with
+travel with so
 traveled light
 traveling light
 travelled light
@@ -49456,7 +49338,6 @@ treetop level and all engines out
 trek across
 trek to some place
 tremble from
-trembled with
 trench coat
 trey bit
 trey eight
@@ -49506,7 +49387,7 @@ tried out utmost
 tried their fortune
 tried their luck
 trifle away
-trifle with
+trifle with me
 trigger finger
 trigger guard
 trigger happy
@@ -49516,7 +49397,6 @@ trilby hat
 trim away
 trim from
 trim sails
-trim with
 trim your sails
 trini by boat
 trini time
@@ -49562,7 +49442,6 @@ trouble oneself
 trouble shared is a trouble halved
 trouble shared is trouble halved
 trouble to do
-trouble with
 troubled waters
 troubles and cares
 trouser bandit
@@ -49875,7 +49754,6 @@ twiddle her thumbs
 twiddle ones thumbs
 twiddle one’s thumbs
 twiddle thumbs
-twiddle with
 twiddle your thumbs
 twig and berries
 twig to that
@@ -49885,7 +49763,6 @@ twin caper
 twin fin
 twinkle star
 twinkle toes
-twinkle with
 twinkling of an eye
 twist and twirl
 twist arm
@@ -50293,7 +50170,11 @@ up to the neck
 up to you
 up top
 up west
-up with
+up with so
+up with the chickens
+up with the crows
+up with the lark
+up with the roosters
 up your alley
 up your game
 up your nose with a rubber hose
@@ -50417,7 +50298,6 @@ vanity sizing
 vantage point
 vapour lock
 varied from
-varied with
 variety is the spice of life
 variety shop
 variety show
@@ -50454,7 +50334,6 @@ verbal assault
 verbal diarrhea
 verbal diarrhoea
 verge upon
-verify with
 veronica lake
 versed her in
 vertical bacon sandwich
@@ -50468,7 +50347,6 @@ very little in it
 very much so
 very thing
 very well
-vest with
 vested interest
 vicar of bray
 vice president
@@ -50486,7 +50364,6 @@ vide infra
 vide supra
 video blog
 video jock
-vie with
 viet shits
 vietnam rose
 vietnam syndrome
@@ -50741,7 +50618,7 @@ war of nerves
 war of words
 war paint
 war wagon
-war with
+war with so
 war zone
 wardrobe malfunction
 warm as toast
@@ -51012,7 +50889,6 @@ weigh ones words
 weigh one’s words
 weigh pros and cons
 weigh upon
-weigh with
 weigh words
 weigh your words
 weight house
@@ -51030,7 +50906,7 @@ welcome to do
 welcome to my world
 welcome to our house
 welcome to the club
-welcome with
+welcome with open arms
 welcoming mat
 weld together
 well and good
@@ -51261,7 +51137,7 @@ what was i thinking of
 what was that
 what will be will be
 what will become of
-what with
+what with one thing and another
 what would you say
 what ya saying
 what yer
@@ -52207,7 +52083,6 @@ word of the law
 word on the street
 word spoken is past recalling
 word to the wise
-word with
 words fail me
 words of one syllable
 words stick in her throat
@@ -52419,7 +52294,6 @@ wounded soldier
 wow factor
 wrack and ruin
 wrack her brain
-wrangle with
 wrap around
 wrap car around
 wrap head around
@@ -52448,7 +52322,8 @@ wrench out of
 wrest from
 wrest her off
 wrestle from
-wrestle with
+wrestle with a pig
+wrestle with so
 wriggle my way out
 wriggle off the hook
 wriggle out of
