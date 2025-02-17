@@ -22,7 +22,6 @@
     "contextMenus",
     "scripting",
     "tts",
-    "identity",
     "tabs"
   ],
   "background": {
