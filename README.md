@@ -18,9 +18,11 @@
 - [x] 右键复制生词
 - [x] lemma等级及当前页面词频
 - [x] 导入导出配置
+- [x] 在线配置链接手动同步
 
-## Download
+## How to Use
 
-from github action build
+- [Microsoft Edge 扩展应用商店](https://microsoftedge.microsoft.com/addons/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85ng/kdphfeabhlflpbeapflpkipohibphhgn)
+- Chrome 扩展应用商店 （上架中）
+- [手动安装](https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml)
 
-https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml
