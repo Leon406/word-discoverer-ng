@@ -23,6 +23,6 @@
 ## How to Use
 
 - [Microsoft Edge 扩展应用商店](https://microsoftedge.microsoft.com/addons/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85ng/kdphfeabhlflpbeapflpkipohibphhgn)
-- Chrome 扩展应用商店 （上架中）
+- [Chrome 扩展应用商店](https://chromewebstore.google.com/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85-ng/oikgdogigcinjcpjpahpgekgbimjgcce) 
 - [手动安装](https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml)
 
