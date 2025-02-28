@@ -5,8 +5,11 @@
 <p align="center"><img src="https://profile-counter.glitch.me/Leon406_word-discoverer-ng/count.svg" alt="Visitor's Count" />
  <img width=0 height=0 src="https://profile-counter.glitch.me/Leon406/count.svg" alt="Leon406:: Visitor's Count" />
 </p>
-
 # Chrome Extension: Word Discoverer Next Generation
+
+## Preview
+
+![preview](\store\preview.jpg)
 
 ## RoadMap
 
@@ -20,7 +23,7 @@
 - [x] 导入导出配置
 - [x] 在线配置链接手动同步
 
-## How to Use
+## How to Install
 
 - [Microsoft Edge 扩展应用商店](https://microsoftedge.microsoft.com/addons/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85ng/kdphfeabhlflpbeapflpkipohibphhgn)
 - [Chrome 扩展应用商店](https://chromewebstore.google.com/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85-ng/oikgdogigcinjcpjpahpgekgbimjgcce) 
