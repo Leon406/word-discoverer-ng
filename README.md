@@ -9,7 +9,7 @@
 
 ## Preview
 
-![preview](\store\preview.jpg)
+![preview](./store/preview.jpg)
 
 ## RoadMap
 
