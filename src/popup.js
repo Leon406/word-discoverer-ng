@@ -84,7 +84,7 @@ function process_show() {
 }
 
 function process_help() {
-  open_local_tab('help.html')
+  open('https://github.com/Leon406/word-discoverer-ng')
 }
 
 function process_adjust() {
