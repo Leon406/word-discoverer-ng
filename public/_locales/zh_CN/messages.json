@@ -46,7 +46,7 @@
     "message": "导入词汇"
   },
   "tipInfo": {
-    "message": "若要添加新的词汇到您的词汇，您可以使用鼠标悬停菜单或浏览器右键菜单（选择文本+右键点击）或此输入字段："
+    "message": "若要添加您的词汇，可使用鼠标悬停菜单或浏览器右键菜单（选择文本+右键点击）或在此输入词汇进行增删（支持多个，用分号分隔）："
   },
   "addErrorDupp": {
     "message": "已经添加。"
@@ -56,6 +56,9 @@
   },
   "addSuccess": {
     "message": "已添加。"
+  },
+ "delSuccess": {
+    "message": "已删除。"
   },
   "saveVisuals": {
     "message": "保存"

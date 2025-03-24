@@ -1,9 +1,9 @@
 import {
-  add_lexeme,
+  add_lexeme2, delete_lexeme,
   idClickFunc,
   localizeHtmlPage,
   open_local_tab,
-  request_unhighlight,
+  request_unhighlight
 } from './common_lib'
 
 let dict_size = null
@@ -13,9 +13,9 @@ function display_mode() {
   chrome.tabs.query(
     {
       active: true,
-      lastFocusedWindow: true,
+      lastFocusedWindow: true
     },
-    function (tabs) {
+    function(tabs) {
       const tab = tabs[0]
       const url = new URL(tab.url)
       const domain = url.hostname
@@ -26,7 +26,7 @@ function display_mode() {
           chrome.i18n.getMessage('addSkippedLabel')
         document.getElementById('addToListLabel').href =
           chrome.runtime.getURL('black_list.html')
-        chrome.storage.sync.get(['wd_black_list'], function (result) {
+        chrome.storage.sync.get(['wd_black_list'], function(result) {
           const black_list = result.wd_black_list
           document.getElementById('addToList').checked =
             black_list.hasOwnProperty(domain)
@@ -37,32 +37,32 @@ function display_mode() {
           chrome.i18n.getMessage('addFavoritesLabel')
         document.getElementById('addToListLabel').href =
           chrome.runtime.getURL('white_list.html')
-        chrome.storage.sync.get(['wd_white_list'], function (result) {
+        chrome.storage.sync.get(['wd_white_list'], function(result) {
           const white_list = result.wd_white_list
           document.getElementById('addToList').checked =
             white_list.hasOwnProperty(domain)
         })
       }
-    },
+    }
   )
 }
 
 function process_checkbox() {
   const checkboxElem = document.getElementById('addToList')
-  chrome.tabs.query({ active: true, lastFocusedWindow: true }, function (tabs) {
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, function(tabs) {
     const tab = tabs[0]
     const url = new URL(tab.url)
     const domain = url.hostname
     document.getElementById('addHostName').textContent = domain
     const list_name = enabled_mode ? 'wd_black_list' : 'wd_white_list'
-    chrome.storage.sync.get([list_name], function (result) {
+    chrome.storage.sync.get([list_name], function(result) {
       const site_list = result[list_name]
       if (checkboxElem.checked) {
         site_list[domain] = 1
       } else {
         delete site_list[domain]
       }
-      chrome.storage.sync.set({ [list_name]: site_list }, function () {
+      chrome.storage.sync.set({ [list_name]: site_list }, function() {
         display_mode()
       })
     })
@@ -92,20 +92,29 @@ function process_adjust() {
 }
 
 function display_vocabulary_size() {
-  chrome.storage.local.get(['wd_user_vocabulary'], function (result) {
+  chrome.storage.local.get(['wd_user_vocabulary'], function(result) {
     const { wd_user_vocabulary } = result
     document.getElementById('vocabIndicator').textContent =
       Object.keys(wd_user_vocabulary).length
   })
 }
 
-function popup_handle_add_result(report, lemma) {
+function popup_handle_result(report, lemma) {
   if (report === 'ok') {
-    request_unhighlight(lemma)
+    if (typeof lemma === 'object') {
+      lemma.forEach(l => {
+        request_unhighlight(l)
+      })
+    } else {
+      request_unhighlight(lemma)
+    }
     display_vocabulary_size()
     document.getElementById('addText').value = ''
-    document.getElementById('addOpResult').textContent =
-      chrome.i18n.getMessage('addSuccess')
+    document.getElementById('addOpResult').textContent = chrome.i18n.getMessage('addSuccess')
+  } else if (report === 'delOk') {
+    display_vocabulary_size()
+    document.getElementById('addText').value = ''
+    document.getElementById('addOpResult').textContent = chrome.i18n.getMessage('delSuccess')
   } else if (report === 'exists') {
     document.getElementById('addOpResult').textContent =
       chrome.i18n.getMessage('addErrorDupp')
@@ -127,16 +136,23 @@ function process_add_word() {
     document.getElementById('addText').value = ''
     return
   }
-  add_lexeme(lexeme, popup_handle_add_result)
+  add_lexeme2(lexeme, popup_handle_result)
 }
+
+function process_delete_word() {
+  const lexeme = document.getElementById('addText').value
+  delete_lexeme(lexeme, popup_handle_result)
+}
+
 function display_percents(show_percents) {
   const not_showing_cnt = Math.floor((dict_size / 100.0) * show_percents)
   document.getElementById('rateIndicator1').textContent = `${show_percents}%`
   document.getElementById('rateIndicator2').textContent = `${show_percents}%`
   document.getElementById('countIndicator').textContent = not_showing_cnt
 }
+
 function process_rate(increase) {
-  chrome.storage.sync.get(['wd_show_percents'], function (result) {
+  chrome.storage.sync.get(['wd_show_percents'], function(result) {
     let show_percents = result.wd_show_percents
     show_percents += increase
     show_percents = Math.min(100, Math.max(0, show_percents))
@@ -148,23 +164,27 @@ function process_rate(increase) {
 function process_rate_m1() {
   process_rate(-1)
 }
+
 function process_rate_m10() {
   process_rate(-10)
 }
+
 function process_rate_p1() {
   process_rate(1)
 }
+
 function process_rate_p10() {
   process_rate(10)
 }
 
 function init_controls() {
-  window.onload = function () {
+  window.onload = function() {
     idClickFunc('addToList', process_checkbox)
     idClickFunc('adjust', process_adjust)
     idClickFunc('showVocab', process_show)
     idClickFunc('getHelp', process_help)
     idClickFunc('addWord', process_add_word)
+    idClickFunc('deleteWord', process_delete_word)
     idClickFunc('rateM10', process_rate_m10)
     idClickFunc('rateM1', process_rate_m1)
     idClickFunc('rateP1', process_rate_p1)
@@ -173,7 +193,7 @@ function init_controls() {
     idClickFunc('rb_disabled', process_mode_switch)
     document
       .getElementById('addText')
-      .addEventListener('keyup', function (event) {
+      .addEventListener('keyup', function(event) {
         event.preventDefault()
         if (event.keyCode === 13) {
           // Enter
@@ -185,18 +205,18 @@ function init_controls() {
 
     chrome.storage.sync.get(
       ['wd_show_percents', 'wd_is_enabled', 'wd_word_max_rank'],
-      function (result) {
+      function(result) {
         const show_percents = result.wd_show_percents
         enabled_mode = result.wd_is_enabled
         dict_size = result.wd_word_max_rank
         display_percents(show_percents)
         display_mode()
-      },
+      }
     )
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   localizeHtmlPage()
   init_controls()
 })

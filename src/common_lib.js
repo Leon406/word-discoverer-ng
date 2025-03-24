@@ -95,6 +95,114 @@ export function add_lexeme(lexeme, result_handler) {
     })
   })
 }
+export function add_lexeme2(lexeme, result_handler) {
+  const req_keys = [
+    'words_discoverer_eng_dict',
+    'wd_idioms',
+    'wd_user_vocabulary',
+  ]
+  chrome.storage.local.get(req_keys, function (result) {
+    const dict_words = result.words_discoverer_eng_dict
+    const dict_idioms = result.wd_idioms
+    const user_vocabulary = result.wd_user_vocabulary
+    if (lexeme.length > 100) {
+      result_handler('bad', undefined)
+      return
+    }
+    lexeme = lexeme.toLowerCase().trim()
+    if (!lexeme) {
+      result_handler('bad', undefined)
+      return
+    }
+    let added = []
+    lexeme.split(/[\n;；]+/).forEach(
+      lemma=> {
+        let key = lemma
+        console.log("lemma add", lemma)
+        if (dict_words.hasOwnProperty(lemma)) {
+          const wf = dict_words[lemma]
+          if (wf) {
+            const [first] = wf
+            key = first
+          }
+        } else if (dict_idioms.hasOwnProperty(lemma)) {
+          const wf = dict_idioms[lemma]
+          if (wf && wf !== -1) {
+            key = wf
+          }
+        }
+
+        if (!user_vocabulary.hasOwnProperty(key)) {
+          user_vocabulary[key] = 1
+          added.push(key)
+        }
+      })
+
+    if (added.length) {
+      const new_state = { wd_user_vocabulary: user_vocabulary }
+      console.log("lemma add", added)
+      chrome.storage.local.set(new_state, function () {
+        result_handler('ok', added)
+      })
+    }else {
+      result_handler('exists', undefined)
+    }
+
+  })
+}
+export function delete_lexeme(lexeme, result_handler) {
+  const req_keys = [
+    'words_discoverer_eng_dict',
+    'wd_idioms',
+    'wd_user_vocabulary',
+  ]
+  chrome.storage.local.get(req_keys, function (result) {
+    const dict_words = result.words_discoverer_eng_dict
+    const dict_idioms = result.wd_idioms
+    const user_vocabulary = result.wd_user_vocabulary
+    if (lexeme.length > 100) {
+      result_handler('bad', undefined)
+      return
+    }
+    lexeme = lexeme.toLowerCase().trim()
+    if (!lexeme) {
+      result_handler('bad', undefined)
+      return
+    }
+    let deleted = []
+    lexeme.split(/[\n;；]+/).forEach(
+      lemma=>{
+        console.log("lemma del", lemma)
+        let key = lemma
+        if (dict_words.hasOwnProperty(lemma)) {
+          const wf = dict_words[lemma]
+          if (wf) {
+            const [first] = wf
+            key = first
+          }
+        } else if (dict_idioms.hasOwnProperty(lemma)) {
+          const wf = dict_idioms[lemma]
+          if (wf && wf !== -1) {
+            key = wf
+          }
+        }
+        if (user_vocabulary.hasOwnProperty(key)) {
+          delete user_vocabulary[key]
+          deleted.push(key)
+        }
+      }
+    )
+
+    if (deleted.length) {
+      console.log("lemma del", deleted)
+      const new_state = { wd_user_vocabulary: user_vocabulary }
+      chrome.storage.local.set(new_state, function () {
+        result_handler('delOk', deleted)
+      })
+    }
+
+  })
+}
 
 export function make_hl_style(hl_params) {
   if (!hl_params.enabled) return undefined
