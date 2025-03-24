@@ -1,4 +1,4 @@
-import { add_lexeme, make_hl_style, make_id_suffix } from './common_lib'
+import { add_lexeme, make_hl_style, make_class_name,unhighlight } from './common_lib'
 import { handleLexResult } from './utils/bing'
 
 import { get_dict_definition_url } from './context_menu_lib'
@@ -28,13 +28,6 @@ const word_re = /^[a-z'’]+$/
 let function_key_is_pressed = false
 let rendered_node_id = null
 let node_to_render_id = null
-
-function make_class_name(lemma) {
-  if (lemma) {
-    return `wdhl_${make_id_suffix(lemma)}`
-  }
-  return 'wdhl_none_none'
-}
 
 function get_rare_lemma(word) {
   if (word.length < 3) return undefined
@@ -658,18 +651,6 @@ function onNodeChanged(event) {
       doHighlightText(textNodes)
     }
   }
-}
-
-function unhighlight(lemma) {
-  const wdclassname = make_class_name(lemma)
-  const hlNodes = document.getElementsByClassName(wdclassname)
-  Array.from(hlNodes).forEach((span) => {
-    span.setAttribute(
-      'style',
-      'font-weight:inherit;color:inherit;background-color:inherit;',
-    )
-    span.setAttribute('class', 'wdhl_none_none')
-  })
 }
 
 function get_verdict(isEnabled, black_list, white_list, callback_func) {

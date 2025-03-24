@@ -1,4 +1,4 @@
-import { add_lexeme, eval_func, request_unhighlight } from './common_lib'
+import { add_lexeme, eval_func, request_unhighlight,unhighlight } from './common_lib'
 
 const isoLangs = {
   ab: 'Abkhaz',
@@ -270,9 +270,16 @@ export function initContextMenus(dictPairs) {
       id: 'vocab_select_add',
     })
     chrome.contextMenus.create({
-      title: 'Copy Vocabulary',
+      title: 'Copy All Vocabulary',
       id: 'vocab_copy',
     })
+
+    chrome.contextMenus.create({
+      id: 'save_all_vocabulary',
+      title: 'Save All Vocabularies',
+      contexts: ['all'],
+    });
+
     chrome.contextMenus.onClicked.addListener(function (info, tab) {
       console.log('ContextMenus', info)
       const word = info.selectionText
@@ -280,6 +287,8 @@ export function initContextMenus(dictPairs) {
         add_lexeme(word, context_handle_add_result)
       } else if (info.menuItemId === 'vocab_copy') {
         eval_func(copy_vocabulary)
+      } else if (info.menuItemId === 'save_all_vocabulary') {
+        eval_func(saveAllVocabulary);
       } else if (info.menuItemId.startsWith('wd_define_')) {
         let i = info.menuItemId.substring(info.menuItemId.lastIndexOf('_') + 1)
         console.log('ddd', i, dictPairs[parseInt(i)])
@@ -293,4 +302,34 @@ export function initContextMenus(dictPairs) {
     })
     createDictionaryEntry(dictPairs)
   })
+}
+
+function saveAllVocabulary() {
+  const highlightedNodes = document.querySelectorAll('wdhl[lemma]');
+  const lemmasToSave = new Set();
+  highlightedNodes.forEach((node) => {
+    const lemma = node.getAttribute('lemma');
+    if (lemma) {
+      lemmasToSave.add(lemma);
+      // 隐藏已高亮的词汇
+      node.setAttribute(
+        'style',
+        'font-weight:inherit;color:inherit;background-color:inherit;',
+      )
+      node.setAttribute('class', 'wdhl_none_none')
+    }
+  });
+
+  chrome.storage.local.get(['wd_user_vocabulary'], function (result) {
+    const userVocabulary = result.wd_user_vocabulary || {};
+    lemmasToSave.forEach((lemma) => {
+      if (!userVocabulary.hasOwnProperty(lemma)) {
+        userVocabulary[lemma] = 1;
+      }
+    });
+
+    chrome.storage.local.set({ wd_user_vocabulary: userVocabulary }, function () {
+      console.log(`Saved ${lemmasToSave.size} unique lemmas to vocabulary.`);
+    });
+  });
 }

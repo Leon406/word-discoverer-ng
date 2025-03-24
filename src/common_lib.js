@@ -122,3 +122,21 @@ export function localizeHtmlPage() {
     }
   }
 }
+
+export function make_class_name(lemma) {
+  if (lemma) {
+    return `wdhl_${make_id_suffix(lemma)}`
+  }
+  return 'wdhl_none_none'
+}
+export function unhighlight(lemma) {
+  const wdclassname = make_class_name(lemma)
+  const hlNodes = document.getElementsByClassName(wdclassname)
+  Array.from(hlNodes).forEach((span) => {
+    span.setAttribute(
+      'style',
+      'font-weight:inherit;color:inherit;background-color:inherit;',
+    )
+    span.setAttribute('class', 'wdhl_none_none')
+  })
+}
