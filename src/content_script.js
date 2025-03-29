@@ -753,7 +753,7 @@ function create_bubble() {
   return bubbleDOM
 }
 
-function initForPage() {
+export function initForPage() {
   if (!document.body) return
 
   chrome.runtime.onMessage.addListener(
@@ -813,13 +813,18 @@ function initForPage() {
                 renderBubble()
                 return
               }
+             const href = location.href
               const elementTagName = event.target.tagName
-              if (!disable_by_keypress && elementTagName !== 'BODY') {
+              href.s
+              console.log("elementTagName",elementTagName,href)
+              if (!disable_by_keypress && elementTagName !== 'BODY' && location.protocol !='chrome-extension:') {
                 // 例如新建issue，写md，然后预览会触发
                 // workaround to prevent highlighting in facebook messages
                 // this logic can also be helpful in other situations, it's better play safe and stop highlighting when user enters data.
                 disable_by_keypress = true
                 chrome.runtime.sendMessage({ wdm_verdict: 'keyboard' })
+              }else {
+                disable_by_keypress = false
               }
             })
 

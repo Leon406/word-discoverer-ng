@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head translate="no">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read offline</title>
+  <link rel="stylesheet" href="./css/content_script.css" />
+  <link rel="stylesheet" href="./css/local.css" />
+  <script type="text/javascript" src="./js/local.js"></script>
+
+</head>
+
+<body>
+<div id='configuration-area'>
+  <form id='configuration'>
+    <p class="title">在此处粘贴或者输入文本:</p>
+    <textarea name='sentence' id="input"></textarea>
+    <div id="actions">
+                <span><input type="button" id="new" value="解析"></span>
+                <span><input type="button" id="delete" value="删除" ></span>
+    </div>
+  </form>
+</div>
+<div id='print-area'>
+  <header id='header'></header>
+
+  <table class="paging">
+    <tbody>
+    <tr>
+      <td>
+        <div id="sentence-preview">
+          <div id="text-to-read"></div>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    </tfoot>
+  </table>
+
+  <footer>
+  </footer>
+
+</div>
+</body>
+
+</html>

@@ -21,6 +21,20 @@ export function eval_func(func, args = []) {
 export function open_local_tab(url, cb) {
   chrome.tabs.create({ url: chrome.runtime.getURL(url) }, cb)
 }
+export function readerService () {
+  const newEle = document.getElementById('new')
+  const input = document.getElementById('input')
+
+  const deleteEle = document.getElementById('delete')
+  const sentence = document.getElementById('text-to-read')
+  newEle.onclick = function() {
+    sentence.innerHTML = input.value
+  }
+  deleteEle.onclick = function() {
+    input.value = ''
+    sentence.innerHTML = ''
+  }
+}
 
 export function idClickFunc(id, func) {
   document.getElementById(id).addEventListener('click', func)

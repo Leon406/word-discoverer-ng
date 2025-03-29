@@ -11,6 +11,7 @@ module.exports = {
     popup: path.join(srcDir, 'popup.js'),
     import: path.join(srcDir, 'import.js'),
     adjust: path.join(srcDir, 'adjust.js'),
+    local: path.join(srcDir, 'local.js'),
     background: path.join(srcDir, 'background.js'),
     content: path.join(srcDir, 'content_script.js'),
   },

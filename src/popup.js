@@ -86,6 +86,9 @@ function process_show() {
 function process_help() {
   open('https://github.com/Leon406/word-discoverer-ng')
 }
+function process_local() {
+  open_local_tab('local.html')
+}
 
 function process_adjust() {
   open_local_tab('adjust.html')
@@ -181,6 +184,7 @@ function init_controls() {
   window.onload = function() {
     idClickFunc('addToList', process_checkbox)
     idClickFunc('adjust', process_adjust)
+    idClickFunc('local', process_local)
     idClickFunc('showVocab', process_show)
     idClickFunc('getHelp', process_help)
     idClickFunc('addWord', process_add_word)

@@ -1,0 +1,281 @@
+html {
+    box-sizing: border-box;
+}
+:root {
+    color-scheme: dark light;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    font-family: system-ui, sans-serif;
+}
+
+#configuration-area {
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    padding: 0.125in;
+    width: 100%;
+    background-color: lightgray;
+}
+
+#configuration {
+    width: 100%;
+}
+
+#other-options {
+    margin-left: 2em;
+    text-align: left;
+}
+
+textarea {
+    width: 100%;
+    height: 25vh;
+    border-radius: 5px;
+    resize: none;
+}
+
+input[type='range'] {
+    width: 90%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    background: linear-gradient(to right, black, white);
+    border: 0.2px solid grey;
+}
+input[type='range']::-webkit-slider-thumb {
+    border: 1px solid black;
+    height: 24px;
+    width: 16px;
+    border-radius: 6px;
+    background: #ffffff;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    margin-top: -10px;
+}
+input[type='range']:focus::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, black, white);
+}
+
+select {
+    border-radius: 5px;
+}
+
+#print-area {
+    font-size: 16px;
+
+    width: 100%;
+    /* background-color: white; */
+
+    /*margin-left: 0.25in;
+    margin-right: 0.25in;*/
+
+    overflow: auto;
+    height: 100vh;
+}
+
+input[type=button], button {
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+header,
+footer {
+    width: 100%;
+    /* height: 0.5in; */
+    height: max-content;
+    margin-top: 0in;
+}
+
+header {
+    /* position: absolute; */
+    top: 0;
+}
+
+#character-target-div {
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 0px;
+}
+
+#sentence-preview {
+    padding: 0.125in;
+}
+
+
+.activities {
+    display: none;
+}
+
+.activity {
+    width: 1.8rem;
+    height: 1.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    writing-mode: horizontal-tb;
+
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.active {
+    background-color: lightgreen;
+}
+
+.cursor-image {
+    max-width: 1rem;
+    max-height: 1rem;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+@media print {
+    @page {
+        /* size: landscape; */
+    }
+
+    @page {
+        /* margin-top: 0;
+        margin-bottom: 0; */
+        margin: 0.5in;
+    }
+
+    /* SIDEBAR_ID */
+    #configuration-area,
+    #chinese-words-separator--sidebar {
+        display: none !important;
+    }
+
+    body {
+        padding: 0 !important;
+    }
+
+    table.paging thead td,
+    table.paging tfoot td {
+        height: 0.5in;
+    }
+
+    header,
+    footer {
+        position: fixed;
+    }
+
+    footer {
+        bottom: 0;
+    }
+
+    #print-area {
+        height: max-content;
+    }
+}
+
+/*
+.calligraphy-border {
+    stroke: red;
+}
+
+.calligraphy-hanzi path {
+    stroke: blue;
+}
+*/
+
+@media only screen and (min-width: 420px) {
+    body {
+        flex-direction: row;
+    }
+
+    .activities {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #configuration-area {
+        width: 30%;
+        height: 100vh;
+    }
+
+    textarea {
+        height: 47vh;
+        resize: vertical;
+    }
+}
+
+
+#titles {
+    width: 100%;
+}
+
+#actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+#parallel {
+    /* display: none; */
+    visibility: hidden;
+}
+
+#vertical {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.5rem;
+}
+
+#vertical.use {
+    background-color: lightgreen;
+}
+
+#vertical > x-x {
+    margin: -0.08rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    #configuration-area {
+        background-color: #222;
+    }
+}
+
+#text-to-read {
+    padding: 10px;
+    min-height: 50px;
+    font-size: 1.5em;
+    /* 关键就在这里！ */
+    white-space: pre-wrap; /* 保留空白符序列和换行符，并且允许自动换行 */
+    /* 或者用 pre-line: 会合并空白符序列，但保留换行符 */
+    /* white-space: pre-line; */
+    word-break: break-word; /* 确保长单词也能换行 */
+}
+
+.title {
+    font-size: 1.5em;
+    color: #86a845;
+}
+
+#delete,#new  {
+    font-size: 1.25em;
+    color: white;
+    background: #4caf50;
+}
+
