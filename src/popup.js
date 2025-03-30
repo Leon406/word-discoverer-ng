@@ -157,7 +157,8 @@ function display_last_hidden_percents(show_percents) {
   const not_showing_cnt = Math.floor((dict_size / 100.0) * show_percents)
   document.getElementById('rateIndicator1L').textContent = `${show_percents}%`
   document.getElementById('rateIndicator2L').textContent = `${show_percents}%`
-  document.getElementById('countIndicatorL').textContent = not_showing_cnt
+  document.getElementById('countIndicatorL').textContent = ` > ${dict_size - not_showing_cnt} `
+  document.getElementById('countIndicatorL').title = not_showing_cnt
 }
 
 function process_rate(increase) {

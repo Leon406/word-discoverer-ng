@@ -19,11 +19,11 @@
     "description": "1-st part of \"Not highlighting 100 most common English words\" sentence"
   },
   "rateInfo2": {
-    "message": "最常用的英语单词。",
+    "message": "最常用的英语单词",
     "description": "2-nd part of \"Not highlighting 100 most common English words\" sentence"
   },
   "rateInfo3": {
-    "message": "最不常用的英语单词。",
+    "message": "最不常用的英语单词",
     "description": "3-nd part of \"Not highlighting 100 most common English words\" sentence"
   },
   "local": {
@@ -105,10 +105,10 @@
     "message": "粗体"
   },
   "enabledDescription": {
-    "message": "高亮所有网站 (除了“跳过列表”)。"
+    "message": "高亮所有网站 (除了“跳过列表”)"
   },
   "disabledDescription": {
-    "message": "仅高亮“收藏列表”网站。"
+    "message": "仅高亮“收藏列表”网站"
   },
   "addVerb": {
     "message": "添加",
