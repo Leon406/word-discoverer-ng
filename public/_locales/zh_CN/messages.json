@@ -33,6 +33,21 @@
   "adjust": {
     "message": "更多设置..."
   },
+ "other_conf": {
+    "message": "其他配置"
+  },
+  "exportConf": {
+    "message": "导出配置"
+  },
+  "importConf": {
+    "message": "导入配置"
+  },
+  "vocabUrl": {
+    "message": "个人词汇远程地址："
+  },
+  "bing": {
+    "message": "Bing翻译预请求"
+  },
   "vocabSizeTranslateDbg": {
     "message": "您的词汇量：100 单词。"
   },
@@ -48,10 +63,10 @@
     "message": "显示词汇"
   },
   "saveVocab": {
-    "message": "导出词汇"
+    "message": "导出个人词汇"
   },
   "loadVocab": {
-    "message": "导入词汇"
+    "message": "导入个人词汇"
   },
   "tipInfo": {
     "message": "若要添加您的词汇，可使用鼠标悬停菜单或浏览器右键菜单（选择文本+右键点击）或在此输入词汇进行增删（支持多个，用分号分隔）："

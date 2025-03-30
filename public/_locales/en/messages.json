@@ -33,6 +33,21 @@
   "adjust": {
     "message": "More Settings..."
   },
+  "exportConf": {
+    "message": "Export Config"
+  },
+  "importConf": {
+    "message": "Import Config"
+  },
+  "vocabUrl": {
+    "message": "Vocabulary Url: "
+  },
+  "bing": {
+    "message": "Bing Prefetch"
+  },
+  "other_conf": {
+    "message": "Other Config"
+  },
   "vocabSizeTranslateDbg": {
     "message": "Your vocabulary size: 100 words."
   },
