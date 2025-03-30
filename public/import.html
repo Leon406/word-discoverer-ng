@@ -1,63 +1,78 @@
 <!doctype html>
 <html>
-  <head>
-    <style>
+<head>
+  <style>
       body {
-        background-color: rgb(255, 248, 220);
+          background-color: rgb(255, 248, 220);
+          display: flex;
+          justify-content: center;
+          align-items: flex-start; /* 保持内容顶部对齐 */
+          min-height: 100vh; /* 使 body 至少占满整个视口高度 */
+          margin: 0; /* 移除默认的 body 外边距 */
       }
-      fieldset {
-        background-color: orange;
-        padding: 8px;
-        border: 0;
-        width: 500px;
-      }
-      input[type='file'] {
-        display: none;
-      }
-      .infoMsg {
-        padding: 4px;
-        font-size: 16px;
-      }
-      .longButton {
-        width: 180px;
-        background-color: #4caf50; /* Green */
-        border: none;
-        color: white;
-        padding: 4px 6px;
-        text-decoration: none;
-        text-align: center;
-        display: inline-block;
-        font-size: 14px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-      }
-      .longButton:hover {
-        background-color: #3e8e41;
-      }
-    </style>
-    <title>Words Discoverer: Import vocabulary</title>
-    <script src="./js/import.js"></script>
-  </head>
-  <body>
-    <fieldset>
-      <span class="infoMsg">__MSG_importInfo__</span>
-      <br />
-      <br />
-      <label for="doLoadVocab" class="longButton">__MSG_selectFile__</label>
-      <input id="doLoadVocab" type="file" />
-      <input
-        type="text"
-        id="configUrl"
-        placeholder="Enter online vocabulary URL"
-      />
 
-      <span class="infoMsg" id="fnamePreview"></span>
-      <br />
-      <button id="vocabSubmit" class="longButton">OK</button>
-      <br />
-      <span class="infoMsg" id="addedInfo"></span><br />
-      <span class="infoMsg" id="skippedInfo"></span><br />
-    </fieldset>
-  </body>
+      fieldset {
+          background-color: orange;
+          border-radius: 8px;
+          padding: 8px;
+          border: 0;
+          width: 500px;
+      }
+
+      button, label {
+          border-radius: 4px;
+      }
+
+      input[type='file'] {
+          display: none;
+      }
+
+      .infoMsg {
+          padding: 4px;
+          font-size: 16px;
+      }
+
+      .longButton {
+          width: 180px;
+          background-color: #4caf50; /* Green */
+          border: none;
+          color: white;
+          padding: 4px 6px;
+          text-decoration: none;
+          text-align: center;
+          display: inline-block;
+          font-size: 14px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+      }
+
+      .longButton:hover {
+          background-color: #3e8e41;
+      }
+  </style>
+  <title>Words Discoverer: Import vocabulary</title>
+  <script src="./js/import.js"></script>
+</head>
+<body>
+<fieldset>
+  <span class="infoMsg">__MSG_importInfo__</span>
+  <br />
+  <br />
+  <label for="doLoadVocab" class="longButton">__MSG_selectFile__</label>
+  <input id="doLoadVocab" type="file" />
+  <input
+    type="text"
+    id="configUrl"
+    placeholder="Enter online vocabulary URL"
+  />
+
+  <span class="infoMsg" id="fnamePreview"></span>
+  <br />
+  <button id="vocabSubmit" class="longButton">OK</button>
+  <br />
+  <span class="infoMsg" id="addedInfo"></span><br />
+  <span class="infoMsg" id="skippedInfo"></span><br />
+</fieldset>
+</body>
 </html>

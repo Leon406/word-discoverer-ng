@@ -22,6 +22,14 @@
     "message": "most common English words.",
     "description": "2-nd part of \"Not highlighting 100 most common English words\" sentence"
   },
+  "rateInfo3": {
+    "message": "most rare English words.",
+    "description": "3-nd part of \"Not highlighting 100 most common English words\" sentence"
+  },
+  "local": {
+    "message": "Highlight Local",
+    "description": "highlight from paste or typed text"
+  },
   "adjust": {
     "message": "More Settings..."
   },

@@ -153,6 +153,12 @@ function display_percents(show_percents) {
   document.getElementById('rateIndicator2').textContent = `${show_percents}%`
   document.getElementById('countIndicator').textContent = not_showing_cnt
 }
+function display_last_hidden_percents(show_percents) {
+  const not_showing_cnt = Math.floor((dict_size / 100.0) * show_percents)
+  document.getElementById('rateIndicator1L').textContent = `${show_percents}%`
+  document.getElementById('rateIndicator2L').textContent = `${show_percents}%`
+  document.getElementById('countIndicatorL').textContent = not_showing_cnt
+}
 
 function process_rate(increase) {
   chrome.storage.sync.get(['wd_show_percents'], function(result) {
@@ -161,6 +167,15 @@ function process_rate(increase) {
     show_percents = Math.min(100, Math.max(0, show_percents))
     display_percents(show_percents)
     chrome.storage.sync.set({ wd_show_percents: show_percents })
+  })
+}
+function process_rate_last(increase) {
+  chrome.storage.sync.get(['wd_last_hidden_percents'], function(result) {
+    let show_percents = result.wd_last_hidden_percents
+    show_percents += increase
+    show_percents = Math.min(100, Math.max(0, show_percents))
+    display_last_hidden_percents(show_percents)
+    chrome.storage.sync.set({ wd_last_hidden_percents: show_percents })
   })
 }
 
@@ -179,6 +194,21 @@ function process_rate_p1() {
 function process_rate_p10() {
   process_rate(10)
 }
+function process_last_rate_m1() {
+  process_rate_last(-1)
+}
+
+function process_last_rate_m10() {
+  process_rate_last(-10)
+}
+
+function process_last_rate_p1() {
+  process_rate_last(1)
+}
+
+function process_last_rate_p10() {
+  process_rate_last(10)
+}
 
 function init_controls() {
   window.onload = function() {
@@ -193,6 +223,12 @@ function init_controls() {
     idClickFunc('rateM1', process_rate_m1)
     idClickFunc('rateP1', process_rate_p1)
     idClickFunc('rateP10', process_rate_p10)
+
+    idClickFunc('rateM10L', process_last_rate_m10)
+    idClickFunc('rateM1L', process_last_rate_m1)
+    idClickFunc('rateP1L', process_last_rate_p1)
+    idClickFunc('rateP10L', process_last_rate_p10)
+
     idClickFunc('rb_enabled', process_mode_switch)
     idClickFunc('rb_disabled', process_mode_switch)
     document
@@ -208,12 +244,14 @@ function init_controls() {
     display_vocabulary_size()
 
     chrome.storage.sync.get(
-      ['wd_show_percents', 'wd_is_enabled', 'wd_word_max_rank'],
+      ['wd_show_percents','wd_last_hidden_percents', 'wd_is_enabled', 'wd_word_max_rank'],
       function(result) {
         const show_percents = result.wd_show_percents
+        const wd_last_hidden_percents = result.wd_last_hidden_percents
         enabled_mode = result.wd_is_enabled
         dict_size = result.wd_word_max_rank
         display_percents(show_percents)
+        display_last_hidden_percents(wd_last_hidden_percents)
         display_mode()
       }
     )

@@ -1,220 +1,268 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <style>
+<head>
+  <meta charset="UTF-8">
+  <style>
       body {
-        background-color: rgb(255, 248, 220);
-        min-width: 340px;
-        max-width: 340px;
+          background-color: rgb(255, 248, 220);
+          min-width: 340px;
+          max-width: 340px;
       }
+
       fieldset {
-        background-color: orange;
-        padding: 8px;
-        border: 0;
+          border-radius: 8px;
+          background-color: orange;
+          padding: 8px;
+          border: 0;
       }
+
+      button {
+          border-radius: 4px;
+      }
+
       .rateButton {
-        width: 40px;
-        background-color: #4caf50; /* Green */
-        border: none;
-        color: white;
-        padding: 4px 6px;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
+          width: 40px;
+          background-color: #4caf50; /* Green */
+          border: none;
+          color: white;
+          padding: 4px 6px;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
       }
+
       .rateButton:hover {
-        background-color: #3e8e41;
+          background-color: #3e8e41;
       }
+
       .helpButton {
-        width: 40px;
-        background-color: #4caf50; /* Green */
-        border: none;
-        color: white;
-        padding: 4px 2px;
-        text-decoration: none;
-        /* display: inline-block; */
-        font-size: 12px;
-        margin: 4px 2px;
-        font-weight: bold;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        float: right;
+          width: 40px;
+          background-color: #4caf50; /* Green */
+          border: none;
+          color: white;
+          padding: 4px 2px;
+          text-decoration: none;
+          /* display: inline-block; */
+          font-size: 12px;
+          margin: 4px 2px;
+          font-weight: bold;
+          transition-duration: 0.4s;
+          cursor: pointer;
+          float: right;
       }
+
       .helpButton:hover {
-        background-color: #3e8e41;
+          background-color: #3e8e41;
       }
+
       .margin_bottom {
-        margin-bottom: 10px !important;
+          margin-bottom: 10px !important;
       }
+
       .display_block {
-        display: block !important;
+          display: block !important;
       }
+
       .vocabButton {
-        width: 150px;
-        background-color: #4caf50; /* Green */
-        border: none;
-        color: white;
-        padding: 4px 6px;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
+          width: 150px;
+          background-color: #4caf50; /* Green */
+          border: none;
+          color: white;
+          padding: 4px 6px;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
       }
+
       .vocabButton:hover {
-        background-color: #3e8e41;
+          background-color: #3e8e41;
       }
+      #local {
+          width: 110px;
+      }
+
       .addButton {
-        background-color: orange;
-        border: none;
-        padding: 0px 0px 0px 0px;
-        margin: 0px 4px 0px 10px;
-        cursor: pointer;
+          background-color: orange;
+          border: none;
+          padding: 0px 0px 0px 0px;
+          margin: 0px 4px 0px 10px;
+          cursor: pointer;
       }
+
       .indicator {
-        color: green;
-        font-weight: bold;
+          color: green;
+          font-weight: bold;
       }
-      #rateIndicator2 {
-        width: 40px;
-        font-size: 16px;
-        color: green;
-        font-weight: bold;
-        text-align: center;
+
+      #rateIndicator2, #rateIndicator2L {
+          width: 40px;
+          font-size: 16px;
+          color: green;
+          font-weight: bold;
+          text-align: center;
       }
+
       .rateInfo {
-        font-size: 14px;
-        margin: 4px 2px;
+          font-size: 14px;
+          margin: 4px 2px;
       }
+
       input[type='text'] {
-        font-size: 14px;
-        box-sizing: border-box;
-        height: 25px;
-        width: 150px;
-        margin: 4px 2px;
+          font-size: 14px;
+          box-sizing: border-box;
+          height: 25px;
+          width: 150px;
+          margin: 4px 2px;
       }
+
       .rangeLabel {
-        background-color: purple;
-        display: inline-block;
-        width: 80px;
-        padding: 2px;
-        text-align: center;
-        vertical-align: middle;
-        color: white;
+          background-color: purple;
+          display: inline-block;
+          width: 80px;
+          padding: 2px;
+          text-align: center;
+          vertical-align: middle;
+          color: white;
       }
+
       .middleCentered {
-        height: 50px;
-        vertical-align: middle;
-        display: table-cell;
+          height: 50px;
+          vertical-align: middle;
+          display: table-cell;
       }
+
       .warningLabel {
-        color: red;
-        padding: 2px;
-        text-align: center;
-        font-weight: bold;
+          color: red;
+          padding: 2px;
+          text-align: center;
+          font-weight: bold;
       }
+
       .cbLabel {
-        font-size: 14px;
+          font-size: 14px;
       }
+
       #add_to_list_group {
-        margin-top: 10px;
-        margin-left: 20px;
+          margin-top: 10px;
+          margin-left: 20px;
       }
 
       .pageCentered {
-        width: 200px;
-        position: fixed;
-        left: 50%;
-        margin-left: -100px;
-        background-color: purple;
-        color: white;
-        padding: 2px;
-        text-align: center;
-        vertical-align: middle;
+          width: 200px;
+          position: fixed;
+          left: 50%;
+          margin-left: -100px;
+          background-color: purple;
+          color: white;
+          padding: 2px;
+          text-align: center;
+          vertical-align: middle;
       }
-    </style>
-    <title>Words Discoverer</title>
+  </style>
+  <title>Words Discoverer</title>
 
-    <script src="./js/popup.js"></script>
-  </head>
-  <body>
-    <fieldset>
-      <input
-        type="radio"
-        id="rb_enabled"
-        name="switch_mode"
-        value="rb_enabled"
-      />
-      <label class="cbLabel" for="rb_enabled">__MSG_enabledDescription__</label
-      ><br />
-      <input
-        type="radio"
-        id="rb_disabled"
-        name="switch_mode"
-        value="rb_disabled"
-      />
-      <label class="cbLabel" for="rb_disabled"
-        >__MSG_disabledDescription__</label
-      ><br />
-      <div id="add_to_list_group">
-        <input type="checkbox" id="addToList" />
-        <span class="cbLabel">
+  <script src="./js/popup.js"></script>
+</head>
+<body>
+<fieldset>
+  <input
+    type="radio"
+    id="rb_enabled"
+    name="switch_mode"
+    value="rb_enabled"
+  />
+  <label class="cbLabel" for="rb_enabled">__MSG_enabledDescription__</label
+  ><br />
+  <input
+    type="radio"
+    id="rb_disabled"
+    name="switch_mode"
+    value="rb_disabled"
+  />
+  <label class="cbLabel" for="rb_disabled"
+  >__MSG_disabledDescription__</label
+  ><br />
+  <div id="add_to_list_group">
+    <input type="checkbox" id="addToList" />
+    <span class="cbLabel">
           <span>__MSG_addVerb__ "</span><span id="addHostName"></span
-          ><span>" __MSG_toVerb__ </span
-          ><a href="example.com" target="_blank" id="addToListLabel"></a>
+    ><span>" __MSG_toVerb__ </span
+    ><a href="example.com" target="_blank" id="addToListLabel"></a>
         </span>
-      </div>
-      <br />
-    </fieldset>
-    <br />
-    <fieldset>
-      <div class="rateInfo">
-        __MSG_rateInfo1__
-        <span class="indicator" id="countIndicator">n/a</span> (<span
-          class="indicator"
-          id="rateIndicator1"
-          >n/a</span
-        >) __MSG_rateInfo2__
-      </div>
-      <button class="rateButton" id="rateM10">-10</button>
-      <button class="rateButton" id="rateM1">-1</button>
-      <div style="display: inline-block" id="rateIndicator2">n/a</div>
-      <button class="rateButton" id="rateP1">+1</button>
-      <button class="rateButton" id="rateP10">+10</button>
-    </fieldset>
-    <br />
-    <fieldset>
-      <div class="rateInfo">
-        __MSG_vocabSizeInfo1__
-        <span class="indicator" id="vocabIndicator">n/a</span>
-        __MSG_vocabSizeInfo2__
-      </div>
-      <button class="vocabButton margin_bottom display_block" id="showVocab">
-        __MSG_showVocab__
-      </button>
-      <span class="rateInfo">__MSG_tipInfo__</span>
-      <br />
-      <input type="text" id="addText" /><button class="addButton" id="addWord">
-      &nbsp;&nbsp;
-        <img src="./assets/add.png" />
-      </button>
-      <button class="addButton" id="deleteWord">
-        &nbsp;
-        <img src="./assets/delete.png" />
-      </button>
-      <br />
-      <span class="rateInfo" id="addOpResult"></span>
-    </fieldset>
-    <br />
-    <fieldset>
-      <button class="vocabButton" id="adjust">__MSG_adjust__</button>
-      <button class="helpButton" id="getHelp">?</button>
-    </fieldset>
-    <button class="vocabButton" id="local">本地文章高亮</button>
-  </body>
+  </div>
+  <br />
+</fieldset>
+<br />
+<fieldset>
+  <div class="rateInfo">
+    __MSG_rateInfo1__
+    <span class="indicator" id="countIndicator">n/a</span> (<span
+    class="indicator"
+    id="rateIndicator1"
+  >n/a</span
+  >) __MSG_rateInfo2__
+    <br>
+    <div style="color:rebeccapurple">
+      __MSG_rateInfo1__
+      <span class="indicator" id="countIndicatorL">n/a</span> (<span
+      class="indicator"
+      id="rateIndicator1L"
+    >n/a</span
+    >) __MSG_rateInfo3__
+    </div>
+  </div>
+  First:
+  <button class="rateButton" id="rateM10">-10</button>
+  <button class="rateButton" id="rateM1">-1</button>
+  <div style="display: inline-block" id="rateIndicator2">n/a</div>
+  <button class="rateButton" id="rateP1">+1</button>
+  <button class="rateButton" id="rateP10">+10</button>
+
+  <div>
+    Last:
+    <button class="rateButton" id="rateM10L">-10</button>
+    <button class="rateButton" id="rateM1L">-1</button>
+    <div style="display: inline-block" id="rateIndicator2L">n/a</div>
+    <button class="rateButton" id="rateP1L">+1</button>
+    <button class="rateButton" id="rateP10L">+10</button>
+  </div>
+</fieldset>
+<br />
+<fieldset>
+  <div class="rateInfo">
+    __MSG_vocabSizeInfo1__
+    <span class="indicator" id="vocabIndicator">n/a</span>
+    __MSG_vocabSizeInfo2__
+  </div>
+  <button class="vocabButton margin_bottom display_block" id="showVocab">
+    __MSG_showVocab__
+  </button>
+  <span class="rateInfo">__MSG_tipInfo__</span>
+  <br />
+  <input type="text" id="addText" />
+  <button class="addButton" id="addWord">
+    &nbsp;&nbsp;
+    <img src="./assets/add.png" />
+  </button>
+  <button class="addButton" id="deleteWord">
+    &nbsp;
+    <img src="./assets/delete.png" />
+  </button>
+  <br />
+  <span class="rateInfo" id="addOpResult"></span>
+</fieldset>
+<br />
+<fieldset>
+  <button class="vocabButton" id="local">__MSG_local__</button>
+  <button class="vocabButton" id="adjust">__MSG_adjust__</button>
+  <button class="helpButton" id="getHelp">?</button>
+</fieldset>
+
+</body>
 </html>

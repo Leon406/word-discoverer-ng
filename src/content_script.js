@@ -1,4 +1,4 @@
-import { add_lexeme, make_hl_style, make_class_name,unhighlight } from './common_lib'
+import { add_lexeme, make_hl_style, make_class_name, unhighlight } from './common_lib'
 import { handleLexResult } from './utils/bing'
 
 import { get_dict_definition_url } from './context_menu_lib'
@@ -7,6 +7,7 @@ let dict_words = null
 let dict_idioms = null
 
 let min_show_rank = null
+let max_show_rank = null
 let word_max_rank = null
 let user_vocabulary = null
 let is_enabled = null
@@ -35,7 +36,7 @@ function get_rare_lemma(word) {
   if (dict_words.hasOwnProperty(word)) {
     wf = dict_words[word]
   }
-  if (!wf || wf[1] < min_show_rank) return undefined
+  if (check_hidden_rank(wf)) return undefined
   const lemma = wf[0]
   return !user_vocabulary || !user_vocabulary.hasOwnProperty(lemma)
     ? lemma
@@ -47,8 +48,12 @@ function get_rare_lemma2(word) {
   if (dict_words.hasOwnProperty(word)) {
     wf = dict_words[word]
   }
-  if (!wf || wf[1] < min_show_rank) return undefined
+  if (check_hidden_rank(wf)) return undefined
   return wf ? wf[0] : undefined
+}
+
+function check_hidden_rank(wf) {
+  return !wf || wf[1] < min_show_rank || wf[1] > max_show_rank
 }
 
 function get_word_percentile(word) {
@@ -114,12 +119,12 @@ function play(audioUrl) {
     chrome.runtime.sendMessage(
       {
         type: 'fetchArrayBuffer',
-        audioUrl,
+        audioUrl
       },
       (res) => {
         const arraybuffer = new Uint8Array(JSON.parse(res).data).buffer
         playArrayBuffer(arraybuffer)
-      },
+      }
     )
   })
 }
@@ -212,7 +217,7 @@ function renderBubble() {
   chrome.runtime.sendMessage(
     {
       type: 'fetch',
-      q: wdSpanText,
+      q: wdSpanText
     },
     (res) => {
       const doc = new DOMParser().parseFromString(res, 'text/html')
@@ -224,9 +229,9 @@ function renderBubble() {
             phsym: true,
             cdef: true,
             related: false,
-            sentence: 0,
+            sentence: 0
           },
-          null,
+          null
         )
         if (lexResult && lexResult.result && lexResult.result.cdef) {
           const { result } = lexResult
@@ -237,16 +242,16 @@ function renderBubble() {
       } else {
         errorHtml()
       }
-    },
+    }
   )
 
   bubbleText.textContent = limit_text_len(wdSpanText)
   // if config third schema, use last one
   let thirdDict = wd_online_dicts.findLast(
-    (dict) => !dict.url.startsWith('http'),
+    (dict) => !dict.url.startsWith('http')
   )
   if (thirdDict) {
-    bubbleText.onclick = function (e) {
+    bubbleText.onclick = function(e) {
       e.preventDefault()
       e.stopImmediatePropagation()
       window.open(get_dict_definition_url(thirdDict.url, wdSpanText))
@@ -276,7 +281,7 @@ function renderBubble() {
   bubbleDOM.style.top = `${topPx}px`
   let leftPx = Math.min(
     maxLeft,
-    Math.max(5, Math.floor((bcr.left + bcr.right) / 2) - 100),
+    Math.max(5, Math.floor((bcr.left + bcr.right) / 2) - 100)
   )
   bubbleDOM.style.left = `${leftPx}px`
   bubbleDOM.style.display = 'block'
@@ -301,7 +306,7 @@ function hideBubble(force) {
 
 function process_hl_leave() {
   node_to_render_id = null
-  setTimeout(function () {
+  setTimeout(function() {
     hideBubble(false)
   }, 100)
 }
@@ -324,7 +329,7 @@ function processMouse(e) {
     return
   }
   node_to_render_id = hitNode.id
-  setTimeout(function () {
+  setTimeout(function() {
     renderBubble()
   }, 200)
 }
@@ -337,11 +342,11 @@ function preFetchBing(w) {
     chrome.runtime.sendMessage(
       {
         type: 'fetch',
-        q: q,
+        q: q
       },
-      function (res) {
+      function(res) {
         console.log(`prefetch ${q}`)
-      },
+      }
     )
   }
 }
@@ -350,7 +355,7 @@ function text_to_hl_nodes(text, dst) {
   const lc_text = text.toLowerCase()
   let ws_text = lc_text.replace(
     /[,;()?!`:".\s\-\u2013\u2014\u201C\u201D]/g,
-    ' ',
+    ' '
   )
 
   ws_text = ws_text.replace(/[^\w '\u2019]/g, '.')
@@ -396,7 +401,7 @@ function text_to_hl_nodes(text, dst) {
             normalized: wf,
             kind: 'idiom',
             begin: ibegin,
-            end: ibegin + mwe_prefix.length,
+            end: ibegin + mwe_prefix.length
           }
           ibegin += mwe_prefix.length + 1
           num_good += lwnum - wnum + 1
@@ -414,7 +419,7 @@ function text_to_hl_nodes(text, dst) {
           normalized: lemma,
           kind: 'lemma',
           begin: ibegin,
-          end: ibegin + tokens[wnum].length,
+          end: ibegin + tokens[wnum].length
         }
         ibegin += tokens[wnum].length + 1
         wnum += 1
@@ -431,7 +436,7 @@ function text_to_hl_nodes(text, dst) {
         normalized: null,
         kind: 'word',
         begin: ibegin,
-        end: ibegin + tokens[wnum].length,
+        end: ibegin + tokens[wnum].length
       }
       ibegin += tokens[wnum].length + 1
       wnum += 1
@@ -469,7 +474,7 @@ function text_to_hl_nodes(text, dst) {
       insert_count += 1
       if (last_hl_end_pos < match.begin) {
         dst.push(
-          document.createTextNode(text.slice(last_hl_end_pos, match.begin)),
+          document.createTextNode(text.slice(last_hl_end_pos, match.begin))
         )
       }
       last_hl_end_pos = match.end
@@ -521,7 +526,7 @@ const invalidTags = [
   'OBJECT',
   'WH-ROOT',
   'WDHL',
-  'W-MARK-T',
+  'W-MARK-T'
 ]
 const EN_REG = /\b[a-z'’]{2,}\b/gi
 const SCHEMA_REG = /:\/\//gi
@@ -551,7 +556,7 @@ function filterType(node) {
     return NodeFilter.FILTER_SKIP
   }
   return invalidTags.includes(node.tagName) ||
-    invalidTags.includes(node.parentNode.tagName)
+  invalidTags.includes(node.parentNode.tagName)
     ? NodeFilter.FILTER_SKIP
     : NodeFilter.FILTER_ACCEPT
 }
@@ -563,7 +568,7 @@ function textNodesUnder(el) {
     el,
     NodeFilter.SHOW_TEXT,
     filterType,
-    false,
+    false
   )
   while ((n = walk.nextNode())) {
     a.push(n)
@@ -602,7 +607,7 @@ function doHighlightText(textNodes) {
       console.log(
         'doHighlightText',
         parent_node.textContent,
-        computedValue.display,
+        computedValue.display
       )
       const isFlex =
         computedValue.display === 'flex' ||
@@ -646,7 +651,7 @@ function onNodeChanged(event) {
     if (textNodes.length) {
       console.log(
         'onNodeChanged highlight',
-        textNodes.map((e) => e.textContent),
+        textNodes.map((e) => e.textContent)
       )
       doHighlightText(textNodes)
     }
@@ -654,7 +659,7 @@ function onNodeChanged(event) {
 }
 
 function get_verdict(isEnabled, black_list, white_list, callback_func) {
-  chrome.runtime.sendMessage({ wdm_request: 'hostname' }, function (response) {
+  chrome.runtime.sendMessage({ wdm_request: 'hostname' }, function(response) {
     if (!response) {
       callback_func('unknown error')
       return
@@ -674,7 +679,7 @@ function get_verdict(isEnabled, black_list, white_list, callback_func) {
     }
     chrome.runtime.sendMessage(
       { wdm_request: 'page_language' },
-      function (lang_response) {
+      function(lang_response) {
         if (!lang_response) {
           callback_func('unknown error')
           return
@@ -682,9 +687,9 @@ function get_verdict(isEnabled, black_list, white_list, callback_func) {
         callback_func(
           lang_response.wdm_iso_language_code === 'en'
             ? 'highlight'
-            : 'page language is not English',
+            : 'page language is not English'
         )
-      },
+      }
     )
   })
 }
@@ -724,7 +729,7 @@ function create_bubble() {
   addButton.setAttribute('class', 'wdAddButton')
   addButton.textContent = chrome.i18n.getMessage('menuItem')
   addButton.style.marginBottom = '4px'
-  addButton.addEventListener('click', function () {
+  addButton.addEventListener('click', function() {
     add_lexeme(current_lexeme, bubble_handle_add_result)
     user_vocabulary[current_lexeme] = 1
   })
@@ -734,7 +739,7 @@ function create_bubble() {
   speakButton.setAttribute('class', 'wdAddButton')
   speakButton.textContent = 'Audio'
   speakButton.style.marginBottom = '4px'
-  speakButton.addEventListener('click', function () {
+  speakButton.addEventListener('click', function() {
     bubble_handle_tts(current_lexeme)
   })
   addAndAudioWrapDom.appendChild(speakButton)
@@ -742,11 +747,11 @@ function create_bubble() {
   div.id = 'wdn_translate_bing'
   bubbleDOM.appendChild(div)
 
-  bubbleDOM.addEventListener('mouseleave', function (e) {
+  bubbleDOM.addEventListener('mouseleave', function(e) {
     bubbleDOM.wdMouseOn = false
     hideBubble(false)
   })
-  bubbleDOM.addEventListener('mouseenter', function (e) {
+  bubbleDOM.addEventListener('mouseenter', function(e) {
     bubbleDOM.wdMouseOn = true
   })
 
@@ -757,17 +762,17 @@ export function initForPage() {
   if (!document.body) return
 
   chrome.runtime.onMessage.addListener(
-    function (request, sender, sendResponse) {
+    function(request, sender, sendResponse) {
       if (request.wdm_unhighlight) {
         const lemma = request.wdm_unhighlight
         unhighlight(lemma)
       }
-    },
+    }
   )
 
   chrome.storage.local.get(
     ['words_discoverer_eng_dict', 'wd_idioms', 'wd_user_vocabulary'],
-    function (result) {
+    function(result) {
       dict_words = result.words_discoverer_eng_dict
       dict_idioms = result.wd_idioms
       user_vocabulary = result.wd_user_vocabulary
@@ -776,27 +781,31 @@ export function initForPage() {
           'wd_online_dicts',
           'wd_hover_settings',
           'wd_show_percents',
+          'wd_last_hidden_percents',
           'wd_is_enabled',
           'wd_hl_settings',
           'wd_black_list',
           'wd_white_list',
           'wd_word_max_rank',
           'wd_enable_prefetch',
-          'wd_enable_tts',
+          'wd_enable_tts'
         ],
-        function (config) {
+        function(config) {
           wd_online_dicts = config.wd_online_dicts
           wd_enable_tts = config.wd_enable_tts
           wd_enable_prefetch = config.wd_enable_prefetch
           wd_hover_settings = config.wd_hover_settings
           word_max_rank = config.wd_word_max_rank
           const show_percents = config.wd_show_percents
+          const wd_last_hidden_percents = config.wd_last_hidden_percents
           wd_hl_settings = config.wd_hl_settings
           min_show_rank = (show_percents * word_max_rank) / 100
+          max_show_rank = word_max_rank - (wd_last_hidden_percents * word_max_rank) / 100
+          console.log("max",wd_last_hidden_percents,max_show_rank)
           is_enabled = config.wd_is_enabled
           const black_list = config.wd_black_list
           const white_list = config.wd_white_list
-          get_verdict(is_enabled, black_list, white_list, function (verdict) {
+          get_verdict(is_enabled, black_list, white_list, function(verdict) {
             console.log('get_verdict', verdict)
             chrome.runtime.sendMessage({ wdm_verdict: verdict })
             // 支持非英文网页
@@ -806,29 +815,29 @@ export function initForPage() {
             )
               return
 
-            document.addEventListener('keydown', function (event) {
+            document.addEventListener('keydown', function(event) {
               if (event.keyCode === 17) {
                 // Ctrl
                 function_key_is_pressed = true
                 renderBubble()
                 return
               }
-             const href = location.href
+              const href = location.href
               const elementTagName = event.target.tagName
               href.s
-              console.log("elementTagName",elementTagName,href)
-              if (!disable_by_keypress && elementTagName !== 'BODY' && location.protocol !='chrome-extension:') {
+              console.log('elementTagName', elementTagName, href)
+              if (!disable_by_keypress && elementTagName !== 'BODY' && location.protocol != 'chrome-extension:') {
                 // 例如新建issue，写md，然后预览会触发
                 // workaround to prevent highlighting in facebook messages
                 // this logic can also be helpful in other situations, it's better play safe and stop highlighting when user enters data.
                 disable_by_keypress = true
                 chrome.runtime.sendMessage({ wdm_verdict: 'keyboard' })
-              }else {
+              } else {
                 disable_by_keypress = false
               }
             })
 
-            document.addEventListener('keyup', function (event) {
+            document.addEventListener('keyup', function(event) {
               if (event.keyCode === 17) {
                 // Ctrl
                 function_key_is_pressed = false
@@ -847,14 +856,14 @@ export function initForPage() {
               mutationList.forEach(onNodeChanged)
             }).observe(document, { subtree: true, childList: true })
 
-            window.addEventListener('scroll', function () {
+            window.addEventListener('scroll', function() {
               node_to_render_id = null
               hideBubble(true)
             })
           })
-        },
+        }
       )
-    },
+    }
   )
 }
 

@@ -22,6 +22,14 @@
     "message": "最常用的英语单词。",
     "description": "2-nd part of \"Not highlighting 100 most common English words\" sentence"
   },
+  "rateInfo3": {
+    "message": "最不常用的英语单词。",
+    "description": "3-nd part of \"Not highlighting 100 most common English words\" sentence"
+  },
+  "local": {
+    "message": "本地文章高亮",
+    "description": "highlight from paste or typed text"
+  },
   "adjust": {
     "message": "更多设置..."
   },

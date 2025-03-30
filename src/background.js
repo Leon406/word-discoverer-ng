@@ -256,6 +256,7 @@ function initialize_extension() {
     chrome.storage.sync.get(
       [
         'wd_show_percents',
+        'wd_last_hidden_percents',
         'wd_is_enabled',
         'wd_hl_settings',
         'wd_online_dicts',
@@ -271,6 +272,7 @@ function initialize_extension() {
           wd_hover_settings,
           wd_online_dicts,
           wd_show_percents,
+          wd_last_hidden_percents,
           wd_black_list,
           wd_white_list,
           wd_is_enabled,
@@ -314,8 +316,13 @@ function initialize_extension() {
         }
         initContextMenus(wd_online_dicts)
 
+        console.log("wd_last_hidden_percents", wd_last_hidden_percents)
+
         if (typeof wd_show_percents === 'undefined') {
           default_options['wd_show_percents'] = 12
+        }
+        if (typeof wd_last_hidden_percents === 'undefined') {
+          default_options['wd_last_hidden_percents'] = 0
         }
         if (typeof wd_is_enabled === 'undefined') {
           default_options['wd_is_enabled'] = true
