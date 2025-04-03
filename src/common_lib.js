@@ -22,17 +22,27 @@ export function open_local_tab(url, cb) {
   chrome.tabs.create({ url: chrome.runtime.getURL(url) }, cb)
 }
 export function readerService () {
+  const sentenceKey = 'previous'
   const newEle = document.getElementById('new')
   const input = document.getElementById('input')
-
   const deleteEle = document.getElementById('delete')
   const sentence = document.getElementById('text-to-read')
+
+  let previouseSentence = localStorage.getItem(sentenceKey)
+
+  if (previouseSentence) {
+    input.value = previouseSentence
+    sentence.innerHTML = previouseSentence
+  }
+
   newEle.onclick = function() {
     sentence.innerHTML = input.value
+    localStorage.setItem(sentenceKey, sentence.innerHTML)
   }
   deleteEle.onclick = function() {
     input.value = ''
     sentence.innerHTML = ''
+    localStorage.removeItem(sentenceKey)
   }
 }
 
