@@ -80,9 +80,9 @@ function show_user_list(list_name, user_list) {
     div_element.appendChild(document.createElement('br'))
     return
   }
-  let total = keys.length
-  let batchSize = 100
-  let loopCount = Math.ceil(total / batchSize)
+  const total = keys.length
+  const batchSize = 3000
+  const loopCount = Math.ceil(total / batchSize)
   let countRender = 0
   function render() {
     const targetElement = div_element
