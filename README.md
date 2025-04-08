@@ -6,6 +6,18 @@
  <img width=0 height=0 src="https://profile-counter.glitch.me/Leon406/count.svg" alt="Leon406:: Visitor's Count" />
 </p>
 
+
+[Chrome 扩展](https://chromewebstore.google.com/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85-ng/oikgdogigcinjcpjpahpgekgbimjgcce)
+  ![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/oikgdogigcinjcpjpahpgekgbimjgcce)
+  ![Chrome Web Store Last Updated](https://img.shields.io/chrome-web-store/last-updated/oikgdogigcinjcpjpahpgekgbimjgcce)
+  ![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/oikgdogigcinjcpjpahpgekgbimjgcce)
+
+[Microsoft Edge 扩展](https://microsoftedge.microsoft.com/addons/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85ng/kdphfeabhlflpbeapflpkipohibphhgn)
+
+[手动安装](https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml) ![GitHub Version](https://img.shields.io/github/v/release/Leon406/word-discoverer-ng)
+
+
+
 # Chrome Extension: Word Discoverer Next Generation
 
 ## Description
@@ -54,15 +66,5 @@
 - [x] 导入导出配置
 - [x] 在线配置链接手动同步
 
-## How to Install
-
-- [Microsoft Edge 扩展](https://microsoftedge.microsoft.com/addons/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85ng/kdphfeabhlflpbeapflpkipohibphhgn)
-
-- [Chrome 扩展](https://chromewebstore.google.com/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85-ng/oikgdogigcinjcpjpahpgekgbimjgcce)
-![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/oikgdogigcinjcpjpahpgekgbimjgcce)
-![Chrome Web Store Last Updated](https://img.shields.io/chrome-web-store/last-updated/oikgdogigcinjcpjpahpgekgbimjgcce)
-![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/oikgdogigcinjcpjpahpgekgbimjgcce)
-
-- [手动安装](https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml) ![GitHub Version](https://img.shields.io/github/v/release/Leon406/word-discoverer-ng)
 
 
