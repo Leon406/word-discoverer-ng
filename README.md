@@ -56,7 +56,13 @@
 
 ## How to Install
 
-- [Microsoft Edge 扩展应用商店](https://microsoftedge.microsoft.com/addons/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85ng/kdphfeabhlflpbeapflpkipohibphhgn)
-- [Chrome 扩展应用商店](https://chromewebstore.google.com/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85-ng/oikgdogigcinjcpjpahpgekgbimjgcce) 
-- [手动安装](https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml)
+- [Microsoft Edge 扩展](https://microsoftedge.microsoft.com/addons/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85ng/kdphfeabhlflpbeapflpkipohibphhgn)
+
+- [Chrome 扩展](https://chromewebstore.google.com/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85-ng/oikgdogigcinjcpjpahpgekgbimjgcce)
+![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/oikgdogigcinjcpjpahpgekgbimjgcce)
+![Chrome Web Store Last Updated](https://img.shields.io/chrome-web-store/last-updated/oikgdogigcinjcpjpahpgekgbimjgcce)
+![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/oikgdogigcinjcpjpahpgekgbimjgcce)
+
+- [手动安装](https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml) ![GitHub Version](https://img.shields.io/github/v/release/Leon406/word-discoverer-ng)
+
 
