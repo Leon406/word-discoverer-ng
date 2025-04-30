@@ -3,6 +3,48 @@ import { handleLexResult } from './utils/bing'
 
 import { get_dict_definition_url } from './context_menu_lib'
 
+
+const function_words =new Set( [
+  // Articles
+  "the","a","an",
+  // Prepositions
+  "about","above","across","after","against","along","among","around","as",
+  "at","before","behind","below","beneath","beside","between","beyond","by",
+  "down","during","except","for","from","in","inside","into","like","near",
+  "of","off","on","onto","opposite","out","outside","over","past","round",
+  "since","through","to","toward","under","underneath","until","up","upon",
+  "with","within","without",
+  // Pronouns
+    // Personal Pronouns
+  "i","me","my","mine","we","us","our","ours","you","your","yours","he","him","his","she","her","hers","it","its","they","them","their","theirs",
+    // Demonstrative Pronouns
+  "this","that","these","those",
+    // Interrogative Pronouns
+  "who","whom","whose","what","which",
+    // Relative Pronouns
+  "who","whom","whose","which","that",
+    // Indefinite Pronouns
+  "all","another","any","anybody","anyone","anything","both","each","either",
+  "every","everybody","everyone","everything","few","many","most","much",
+  "neither","none","nobody","nothing","one","other","several","some","somebody",
+  "someone","something",
+    // Reflexive Pronouns
+  "myself","yourself","himself","herself","itself","ourselves","yourselves","themselves",
+  // Conjunctions
+    // Coordinating Conjunctions
+  "and","but","or","nor","for","so","yet",
+    // Subordinating Conjunctions
+  "after","although","as","because","before","if","lest","once","since","than",
+  "that","though","till","unless","until","when","whenever","where",
+  "whereas","wherever","while",
+  "whether",
+  // Auxiliary Verbs / Modal Verbs
+  "am","is","are","was","were","be","been","being",
+  "have","has","had","do","does","did","will","would","shall","should",
+  "can","could","may","might","must",
+  // Interjections
+  "oh","ah","wow","ouch","gosh","ow","ew","yes","okay","no","nope",
+])
 let dict_words = null
 let dict_idioms = null
 
@@ -434,6 +476,7 @@ function text_to_hl_nodes(text, dst) {
     ) {
       match = {
         normalized: null,
+        raw: tokens[wnum],
         kind: 'word',
         begin: ibegin,
         end: ibegin + tokens[wnum].length
@@ -468,7 +511,9 @@ function text_to_hl_nodes(text, dst) {
       const hlParams = wd_hl_settings.idiomParams
       text_style = make_hl_style(hlParams)
     } else if (match.kind === 'word') {
-      text_style = 'font:inherit;color:inherit;background-color:inherit;'
+      // function word
+      text_style = function_words.has(match.raw) ? 'font:inherit;font-size:0.875em;color:#777777;background-color:inherit;'
+        :'font:inherit;color:inherit;background-color:inherit;'
     }
     if (text_style) {
       insert_count += 1
@@ -822,10 +867,9 @@ export function initForPage() {
                 renderBubble()
                 return
               }
-              const href = location.href
               const elementTagName = event.target.tagName
-              href.s
-              console.log('elementTagName', elementTagName, href)
+              // const href = location.href
+              // console.log('elementTagName', elementTagName, href)
               if (!disable_by_keypress && elementTagName !== 'BODY' && location.protocol != 'chrome-extension:') {
                 // 例如新建issue，写md，然后预览会触发
                 // workaround to prevent highlighting in facebook messages
