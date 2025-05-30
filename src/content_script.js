@@ -4,46 +4,46 @@ import { handleLexResult } from './utils/bing'
 import { get_dict_definition_url } from './context_menu_lib'
 
 
-const function_words =new Set( [
+const function_words = new Set([
   // Articles
-  "the","a","an",
+  'the', 'a', 'an',
   // Prepositions
-  "about","above","across","after","against","along","among","around","as",
-  "at","before","behind","below","beneath","beside","between","beyond","by",
-  "down","during","except","for","from","in","inside","into","like","near",
-  "of","off","on","onto","opposite","out","outside","over","past","round",
-  "since","through","to","toward","under","underneath","until","up","upon",
-  "with","within","without",
+  'about', 'above', 'across', 'after', 'against', 'along', 'among', 'around', 'as',
+  'at', 'before', 'behind', 'below', 'beneath', 'beside', 'between', 'beyond', 'by',
+  'down', 'during', 'except', 'for', 'from', 'in', 'inside', 'into', 'like', 'near',
+  'of', 'off', 'on', 'onto', 'opposite', 'out', 'outside', 'over', 'past', 'round',
+  'since', 'through', 'to', 'toward', 'under', 'underneath', 'until', 'up', 'upon',
+  'with', 'within', 'without',
   // Pronouns
-    // Personal Pronouns
-  "i","me","my","mine","we","us","our","ours","you","your","yours","he","him","his","she","her","hers","it","its","they","them","their","theirs",
-    // Demonstrative Pronouns
-  "this","that","these","those",
-    // Interrogative Pronouns
-  "who","whom","whose","what","which",
-    // Relative Pronouns
-  "who","whom","whose","which","that",
-    // Indefinite Pronouns
-  "all","another","any","anybody","anyone","anything","both","each","either",
-  "every","everybody","everyone","everything","few","many","most","much",
-  "neither","none","nobody","nothing","one","other","several","some","somebody",
-  "someone","something",
-    // Reflexive Pronouns
-  "myself","yourself","himself","herself","itself","ourselves","yourselves","themselves",
+  // Personal Pronouns
+  'i', 'me', 'my', 'mine', 'we', 'us', 'our', 'ours', 'you', 'your', 'yours', 'he', 'him', 'his', 'she', 'her', 'hers', 'it', 'its', 'they', 'them', 'their', 'theirs',
+  // Demonstrative Pronouns
+  'this', 'that', 'these', 'those',
+  // Interrogative Pronouns
+  'who', 'whom', 'whose', 'what', 'which',
+  // Relative Pronouns
+  'who', 'whom', 'whose', 'which', 'that',
+  // Indefinite Pronouns
+  'all', 'another', 'any', 'anybody', 'anyone', 'anything', 'both', 'each', 'either',
+  'every', 'everybody', 'everyone', 'everything', 'few', 'many', 'most', 'much',
+  'neither', 'none', 'nobody', 'nothing', 'one', 'other', 'several', 'some', 'somebody',
+  'someone', 'something',
+  // Reflexive Pronouns
+  'myself', 'yourself', 'himself', 'herself', 'itself', 'ourselves', 'yourselves', 'themselves',
   // Conjunctions
-    // Coordinating Conjunctions
-  "and","but","or","nor","for","so","yet",
-    // Subordinating Conjunctions
-  "after","although","as","because","before","if","lest","once","since","than",
-  "that","though","till","unless","until","when","whenever","where",
-  "whereas","wherever","while",
-  "whether",
+  // Coordinating Conjunctions
+  'and', 'but', 'or', 'nor', 'for', 'so', 'yet',
+  // Subordinating Conjunctions
+  'after', 'although', 'as', 'because', 'before', 'if', 'lest', 'once', 'since', 'than',
+  'that', 'though', 'till', 'unless', 'until', 'when', 'whenever', 'where',
+  'whereas', 'wherever', 'while',
+  'whether',
   // Auxiliary Verbs / Modal Verbs
-  "am","is","are","was","were","be","been","being",
-  "have","has","had","do","does","did","will","would","shall","should",
-  "can","could","may","might","must",
+  'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+  'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'shall', 'should',
+  'can', 'could', 'may', 'might', 'must',
   // Interjections
-  "oh","ah","wow","ouch","gosh","ow","ew","yes","okay","no","nope",
+  'oh', 'ah', 'wow', 'ouch', 'gosh', 'ow', 'ew', 'yes', 'okay', 'no', 'nope'
 ])
 let dict_words = null
 let dict_idioms = null
@@ -71,6 +71,9 @@ const word_re = /^[a-z'’]+$/
 let function_key_is_pressed = false
 let rendered_node_id = null
 let node_to_render_id = null
+
+const FUNCTION_WORD_STYLE = 'font:inherit;font-size:0.875em;color:#777777;background-color:inherit;'
+const NORMAL_STYLE = 'font:inherit;color:inherit;background-color:inherit;'
 
 function get_rare_lemma(word) {
   if (word.length < 3) return undefined
@@ -512,8 +515,7 @@ function text_to_hl_nodes(text, dst) {
       text_style = make_hl_style(hlParams)
     } else if (match.kind === 'word') {
       // function word
-      text_style = function_words.has(match.raw) ? 'font:inherit;font-size:0.875em;color:#777777;background-color:inherit;'
-        :'font:inherit;color:inherit;background-color:inherit;'
+      text_style = function_words.has(match.raw) ? FUNCTION_WORD_STYLE : NORMAL_STYLE
     }
     if (text_style) {
       insert_count += 1
@@ -526,6 +528,9 @@ function text_to_hl_nodes(text, dst) {
       // span = document.createElement("span");
       const span = document.createElement('wdhl')
       span.textContent = text.slice(match.begin, last_hl_end_pos)
+      if (text_style === FUNCTION_WORD_STYLE && isAllUpperCase(span.textContent)) {
+        text_style = NORMAL_STYLE
+      }
       span.setAttribute('style', text_style)
       if (match.normalized) {
         span.setAttribute('lemma', match.normalized)
@@ -575,6 +580,11 @@ const invalidTags = [
 ]
 const EN_REG = /\b[a-z'’]{2,}\b/gi
 const SCHEMA_REG = /:\/\//gi
+
+function isAllUpperCase(word) {
+  return word === word.toUpperCase()
+}
+
 
 function filterType(node) {
   // 过滤可编辑文本
@@ -846,7 +856,7 @@ export function initForPage() {
           wd_hl_settings = config.wd_hl_settings
           min_show_rank = (show_percents * word_max_rank) / 100
           max_show_rank = word_max_rank - (wd_last_hidden_percents * word_max_rank) / 100
-          console.log("max",wd_last_hidden_percents,max_show_rank)
+          console.log('max', wd_last_hidden_percents, max_show_rank)
           is_enabled = config.wd_is_enabled
           const black_list = config.wd_black_list
           const white_list = config.wd_white_list

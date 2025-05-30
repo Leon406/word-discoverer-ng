@@ -2946,7 +2946,7 @@ all sizzle and no steak
 all skin and bone
 all smiles
 all snot and tears
-all sorts
+all sorts of
 all spruced up
 all square
 all star
@@ -4052,6 +4052,7 @@ as sober as a judge
 as soft as silk
 as solid as the rock of gibraltar
 as soon
+as soon as possible
 as sound as a bell
 as steady as a rock
 as stiff as a poker
@@ -26317,7 +26318,6 @@ iron worker
 iron yard
 ironing board
 irons in the fire
-is all
 is at disposal
 is at your disposal
 is bag
@@ -34957,7 +34957,7 @@ on the off chance
 on the one hand
 on the open market
 on the order of
-on the other
+on the other hand
 on the outs
 on the pad
 on the panel
@@ -35235,7 +35235,6 @@ one hit wonder
 one hitta quitta
 one hitter
 one horse town
-one hundred
 one hung low
 one in a hundred
 one in a million
@@ -35288,7 +35287,6 @@ one rotten apple spoiled the bushel
 one sandwich short of a picnic
 one sandwich shy of a picnic
 one shot in her locker
-one side
 one smart apple
 one star
 one step ahead
@@ -38011,7 +38009,6 @@ professional victim
 profit from
 prog rock
 progress bar
-progress toward
 project it on
 project management
 projectile style
@@ -43725,7 +43722,6 @@ sonic boom
 sonny boy
 sonny jim
 sons of bitches
-as soon as possible
 sooner or later
 sooner rather than later
 sooner than later
@@ -46787,6 +46783,7 @@ that feeling when
 that figures
 that having been said
 that is
+that is all
 that makes two of us
 that monday morning feeling
 that plays
@@ -48588,7 +48585,6 @@ to an extent
 to and fro
 to another tune
 to attention
-to back
 to bat
 to bay
 to be continued
@@ -48704,7 +48700,6 @@ to put on a pedestal
 to put the kibosh on
 to put too fine a point on it
 to reason
-to rest
 to retreat into your shell
 to rights
 to roger
