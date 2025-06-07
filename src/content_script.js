@@ -792,7 +792,7 @@ function bubble_handle_tts(lexeme) {
 function bubble_handle_add_result(report, lemma) {
   if (report === 'ok') {
     let count = document.getElementsByClassName(make_class_name(lemma)).length
-    frequency.rare.count-= count
+    frequency.rare.count -= count
     frequency.rare.sets.delete(lemma)
     unhighlight(lemma)
   }
@@ -851,21 +851,38 @@ function create_bubble() {
 
   return bubbleDOM
 }
-function showToast(message) {
-  // 防止重复添加
-  let existingToast = document.getElementById('wd_toast');
-  if (existingToast) {
-    existingToast.remove();
-  }
 
-  const toast = document.createElement('div');
-  toast.id = 'wd_toast';
-  toast.textContent = message;
-  document.body.appendChild(toast);
+function showRateToast() {
+  // 防止重复添加
+  let existingToast = document.getElementById('wd_toast')
+  if (existingToast) {
+    existingToast.remove()
+  }
+  const info = make_rate_info()
+
+  const toast = document.createElement('div')
+  let rareRate = frequency.rare.count * 100 / frequency.tokens
+  // < 2 green    <5    < 10 yellow  >10 red
+
+  let className = ""
+  if (rareRate > 10) {
+    className = "red"
+  }else if (rareRate > 5) {
+    className = "yellow"
+  }else if (rareRate > 2) {
+    className = "greenyellow"
+  }else {
+    className = "green"
+  }
+  console.log("rate",rareRate,className)
+  toast.classList.add(className)
+  toast.id = 'wd_toast'
+  toast.textContent = info
+  document.body.appendChild(toast)
   // 5秒后自动隐藏
   setTimeout(() => {
-    toast.style.display = 'none';
-  }, 5000);
+    toast.style.display = 'none'
+  }, 5000)
 }
 
 export function initForPage() {
@@ -924,7 +941,7 @@ export function initForPage() {
               verdict !== 'page language is not English'
             )
               return
-            let keyPressHistory = [];
+            let keyPressHistory = []
             document.addEventListener('keydown', function(event) {
               if (event.keyCode === 17) {
                 // Ctrl
@@ -933,13 +950,12 @@ export function initForPage() {
                 return
               }
               if (event.key === 'i') {
-                const now = Date.now();
-                keyPressHistory.push(now);
-                keyPressHistory = keyPressHistory.filter(time => now - time < 1000);
+                const now = Date.now()
+                keyPressHistory.push(now)
+                keyPressHistory = keyPressHistory.filter(time => now - time < 1000)
                 if (keyPressHistory.length >= 2) {
-                  keyPressHistory = [];
-                  const info = make_rate_info();
-                  showToast(info);
+                  keyPressHistory = []
+                  showRateToast()
                 }
               }
               const elementTagName = event.target.tagName

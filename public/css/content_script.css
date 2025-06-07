@@ -168,3 +168,22 @@ span > wdhl.fix:first-of-type::before {
     transition: opacity 0.5s ease;
     opacity: 1
 }
+
+#wd_toast.greenyellow {
+    background-color: greenyellow;
+    color: #000;
+}
+#wd_toast.green {
+    background-color: lightgreen;
+    color: #eee;
+}
+
+#wd_toast.red {
+    background-color: red;
+    color: #fff;
+}
+
+#wd_toast.yellow {
+    background-color: #FFD700;
+    color: #333;
+}
