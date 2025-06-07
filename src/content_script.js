@@ -71,6 +71,7 @@ const word_re = /^[a-z'’]+$/
 let function_key_is_pressed = false
 let rendered_node_id = null
 let node_to_render_id = null
+let frequency = { rare: { count: 0, sets: new Set() }, tokens: 0, lemmas: {} }
 
 const FUNCTION_WORD_STYLE = 'font:inherit;font-size:0.875em;color:#777777;background-color:inherit;'
 const NORMAL_STYLE = 'font:inherit;color:inherit;background-color:inherit;'
@@ -86,6 +87,19 @@ function get_rare_lemma(word) {
   return !user_vocabulary || !user_vocabulary.hasOwnProperty(lemma)
     ? lemma
     : undefined
+}
+
+function get_lemma(word) {
+  let wf
+  if (dict_words.hasOwnProperty(word)) {
+    wf = dict_words[word]
+  }
+  if (!wf) return word
+  const lemma = wf[0]
+  if (!lemma) return word
+  return !user_vocabulary || !user_vocabulary.hasOwnProperty(lemma)
+    ? lemma
+    : word
 }
 
 function get_rare_lemma2(word) {
@@ -405,7 +419,18 @@ function text_to_hl_nodes(text, dst) {
 
   ws_text = ws_text.replace(/[^\w '\u2019]/g, '.')
   const tokens = ws_text.split(' ')
-  // console.log('tokens',text,ws_text, tokens)
+  let words = tokens.filter(w => word_re.test(w) && !w.startsWith('\''))
+  frequency.tokens += words.length
+  words.map(item => get_lemma(item))
+    .reduce((acc, key) => {
+      if (!acc[key]) {
+        acc[key] = 0
+      }
+      acc[key] = acc[key] + 1
+      return acc
+    }, frequency.lemmas)
+
+  console.log('tokens', Object.keys(frequency.lemmas).length, frequency)
   let num_good = 0 // number of found dictionary words
   let num_nonempty = 0
   let ibegin = 0 // beginning of word
@@ -504,12 +529,15 @@ function text_to_hl_nodes(text, dst) {
 
   let last_hl_end_pos = 0
   let insert_count = 0
+
   for (let i = 0; i < matches.length; i++) {
     let text_style
     const match = matches[i]
     if (match.kind === 'lemma') {
       const hlParams = wd_hl_settings.wordParams
       text_style = make_hl_style(hlParams)
+      frequency.rare.count++
+      frequency.rare.sets.add(match.normalized)
     } else if (match.kind === 'idiom') {
       const hlParams = wd_hl_settings.idiomParams
       text_style = make_hl_style(hlParams)
@@ -550,8 +578,16 @@ function text_to_hl_nodes(text, dst) {
   if (insert_count && last_hl_end_pos < text.length) {
     dst.push(document.createTextNode(text.slice(last_hl_end_pos, text.length)))
   }
-
+  console.log(make_rate_info())
   return insert_count
+}
+
+function make_rate_info() {
+  const lemmaRareCount = frequency.rare.sets.size
+  const lemmaCount = Object.keys(frequency.lemmas).length
+  const lemmaRate = parseFloat(lemmaRareCount * 100 / lemmaCount).toFixed(2)
+  const tokenRate = parseFloat(frequency.rare.count * 100 / frequency.tokens).toFixed(2)
+  return `tokens ${frequency.rare.count}/${frequency.tokens} (${tokenRate}%) lemma: ${lemmaRareCount}/${lemmaCount} (${lemmaRate}%)`
 }
 
 const invalidTags = [
@@ -607,7 +643,7 @@ function filterType(node) {
   }
   // mat-select 下拉选择失效
   // .wdSelectionBubble 翻译bubble
-  if (node.parentNode.closest('mat-option,mat-select,.wdSelectionBubble')) {
+  if (node.parentNode.closest('mat-option,mat-select,.wdSelectionBubble,#wd_toast')) {
     return NodeFilter.FILTER_SKIP
   }
   return invalidTags.includes(node.tagName) ||
@@ -755,6 +791,9 @@ function bubble_handle_tts(lexeme) {
 
 function bubble_handle_add_result(report, lemma) {
   if (report === 'ok') {
+    let count = document.getElementsByClassName(make_class_name(lemma)).length
+    frequency.rare.count-= count
+    frequency.rare.sets.delete(lemma)
     unhighlight(lemma)
   }
 }
@@ -811,6 +850,22 @@ function create_bubble() {
   })
 
   return bubbleDOM
+}
+function showToast(message) {
+  // 防止重复添加
+  let existingToast = document.getElementById('wd_toast');
+  if (existingToast) {
+    existingToast.remove();
+  }
+
+  const toast = document.createElement('div');
+  toast.id = 'wd_toast';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  // 5秒后自动隐藏
+  setTimeout(() => {
+    toast.style.display = 'none';
+  }, 5000);
 }
 
 export function initForPage() {
@@ -869,13 +924,23 @@ export function initForPage() {
               verdict !== 'page language is not English'
             )
               return
-
+            let keyPressHistory = [];
             document.addEventListener('keydown', function(event) {
               if (event.keyCode === 17) {
                 // Ctrl
                 function_key_is_pressed = true
                 renderBubble()
                 return
+              }
+              if (event.key === 'i') {
+                const now = Date.now();
+                keyPressHistory.push(now);
+                keyPressHistory = keyPressHistory.filter(time => now - time < 1000);
+                if (keyPressHistory.length >= 2) {
+                  keyPressHistory = [];
+                  const info = make_rate_info();
+                  showToast(info);
+                }
               }
               const elementTagName = event.target.tagName
               // const href = location.href

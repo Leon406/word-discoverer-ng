@@ -22099,6 +22099,7 @@ has the blues
 has the brass face to
 has the bug
 has the courtesy to
+courtesy of	by courtesy of	
 has the deck stacked against
 has the makings
 has the sun in my eyes
@@ -33253,7 +33254,6 @@ norris mcwhirter
 north and south
 north circ
 north end round
-north pole
 northern lights
 norwegian steam
 nose about
@@ -42921,7 +42921,6 @@ six and four
 six bits
 six by six
 six feet under
-six months
 six moon
 six of one and half a dozen of the other
 six of the best
@@ -43802,7 +43801,6 @@ south austin suitcase
 south county indian
 south of france
 south of the border
-south pole
 southend pier
 southerly buster
 southern and seven
@@ -47324,6 +47322,7 @@ the nightmare scenario
 the nod
 the noose is hanging
 the normal run
+the north pole
 the nose knows
 the nouveau riche
 the nuts
@@ -47552,6 +47551,7 @@ the soft sell
 the sooner the better
 the soshe
 the soul of
+the south pole
 the spanish archer
 the sparks fly
 the spectre at the feast
@@ -47615,7 +47615,6 @@ the thick plottens
 the thin edge of the wedge
 the thin end of the wedge
 the thing
-the third
 the three rs
 the three strikes rule
 the threepenny bits
@@ -48690,7 +48689,6 @@ to no purpose
 to one side
 to oneself
 to order
-to pass
 to perfection
 to pieces
 to place on a pedestal
@@ -52896,3 +52894,5 @@ zorba the greek
 zsa zsa
 zulu princess
 zulu time
+dragon boat race
+dragon boat festival

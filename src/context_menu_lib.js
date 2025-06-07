@@ -270,7 +270,7 @@ export function initContextMenus(dictPairs) {
       id: 'vocab_select_add',
     })
     chrome.contextMenus.create({
-      title: 'Copy All Vocabulary',
+      title: 'Copy All Vocabularies',
       id: 'vocab_copy',
     })
 
