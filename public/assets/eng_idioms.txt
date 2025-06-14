@@ -3392,7 +3392,7 @@ and one for luck
 and one more for luck
 and ringo
 and shit
-and so
+and so on
 and stuff
 and such
 and that
@@ -8644,7 +8644,7 @@ but good
 but me no buts
 but not in the biblical sense
 but not least
-but on the other
+but on the other hand
 but still and all
 but that is just me
 but then
@@ -16455,7 +16455,6 @@ figure of fun
 figure of speech
 figure on doing
 figure out the root of the problem
-figure that
 fiirst come first served
 filch it from
 file away
@@ -22808,7 +22807,6 @@ have nookie
 have nose in a book
 have nose in the air
 have nose out of joint
-have not
 have occasion to
 have off pat
 have on a short fuse
@@ -24509,7 +24507,6 @@ how can i help you
 how can you sleep at night
 how come
 how dare
-how do
 how far
 how goes it
 how goes the battle
@@ -35249,7 +35246,6 @@ one law for the rich and another for the poor
 one little bit
 one love
 one lunger
-one man
 one means business
 one minute to midnight
 one moment
@@ -35509,7 +35505,6 @@ other good fish in the sea
 other half
 other lot
 other man
-other people
 other place
 other side
 other than
@@ -47531,7 +47526,6 @@ the silver screen
 the sin bin
 the skids
 the skitters
-the sky
 the slammer
 the slings and arrows
 the slip
