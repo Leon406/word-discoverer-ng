@@ -58,6 +58,26 @@
     float: left !important;
 }
 
+.wdQueryTimes {
+    color: white !important;
+    font-size: 10px !important;
+    text-align: left !important;
+    text-transform: none !important;
+    padding: 5px !important;
+    margin: 1px 4px 0 2px !important;
+    border: none 4px !important;
+    vertical-align: baseline !important;
+    line-height: 65% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+    float: left !important;
+}
+
+
 .wdFreqSpan {
     color: black;
     background-color: orange;
@@ -144,7 +164,7 @@
 }
 
 wdhl.fix::before {
-    content: ;
+    content: " ";
     margin-right: 0.25rem;
 }
 

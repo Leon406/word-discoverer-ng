@@ -56,6 +56,7 @@ let is_enabled = null
 let wd_hl_settings = null
 let wd_hover_settings = null
 let wd_online_dicts = null
+let wd_query_times = null
 let wd_enable_tts = null
 let wd_enable_prefetch = null
 
@@ -224,6 +225,16 @@ function renderBubble() {
   lemma = lemma && lemma !== 'undefined' ? lemma : ''
   const bubbleDOM = document.getElementById('wd_selection_bubble')
   const bubbleText = document.getElementById('wd_selection_bubble_text')
+  const bubbleQueryTimes = document.getElementById('wd_selection_bubble_query_times')
+
+  if (wd_query_times.hasOwnProperty(lemma)) {
+    wd_query_times[lemma] += 1
+  }else  {
+    wd_query_times[lemma] = 1
+  }
+  bubbleQueryTimes.textContent = `x ${wd_query_times[lemma]}`
+  chrome.storage.local.set({ wd_query_times })
+
   const bubbleFreq = document.getElementById('wd_selection_bubble_freq')
   const wdnTranslateBingDom = document.getElementById('wdn_translate_bing')
   // 避免网络问题，显示上一次内容
@@ -808,6 +819,11 @@ function create_bubble() {
   infoSpan.setAttribute('class', 'wdInfoSpan')
   bubbleDOM.appendChild(infoSpan)
 
+  const queryTimesSpan = document.createElement('span')
+  queryTimesSpan.setAttribute('id', 'wd_selection_bubble_query_times')
+  queryTimesSpan.setAttribute('class', 'wdQueryTimes')
+  bubbleDOM.appendChild(queryTimesSpan)
+
   const freqSpan = document.createElement('span')
   freqSpan.setAttribute('id', 'wd_selection_bubble_freq')
   freqSpan.setAttribute('class', 'wdFreqSpan')
@@ -864,17 +880,17 @@ function showRateToast() {
   let rareRate = frequency.rare.count * 100 / frequency.tokens
   // < 2 green    <5    < 10 yellow  >10 red
 
-  let className = ""
+  let className = ''
   if (rareRate > 10) {
-    className = "red"
-  }else if (rareRate > 5) {
-    className = "yellow"
-  }else if (rareRate > 2) {
-    className = "greenyellow"
-  }else {
-    className = "green"
+    className = 'red'
+  } else if (rareRate > 5) {
+    className = 'yellow'
+  } else if (rareRate > 2) {
+    className = 'greenyellow'
+  } else {
+    className = 'green'
   }
-  console.log("rate",rareRate,className)
+  console.log('rate', rareRate, className)
   toast.classList.add(className)
   toast.id = 'wd_toast'
   toast.textContent = info
@@ -898,11 +914,12 @@ export function initForPage() {
   )
 
   chrome.storage.local.get(
-    ['words_discoverer_eng_dict', 'wd_idioms', 'wd_user_vocabulary'],
+    ['words_discoverer_eng_dict', 'wd_idioms', 'wd_user_vocabulary',"wd_query_times"],
     function(result) {
       dict_words = result.words_discoverer_eng_dict
       dict_idioms = result.wd_idioms
       user_vocabulary = result.wd_user_vocabulary
+      wd_query_times = result.wd_query_times || {}
       chrome.storage.sync.get(
         [
           'wd_online_dicts',
