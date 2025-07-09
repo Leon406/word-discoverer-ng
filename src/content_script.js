@@ -226,13 +226,13 @@ function renderBubble() {
   const bubbleDOM = document.getElementById('wd_selection_bubble')
   const bubbleText = document.getElementById('wd_selection_bubble_text')
   const bubbleQueryTimes = document.getElementById('wd_selection_bubble_query_times')
-
-  if (wd_query_times.hasOwnProperty(lemma)) {
-    wd_query_times[lemma] += 1
-  }else  {
-    wd_query_times[lemma] = 1
+  const queryKey = lemma ? lemma : q
+  if (wd_query_times.hasOwnProperty(queryKey)) {
+    wd_query_times[queryKey] += 1
+  } else {
+    wd_query_times[queryKey] = 1
   }
-  bubbleQueryTimes.textContent = `x ${wd_query_times[lemma]}`
+  bubbleQueryTimes.textContent = `x ${wd_query_times[queryKey]}`
   chrome.storage.local.set({ wd_query_times })
 
   const bubbleFreq = document.getElementById('wd_selection_bubble_freq')
@@ -914,7 +914,7 @@ export function initForPage() {
   )
 
   chrome.storage.local.get(
-    ['words_discoverer_eng_dict', 'wd_idioms', 'wd_user_vocabulary',"wd_query_times"],
+    ['words_discoverer_eng_dict', 'wd_idioms', 'wd_user_vocabulary', 'wd_query_times'],
     function(result) {
       dict_words = result.words_discoverer_eng_dict
       dict_idioms = result.wd_idioms
