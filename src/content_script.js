@@ -239,7 +239,6 @@ function renderBubble() {
   const wdnTranslateBingDom = document.getElementById('wdn_translate_bing')
   // 避免网络问题，显示上一次内容
   wdnTranslateBingDom.innerHTML = ''
-
   function bingHtml(bingResult) {
     let inf_html = ''
     let phonetic_html = ''
@@ -251,6 +250,8 @@ function renderBubble() {
       </div>`
     } else {
       phonetic_html = `<div>♫
+      <a target="_blank" href="https://forvo.com/word/${q}">
+      Forvo</a>
       <a target="_blank" href="https://youglish.com/search/${q}">
       YouGlish</a>
       <a target="_blank" href="https://www.playphrase.me/#/search?q=${q}">
@@ -274,6 +275,8 @@ function renderBubble() {
           <a target="_blank" href="https://www.google.com/search?q=${q}+definition">Google</a>
           </div>`
     const pron_html = `<div>♫
+         <a target="_blank" href="https://forvo.com/word/${q}">
+              Forvo</a>
           <a target="_blank" href="https://youglish.com/search/${q}">
           YouGlish</a>
           <a target="_blank" href="https://www.playphrase.me/#/search?q=${q}">
@@ -441,7 +444,6 @@ function text_to_hl_nodes(text, dst) {
       return acc
     }, frequency.lemmas)
 
-  console.log('tokens', Object.keys(frequency.lemmas).length, frequency)
   let num_good = 0 // number of found dictionary words
   let num_nonempty = 0
   let ibegin = 0 // beginning of word

@@ -4,7 +4,7 @@
   "name": "__MSG_appName__",
   "description": "__MSG_appDesc__",
   "default_locale": "zh_CN",
-  "version": "0.17.1",
+  "version": "0.17.2",
   "icons": {
     "48": "assets/result48.png",
     "128": "assets/icon_128.png"
