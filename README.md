@@ -2,8 +2,9 @@
 <a href="https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml"><img src="https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml/badge.svg"/></a>
 </p>
 
-<p align="center"><img src="https://profile-counter.glitch.me/Leon406_word-discoverer-ng/count.svg" alt="Visitor's Count" />
- <img width=0 height=0 src="https://profile-counter.glitch.me/Leon406/count.svg" alt="Leon406:: Visitor's Count" />
+<p align="center">
+<img  src="https://api.visitorbadge.io/api/visitors?path=leon406%2Fword-discoverer-ng&countColor=%232ccce4" alt="Sub :: Visitor's Count" />
+ <img width=0 height=0 src="https://api.visitorbadge.io/api/visitors?path=leon406%2Fleon406&countColor=%232ccce4" alt="Leon406:: Visitor's Count" />
 </p>
 
 
