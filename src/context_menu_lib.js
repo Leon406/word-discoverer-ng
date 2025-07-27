@@ -269,6 +269,11 @@ export function initContextMenus(dictPairs) {
       contexts: ['selection'],
       id: 'vocab_select_add',
     })
+     chrome.contextMenus.create({
+      title:  "Open In Local",
+      contexts: ['selection'],
+      id: 'vocab_open_in_local',
+    })
     chrome.contextMenus.create({
       title: 'Copy All Vocabularies',
       id: 'vocab_copy',
@@ -289,6 +294,14 @@ export function initContextMenus(dictPairs) {
         eval_func(copy_vocabulary)
       } else if (info.menuItemId === 'save_all_vocabulary') {
         eval_func(saveAllVocabulary);
+      } else if (info.menuItemId === 'vocab_open_in_local') {
+        const internalPageUrl = chrome.runtime.getURL('local.html');
+        const urlWithParams = `${internalPageUrl}?s=${encodeURIComponent(word)}`;
+
+        // 创建一个新的标签页来打开我们的内部页面
+        chrome.tabs.create({
+          url: urlWithParams
+        });
       } else if (info.menuItemId.startsWith('wd_define_')) {
         let i = info.menuItemId.substring(info.menuItemId.lastIndexOf('_') + 1)
         console.log('ddd', i, dictPairs[parseInt(i)])

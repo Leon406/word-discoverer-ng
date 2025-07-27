@@ -1,5 +1,5 @@
 export function request_unhighlight(lemma) {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     chrome.tabs.sendMessage(tabs[0].id, { wdm_unhighlight: lemma })
   })
 }
@@ -9,11 +9,11 @@ export function request_unhighlight(lemma) {
  * refer https://developer.chrome.com/docs/extensions/reference/api/scripting?hl=zh-cn
  */
 export function eval_func(func, args = []) {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     chrome.scripting.executeScript({
       target: { tabId: tabs[0].id },
       func,
-      args,
+      args
     })
   })
 }
@@ -21,14 +21,17 @@ export function eval_func(func, args = []) {
 export function open_local_tab(url, cb) {
   chrome.tabs.create({ url: chrome.runtime.getURL(url) }, cb)
 }
-export function readerService () {
+
+export function readerService() {
   const sentenceKey = 'previous'
   const newEle = document.getElementById('new')
   const input = document.getElementById('input')
   const deleteEle = document.getElementById('delete')
   const sentence = document.getElementById('text-to-read')
 
-  let previouseSentence = localStorage.getItem(sentenceKey)
+  const params = new URLSearchParams(window.location.search)
+  const selectedText = params.get('s')
+  let previouseSentence = selectedText ? selectedText : localStorage.getItem(sentenceKey)
 
   if (previouseSentence) {
     input.value = previouseSentence
@@ -65,9 +68,9 @@ export function add_lexeme(lexeme, result_handler) {
     'wd_idioms',
     'wd_user_vocabulary',
     'wd_user_vocab_added',
-    'wd_user_vocab_deleted',
+    'wd_user_vocab_deleted'
   ]
-  chrome.storage.local.get(req_keys, function (result) {
+  chrome.storage.local.get(req_keys, function(result) {
     const dict_words = result.words_discoverer_eng_dict
     const dict_idioms = result.wd_idioms
     const user_vocabulary = result.wd_user_vocabulary
@@ -114,18 +117,19 @@ export function add_lexeme(lexeme, result_handler) {
       new_state.wd_user_vocab_deleted = wd_user_vocab_deleted
     }
 
-    chrome.storage.local.set(new_state, function () {
+    chrome.storage.local.set(new_state, function() {
       result_handler('ok', key)
     })
   })
 }
+
 export function add_lexeme2(lexeme, result_handler) {
   const req_keys = [
     'words_discoverer_eng_dict',
     'wd_idioms',
-    'wd_user_vocabulary',
+    'wd_user_vocabulary'
   ]
-  chrome.storage.local.get(req_keys, function (result) {
+  chrome.storage.local.get(req_keys, function(result) {
     const dict_words = result.words_discoverer_eng_dict
     const dict_idioms = result.wd_idioms
     const user_vocabulary = result.wd_user_vocabulary
@@ -140,9 +144,9 @@ export function add_lexeme2(lexeme, result_handler) {
     }
     let added = []
     lexeme.split(/[\n;；]+/).forEach(
-      lemma=> {
+      lemma => {
         let key = lemma
-        console.log("lemma add", lemma)
+        console.log('lemma add', lemma)
         if (dict_words.hasOwnProperty(lemma)) {
           const wf = dict_words[lemma]
           if (wf) {
@@ -164,23 +168,24 @@ export function add_lexeme2(lexeme, result_handler) {
 
     if (added.length) {
       const new_state = { wd_user_vocabulary: user_vocabulary }
-      console.log("lemma add", added)
-      chrome.storage.local.set(new_state, function () {
+      console.log('lemma add', added)
+      chrome.storage.local.set(new_state, function() {
         result_handler('ok', added)
       })
-    }else {
+    } else {
       result_handler('exists', undefined)
     }
 
   })
 }
+
 export function delete_lexeme(lexeme, result_handler) {
   const req_keys = [
     'words_discoverer_eng_dict',
     'wd_idioms',
-    'wd_user_vocabulary',
+    'wd_user_vocabulary'
   ]
-  chrome.storage.local.get(req_keys, function (result) {
+  chrome.storage.local.get(req_keys, function(result) {
     const dict_words = result.words_discoverer_eng_dict
     const dict_idioms = result.wd_idioms
     const user_vocabulary = result.wd_user_vocabulary
@@ -195,8 +200,8 @@ export function delete_lexeme(lexeme, result_handler) {
     }
     let deleted = []
     lexeme.split(/[\n;；]+/).forEach(
-      lemma=>{
-        console.log("lemma del", lemma)
+      lemma => {
+        console.log('lemma del', lemma)
         let key = lemma
         if (dict_words.hasOwnProperty(lemma)) {
           const wf = dict_words[lemma]
@@ -218,9 +223,9 @@ export function delete_lexeme(lexeme, result_handler) {
     )
 
     if (deleted.length) {
-      console.log("lemma del", deleted)
+      console.log('lemma del', deleted)
       const new_state = { wd_user_vocabulary: user_vocabulary }
-      chrome.storage.local.set(new_state, function () {
+      chrome.storage.local.set(new_state, function() {
         result_handler('delOk', deleted)
       })
     }
@@ -246,7 +251,7 @@ export function localizeHtmlPage() {
   for (let j = 0; j < objects.length; j++) {
     const obj = objects[j]
     const valStrH = obj.innerHTML.toString()
-    const valNewH = valStrH.replace(/__MSG_(\w+)__/g, function (match, v1) {
+    const valNewH = valStrH.replace(/__MSG_(\w+)__/g, function(match, v1) {
       return v1 ? chrome.i18n.getMessage(v1) : ''
     })
     if (valNewH !== valStrH) {
@@ -261,13 +266,14 @@ export function make_class_name(lemma) {
   }
   return 'wdhl_none_none'
 }
+
 export function unhighlight(lemma) {
   const wdclassname = make_class_name(lemma)
   const hlNodes = document.getElementsByClassName(wdclassname)
   Array.from(hlNodes).forEach((span) => {
     span.setAttribute(
       'style',
-      'font-weight:inherit;color:inherit;background-color:inherit;',
+      'font-weight:inherit;color:inherit;background-color:inherit;'
     )
     span.setAttribute('class', 'wdhl_none_none')
   })
