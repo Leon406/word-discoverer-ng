@@ -74,6 +74,8 @@ let rendered_node_id = null
 let node_to_render_id = null
 let frequency = { rare: { count: 0, sets: new Set() }, tokens: 0, lemmas: {} }
 
+let isLocal = false
+
 const FUNCTION_WORD_STYLE = 'font:inherit;font-size:0.875em;color:#777777;background-color:inherit;'
 const NORMAL_STYLE = 'font:inherit;color:inherit;background-color:inherit;'
 
@@ -239,6 +241,7 @@ function renderBubble() {
   const wdnTranslateBingDom = document.getElementById('wdn_translate_bing')
   // 避免网络问题，显示上一次内容
   wdnTranslateBingDom.innerHTML = ''
+
   function bingHtml(bingResult) {
     let inf_html = ''
     let phonetic_html = ''
@@ -654,7 +657,7 @@ function filterType(node) {
   }
   // mat-select 下拉选择失效
   // .wdSelectionBubble 翻译bubble
-  if (node.parentNode.closest('mat-option,mat-select,.wdSelectionBubble,#wd_toast')) {
+  if (node.parentNode.closest('mat-option,mat-select,.wdSelectionBubble,#wd_toast,#wd_local')) {
     return NodeFilter.FILTER_SKIP
   }
   return invalidTags.includes(node.tagName) ||
@@ -798,6 +801,7 @@ function bubble_handle_add_result(report, lemma) {
     frequency.rare.count -= count
     frequency.rare.sets.delete(lemma)
     unhighlight(lemma)
+    if (isLocal) showRateInfo()
   }
 }
 
@@ -860,9 +864,10 @@ function create_bubble() {
   return bubbleDOM
 }
 
-function showRateToast() {
+function showRateInfo() {
   // 防止重复添加
-  let existingToast = document.getElementById('wd_toast')
+  let existingToast = document.getElementById('wd_toast') || document.getElementById('wd_local_freq')
+  let localFooter = document.getElementById('wd_local')
   if (existingToast) {
     existingToast.remove()
   }
@@ -884,18 +889,23 @@ function showRateToast() {
   }
   console.log('rate', rareRate, className)
   toast.classList.add(className)
-  toast.id = 'wd_toast'
   toast.textContent = info
-  document.body.appendChild(toast)
-  // 5秒后自动隐藏
-  setTimeout(() => {
-    toast.style.display = 'none'
-  }, 5000)
+  if (localFooter) {
+    toast.id = 'wd_local_freq'
+    localFooter.appendChild(toast)
+  } else {
+    toast.id = 'wd_toast'
+    document.body.appendChild(toast)
+    // 5秒后自动隐藏
+    setTimeout(() => {
+      toast.style.display = 'none'
+    }, 5000)
+  }
 }
 
 export function initForPage() {
   if (!document.body) return
-
+  isLocal = !!document.getElementById('wd_local')
   chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
       if (request.wdm_unhighlight) {
@@ -958,13 +968,13 @@ export function initForPage() {
                 renderBubble()
                 return
               }
-              if (event.key === 'i') {
+              if (event.key === 's') {
                 const now = Date.now()
                 keyPressHistory.push(now)
                 keyPressHistory = keyPressHistory.filter(time => now - time < 1000)
                 if (keyPressHistory.length >= 2) {
                   keyPressHistory = []
-                  showRateToast()
+                  showRateInfo()
                 }
               }
               const elementTagName = event.target.tagName
@@ -991,6 +1001,7 @@ export function initForPage() {
             // 默认加载
             const textNodes = textNodesUnder(document.body)
             doHighlightText(textNodes)
+            if (isLocal) showRateInfo()
 
             const bubbleDOM = create_bubble()
             document.body.appendChild(bubbleDOM)

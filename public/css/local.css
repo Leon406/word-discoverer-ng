@@ -279,3 +279,34 @@ header {
     background: #4caf50;
 }
 
+#wd_local div {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    z-index: 999999;
+    font-size: 24px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease;
+    opacity: 1
+}
+
+#wd_local div.greenyellow {
+    background-color: greenyellow;
+    color: #000;
+}
+#wd_local div.green {
+    background-color: lightgreen;
+    color: #eee;
+}
+
+#wd_local div.red {
+    background-color: red;
+    color: #fff;
+}
+
+#wd_local div.yellow {
+    background-color: #FFD700;
+    color: #333;
+}
