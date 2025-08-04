@@ -186,7 +186,14 @@ span > wdhl.fix:first-of-type::before {
     font-size: 24px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: opacity 0.5s ease;
-    opacity: 1
+    opacity: 1 ;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #wd_toast.greenyellow {

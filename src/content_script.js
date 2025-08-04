@@ -601,7 +601,7 @@ function make_rate_info() {
   const lemmaCount = Object.keys(frequency.lemmas).length
   const lemmaRate = parseFloat(lemmaRareCount * 100 / lemmaCount).toFixed(2)
   const tokenRate = parseFloat(frequency.rare.count * 100 / frequency.tokens).toFixed(2)
-  return `tokens ${frequency.rare.count}/${frequency.tokens} (${tokenRate}%) lemma: ${lemmaRareCount}/${lemmaCount} (${lemmaRate}%)`
+  return `🪙 Tokens: ${frequency.rare.count}/${frequency.tokens} (${tokenRate}%) 📖 Lemma: ${lemmaRareCount}/${lemmaCount} (${lemmaRate}%)`
 }
 
 const invalidTags = [
