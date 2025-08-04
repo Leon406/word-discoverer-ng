@@ -30,7 +30,9 @@ export function readerService() {
   const sentence = document.getElementById('text-to-read')
 
   const params = new URLSearchParams(window.location.search)
+
   const selectedText = params.get('s')
+  selectedText && localStorage.setItem(sentenceKey,selectedText)
   let previouseSentence = selectedText ? selectedText : localStorage.getItem(sentenceKey)
 
   if (previouseSentence) {

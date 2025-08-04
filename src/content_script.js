@@ -976,6 +976,8 @@ export function initForPage() {
                   keyPressHistory = []
                   showRateInfo()
                 }
+              }else {
+                keyPressHistory = []
               }
               const elementTagName = event.target.tagName
               // const href = location.href

@@ -285,9 +285,21 @@ export function initContextMenus(dictPairs) {
       contexts: ['all'],
     });
 
-    chrome.contextMenus.onClicked.addListener(function (info, tab) {
+    chrome.contextMenus.onClicked.addListener(async function (info, tab) {
       console.log('ContextMenus', info)
-      const word = info.selectionText
+      let word = info.selectionText
+      if (info.menuItemId === 'vocab_open_in_local') {
+        try {
+          // 在当前标签页里执行一段脚本，把选区文本带换行地拿回来
+          const [{ result }] = await chrome.scripting.executeScript({
+            target: { tabId: tab.id },
+            func: getSelectionTextWithBreaks
+          });
+          word = result;
+        } catch (e) {
+          console.error(e);
+        }
+      }
       if (info.menuItemId === 'vocab_select_add') {
         add_lexeme(word, context_handle_add_result)
       } else if (info.menuItemId === 'vocab_copy') {
@@ -297,14 +309,12 @@ export function initContextMenus(dictPairs) {
       } else if (info.menuItemId === 'vocab_open_in_local') {
         const internalPageUrl = chrome.runtime.getURL('local.html');
         const urlWithParams = `${internalPageUrl}?s=${encodeURIComponent(word)}`;
-
         // 创建一个新的标签页来打开我们的内部页面
         chrome.tabs.create({
           url: urlWithParams
         });
       } else if (info.menuItemId.startsWith('wd_define_')) {
         let i = info.menuItemId.substring(info.menuItemId.lastIndexOf('_') + 1)
-        console.log('ddd', i, dictPairs[parseInt(i)])
         showDefinition(dictPairs[parseInt(i)].url, word)
       }
     })
@@ -315,6 +325,26 @@ export function initContextMenus(dictPairs) {
     })
     createDictionaryEntry(dictPairs)
   })
+}
+
+// 这段代码会在页面上下文中运行
+function getSelectionTextWithBreaks() {
+  const selection = window.getSelection();
+  if (!selection.rangeCount) return '';
+
+  // 用 <br> 占位换行，再转成纯文本
+  const div = document.createElement('div');
+  for (let i = 0; i < selection.rangeCount; i++) {
+    div.appendChild(selection.getRangeAt(i).cloneContents());
+  }
+
+  // 把 <br> 换成 \n\n，再剔除多余空白
+  return div.innerHTML
+    .replace(/<br\s*\/?>/gi, '\n\n')
+    .replace(/<\/p>/gi, '\n\n')
+    .replace(/<[^>]+>/g, '')   // 去掉其余标签
+    .replace(/\n{2,}/g, '\n\n')  // 合并多余空行
+    .trim();
 }
 
 function saveAllVocabulary() {
