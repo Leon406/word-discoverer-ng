@@ -242,7 +242,6 @@ function renderBubble() {
   function bingHtml(bingResult) {
     let inf_html = ''
     let phonetic_html = ''
-    console.log('audio1', bingResult)
     if (bingResult.phsym && bingResult.phsym.length) {
       phonetic_html = `<div class="phonetic">
         <span id="play_us" data-src="${bingResult.phsym[0].pron}">${bingResult.phsym[0].lang}</span>
@@ -591,7 +590,6 @@ function text_to_hl_nodes(text, dst) {
   if (insert_count && last_hl_end_pos < text.length) {
     dst.push(document.createTextNode(text.slice(last_hl_end_pos, text.length)))
   }
-  console.log(make_rate_info())
   return insert_count
 }
 
@@ -708,15 +706,11 @@ function doHighlightText(textNodes) {
       let computedValue =
         getComputedStyle(parent_node) ||
         document.defaultView.getComputedStyle(parent_node)
-      console.log(
-        'doHighlightText',
-        parent_node.textContent,
-        computedValue.display
-      )
+      // console.log('doHighlightText', parent_node.textContent, computedValue.display)
       const isFlex =
         computedValue.display === 'flex' ||
         computedValue.display === 'inline-flex'
-      assert(new_children.length > 0, 'children must be non empty')
+      assert(new_children.length > 0, 'children must be not empty')
       for (let j = 0; j < new_children.length; j++) {
         const child = new_children[j]
         if (isFlex) {
@@ -735,9 +729,8 @@ function doHighlightText(textNodes) {
 function onNodeChanged(event) {
   const inobj = event.target
   if (!inobj) return
-  // todo ignore editor
+  // ignore editor
   if (inobj.closest('.wdSelectionBubble,.cm-editor')) {
-    console.info('bypass', inobj)
     return
   }
 
@@ -753,10 +746,7 @@ function onNodeChanged(event) {
   if (!classattr || !classattr.startsWith('wdhl_')) {
     const textNodes = textNodesUnder(inobj)
     if (textNodes.length) {
-      console.log(
-        'onNodeChanged highlight',
-        textNodes.map((e) => e.textContent)
-      )
+      // console.log('onNodeChanged highlight', textNodes.map((e) => e.textContent))
       doHighlightText(textNodes)
     }
   }

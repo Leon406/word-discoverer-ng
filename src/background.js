@@ -100,39 +100,21 @@ function load_eng_dictionary() {
     .then(do_load_dictionary)
 }
 
-const common_verb_dict = {
-  do: ['did', 'done', 'doing', 'does'],
-  feel: ['feels', 'felt', 'feeling'],
-  find: ['finds', 'found', 'finding'],
-  get: ['gets', 'got', 'getting', 'gotten'],
-  give: ['gives', 'gave', 'given', 'giving'],
-  go: ['goes', 'went', 'gone', 'going'],
-  hang: ['hangs', 'hung', 'hanging'],
-  have: ['has', 'had', 'having'],
-  hold: ['holds', 'held', 'holding'],
-  hit: ['hits', 'hitting'],
-  keep: ['keeps', 'kept', 'keeping'],
-  kick: ['kicks', 'kicked', 'kicking'],
-  kill: ['kills', 'killed', 'killing'],
-  knock: ['knocks', 'knocked', 'knocking'],
-  know: ['knows', 'known', 'knowing'],
-  leave: ['leaves', 'left', 'leaving'],
-  look: ['looks', 'looked', 'looking'],
-  make: ['makes', 'made', 'making'],
-  pick: ['picks', 'picked', 'picking'],
-  pull: ['pulls', 'pulled', 'pulling'],
-  put: ['putting', 'puts'],
-  ride: ['rides', 'ridden', 'riding'],
-  roll: ['rolls', 'rolled', 'rolling'],
-  see: ['sees', 'saw', 'seeing'],
-  sell: ['sells', 'sold', 'selling'],
-  send: ['sends', 'sent', 'sending'],
-  take: ['takes', 'took', 'taking', 'taken'],
-  talk: ['talks', 'talked', 'talking'],
-  tell: ['tells', 'told', 'telling'],
-  throw: ['throws', 'thew', 'throwing', 'thrown'],
-  work: ['works', 'worked', 'working'],
-  write: ['writes', 'wrote', 'written', 'writing'],
+const common_verb_dict = {}
+
+function load_eng_verb_inflection() {
+  const file_path = chrome.runtime.getURL('../assets/eng_verb_inflection.txt')
+  fetch(file_path)
+    .then((res) => res.text())
+    .then(do_tmp_verb_inflection)
+}
+
+function do_tmp_verb_inflection(file_text) {
+  const lines = file_text.split(/[\r\n]+/)
+  lines.forEach((value) => {
+    const verbs = value.split('\t')
+    common_verb_dict[verbs.shift()] = verbs
+  })
 }
 
 function deriveKey(key, rare_words, value) {
@@ -387,6 +369,7 @@ function initialize_extension() {
   }
 
   chrome.storage.local.get(['wd_user_vocabulary'], function (result) {
+    load_eng_verb_inflection()
     load_eng_dictionary()
     load_idioms()
     const user_vocabulary = result.wd_user_vocabulary
