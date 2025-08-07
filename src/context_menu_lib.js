@@ -1,4 +1,4 @@
-import { add_lexeme, eval_func, request_unhighlight,unhighlight } from './common_lib'
+import { add_lexeme, compress, eval_func, request_unhighlight } from './common_lib'
 
 const isoLangs = {
   ab: 'Abkhaz',
@@ -308,10 +308,11 @@ export function initContextMenus(dictPairs) {
         eval_func(saveAllVocabulary);
       } else if (info.menuItemId === 'vocab_open_in_local') {
         const internalPageUrl = chrome.runtime.getURL('local.html');
-        const urlWithParams = `${internalPageUrl}?s=${encodeURIComponent(word)}`;
-        // 创建一个新的标签页来打开我们的内部页面
-        chrome.tabs.create({
-          url: urlWithParams
+        let sentence = compress(word)
+        chrome.storage.local.set({ sentence },()=>{
+          chrome.tabs.create({
+            url: internalPageUrl
+          });
         });
       } else if (info.menuItemId.startsWith('wd_define_')) {
         let i = info.menuItemId.substring(info.menuItemId.lastIndexOf('_') + 1)

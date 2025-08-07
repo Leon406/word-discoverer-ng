@@ -1,4 +1,4 @@
-import { add_lexeme, make_hl_style, make_class_name, unhighlight } from './common_lib'
+import { add_lexeme, make_hl_style, make_class_name, unhighlight, eval_func } from './common_lib'
 import { handleLexResult } from './utils/bing'
 
 import { get_dict_definition_url } from './context_menu_lib'
@@ -247,8 +247,8 @@ function renderBubble() {
     let phonetic_html = ''
     if (bingResult.phsym && bingResult.phsym.length) {
       phonetic_html = `<div class="phonetic">
-        <span id="play_us" data-src="${bingResult.phsym[0].pron}">${bingResult.phsym[0].lang}</span>
         <span id="play_uk" data-src="${bingResult.phsym[1].pron}">${bingResult.phsym[1].lang}</span>
+        <span id="play_us" data-src="${bingResult.phsym[0].pron}">${bingResult.phsym[0].lang}</span>
       </div>`
     } else {
       phonetic_html = `<div>♫
@@ -329,7 +329,9 @@ function renderBubble() {
     bubbleText.onclick = function(e) {
       e.preventDefault()
       e.stopImmediatePropagation()
-      window.open(get_dict_definition_url(thirdDict.url, wdSpanText))
+      // 词组改为查询 lemma
+      let queryWord = wdSpanText.includes(' ') ? bubbleText.title : wdSpanText
+      window.open(get_dict_definition_url(thirdDict.url, queryWord))
     }
   }
 
@@ -872,7 +874,6 @@ function showRateInfo() {
     existingToast.remove()
   }
   const info = make_rate_info()
-
   const toast = document.createElement('div')
   let rareRate = frequency.rare.count * 100 / frequency.tokens
   // < 2 green    <5    < 10 yellow  >10 red
@@ -952,7 +953,6 @@ export function initForPage() {
           const black_list = config.wd_black_list
           const white_list = config.wd_white_list
           get_verdict(is_enabled, black_list, white_list, function(verdict) {
-            console.log('get_verdict', verdict)
             chrome.runtime.sendMessage({ wdm_verdict: verdict })
             // 支持非英文网页
             if (
@@ -976,7 +976,7 @@ export function initForPage() {
                   keyPressHistory = []
                   showRateInfo()
                 }
-              }else {
+              } else {
                 keyPressHistory = []
               }
               const elementTagName = event.target.tagName
@@ -1003,7 +1003,6 @@ export function initForPage() {
             // 默认加载
             const textNodes = textNodesUnder(document.body)
             doHighlightText(textNodes)
-            if (isLocal) showRateInfo()
 
             const bubbleDOM = create_bubble()
             document.body.appendChild(bubbleDOM)
@@ -1017,6 +1016,7 @@ export function initForPage() {
               node_to_render_id = null
               hideBubble(true)
             })
+            if (isLocal) { showRateInfo() }
           })
         }
       )
