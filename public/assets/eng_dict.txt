@@ -63,7 +63,7 @@ other	otherest
 them
 some
 want	wanted	wanting	wants
-how
+how	hows
 now
 which
 right	righted	righter	rightest	righting	rights
@@ -31324,7 +31324,6 @@ furthest
 acer	acers
 chang	changs
 weil	weils
-hows
 fletcher	fletchers
 benedict	benedicts
 wank	wanked	wanking	wanks
