@@ -174,7 +174,7 @@ const isoLangs = {
   xh: 'Xhosa',
   yi: 'Yiddish',
   yo: 'Yoruba',
-  za: 'Zhuang',
+  za: 'Zhuang'
 }
 
 export function get_dict_definition_url(dictUrl, text) {
@@ -194,7 +194,7 @@ function copy_vocabulary() {
       .map(ele => ele.getAttribute('lemma'))
   )]
   if (!vocabularies.length) return
-  const voca = vocabularies.join('\n');
+  const voca = vocabularies.join('\n')
   const textArea = document.createElement('textarea')
   textArea.value = voca
   textArea.style.position = 'fixed'
@@ -210,7 +210,7 @@ function copy_vocabulary() {
 export function showDefinition(dictUrl, text) {
   const fullUrl = get_dict_definition_url(dictUrl, text)
   if (fullUrl.startsWith('http')) {
-    chrome.tabs.create({ url: fullUrl }, function (tab) {
+    chrome.tabs.create({ url: fullUrl }, function(tab) {
       // opens definition in a new tab
     })
   } else {
@@ -223,7 +223,7 @@ export function createDictionaryEntry(dictPairs) {
     chrome.contextMenus.create({
       title: dictPairs[i].title,
       contexts: ['selection'],
-      id: `wd_define_${i}`,
+      id: `wd_define_${i}`
     })
   }
 }
@@ -243,49 +243,49 @@ export function make_default_online_dicts() {
     const langName = isoLangs[uiLang]
     result.push({
       title: `Translate to ${langName} in Google`,
-      url: `https://translate.google.com/#en/${uiLang}/`,
+      url: `https://translate.google.com/#en/${uiLang}/`
     })
   }
   result.push({
     title: 'Define in Merriam-Webster',
-    url: 'https://www.merriam-webster.com/dictionary/',
+    url: 'https://www.merriam-webster.com/dictionary/'
   })
   result.push({
     title: 'Define in Google',
-    url: 'https://encrypted.google.com/search?hl=en&gl=en&q=define:',
+    url: 'https://encrypted.google.com/search?hl=en&gl=en&q=define:'
   })
   result.push({
     title: 'View pictures in Google',
-    url: 'https://encrypted.google.com/search?hl=en&gl=en&tbm=isch&q=',
+    url: 'https://encrypted.google.com/search?hl=en&gl=en&tbm=isch&q='
   })
   return result
 }
 
 export function initContextMenus(dictPairs) {
-  chrome.contextMenus.removeAll(function () {
+  chrome.contextMenus.removeAll(function() {
     const title = chrome.i18n.getMessage('menuItem')
     chrome.contextMenus.create({
       title,
       contexts: ['selection'],
-      id: 'vocab_select_add',
+      id: 'vocab_select_add'
     })
-     chrome.contextMenus.create({
-      title:  "Open In Local",
+    chrome.contextMenus.create({
+      title: 'Open In Local',
       contexts: ['selection'],
-      id: 'vocab_open_in_local',
+      id: 'vocab_open_in_local'
     })
     chrome.contextMenus.create({
       title: 'Copy All Vocabularies',
-      id: 'vocab_copy',
+      id: 'vocab_copy'
     })
 
     chrome.contextMenus.create({
       id: 'save_all_vocabulary',
       title: 'Save All Vocabularies',
-      contexts: ['all'],
-    });
+      contexts: ['all']
+    })
 
-    chrome.contextMenus.onClicked.addListener(async function (info, tab) {
+    chrome.contextMenus.onClicked.addListener(async function(info, tab) {
       console.log('ContextMenus', info)
       let word = info.selectionText
       if (info.menuItemId === 'vocab_open_in_local') {
@@ -294,10 +294,10 @@ export function initContextMenus(dictPairs) {
           const [{ result }] = await chrome.scripting.executeScript({
             target: { tabId: tab.id },
             func: getSelectionTextWithBreaks
-          });
-          word = result;
+          })
+          word = result ? result : word
         } catch (e) {
-          console.error(e);
+          console.error(e)
         }
       }
       if (info.menuItemId === 'vocab_select_add') {
@@ -305,15 +305,15 @@ export function initContextMenus(dictPairs) {
       } else if (info.menuItemId === 'vocab_copy') {
         eval_func(copy_vocabulary)
       } else if (info.menuItemId === 'save_all_vocabulary') {
-        eval_func(saveAllVocabulary);
+        eval_func(saveAllVocabulary)
       } else if (info.menuItemId === 'vocab_open_in_local') {
-        const internalPageUrl = chrome.runtime.getURL('local.html');
+        const internalPageUrl = chrome.runtime.getURL('local.html')
         let sentence = compress(word)
-        chrome.storage.local.set({ sentence },()=>{
+        chrome.storage.local.set({ sentence }, () => {
           chrome.tabs.create({
             url: internalPageUrl
-          });
-        });
+          })
+        })
       } else if (info.menuItemId.startsWith('wd_define_')) {
         let i = info.menuItemId.substring(info.menuItemId.lastIndexOf('_') + 1)
         showDefinition(dictPairs[parseInt(i)].url, word)
@@ -322,7 +322,7 @@ export function initContextMenus(dictPairs) {
     chrome.contextMenus.create({
       type: 'separator',
       contexts: ['selection'],
-      id: 'wd_separator_id',
+      id: 'wd_separator_id'
     })
     createDictionaryEntry(dictPairs)
   })
@@ -330,13 +330,13 @@ export function initContextMenus(dictPairs) {
 
 // 这段代码会在页面上下文中运行
 function getSelectionTextWithBreaks() {
-  const selection = window.getSelection();
-  if (!selection.rangeCount) return '';
+  const selection = window.getSelection()
+  if (!selection.rangeCount) return ''
 
   // 用 <br> 占位换行，再转成纯文本
-  const div = document.createElement('div');
+  const div = document.createElement('div')
   for (let i = 0; i < selection.rangeCount; i++) {
-    div.appendChild(selection.getRangeAt(i).cloneContents());
+    div.appendChild(selection.getRangeAt(i).cloneContents())
   }
 
   // 把 <br> 换成 \n\n，再剔除多余空白
@@ -345,35 +345,35 @@ function getSelectionTextWithBreaks() {
     .replace(/<\/p>/gi, '\n\n')
     .replace(/<[^>]+>/g, '')   // 去掉其余标签
     .replace(/\n{2,}/g, '\n\n')  // 合并多余空行
-    .trim();
+    .trim()
 }
 
 function saveAllVocabulary() {
-  const highlightedNodes = document.querySelectorAll('wdhl[lemma]');
-  const lemmasToSave = new Set();
+  const highlightedNodes = document.querySelectorAll('wdhl[lemma]')
+  const lemmasToSave = new Set()
   highlightedNodes.forEach((node) => {
-    const lemma = node.getAttribute('lemma');
+    const lemma = node.getAttribute('lemma')
     if (lemma) {
-      lemmasToSave.add(lemma);
+      lemmasToSave.add(lemma)
       // 隐藏已高亮的词汇
       node.setAttribute(
         'style',
-        'font-weight:inherit;color:inherit;background-color:inherit;',
+        'font-weight:inherit;color:inherit;background-color:inherit;'
       )
       node.setAttribute('class', 'wdhl_none_none')
     }
-  });
+  })
 
-  chrome.storage.local.get(['wd_user_vocabulary'], function (result) {
-    const userVocabulary = result.wd_user_vocabulary || {};
+  chrome.storage.local.get(['wd_user_vocabulary'], function(result) {
+    const userVocabulary = result.wd_user_vocabulary || {}
     lemmasToSave.forEach((lemma) => {
       if (!userVocabulary.hasOwnProperty(lemma)) {
-        userVocabulary[lemma] = 1;
+        userVocabulary[lemma] = 1
       }
-    });
+    })
 
-    chrome.storage.local.set({ wd_user_vocabulary: userVocabulary }, function () {
-      console.log(`Saved ${lemmasToSave.size} unique lemmas to vocabulary.`);
-    });
-  });
+    chrome.storage.local.set({ wd_user_vocabulary: userVocabulary }, function() {
+      console.log(`Saved ${lemmasToSave.size} unique lemmas to vocabulary.`)
+    })
+  })
 }

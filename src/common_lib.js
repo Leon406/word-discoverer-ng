@@ -3,6 +3,7 @@ import { compressToBase64, decompressFromBase64 } from 'lz-string'
 export function request_unhighlight(lemma) {
   sendMessage({ wdm_unhighlight: lemma })
 }
+
 export function sendMessage(msg) {
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     chrome.tabs.sendMessage(tabs[0].id, msg)
@@ -31,17 +32,17 @@ export function open_local_tab(url, cb) {
  * 压缩字符串，提高url query传递长度
  */
 export function compress(text) {
-    return compressToBase64(text)
-      .replace(/\+/g, '-')
-      .replace(/\//g, '_')
-      .replace(/=+$/, '')
+  return compressToBase64(text)
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '')
 }
 
 export function decompress(text) {
   if (!text) return
-  text = text.replace(/-/g, '+').replace(/_/g, '/');
+  text = text.replace(/-/g, '+').replace(/_/g, '/')
   while (text.length % 4) {
-    text += '=';
+    text += '='
   }
   return decompressFromBase64(text)
 }
@@ -55,6 +56,7 @@ export function readerService() {
 
   chrome.storage.local.get(sentenceKey, result => {
     let previouseSentence = decompress(result.sentence)
+    console.log('previouseSentence', previouseSentence)
     if (previouseSentence) {
       input.value = previouseSentence
       sentenceEle.innerHTML = previouseSentence
@@ -63,18 +65,18 @@ export function readerService() {
     // todo 解析和删除 暂时通过刷新页面同步词频数据
     newEle.onclick = function() {
       sentenceEle.innerHTML = input.value
-      chrome.storage.local.set({sentence: compress(input.value)},function() {
-         location.reload()
+      chrome.storage.local.set({ sentence: compress(input.value) }, function() {
+        location.reload()
       })
     }
     deleteEle.onclick = function() {
       input.value = ''
       sentenceEle.innerHTML = ''
-      chrome.storage.local.remove(sentenceKey,function() {
+      chrome.storage.local.remove(sentenceKey, function() {
         location.reload()
       })
     }
-  });
+  })
 }
 
 export function idClickFunc(id, func) {
