@@ -14,6 +14,8 @@
   ![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/oikgdogigcinjcpjpahpgekgbimjgcce)
 
 [Microsoft Edge 扩展](https://microsoftedge.microsoft.com/addons/detail/%E5%8D%95%E8%AF%8D%E5%8F%91%E7%8E%B0%E8%80%85ng/kdphfeabhlflpbeapflpkipohibphhgn)
+![Edge Add-On Store Version](https://img.shields.io/badge/dynamic/json?label=users&query=$.version&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/kdphfeabhlflpbeapflpkipohibphhgn)
+![Edge Add-On Users](https://img.shields.io/badge/dynamic/json?label=users&query=$.activeInstallCount&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/kdphfeabhlflpbeapflpkipohibphhgn)
 
 [手动安装](https://github.com/Leon406/word-discoverer-ng/actions/workflows/webpack.yml) ![GitHub Version](https://img.shields.io/github/v/release/Leon406/word-discoverer-ng)
 
