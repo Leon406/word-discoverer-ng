@@ -5,26 +5,30 @@ const options = {
   max: 200,
   dispose: (value, key) => {
     console.info('Cache Evict', key)
-  },
+  }
 }
 
 const cacheAudio = new LRUCache(options)
 
 let db
 
+const PRON_OWN = ['my', 'your', 'his', 'her', 'their', 'our', 'its']
+const PRON_OBJECT = ['i', 'you', 'he', 'she', 'they', 'we', 'it']
+const PRON_SUBJECT = ['me', 'you', 'him', 'her', 'them', 'us', 'it']
+
 function initDatabase() {
   const request = indexedDB.open('WordDiscovererDB', 1)
 
-  request.onerror = function (event) {
+  request.onerror = function(event) {
     console.error('Database error:', event.target.errorCode)
   }
 
-  request.onsuccess = function (event) {
+  request.onsuccess = function(event) {
     db = event.target.result
     console.log('Database initialized.')
   }
 
-  request.onupgradeneeded = function (event) {
+  request.onupgradeneeded = function(event) {
     db = event.target.result
     const objectStore = db.createObjectStore('dictionary', { keyPath: 'q' })
     objectStore.createIndex('q', 'q', { unique: true })
@@ -40,11 +44,11 @@ function saveToIndexedDB(q, data) {
   const objectStore = transaction.objectStore('dictionary')
   const request = objectStore.add({ q: q.toLowerCase(), data: data })
 
-  request.onsuccess = function (event) {
+  request.onsuccess = function(event) {
     console.info(`\x1B[31msaved to DB ==> \x1B[34m${q}`)
   }
 
-  request.onerror = function (event) {
+  request.onerror = function(event) {
     console.error('Error saving data to IndexedDB:', event.target.errorCode)
   }
 }
@@ -60,11 +64,11 @@ function getFromIndexedDB(q) {
     const objectStore = transaction.objectStore('dictionary')
     const request = objectStore.get(q.toLowerCase())
 
-    request.onsuccess = function (event) {
+    request.onsuccess = function(event) {
       resolve(event.target.result ? event.target.result.data : null)
     }
 
-    request.onerror = function (event) {
+    request.onerror = function(event) {
       reject(event.target.errorCode)
     }
   })
@@ -83,7 +87,7 @@ function do_load_dictionary(file_text) {
       if (item) {
         rare_words[item] = [lemma, rank]
         if (item.includes('’')) {
-          rare_words[item.replace(/’/g, "'")] = [lemma, rank]
+          rare_words[item.replace(/’/g, '\'')] = [lemma, rank]
         }
       }
     })
@@ -118,7 +122,7 @@ function do_tmp_verb_inflection(file_text) {
 }
 
 function deriveKey(key, rare_words, value) {
-  const tmp = key.replace(/’/g, "'")
+  const tmp = key.replace(/’/g, '\'')
   if (tmp !== key) {
     rare_words[tmp] = value
   }
@@ -127,7 +131,7 @@ function deriveKey(key, rare_words, value) {
   if (index > 0) {
     const first = key.substring(0, index)
     if (common_verb_dict[first]) {
-      common_verb_dict[first].forEach(function (verb) {
+      common_verb_dict[first].forEach(function(verb) {
         const newKey = verb + key.substring(index)
         rare_words[newKey] = value
       })
@@ -136,10 +140,18 @@ function deriveKey(key, rare_words, value) {
 }
 
 function do_load_idioms(file_text) {
-  const lines = file_text
-    .split(/[\r\n]+/)
-    .filter((line) => !line.startsWith('#'))
+  let lines = file_text.split(/[\r\n]+/).filter((line) => !line.startsWith('#'))
   const rare_words = {}
+
+  const ownIdioms = lines.filter((line) => line.includes('one’s'))
+  if (ownIdioms.length) {
+    let populateIdioms = []
+    PRON_OWN.forEach((pron) => {
+      const oneS_lines = ownIdioms.map((line) => line.replace(/one’s/g, pron))
+      populateIdioms = populateIdioms.concat(oneS_lines)
+    })
+    lines = lines.concat(populateIdioms)
+  }
 
   for (let lno = 0; lno < lines.length; ++lno) {
     const fields = lines[lno].split('\t')
@@ -170,9 +182,9 @@ function load_idioms() {
     .then(do_load_idioms)
 }
 
-function handleMessage(request,sendResponse){
- return  fetch(
-    `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${encodeURIComponent(request.q)}`,
+function handleMessage(request, sendResponse) {
+  return fetch(
+    `https://cn.bing.com/dict/clientsearch?mkt=zh-CN&setLang=zh&form=BDVEHC&ClientVer=BDDTV3.5.1.4320&q=${encodeURIComponent(request.q)}`
   )
     .then((response) => response.text())
     .then((html) => {
@@ -182,14 +194,14 @@ function handleMessage(request,sendResponse){
         // 删除无用跳转数据
         .replace(
           /<span id="anchor1">[\s\S]+?<span id="dictionaryvoiceid"><\/span>/g,
-          '</div></div></div>',
+          '</div></div></div>'
         )
       // console.log("minimizeHtml",minimizeHtml)
       if (db) {
         saveToIndexedDB(request.q, minimizeHtml)
-      }else {
+      } else {
         console.log('waiting for DB...')
-        setTimeout(function () {
+        setTimeout(function() {
           saveToIndexedDB(request.q, minimizeHtml)
         }, 3000)
       }
@@ -200,7 +212,7 @@ function handleMessage(request,sendResponse){
 function initialize_extension() {
   initDatabase()
   chrome.runtime.onMessage.addListener(
-    function (request, sender, sendResponse) {
+    function(request, sender, sendResponse) {
       if (request.type === 'fetch') {
         getFromIndexedDB(request.q)
           .then((cachedData) => {
@@ -222,7 +234,7 @@ function initialize_extension() {
         let cached = cacheAudio.get(request.audioUrl)
         if (cached) {
           console.info(
-            `\tarraybuffer cache: ${request.audioUrl} size: ${cacheAudio.size}`,
+            `\tarraybuffer cache: ${request.audioUrl} size: ${cacheAudio.size}`
           )
           sendResponse(cached)
         } else {
@@ -231,7 +243,7 @@ function initialize_extension() {
             .then((response) => response.arrayBuffer())
             .then((buffer) => {
               let jsonBuffer = JSON.stringify({
-                data: Array.apply(null, new Uint8Array(buffer)),
+                data: Array.apply(null, new Uint8Array(buffer))
               })
               cacheAudio.set(request.audioUrl, jsonBuffer)
               return jsonBuffer
@@ -250,7 +262,7 @@ function initialize_extension() {
         const domain = url.hostname
         sendResponse({ wdm_hostname: domain })
       } else if (request.wdm_request === 'page_language') {
-        chrome.tabs.detectLanguage(sender.tab.id, function (iso_language_code) {
+        chrome.tabs.detectLanguage(sender.tab.id, function(iso_language_code) {
           sendResponse({ wdm_iso_language_code: iso_language_code })
         })
         return true // Will respond asynchronously.
@@ -258,18 +270,19 @@ function initialize_extension() {
         if (request.wdm_verdict === 'keyboard') {
           chrome.action.setIcon({
             path: '../assets/no_dynamic.png',
-            tabId: sender.tab.id,
+            tabId: sender.tab.id
           })
         } else {
           chrome.action.setIcon({
             path: '../assets/result48_gray.png',
-            tabId: sender.tab.id,
+            tabId: sender.tab.id
           })
         }
         sendResponse() // 确保发送空响应
       } else if (request.wdm_new_tab_url) {
         const fullUrl = request.wdm_new_tab_url
-        chrome.tabs.create({ url: fullUrl }, function (tab) {})
+        chrome.tabs.create({ url: fullUrl }, function(tab) {
+        })
         sendResponse() // 确保发送空响应
       } else if (request.type === 'tts_speak') {
         if (!!request.word && typeof request.word === 'string') {
@@ -277,7 +290,7 @@ function initialize_extension() {
         }
         sendResponse() // 确保发送空响应
       }
-    },
+    }
   )
 
   function loadConfig() {
@@ -291,9 +304,9 @@ function initialize_extension() {
         'wd_hover_settings',
         'wd_black_list',
         'wd_white_list',
-        'wd_enable_tts',
+        'wd_enable_tts'
       ],
-      function (result) {
+      function(result) {
         let {
           wd_hl_settings,
           wd_enable_tts,
@@ -303,7 +316,7 @@ function initialize_extension() {
           wd_last_hidden_percents,
           wd_black_list,
           wd_white_list,
-          wd_is_enabled,
+          wd_is_enabled
         } = result
         const default_options = {}
         if (typeof wd_hl_settings === 'undefined') {
@@ -314,7 +327,7 @@ function initialize_extension() {
             useBackground: false,
             backgroundColor: 'rgb(255, 248, 220)',
             useColor: true,
-            color: 'red',
+            color: 'red'
           }
           const idiom_hl_params = {
             enabled: true,
@@ -323,11 +336,11 @@ function initialize_extension() {
             useBackground: false,
             backgroundColor: 'rgb(255, 248, 220)',
             useColor: true,
-            color: 'blue',
+            color: 'blue'
           }
           wd_hl_settings = {
             wordParams: word_hl_params,
-            idiomParams: idiom_hl_params,
+            idiomParams: idiom_hl_params
           }
           default_options['wd_hl_settings'] = wd_hl_settings
         }
@@ -344,7 +357,7 @@ function initialize_extension() {
         }
         initContextMenus(wd_online_dicts)
 
-        console.log("wd_last_hidden_percents", wd_last_hidden_percents)
+        console.log('wd_last_hidden_percents', wd_last_hidden_percents)
 
         if (typeof wd_show_percents === 'undefined') {
           default_options['wd_show_percents'] = 12
@@ -364,11 +377,11 @@ function initialize_extension() {
         if (Object.keys(default_options).length) {
           chrome.storage.sync.set(default_options)
         }
-      },
+      }
     )
   }
 
-  chrome.storage.local.get(['wd_user_vocabulary'], function (result) {
+  chrome.storage.local.get(['wd_user_vocabulary'], function(result) {
     load_eng_verb_inflection()
     load_eng_dictionary()
     load_idioms()

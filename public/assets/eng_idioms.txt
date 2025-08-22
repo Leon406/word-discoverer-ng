@@ -132,6 +132,7 @@ a bird in the hand
 a bird of passage
 a birther
 a bit
+a bit steep
 a bizatch
 a black box
 a black day
@@ -199,6 +200,7 @@ a bossy boots
 a bottomless pit
 a bounden duty
 a bowl of cherries
+a box of birds
 a box of tricks
 a box on the ear
 a bozo filter
@@ -434,6 +436,7 @@ a cry for help
 a cry from the heart
 a crying need
 a crying shame
+a crying shame
 a crystal ball
 a crystal set
 a cuck
@@ -614,6 +617,7 @@ a false friend is worse than an open enemy
 a false move
 a false start
 a family man
+a fan of
 a fan of
 a fanboy
 a fangirl
@@ -992,7 +996,6 @@ a jill of all trades is a master of none
 a jim dandy
 a job lot
 a job of work
-be a joke
 a journey of a thousand miles begins with a single step
 a joy to behold
 a judas kiss
@@ -2290,6 +2293,7 @@ a yimby
 a younger brother
 a younger sister
 a zombie apocalypse
+aa double edged weapon
 abandon herself to
 abandon oneself to
 abbreviated piece of nothing
@@ -2676,7 +2680,6 @@ air monkey
 air of pretension
 air off oneself
 air one out
-air ones dirty laundry in public
 air one’s dirty laundry in public
 air pores
 air quotes
@@ -3130,28 +3133,10 @@ always a bridesmaid
 always chasing rainbows
 always the way
 always turns up like a bad penny
-am a bit steep
-am a box of birds
-am a crying shame
-am a double edged weapon
-am a fan of
 am dram
-am honoured
-am hot and cold
-am hounded
-am hung out to dry
 am i glad to see you
 am i my brothers keeper
 am i right
-am ideally placed
-am imposed upon
-am in a bad mood
-am in a bit of a sticky situation
-am in a class of my own
-am in a different league
-am in a flap
-am in a good cause
-am in a minority
 am sam
 amateur hour
 amateur night
@@ -3521,7 +3506,6 @@ anthony blunt
 anthropic principle
 antique brass
 ants in her pants
-ants in ones pants
 ants in one’s pants
 ants in pants
 ants in your pants
@@ -3619,7 +3603,6 @@ apple of discord
 apple of eye
 apple of his eye
 apple of my eye
-apple of ones eye
 apple of one’s eye
 apple of your eye
 apple pie order
@@ -3659,40 +3642,18 @@ arching for it
 arctic explorer
 are all over
 are up to our old tricks
-are up to par
 are up to their chin in
-are up with the crows
-are up with the lark
-are waiting for the other shoe to drop
-are walking a tightrope
 are walking on thin ice
-are way off beam
-are welcome to
 are well aware of
 are well off
 are well on our way to
-are well out of
-are well placed
-are well turned out
-are well versed
-are whistling in the wind
-are wide open to
-are within a whisker of
-are within sight
-are without equal
 are witness to
 are worked up
-are working overtime
 are worlds away
-are worn to a frazzle
-are worse off
-are worth it
-are wringing hands
 are you blind
 are you feeing ok
 are you sorry that you asked
 are you still riding the goat
-are young at heart
 are your boots laced
 are your huckleberry
 are your lookout
@@ -4428,7 +4389,6 @@ at the drop of a dime
 at the drop of a hat
 at the eleventh hour
 at the end of nowhere
-at the end of ones rope
 at the end of one’s rope
 at the end of rope
 at the end of the day
@@ -4820,7 +4780,6 @@ back of the envelope
 back of the yards
 back off and let the breeze blow over me
 back on feet
-back on ones feet
 back on one’s feet
 back on track
 back on your feet
@@ -5463,16 +5422,33 @@ bc bud
 bc kush
 bc lounge
 be a devil
+be a joke
 be a shingle short
 be a thing
 be all about
 be doing well
+be had
+be hounded out of
+be ideally placed
 be my guest
 be right back
 be that as it may
 be the case
 be the way to go
+be up with the crows
+be up with the lark
 be upstanding
+be welcome to
+be well out of
+be well placed
+be well turned out
+be well versed
+be whistling in the wind
+be without equal
+be working overtime
+be worn to a frazzle
+be worth it
+be wringing hands
 be yourself
 beach body
 beach bomber
@@ -6208,7 +6184,6 @@ bid it up
 bid up
 biddle move
 bide her time
-bide ones time
 bide one’s time
 bide quiet
 bide time
@@ -6499,7 +6474,6 @@ bite off more than can chew
 bite off more than one can chew
 bite off more than you can chew
 bite on so
-bite ones tongue
 bite one’s tongue
 bite the big one
 bite the biscuit
@@ -7520,7 +7494,7 @@ bounce along
 bounce an idea off
 bounce around
 bounce back
-bounce ideas off sb
+bounce ideas off
 bounce off her
 bounce off the walls
 bounce shot
@@ -8496,7 +8470,6 @@ buried under
 burke and hare
 burlington bertie
 burlington hunt
-burn a hole in ones pocket
 burn a hole in one’s pocket
 burn a hole in your pocket
 burn and smoulder
@@ -8930,7 +8903,6 @@ by the seat of the pants
 by the seat of your pants
 by the short hairs
 by the skin of his teeth
-by the skin of ones teeth
 by the skin of one’s teeth
 by the skin of teeth
 by the skin of their teeth
@@ -10347,7 +10319,6 @@ chip dip
 chip head
 chip off the old block
 chip on his shoulder
-chip on ones shoulder
 chip on one’s shoulder
 chip on shoulder
 chip on theshoulder
@@ -11190,6 +11161,7 @@ come hell or high water
 come home by weeping cross
 come home from
 come home to
+come home to roost
 come in a body
 come in a certain position
 come in all shapes and sizes
@@ -11235,6 +11207,7 @@ come into the open
 come into the world
 come into use
 come into view
+come into your head
 come into your own
 come it hard
 come it over
@@ -11399,8 +11372,6 @@ come your way
 comeback kid
 comedy equals tragedy plus time
 comedy of errors
-come home to roost
-come into your head
 comfort food
 comfort girl
 comfort lady
@@ -12182,7 +12153,6 @@ cross her
 cross mind
 cross my heart
 cross of the north
-cross ones mind
 cross one’s mind
 cross over into
 cross over jordan
@@ -14713,7 +14683,6 @@ drop your guard
 dropout factory
 drove a wedge between
 drown her troubles
-drown ones sorrows
 drown one’s sorrows
 drown out
 drown your fears
@@ -16277,7 +16246,6 @@ feather and flip
 feather brain
 feather hauler
 feather in cap
-feather in ones cap
 feather in one’s cap
 feather in your cap
 feather merchant
@@ -16343,7 +16311,6 @@ feel hard done by
 feel her legs
 feel hot and cold
 feel in bones
-feel in ones bones
 feel in one’s bones
 feel in your bones
 feel it beneath
@@ -17079,7 +17046,6 @@ flip a coin
 flip flop
 flip her the bird
 flip him over
-flip ones lid
 flip one’s lid
 flip side
 flip the bird
@@ -17875,7 +17841,7 @@ frighten the horses
 frighten the life
 frighten the living daylights out of
 frighten the pants off
-frighten the wits out of sb
+frighten the wits out of
 frighten to death
 frightened of her own shadow
 fringe benefit
@@ -17971,7 +17937,6 @@ from that day forth
 from that time forth
 from the bottom of heart
 from the bottom of my heart
-from the bottom of ones heart
 from the bottom of one’s heart
 from the bottom of your heart
 from the corner of eye
@@ -19053,9 +19018,7 @@ get on the horn
 get on the phone
 get on the right side of
 get on the stick
-get on the wrong side of her
-get on the wrong side of sb
-get on the wrong side of the law
+get on the wrong side of
 get on tick
 get on tits
 get on to
@@ -19072,7 +19035,6 @@ get one over
 get one right here
 get one up on her
 get one wrong
-get ones goat
 get oneself up
 get one’s goat
 get onto the phone
@@ -19195,7 +19157,7 @@ get the devil
 get the draw on
 get the drift
 get the drop on
-get the edge on sb
+get the edge on
 get the elbow
 get the eye
 get the facts straight
@@ -20630,6 +20592,8 @@ going rate
 going strong
 going through changes
 going to hell in a handbasket
+going to murder me
+going to murder you
 going to tattle
 going to tell
 going to the mountains
@@ -21839,6 +21803,7 @@ hang out for
 hang out shingle
 hang out the white flag
 hang out to dry
+hang out to dry
 hang out with
 hang out your shingle
 hang over her head
@@ -22375,7 +22340,6 @@ have a mind like a sieve
 have a mind like a steel trap
 have a mind of her own
 have a mind of its own
-have a mind of ones own
 have a mind of one’s own
 have a mind of own
 have a mind of your own
@@ -22564,6 +22528,7 @@ have bats in belfry
 have bats in the belfry
 have beady eye on
 have been around
+have been had
 have been in the wars
 have been there before
 have been to hell and back
@@ -22619,7 +22584,6 @@ have ear
 have eating out of hand
 have egg all over your face
 have egg on face
-have egg on ones face
 have egg on one’s face
 have egg on your face
 have end away
@@ -22862,10 +22826,6 @@ have one in the oven
 have one on me
 have one too many
 have one up on her
-have ones feet on the ground
-have ones hand in the till
-have ones head in the clouds
-have ones heart set on
 have oneself
 have one’s feet on the ground
 have one’s hand in the till
@@ -24003,7 +23963,6 @@ hold on like grim death
 hold on the slack
 hold on tight
 hold on to
-hold ones horses
 hold oneself together
 hold one’s horses
 hold onto
@@ -24358,6 +24317,7 @@ hostess with the mostest
 hostile takeover
 hot air
 hot and bothered
+hot and cold
 hot and cold
 hot and heavy
 hot and stuck
@@ -25021,6 +24981,7 @@ impending social disaster
 imperial system
 implied consent
 impose upon
+imposed upon
 impostor syndrome
 impress her with
 impress it into
@@ -25031,9 +24992,11 @@ imps file
 impulse buy
 in Dutch
 in a bad
+in a bad mood
 in a big way
 in a bind
 in a bit
+in a bit of a sticky situation
 in a blaze of glory
 in a blink
 in a blue funk
@@ -25047,6 +25010,7 @@ in a canter
 in a circle
 in a class by
 in a class of her own
+in a class of my own
 in a cleft stick
 in a clutch situation
 in a cold sweat
@@ -25056,6 +25020,7 @@ in a daze
 in a dead heat
 in a delicate condition
 in a deuce
+in a different league
 in a dither
 in a dogs age
 in a double bind
@@ -25070,6 +25035,7 @@ in a flat spin
 in a flutter
 in a fog
 in a funk
+in a good cause
 in a good frame of mind
 in a good light
 in a good mood
@@ -25095,6 +25061,7 @@ in a mad rush
 in a manner of speaking
 in a measure
 in a minor key
+in a minority
 in a minority of one
 in a minute
 in a moment of weakness
@@ -26374,8 +26341,6 @@ is at disposal
 is at your disposal
 is bag
 is beyond me
-is going to murder me
-is going to murder you
 is in business
 is it just me
 is not a bed of roses
@@ -26408,7 +26373,7 @@ it cost the earth
 it could happen to a bishop
 it cuts both ways
 it cuts two ways
-it dawned on sb
+it dawned on
 it do not make me no never mind
 it does exactly what it says on the tin
 it does heart good
@@ -27556,10 +27521,6 @@ keep one eye on
 keep one in place
 keep one jump ahead
 keep one step ahead
-keep ones fingers crossed
-keep ones head above water
-keep ones nose clean
-keep ones shirt on
 keep oneself above suspicion
 keep oneself to oneself
 keep one’s fingers crossed
@@ -28065,7 +28026,6 @@ knock one off feet
 knock one on
 knock one out
 knock one over
-knock ones head against the wall
 knock oneself out
 knock one’s head against the wall
 knock out drops
@@ -28368,7 +28328,6 @@ land of the rising hagis
 land office business
 land on both feet
 land on feet
-land on ones feet
 land on one’s feet
 land on your feet
 land one
@@ -28767,7 +28726,6 @@ leatherneck square
 leave a bad impression
 leave a bad taste in her mouth
 leave a bad taste in mouth
-leave a bad taste in ones mouth
 leave a bad taste in one’s mouth
 leave a bad taste in the mouth
 leave a bad taste in your mouth
@@ -29020,7 +28978,6 @@ let one in on
 let one loose
 let one off
 let one rip
-let ones hair down
 let oneself go
 let oneself in for
 let one’s hair down
@@ -30093,8 +30050,6 @@ lose its grip
 lose money hand over fist
 lose my train of thought
 lose no time
-lose ones marbles
-lose ones shirt
 lose oneself in
 lose one’s marbles
 lose one’s shirt
@@ -30407,81 +30362,6 @@ madame de luce
 madame tussaud
 madder than a hornet
 madder than a wet hen
-make a bed
-make a beeline for
-make a believer of
-make a better door than a window
-make a bolt
-make fair weather
-make fish of one and flesh of another
-make for each other
-make for other
-make for so
-make from the same mold
-make from the whole cloth
-make good as
-make good weather of it
-make ground against
-make ground on
-make hair curl
-make his own way
-make his point
-make his position clear
-make his skin crawl
-make his teeth itch
-make his voice heard
-make his way
-make honest bucks
-make horns at
-make hot under the collar
-make in china
-make in heaven
-make in the shade
-make it clear
-make mock of
-make money in
-make my beard
-make my bed
-make my blood curdle
-make my blood run cold
-make my bones
-make my ears burn
-make my fortune
-make my hair stand on end
-make my hair stand up on the back of my neck
-make my head spin
-make my head swim
-make my jaw drop
-make my mark
-make my number
-make my own luck
-make no bones about it
-make of money
-make of sterner stuff
-make old bones
-make one an offer
-make one look good
-make one mad
-make one pay through the nose
-make one see reason
-make one see sense
-make one see stars
-make one the scapegoat
-make ourselves heard
-make ourselves scarce
-make out for
-make out like
-make out of the whole cloth
-make out that
-make play of
-make quick work
-make rapid strides
-make them stick
-make to measure
-make to order
-make up as he went
-make up bed
-make up from
 madison avenue
 madonna claws
 mag wheel
@@ -30548,7 +30428,11 @@ major stevens
 majority leader
 majority rule
 make a bad fist of
+make a bed
 make a beeline
+make a beeline for
+make a believer of
+make a better door than a window
 make a better fist
 make a big deal about
 make a big deal of it
@@ -30556,6 +30440,7 @@ make a big play of
 make a big thing about
 make a big thing of
 make a big thing out of
+make a bolt
 make a bolt for
 make a bomb
 make a booboo
@@ -30752,28 +30637,40 @@ make exhibition of
 make eyes at
 make faces at
 make faces face
+make fair weather
 make fast money
 make fast work of
 make feel small
+make fish of one and flesh of another
 make flesh crawl
 make flesh creep
 make food offerings
+make for each other
 make for odd bedfellows
+make for other
+make for so
 make for somewhere
 make free with
 make friends with
+make from the same mold
+make from the whole cloth
 make fun of
 make funny faces
 make game of
+make good as
 make good her escape
 make good money
 make good on
 make good time
+make good weather of it
 make good your escape
 make gorge rise
 make great play of
 make great strides
+make ground against
+make ground on
 make hackles rise
+make hair curl
 make hair stand on end
 make hamburger out of
 make hard work of
@@ -30792,6 +30689,19 @@ make headway towards
 make headway with
 make heavy going
 make heavy weather
+make his own way
+make his point
+make his position clear
+make his skin crawl
+make his teeth itch
+make his voice heard
+make his way
+make honest bucks
+make horns at
+make hot under the collar
+make in china
+make in heaven
+make in the shade
 make inroads into
 make inroads on
 make it a double
@@ -30799,6 +30709,7 @@ make it a rule
 make it better
 make it big
 make it business to
+make it clear
 make it good
 make it hot
 make it or break it
@@ -30833,19 +30744,37 @@ make merry
 make mincemeat of
 make mincemeat out of
 make mind up
+make mock of
 make money hand over fist
+make money in
 make money stretch
 make mountains out of molehills
 make mouth water
 make much of
 make much play with
+make my beard
+make my bed
+make my blood curdle
+make my blood run cold
+make my bones
 make my day
+make my ears burn
+make my fortune
+make my hair stand on end
+make my hair stand up on the back of my neck
+make my head spin
+make my head swim
+make my jaw drop
+make my mark
+make my number
+make my own luck
 make myself clear
 make neither head nor tail of
 make nice with
 make no apologies
 make no apology
 make no bones
+make no bones about it
 make no claim
 make no difference
 make no mistake
@@ -30854,16 +30783,24 @@ make noises about
 make nonsense of
 make nothing of
 make of it
+make of money
+make of sterner stuff
 make of yourself
 make off with
+make old bones
+make one an offer
 make one an offer one cannot refuse
 make one feel at home
+make one look good
+make one mad
 make one out to be
+make one pay through the nose
+make one see reason
+make one see sense
+make one see stars
 make one sick
+make one the scapegoat
 make one tick
-make ones hair stand on end
-make ones mouth water
-make ones own way
 make oneself at home
 make oneself busy
 make oneself conspicuous
@@ -30874,16 +30811,25 @@ make one’s hair stand on end
 make one’s mouth water
 make one’s own way
 make or break
+make ourselves heard
+make ourselves scarce
 make out a case for
+make out for
+make out like
 make out like a bandit
+make out of the whole cloth
+make out that
 make overtures about doing
 make passes at
 make pavement asterisks
 make peace with
+make play of
 make presence felt
 make public
 make quake in boots
 make quake in their boots
+make quick work
+make rapid strides
 make ready for
 make ready to
 make reassuring noises
@@ -30928,22 +30874,27 @@ make the team
 make the welkin ring
 make the world go around
 make them cry
+make them stick
 make things hot for
 make things hum
-make things lively for sb
+make things lively for
 make things warm for
 make time for
 make time with her
+make to measure
+make to order
 make toes curl
 make tongues wag
 make tracks
 make up a foursome
+make up as he went
+make up bed
 make up for
+make up from
 make up ground
 make up leeway
 make up lost ground
 make up mind
-make up ones mind
 make up one’s mind
 make up out of whole cloth
 make up the bed
@@ -34277,7 +34228,6 @@ off on a sidetrack
 off on a tangent
 off on the right foot
 off on the wrong foot
-off ones rocker
 off one’s rocker
 off own bat
 off pat
@@ -34792,8 +34742,6 @@ on occasion
 on offer
 on one hand
 on one side
-on ones last leg
-on ones shoulders
 on oneself
 on one’s last leg
 on one’s shoulders
@@ -35399,10 +35347,6 @@ one who got away
 one word from you and he does as he likes
 one word leads to another
 onen pointes
-ones and twos
-ones cup of tea
-ones hands are tied
-ones heart is in ones mouth
 oneself again
 one’s cup of tea
 one’s hands are tied
@@ -35875,7 +35819,6 @@ over him
 over medium
 over my dead body
 over my head
-over ones dead body
 over one’s dead body
 over shoes over boots
 over spilled milk
@@ -38666,7 +38609,6 @@ put in layaway
 put in mind
 put in mothballs
 put in motion
-put in ones two cents
 put in one’s two cents
 put in order
 put in perspective
@@ -38810,10 +38752,6 @@ put one through paces
 put one through the hoops
 put one through to
 put one wise
-put ones cards on the table
-put ones finger on
-put ones foot down
-put ones foot in ones mouth
 put oneself out
 put oneself straight
 put one’s cards on the table
@@ -39246,7 +39184,6 @@ rack duty
 rack face
 rack monster
 rack my brain
-rack ones brain
 rack one’s brain
 rack out
 rack time
@@ -40161,7 +40098,6 @@ right tack
 right to do
 right to life
 right under her nose
-right under ones nose
 right under one’s nose
 right up alley
 right up my alley
@@ -41370,46 +41306,8 @@ sb is asking for it
 sb is away with the fairies
 sb is barking up the wrong tree
 sb is cruising for a bruising
-sb is daft as a brush
-sb is dead meat
-sb is dead to the world
-sb is down to earth
-sb is economical with the truth
-sb is fishing without bait
-sb is for real
-sb is full of it
-sb is hard work
-sb is in good company
-sb is laughing
-sb is looking over your shoulder
-sb is made of sterner stuff
-sb is more sinned against than sinning
-sb is not a happy bunny
-sb is not a happy camper
-sb is not all there
-sb is not just a pretty face
-sb is not long for this world
-sb is not the sharpest tool in the box
-sb is only human
-sb is raking it in
-sb is robbing the cradle
-sb is soft in the head
-sb is up to no good
-sb knows how many beans make five
-sb lies like a rug
-sb means business
-sb must have had worms for breakfast
-sb needs a hand
-sb refuses to take no for an answer
-sb serves two masters
-sb swings both ways
-sb takes no prisoners
-sb wants a piece of sb
-sb will be the death of me
-sb will get there
-sb would go through fire and water for sb
-sb would run a mile
-sb would turn in their grave
+fishing without bait
+be for real
 scab duty
 scabby eye
 scag jones
@@ -41447,8 +41345,7 @@ scare the life
 scare the living daylights out of
 scare the pants off
 scare the shit out of
-scare the wits out of sb
-scare the wits out of so
+scare the wits out of
 scare to death
 scare up
 scare you to death
@@ -42943,7 +42840,6 @@ sinistered area
 sink into despair
 sink into oblivion
 sink like a stone
-sink ones teeth into
 sink one’s teeth into
 sink or swim
 sink so low
@@ -43069,7 +42965,6 @@ skeet shooting
 skein of thread
 skeleton in closet
 skeleton in cupboard
-skeleton in ones closet
 skeleton in one’s closet
 skeleton in the closet
 skeleton in the cupboard
@@ -43277,7 +43172,6 @@ slip of the tongue
 slip off the tongue
 slip on a banana peel
 slip one over on
-slip ones mind
 slip one’s mind
 slip out of
 slip over on
@@ -44542,7 +44436,6 @@ stand on end
 stand on her shoulders
 stand on it
 stand on me
-stand on ones own two feet
 stand on one’s own two feet
 stand on own feet
 stand on own two feet
@@ -44878,7 +44771,6 @@ stick of chalk
 stick of rock
 stick of tea
 stick one on
-stick ones neck out
 stick one’s neck out
 stick or twist
 stick out a mile
@@ -44896,7 +44788,6 @@ stick to fingers
 stick to guns
 stick to it
 stick to knitting
-stick to ones guns
 stick to one’s guns
 stick to ribs
 stick to the knitting
@@ -46543,7 +46434,6 @@ talk the leg off the lamb of god
 talk the same language
 talk the talk
 talk through hat
-talk through ones hat
 talk through one’s hat
 talk through your hat
 talk till face is blue
@@ -47132,7 +47022,7 @@ the dead of winter
 the dear knows
 the dear only knows
 the death knell
-the deck is stacked against sb
+the deck is stacked against
 the deep fry
 the deep six
 the demon drink
@@ -48374,7 +48264,6 @@ throw off the track
 throw on a dog for you
 throw on mercy
 throw on the scrap heap
-throw ones weight around
 throw oneself at
 throw oneself into
 throw oneself on the mercy of
@@ -48543,7 +48432,6 @@ tight spot
 tight squeeze
 tight wad
 tight with a pound
-tighten ones belt
 tighten one’s belt
 tighten our belts
 tighten the purse strings
@@ -49916,7 +49804,6 @@ twice as natural
 twice over
 twice pipes
 twiddle her thumbs
-twiddle ones thumbs
 twiddle one’s thumbs
 twiddle thumbs
 twiddle your thumbs
@@ -50270,7 +50157,6 @@ up on blocks
 up on my ear
 up on one
 up one side and down the other
-up ones alley
 up oneself
 up one’s alley
 up pot
@@ -50320,7 +50206,6 @@ up to my ears
 up to neck
 up to no good
 up to old tricks
-up to ones ears
 up to one’s ears
 up to par
 up to putty
@@ -50343,7 +50228,6 @@ up top
 up west
 up with so
 up with the chickens
-up with the crows
 up with the lark
 up with the roosters
 up your alley
@@ -50658,6 +50542,7 @@ wait up for
 wait upon hand and foot
 wait with bated breath
 waiting for a raindrop in the drought
+waiting for the other shoe to drop
 waiting game
 waiting list
 wake and bake
@@ -50808,7 +50693,6 @@ warp drive
 warped sense of humor
 warrior bold
 warts and all
-was had
 wash a brick
 wash a few things out
 wash and wear
@@ -50819,7 +50703,6 @@ wash hands of
 wash it down
 wash it off
 wash its face
-wash ones hands of
 wash one’s hands of
 wash out of
 wash over
@@ -50834,7 +50717,6 @@ waste no time
 waste not want not
 waste of breath
 waste of space
-waste ones breath
 waste one’s breath
 waste time
 waste your breath
@@ -51051,7 +50933,6 @@ weigh down
 weigh in at
 weigh on mind
 weigh on your mind
-weigh ones words
 weigh one’s words
 weigh pros and cons
 weigh upon
@@ -51068,7 +50949,6 @@ welcome aboard
 welcome back
 welcome her to
 welcome mat
-welcome to do
 welcome to my world
 welcome to our house
 welcome to the club
@@ -51087,7 +50967,6 @@ well in hand
 well in with
 well met
 well oiled
-well out of
 well padded
 well played
 well preserved
@@ -51706,6 +51585,7 @@ wide load
 wide of the mark
 wide off the mark
 wide open
+wide open to
 wide place in the road
 wide ride
 widen horizons
@@ -51756,8 +51636,8 @@ will come of
 will do
 will eat for breakfast
 will go a long way
-will going to murder me
-will going to murder you
+will murder me
+will murder you
 will never fly
 will not
 will power
@@ -52067,6 +51947,7 @@ wither away
 wither on the vine
 within a hair of
 within a whisker of
+within a whisker of
 within an ace of
 within an inch of
 within bounds
@@ -52086,6 +51967,7 @@ within reach
 within reason
 within regards to
 within shouting distance
+within sight
 within spitting distance
 within striking distance
 within the bounds of possibility
@@ -52298,7 +52180,6 @@ work my fingers to the bone
 work of art
 work on all cylinders
 work on so
-work ones fingers to the bone
 work oneself up
 work one’s fingers to the bone
 work our asss off
@@ -52350,7 +52231,6 @@ work yourself up
 working class
 working end
 working knowledge
-working overtime
 working the lemon
 working title
 works for me
@@ -52391,6 +52271,7 @@ worry through
 worry wart
 worse for wear
 worse luck
+worse off
 worse things happen at sea
 worship at the porcelain altar
 worship ralph
@@ -52406,7 +52287,6 @@ worth a crumpet
 worth a damn
 worth a try
 worth every penny
-worth it
 worth of a thing is what it will bring
 worth pondering
 worth salt
