@@ -128,6 +128,4 @@ function process_display() {
   })
 }
 
-document.addEventListener('DOMContentLoaded', function (event) {
-  process_display()
-})
+document.addEventListener('DOMContentLoaded', process_display)
