@@ -24075,7 +24075,7 @@ hollywood stop
 holy cats
 holy city
 holy cow
-holy crap on a cracker
+holy crap
 holy crickets
 holy friar
 holy fuck
@@ -47958,7 +47958,7 @@ thin on the top
 thin on top
 thin one
 thin skin
-thing is
+the thing is
 thing of the past
 thing or two
 things are crook in tallarook
@@ -48641,9 +48641,6 @@ to alter out of recognition
 to an extent
 to and fro
 to another tune
-to attention
-to bat
-to bay
 to be continued
 to be exact
 to be going on with
@@ -48663,28 +48660,19 @@ to be under a cloud
 to beard the lion in his den
 to beat all
 to beat the band
-to bed
 to begin with
 to bits
-to blame
 to blow the grounsils
 to bones
 to boot
 to buggery
-to burn
-to call own
-to call your own
-to cap it all
 to change out of all recognition
 to change out of recognition
 to coin a phrase
-to come
-to credit
 to crown it all
 to cut a long story short
 to date
 to death
-to die
 to distraction
 to dramatic effect
 to each his own
@@ -48728,7 +48716,6 @@ to keep a weather eye
 to keep one jump ahead
 to kill for
 to leak
-to lean on
 to light
 to liking
 to line
@@ -52763,7 +52750,7 @@ your elders and betters
 your eyes are bigger than your stomach
 your eyes pop out of head
 your eyes pop out of your head
-your father
+how's your father
 your feet on the ground
 your final word
 your finger on the pulse
